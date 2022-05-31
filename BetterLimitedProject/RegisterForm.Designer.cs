@@ -35,23 +35,23 @@ namespace BetterLimitedProject
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbUsername = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbPasswordConfirm = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
+            this.cboDepartment = new System.Windows.Forms.ComboBox();
+            this.cboPosition = new System.Windows.Forms.ComboBox();
+            this.dtpHireDate = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +83,7 @@ namespace BetterLimitedProject
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(361, 23);
+            this.label2.Location = new System.Drawing.Point(345, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(208, 56);
             this.label2.TabIndex = 3;
@@ -128,15 +128,15 @@ namespace BetterLimitedProject
             this.label4.TabIndex = 21;
             this.label4.Text = "Name";
             // 
-            // textBox3
+            // tbName
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox3.Location = new System.Drawing.Point(365, 136);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox3.Size = new System.Drawing.Size(237, 29);
-            this.textBox3.TabIndex = 20;
+            this.tbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbName.Location = new System.Drawing.Point(365, 136);
+            this.tbName.Name = "tbName";
+            this.tbName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbName.Size = new System.Drawing.Size(237, 29);
+            this.tbName.TabIndex = 20;
             // 
             // label1
             // 
@@ -149,15 +149,15 @@ namespace BetterLimitedProject
             this.label1.TabIndex = 23;
             this.label1.Text = "Username";
             // 
-            // textBox1
+            // tbUsername
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox1.Location = new System.Drawing.Point(653, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox1.Size = new System.Drawing.Size(237, 29);
-            this.textBox1.TabIndex = 22;
+            this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsername.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbUsername.Location = new System.Drawing.Point(653, 136);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbUsername.Size = new System.Drawing.Size(237, 29);
+            this.tbUsername.TabIndex = 22;
             // 
             // label3
             // 
@@ -170,15 +170,15 @@ namespace BetterLimitedProject
             this.label3.TabIndex = 25;
             this.label3.Text = "Password";
             // 
-            // textBox2
+            // tbPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox2.Location = new System.Drawing.Point(365, 226);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox2.Size = new System.Drawing.Size(237, 29);
-            this.textBox2.TabIndex = 24;
+            this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassword.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbPassword.Location = new System.Drawing.Point(365, 226);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbPassword.Size = new System.Drawing.Size(237, 29);
+            this.tbPassword.TabIndex = 24;
             // 
             // label5
             // 
@@ -191,15 +191,15 @@ namespace BetterLimitedProject
             this.label5.TabIndex = 27;
             this.label5.Text = "Confirm Password";
             // 
-            // textBox4
+            // tbPasswordConfirm
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox4.Location = new System.Drawing.Point(653, 226);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox4.Size = new System.Drawing.Size(237, 29);
-            this.textBox4.TabIndex = 26;
+            this.tbPasswordConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPasswordConfirm.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbPasswordConfirm.Location = new System.Drawing.Point(653, 226);
+            this.tbPasswordConfirm.Name = "tbPasswordConfirm";
+            this.tbPasswordConfirm.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbPasswordConfirm.Size = new System.Drawing.Size(237, 29);
+            this.tbPasswordConfirm.TabIndex = 26;
             // 
             // label6
             // 
@@ -212,15 +212,15 @@ namespace BetterLimitedProject
             this.label6.TabIndex = 29;
             this.label6.Text = "Email Address";
             // 
-            // textBox5
+            // tbEmail
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox5.Location = new System.Drawing.Point(365, 321);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox5.Size = new System.Drawing.Size(237, 29);
-            this.textBox5.TabIndex = 28;
+            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbEmail.Location = new System.Drawing.Point(365, 321);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbEmail.Size = new System.Drawing.Size(237, 29);
+            this.tbEmail.TabIndex = 28;
             // 
             // label7
             // 
@@ -266,35 +266,38 @@ namespace BetterLimitedProject
             this.label10.TabIndex = 37;
             this.label10.Text = "Hire Date";
             // 
-            // dateTimePicker1
+            // dtpDOB
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(653, 321);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(283, 29);
-            this.dateTimePicker1.TabIndex = 38;
+            this.dtpDOB.Location = new System.Drawing.Point(653, 321);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(283, 29);
+            this.dtpDOB.TabIndex = 38;
             // 
-            // comboBox1
+            // cboDepartment
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(365, 436);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(231, 29);
-            this.comboBox1.TabIndex = 39;
+            this.cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDepartment.FormattingEnabled = true;
+            this.cboDepartment.Location = new System.Drawing.Point(365, 436);
+            this.cboDepartment.Name = "cboDepartment";
+            this.cboDepartment.Size = new System.Drawing.Size(231, 29);
+            this.cboDepartment.TabIndex = 39;
+            this.cboDepartment.SelectedValueChanged += new System.EventHandler(this.cboDepartment_SelectedValueChanged);
             // 
-            // comboBox2
+            // cboPosition
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(653, 436);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(231, 29);
-            this.comboBox2.TabIndex = 40;
+            this.cboPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPosition.FormattingEnabled = true;
+            this.cboPosition.Location = new System.Drawing.Point(653, 436);
+            this.cboPosition.Name = "cboPosition";
+            this.cboPosition.Size = new System.Drawing.Size(231, 29);
+            this.cboPosition.TabIndex = 40;
             // 
-            // dateTimePicker2
+            // dtpHireDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(365, 523);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(283, 29);
-            this.dateTimePicker2.TabIndex = 41;
+            this.dtpHireDate.Location = new System.Drawing.Point(365, 523);
+            this.dtpHireDate.Name = "dtpHireDate";
+            this.dtpHireDate.Size = new System.Drawing.Size(283, 29);
+            this.dtpHireDate.TabIndex = 41;
             // 
             // RegisterForm
             // 
@@ -302,24 +305,24 @@ namespace BetterLimitedProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpHireDate);
+            this.Controls.Add(this.cboPosition);
+            this.Controls.Add(this.cboDepartment);
+            this.Controls.Add(this.dtpDOB);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbPasswordConfirm);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbName);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label2);
@@ -328,6 +331,7 @@ namespace BetterLimitedProject
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RegisterForm";
             this.Text = "BetterLimited - Register";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -343,22 +347,22 @@ namespace BetterLimitedProject
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbPasswordConfirm;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
+        private System.Windows.Forms.ComboBox cboDepartment;
+        private System.Windows.Forms.ComboBox cboPosition;
+        private System.Windows.Forms.DateTimePicker dtpHireDate;
     }
 }

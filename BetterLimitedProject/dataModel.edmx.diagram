@@ -58,6 +58,7 @@
         <AssociationConnector Association="betterlimitedModel.FKRetail_Sto91839" ManuallyRouted="false" />
         <AssociationConnector Association="betterlimitedModel.FKWarehouse741635" ManuallyRouted="false" />
         <AssociationConnector Association="betterlimitedModel.FKWarehouse_192567" ManuallyRouted="false" />
+        <AssociationConnector Association="betterlimitedModel.position_department_department_ID_fk" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

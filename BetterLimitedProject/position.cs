@@ -24,9 +24,10 @@ namespace BetterLimitedProject
         public string position_title { get; set; }
         public float min_salarly { get; set; }
         public float max_salary { get; set; }
-        public int permission_level { get; set; }
+        public Nullable<int> department_ID { get; set; }
     
         public virtual ICollection<staff> staffs { get; set; }
         public virtual ICollection<worker> workers { get; set; }
+        public virtual department department { get; set; }
     }
 }

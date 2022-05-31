@@ -17,6 +17,7 @@ namespace BetterLimitedProject
         public department()
         {
             this.staffs = new HashSet<staff>();
+            this.positions = new HashSet<position>();
         }
     
         public int department_ID { get; set; }
@@ -24,5 +25,6 @@ namespace BetterLimitedProject
         public int department_head { get; set; }
     
         public virtual ICollection<staff> staffs { get; set; }
+        public virtual ICollection<position> positions { get; set; }
     }
 }

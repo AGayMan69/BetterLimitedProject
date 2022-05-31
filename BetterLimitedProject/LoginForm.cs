@@ -18,6 +18,9 @@ namespace BetterLimitedProject
         private char passwordCharNone = '\0';
         private Boolean passwordHide = true;
 
+        private string username;
+        private string password;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -99,6 +102,68 @@ namespace BetterLimitedProject
         private void btnLogin_MouseHover(object sender, EventArgs e)
         {
             ((Button)sender).BackColor = Color.FromArgb(79, 79, 79);
+        }
+
+        private void clear()
+        {
+            tbUsername.Text = usernamePlaceHolder;
+            tbPassword.Text = passwordPlaceHolder;
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            username = tbUsername.Text;
+            password = tbPassword.Text;
+
+            if (username == usernamePlaceHolder || password == passwordPlaceHolder)
+            {
+                MessageBox.Show("Username / Password can not be empty!!");
+            }
+            else
+            {
+                using (var betterDB = new betterlimitedEntities())
+                {
+
+                    var user = (from users in betterDB.staffs
+                                where users.username.Equals(username)
+                                select new {users.username, users.password, users.department_ID}).FirstOrDefault();
+                    if (password.Equals(user.password))
+                    {
+                        // Login Successful
+                        MessageBox.Show("Login successful!");
+                        this.Hide();
+                        switch (user.department_ID)
+                        {
+                            case 1:
+                                Sales salefrm = new Sales();
+                                salefrm.ShowDialog();
+                                break;
+                            case 2:
+                                Inventory invenfrm = new Inventory();
+                                invenfrm.ShowDialog();
+                                break;
+                            case 3:
+                                Technical techfrm = new Technical();
+                                techfrm.ShowDialog();
+                                break;
+                            case 4:
+                                Accounting accfrm = new Accounting();
+                                accfrm.ShowDialog();
+                                break;
+                            case 5:
+                                Purchase purfrm = new Purchase();
+                                purfrm.ShowDialog();
+                                break;
+                        } 
+                        this.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect username or password");
+                        clear();
+                    }
+                }
+            }
         }
     }
 } 
