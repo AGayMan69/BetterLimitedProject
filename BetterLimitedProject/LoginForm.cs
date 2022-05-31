@@ -90,5 +90,15 @@ namespace BetterLimitedProject
                 tbPassword.PasswordChar = (passwordHide) ? passwordChar : passwordCharNone;
             }
         }
+
+        private void btnLogin_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Black;
+        }
+
+        private void btnLogin_MouseHover(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.FromArgb(79, 79, 79);
+        }
     }
-}
+} 

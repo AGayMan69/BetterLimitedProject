@@ -30,20 +30,20 @@ namespace BetterLimitedProject
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
-            this.passwordPic = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.tbUsername = new System.Windows.Forms.TextBox();
+            this.passwordPic = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +58,113 @@ namespace BetterLimitedProject
             this.panel1.Size = new System.Drawing.Size(507, 681);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 51.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(717, 210);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(355, 82);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Welcome";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(687, 339);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(129, 32);
+            this.lblUsername.TabIndex = 4;
+            this.lblUsername.Text = "Username";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(687, 412);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 32);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Password";
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.tbPassword.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbPassword.Location = new System.Drawing.Point(826, 406);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(284, 43);
+            this.tbPassword.TabIndex = 5;
+            this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
+            this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.label3.Location = new System.Drawing.Point(928, 465);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(182, 21);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Forgot your password?";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.Black;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(693, 534);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(174, 65);
+            this.btnLogin.TabIndex = 9;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            this.btnLogin.MouseHover += new System.EventHandler(this.btnLogin_MouseHover);
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.White;
+            this.btnRegister.FlatAppearance.BorderSize = 5;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.Black;
+            this.btnRegister.Location = new System.Drawing.Point(936, 534);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(174, 65);
+            this.btnRegister.TabIndex = 10;
+            this.btnRegister.Text = "REGISTER";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            // 
+            // tbUsername
+            // 
+            this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.tbUsername.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbUsername.Location = new System.Drawing.Point(826, 333);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(284, 43);
+            this.tbUsername.TabIndex = 1;
+            this.tbUsername.Enter += new System.EventHandler(this.tbUsername_Enter);
+            this.tbUsername.Leave += new System.EventHandler(this.tbUsername_Leave);
+            // 
+            // passwordPic
+            // 
+            this.passwordPic.BackColor = System.Drawing.Color.White;
+            this.passwordPic.Image = global::BetterLimitedProject.Properties.Resources.password_show2;
+            this.passwordPic.Location = new System.Drawing.Point(1058, 409);
+            this.passwordPic.Margin = new System.Windows.Forms.Padding(0);
+            this.passwordPic.Name = "passwordPic";
+            this.passwordPic.Size = new System.Drawing.Size(51, 38);
+            this.passwordPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.passwordPic.TabIndex = 7;
+            this.passwordPic.TabStop = false;
+            this.passwordPic.Click += new System.EventHandler(this.passwordPic_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -69,121 +176,16 @@ namespace BetterLimitedProject
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 51.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(747, 192);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 82);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Welcome";
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(696, 339);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(129, 32);
-            this.lblUsername.TabIndex = 4;
-            this.lblUsername.Text = "Username";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(696, 412);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 32);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Password";
-            // 
-            // tbPassword
-            // 
-            this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.tbPassword.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.tbPassword.Location = new System.Drawing.Point(835, 406);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(284, 43);
-            this.tbPassword.TabIndex = 5;
-            this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
-            this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
-            // 
-            // passwordPic
-            // 
-            this.passwordPic.BackColor = System.Drawing.Color.White;
-            this.passwordPic.Image = global::BetterLimitedProject.Properties.Resources.password_show2;
-            this.passwordPic.Location = new System.Drawing.Point(1067, 409);
-            this.passwordPic.Margin = new System.Windows.Forms.Padding(0);
-            this.passwordPic.Name = "passwordPic";
-            this.passwordPic.Size = new System.Drawing.Size(51, 38);
-            this.passwordPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.passwordPic.TabIndex = 7;
-            this.passwordPic.TabStop = false;
-            this.passwordPic.Click += new System.EventHandler(this.passwordPic_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Image = global::BetterLimitedProject.Properties.Resources.noun_login_3549890_1;
-            this.pictureBox2.Location = new System.Drawing.Point(786, 32);
+            this.pictureBox2.Location = new System.Drawing.Point(731, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(269, 175);
+            this.pictureBox2.Size = new System.Drawing.Size(338, 204);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label3.Location = new System.Drawing.Point(937, 465);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 21);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Forgot your password?";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(702, 534);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 65);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 5;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(945, 534);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 65);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "REGISTER";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // tbUsername
-            // 
-            this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.tbUsername.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.tbUsername.Location = new System.Drawing.Point(835, 333);
-            this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(284, 43);
-            this.tbUsername.TabIndex = 1;
-            this.tbUsername.Enter += new System.EventHandler(this.tbUsername_Enter);
-            this.tbUsername.Leave += new System.EventHandler(this.tbUsername_Leave);
             // 
             // LoginForm
             // 
@@ -191,8 +193,8 @@ namespace BetterLimitedProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.passwordPic);
             this.Controls.Add(this.label2);
@@ -208,8 +210,8 @@ namespace BetterLimitedProject
             this.Text = "Better Limited - Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -227,8 +229,8 @@ namespace BetterLimitedProject
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.PictureBox passwordPic;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.TextBox tbUsername;
     }
 }
