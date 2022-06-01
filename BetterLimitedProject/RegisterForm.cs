@@ -59,5 +59,13 @@ namespace BetterLimitedProject
         {
             this.DialogResult = DialogResult.Abort;
         }
+
+        private void tbName_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrEmpty(tbName.Text))
+            {
+
+            }
+        }
     }
 }

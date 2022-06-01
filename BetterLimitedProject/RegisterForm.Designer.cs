@@ -157,6 +157,8 @@ namespace BetterLimitedProject
             this.tbName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbName.Size = new System.Drawing.Size(237, 29);
             this.tbName.TabIndex = 20;
+            this.tbName.Text = "s";
+            this.tbName.Validating += new System.ComponentModel.CancelEventHandler(this.tbName_Validating);
             // 
             // label1
             // 
@@ -238,7 +240,7 @@ namespace BetterLimitedProject
             this.tbEmail.ForeColor = System.Drawing.SystemColors.InfoText;
             this.tbEmail.Location = new System.Drawing.Point(365, 321);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbEmail.Size = new System.Drawing.Size(237, 29);
             this.tbEmail.TabIndex = 28;
             // 
