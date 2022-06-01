@@ -30,6 +30,8 @@ namespace BetterLimitedProject
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
@@ -51,8 +53,6 @@ namespace BetterLimitedProject
             this.cboDepartment = new System.Windows.Forms.ComboBox();
             this.cboPosition = new System.Windows.Forms.ComboBox();
             this.dtpHireDate = new System.Windows.Forms.DateTimePicker();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,35 @@ namespace BetterLimitedProject
             this.panel1.Padding = new System.Windows.Forms.Padding(70, 0, 70, 0);
             this.panel1.Size = new System.Drawing.Size(314, 681);
             this.panel1.TabIndex = 1;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.btnLogin.Location = new System.Drawing.Point(0, 613);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(314, 65);
+            this.btnLogin.TabIndex = 42;
+            this.btnLogin.Text = "Back To Login";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::BetterLimitedProject.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(70, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 681);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -125,7 +154,7 @@ namespace BetterLimitedProject
             this.tbName.ForeColor = System.Drawing.SystemColors.InfoText;
             this.tbName.Location = new System.Drawing.Point(365, 136);
             this.tbName.Name = "tbName";
-            this.tbName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbName.Size = new System.Drawing.Size(237, 29);
             this.tbName.TabIndex = 20;
             // 
@@ -146,7 +175,7 @@ namespace BetterLimitedProject
             this.tbUsername.ForeColor = System.Drawing.SystemColors.InfoText;
             this.tbUsername.Location = new System.Drawing.Point(653, 136);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbUsername.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbUsername.Size = new System.Drawing.Size(237, 29);
             this.tbUsername.TabIndex = 22;
             // 
@@ -167,7 +196,7 @@ namespace BetterLimitedProject
             this.tbPassword.ForeColor = System.Drawing.SystemColors.InfoText;
             this.tbPassword.Location = new System.Drawing.Point(365, 226);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbPassword.Size = new System.Drawing.Size(237, 29);
             this.tbPassword.TabIndex = 24;
             // 
@@ -188,7 +217,7 @@ namespace BetterLimitedProject
             this.tbPasswordConfirm.ForeColor = System.Drawing.SystemColors.InfoText;
             this.tbPasswordConfirm.Location = new System.Drawing.Point(653, 226);
             this.tbPasswordConfirm.Name = "tbPasswordConfirm";
-            this.tbPasswordConfirm.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbPasswordConfirm.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbPasswordConfirm.Size = new System.Drawing.Size(237, 29);
             this.tbPasswordConfirm.TabIndex = 26;
             // 
@@ -289,35 +318,6 @@ namespace BetterLimitedProject
             this.dtpHireDate.Name = "dtpHireDate";
             this.dtpHireDate.Size = new System.Drawing.Size(283, 29);
             this.dtpHireDate.TabIndex = 41;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(17)))), ((int)(((byte)(24)))));
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.btnLogin.Location = new System.Drawing.Point(0, 613);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(314, 65);
-            this.btnLogin.TabIndex = 42;
-            this.btnLogin.Text = "Back To Login";
-            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::BetterLimitedProject.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 681);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // RegisterForm
             // 

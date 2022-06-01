@@ -16,7 +16,7 @@ namespace BetterLimitedProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EditProduct());
+            Application.Run(new LoginForm());
         }
     }
 }
