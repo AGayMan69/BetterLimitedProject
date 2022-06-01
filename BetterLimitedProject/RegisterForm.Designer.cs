@@ -53,6 +53,11 @@ namespace BetterLimitedProject
             this.cboDepartment = new System.Windows.Forms.ComboBox();
             this.cboPosition = new System.Windows.Forms.ComboBox();
             this.dtpHireDate = new System.Windows.Forms.DateTimePicker();
+            this.lblErrName = new System.Windows.Forms.Label();
+            this.lblErrEmail = new System.Windows.Forms.Label();
+            this.lblErrCPW = new System.Windows.Forms.Label();
+            this.lblErrUsername = new System.Windows.Forms.Label();
+            this.lblErrPW = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -157,7 +162,6 @@ namespace BetterLimitedProject
             this.tbName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbName.Size = new System.Drawing.Size(237, 29);
             this.tbName.TabIndex = 20;
-            this.tbName.Text = "s";
             this.tbName.Validating += new System.ComponentModel.CancelEventHandler(this.tbName_Validating);
             // 
             // label1
@@ -180,6 +184,7 @@ namespace BetterLimitedProject
             this.tbUsername.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbUsername.Size = new System.Drawing.Size(237, 29);
             this.tbUsername.TabIndex = 22;
+            this.tbUsername.Validating += new System.ComponentModel.CancelEventHandler(this.tbUsername_Validating);
             // 
             // label3
             // 
@@ -201,6 +206,8 @@ namespace BetterLimitedProject
             this.tbPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbPassword.Size = new System.Drawing.Size(237, 29);
             this.tbPassword.TabIndex = 24;
+            this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
+            this.tbPassword.Validating += new System.ComponentModel.CancelEventHandler(this.tbPassword_Validating);
             // 
             // label5
             // 
@@ -222,6 +229,7 @@ namespace BetterLimitedProject
             this.tbPasswordConfirm.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbPasswordConfirm.Size = new System.Drawing.Size(237, 29);
             this.tbPasswordConfirm.TabIndex = 26;
+            this.tbPasswordConfirm.Validating += new System.ComponentModel.CancelEventHandler(this.tbPasswordConfirm_Validating);
             // 
             // label6
             // 
@@ -243,6 +251,7 @@ namespace BetterLimitedProject
             this.tbEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbEmail.Size = new System.Drawing.Size(237, 29);
             this.tbEmail.TabIndex = 28;
+            this.tbEmail.Validating += new System.ComponentModel.CancelEventHandler(this.tbEmail_Validating);
             // 
             // label7
             // 
@@ -321,12 +330,67 @@ namespace BetterLimitedProject
             this.dtpHireDate.Size = new System.Drawing.Size(283, 29);
             this.dtpHireDate.TabIndex = 41;
             // 
+            // lblErrName
+            // 
+            this.lblErrName.AutoSize = true;
+            this.lblErrName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblErrName.Location = new System.Drawing.Point(370, 168);
+            this.lblErrName.Name = "lblErrName";
+            this.lblErrName.Size = new System.Drawing.Size(0, 21);
+            this.lblErrName.TabIndex = 42;
+            this.lblErrName.Visible = false;
+            // 
+            // lblErrEmail
+            // 
+            this.lblErrEmail.AutoSize = true;
+            this.lblErrEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblErrEmail.Location = new System.Drawing.Point(374, 357);
+            this.lblErrEmail.Name = "lblErrEmail";
+            this.lblErrEmail.Size = new System.Drawing.Size(0, 21);
+            this.lblErrEmail.TabIndex = 43;
+            this.lblErrEmail.Visible = false;
+            // 
+            // lblErrCPW
+            // 
+            this.lblErrCPW.AutoSize = true;
+            this.lblErrCPW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblErrCPW.Location = new System.Drawing.Point(659, 262);
+            this.lblErrCPW.Name = "lblErrCPW";
+            this.lblErrCPW.Size = new System.Drawing.Size(0, 21);
+            this.lblErrCPW.TabIndex = 44;
+            this.lblErrCPW.Visible = false;
+            // 
+            // lblErrUsername
+            // 
+            this.lblErrUsername.AutoSize = true;
+            this.lblErrUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblErrUsername.Location = new System.Drawing.Point(663, 172);
+            this.lblErrUsername.Name = "lblErrUsername";
+            this.lblErrUsername.Size = new System.Drawing.Size(0, 21);
+            this.lblErrUsername.TabIndex = 45;
+            this.lblErrUsername.Visible = false;
+            // 
+            // lblErrPW
+            // 
+            this.lblErrPW.AutoSize = true;
+            this.lblErrPW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblErrPW.Location = new System.Drawing.Point(378, 262);
+            this.lblErrPW.Name = "lblErrPW";
+            this.lblErrPW.Size = new System.Drawing.Size(0, 21);
+            this.lblErrPW.TabIndex = 46;
+            this.lblErrPW.Visible = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblErrPW);
+            this.Controls.Add(this.lblErrUsername);
+            this.Controls.Add(this.lblErrCPW);
+            this.Controls.Add(this.lblErrEmail);
+            this.Controls.Add(this.lblErrName);
             this.Controls.Add(this.dtpHireDate);
             this.Controls.Add(this.cboPosition);
             this.Controls.Add(this.cboDepartment);
@@ -388,5 +452,10 @@ namespace BetterLimitedProject
         private System.Windows.Forms.ComboBox cboPosition;
         private System.Windows.Forms.DateTimePicker dtpHireDate;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblErrName;
+        private System.Windows.Forms.Label lblErrEmail;
+        private System.Windows.Forms.Label lblErrCPW;
+        private System.Windows.Forms.Label lblErrUsername;
+        private System.Windows.Forms.Label lblErrPW;
     }
 }
