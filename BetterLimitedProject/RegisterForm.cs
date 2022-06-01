@@ -30,6 +30,10 @@ namespace BetterLimitedProject
                     cboDepartment.Items.Add(department);
                 }
             }
+
+            btnLogin.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLogin.Image = (Image)new Bitmap(BetterLimitedProject.Properties.Resources.login_icon, new Size(16,16));
+
         }
 
         private void cboDepartment_SelectedValueChanged(object sender, EventArgs e)
@@ -49,6 +53,16 @@ namespace BetterLimitedProject
                     cboPosition.Items.Add(position);
                 }
             }
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Abort;
         }
     }
 }

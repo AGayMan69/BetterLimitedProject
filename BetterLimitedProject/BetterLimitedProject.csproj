@@ -241,12 +241,15 @@
       <DependentUpon>dataModel.edmx</DependentUpon>
       <LastGenOutput>dataModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\login-icon.png" />
+    <None Include="Resources\login-icon1.png" />
+    <None Include="Resources\login-icon1.jpg" />
+    <None Include="Resources\login-icon.jpg" />
     <None Include="Resources\password-show2.png" />
     <None Include="Resources\password-hide.png" />
     <None Include="Resources\password-show.png" />
     <None Include="Resources\password-show.jpg" />
     <None Include="Resources\noun-login-3549890 1.png" />
-    <None Include="Resources\login-icon.jpg" />
     <None Include="Resources\logo.jpg" />
   </ItemGroup>
   <ItemGroup>

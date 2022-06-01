@@ -165,5 +165,13 @@ namespace BetterLimitedProject
                 }
             }
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            RegisterForm regfrm = new RegisterForm();
+            this.Hide();
+            regfrm.ShowDialog();
+            this.Show();
+        }
     }
 } 

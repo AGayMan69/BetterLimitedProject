@@ -63,7 +63,7 @@ namespace BetterLimitedProject
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 51.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(717, 210);
+            this.label1.Location = new System.Drawing.Point(717, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(355, 82);
             this.label1.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace BetterLimitedProject
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(687, 339);
+            this.lblUsername.Location = new System.Drawing.Point(687, 314);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(129, 32);
             this.lblUsername.TabIndex = 4;
@@ -83,7 +83,7 @@ namespace BetterLimitedProject
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(687, 412);
+            this.label2.Location = new System.Drawing.Point(687, 387);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 32);
             this.label2.TabIndex = 6;
@@ -93,7 +93,7 @@ namespace BetterLimitedProject
             // 
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.tbPassword.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.tbPassword.Location = new System.Drawing.Point(826, 406);
+            this.tbPassword.Location = new System.Drawing.Point(826, 381);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(284, 43);
             this.tbPassword.TabIndex = 5;
@@ -105,7 +105,7 @@ namespace BetterLimitedProject
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label3.Location = new System.Drawing.Point(928, 465);
+            this.label3.Location = new System.Drawing.Point(928, 440);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 21);
             this.label3.TabIndex = 8;
@@ -117,10 +117,10 @@ namespace BetterLimitedProject
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(693, 534);
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.btnLogin.Location = new System.Drawing.Point(694, 487);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(174, 65);
+            this.btnLogin.Size = new System.Drawing.Size(416, 65);
             this.btnLogin.TabIndex = 9;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -135,18 +135,19 @@ namespace BetterLimitedProject
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
-            this.btnRegister.Location = new System.Drawing.Point(936, 534);
+            this.btnRegister.Location = new System.Drawing.Point(694, 567);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(174, 65);
+            this.btnRegister.Size = new System.Drawing.Size(416, 65);
             this.btnRegister.TabIndex = 10;
             this.btnRegister.Text = "REGISTER";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // tbUsername
             // 
             this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.tbUsername.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.tbUsername.Location = new System.Drawing.Point(826, 333);
+            this.tbUsername.Location = new System.Drawing.Point(826, 308);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(284, 43);
             this.tbUsername.TabIndex = 1;
@@ -157,7 +158,7 @@ namespace BetterLimitedProject
             // 
             this.passwordPic.BackColor = System.Drawing.Color.White;
             this.passwordPic.Image = global::BetterLimitedProject.Properties.Resources.password_show2;
-            this.passwordPic.Location = new System.Drawing.Point(1058, 409);
+            this.passwordPic.Location = new System.Drawing.Point(1058, 384);
             this.passwordPic.Margin = new System.Windows.Forms.Padding(0);
             this.passwordPic.Name = "passwordPic";
             this.passwordPic.Size = new System.Drawing.Size(51, 38);
@@ -181,7 +182,7 @@ namespace BetterLimitedProject
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Image = global::BetterLimitedProject.Properties.Resources.noun_login_3549890_1;
-            this.pictureBox2.Location = new System.Drawing.Point(731, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(721, -16);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(338, 204);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -208,6 +209,7 @@ namespace BetterLimitedProject
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Better Limited - Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
