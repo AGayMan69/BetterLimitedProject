@@ -107,6 +107,9 @@
     <Compile Include="buyorder.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="category.cs">
+      <DependentUpon>dataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="customer.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
@@ -264,6 +267,9 @@
     </Compile>
     <Compile Include="ResetPasswdForm.Designer.cs">
       <DependentUpon>ResetPasswdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="resetpassword_request.cs">
+      <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="retail_store.cs">
       <DependentUpon>dataModel.tt</DependentUpon>

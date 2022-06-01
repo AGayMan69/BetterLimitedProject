@@ -122,6 +122,7 @@ namespace BetterLimitedProject
             this.btnSubmit.TabIndex = 11;
             this.btnSubmit.Text = "SUBMIT";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnNext
             // 

@@ -47,5 +47,7 @@ namespace BetterLimitedProject
         public DbSet<warehouse> warehouses { get; set; }
         public DbSet<warehouse_product> warehouse_product { get; set; }
         public DbSet<worker> workers { get; set; }
+        public DbSet<resetpassword_request> resetpassword_request { get; set; }
+        public DbSet<category> categories { get; set; }
     }
 }

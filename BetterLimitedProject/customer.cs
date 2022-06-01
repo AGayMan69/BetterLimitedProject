@@ -17,6 +17,7 @@ namespace BetterLimitedProject
         public customer()
         {
             this.reservations = new HashSet<reservation>();
+            this.buyorders = new HashSet<buyorder>();
         }
     
         public int user_ID { get; set; }
@@ -26,5 +27,6 @@ namespace BetterLimitedProject
         public string address { get; set; }
     
         public virtual ICollection<reservation> reservations { get; set; }
+        public virtual ICollection<buyorder> buyorders { get; set; }
     }
 }

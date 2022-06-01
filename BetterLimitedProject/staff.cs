@@ -22,6 +22,7 @@ namespace BetterLimitedProject
             this.replenishments = new HashSet<replenishment>();
             this.retail_store = new HashSet<retail_store>();
             this.warehouses = new HashSet<warehouse>();
+            this.resetpassword_request = new HashSet<resetpassword_request>();
         }
     
         public int staff_ID { get; set; }
@@ -43,5 +44,6 @@ namespace BetterLimitedProject
         public virtual ICollection<replenishment> replenishments { get; set; }
         public virtual ICollection<retail_store> retail_store { get; set; }
         public virtual ICollection<warehouse> warehouses { get; set; }
+        public virtual ICollection<resetpassword_request> resetpassword_request { get; set; }
     }
 }

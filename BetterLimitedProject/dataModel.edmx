@@ -16,6 +16,13 @@
           <Property Name="installation_ID" Type="int" />
           <Property Name="total_price" Type="float" Nullable="false" />
         </EntityType>
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="category_ID" />
+          </Key>
+          <Property Name="category_ID" Type="int" Nullable="false" />
+          <Property Name="category_name" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
         <EntityType Name="customer">
           <Key>
             <PropertyRef Name="user_ID" />
@@ -127,6 +134,7 @@
           <Property Name="weight" Type="float" Nullable="false" />
           <Property Name="dimension" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="image_link" Type="varchar" MaxLength="255" />
+          <Property Name="image" Type="blob" />
         </EntityType>
         <EntityType Name="purchaseorder">
           <Key>
@@ -176,6 +184,14 @@
           <Property Name="qty" Type="int" Nullable="false" />
           <Property Name="reservation_date" Type="date" Nullable="false" />
           <Property Name="complete_date" Type="date" />
+        </EntityType>
+        <EntityType Name="resetpassword_request">
+          <Key>
+            <PropertyRef Name="request_code" />
+          </Key>
+          <Property Name="request_code" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="staff_ID" Type="int" Nullable="false" />
+          <Property Name="request_time" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="retail_store">
           <Key>
@@ -258,6 +274,18 @@
             </Principal>
             <Dependent Role="buyorder">
               <PropertyRef Name="delivery_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKBuyOrdercustomerID">
+          <End Role="customer" Type="Self.customer" Multiplicity="1" />
+          <End Role="buyorder" Type="Self.buyorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="user_ID" />
+            </Principal>
+            <Dependent Role="buyorder">
+              <PropertyRef Name="customer_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -378,6 +406,18 @@
             </Principal>
             <Dependent Role="orderline">
               <PropertyRef Name="product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKproductCategoryID">
+          <End Role="category" Type="Self.category" Multiplicity="1" />
+          <End Role="product" Type="Self.product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="category">
+              <PropertyRef Name="category_ID" />
+            </Principal>
+            <Dependent Role="product">
+              <PropertyRef Name="category_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -573,6 +613,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FKstaffID">
+          <End Role="staff" Type="Self.staff" Multiplicity="1" />
+          <End Role="resetpassword_request" Type="Self.resetpassword_request" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_ID" />
+            </Principal>
+            <Dependent Role="resetpassword_request">
+              <PropertyRef Name="staff_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FKWarehouse_192567">
           <End Role="warehouse" Type="Self.warehouse" Multiplicity="1" />
           <End Role="warehouse_product" Type="Self.warehouse_product" Multiplicity="*" />
@@ -635,6 +687,7 @@
         </Association>
         <EntityContainer Name="betterlimitedModelStoreContainer">
           <EntitySet Name="buyorder" EntityType="Self.buyorder" Schema="betterlimited" store:Type="Tables" />
+          <EntitySet Name="category" EntityType="Self.category" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="customer" EntityType="Self.customer" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="defect" EntityType="Self.defect" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="delivery" EntityType="Self.delivery" Schema="betterlimited" store:Type="Tables" />
@@ -650,6 +703,7 @@
           <EntitySet Name="replenishment" EntityType="Self.replenishment" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="replenishment_product" EntityType="Self.replenishment_product" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="reservation" EntityType="Self.reservation" Schema="betterlimited" store:Type="Tables" />
+          <EntitySet Name="resetpassword_request" EntityType="Self.resetpassword_request" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="retail_store" EntityType="Self.retail_store" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="retail_store_product" EntityType="Self.retail_store_product" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="staff" EntityType="Self.staff" Schema="betterlimited" store:Type="Tables" />
@@ -658,6 +712,10 @@
           <EntitySet Name="worker" EntityType="Self.worker" Schema="betterlimited" store:Type="Tables" />
           <AssociationSet Name="FKBuyOrder843053" Association="Self.FKBuyOrder843053">
             <End Role="delivery" EntitySet="delivery" />
+            <End Role="buyorder" EntitySet="buyorder" />
+          </AssociationSet>
+          <AssociationSet Name="FKBuyOrdercustomerID" Association="Self.FKBuyOrdercustomerID">
+            <End Role="customer" EntitySet="customer" />
             <End Role="buyorder" EntitySet="buyorder" />
           </AssociationSet>
           <AssociationSet Name="FKDefect544799" Association="Self.FKDefect544799">
@@ -699,6 +757,10 @@
           <AssociationSet Name="FKOrderLine592221" Association="Self.FKOrderLine592221">
             <End Role="product" EntitySet="product" />
             <End Role="orderline" EntitySet="orderline" />
+          </AssociationSet>
+          <AssociationSet Name="FKproductCategoryID" Association="Self.FKproductCategoryID">
+            <End Role="category" EntitySet="category" />
+            <End Role="product" EntitySet="product" />
           </AssociationSet>
           <AssociationSet Name="FKPurchaseOr784407" Association="Self.FKPurchaseOr784407">
             <End Role="staff" EntitySet="staff" />
@@ -764,6 +826,10 @@
             <End Role="position" EntitySet="position" />
             <End Role="staff" EntitySet="staff" />
           </AssociationSet>
+          <AssociationSet Name="FKstaffID" Association="Self.FKstaffID">
+            <End Role="staff" EntitySet="staff" />
+            <End Role="resetpassword_request" EntitySet="resetpassword_request" />
+          </AssociationSet>
           <AssociationSet Name="FKWarehouse_192567" Association="Self.FKWarehouse_192567">
             <End Role="warehouse" EntitySet="warehouse" />
             <End Role="warehouse_product" EntitySet="warehouse_product" />
@@ -802,6 +868,7 @@
           <NavigationProperty Name="delivery" Relationship="Self.FKBuyOrder843053" FromRole="buyorder" ToRole="delivery" />
           <NavigationProperty Name="installations" Relationship="Self.FKInstallati134709" FromRole="buyorder" ToRole="installation" />
           <NavigationProperty Name="orderlines" Relationship="Self.FKOrderLine431184" FromRole="buyorder" ToRole="orderline" />
+          <NavigationProperty Name="customer" Relationship="betterlimitedModel.FKBuyOrdercustomerID" FromRole="buyorder" ToRole="customer" />
         </EntityType>
         <EntityType Name="customer">
           <Key>
@@ -813,6 +880,7 @@
           <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="reservations" Relationship="Self.FKReservatio648681" FromRole="customer" ToRole="reservation" />
+          <NavigationProperty Name="buyorders" Relationship="betterlimitedModel.FKBuyOrdercustomerID" FromRole="customer" ToRole="buyorder" />
         </EntityType>
         <EntityType Name="defect">
           <Key>
@@ -941,6 +1009,8 @@
           <NavigationProperty Name="reservations" Relationship="Self.FKReservatio826341" FromRole="product" ToRole="reservation" />
           <NavigationProperty Name="retail_store_product" Relationship="Self.FKRetail_Sto859037" FromRole="product" ToRole="retail_store_product" />
           <NavigationProperty Name="warehouse_product" Relationship="Self.FKWarehouse_549814" FromRole="product" ToRole="warehouse_product" />
+          <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="category" Relationship="betterlimitedModel.FKproductCategoryID" FromRole="product" ToRole="category" />
         </EntityType>
         <EntityType Name="purchaseorder">
           <Key>
@@ -1056,6 +1126,7 @@
           <NavigationProperty Name="replenishments" Relationship="Self.FKReplenishm316808" FromRole="staff" ToRole="replenishment" />
           <NavigationProperty Name="retail_store" Relationship="Self.FKRetail_Sto624655" FromRole="staff" ToRole="retail_store" />
           <NavigationProperty Name="warehouses" Relationship="Self.FKWarehouse741635" FromRole="staff" ToRole="warehouse" />
+          <NavigationProperty Name="resetpassword_request" Relationship="betterlimitedModel.FKstaffID" FromRole="staff" ToRole="resetpassword_request" />
         </EntityType>
         <EntityType Name="warehouse">
           <Key>
@@ -1620,6 +1691,20 @@
             <End Role="department" EntitySet="departments" />
             <End Role="position" EntitySet="positions" />
           </AssociationSet>
+          <EntitySet Name="resetpassword_request" EntityType="betterlimitedModel.resetpassword_request" />
+          <AssociationSet Name="FKstaffID" Association="betterlimitedModel.FKstaffID">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="resetpassword_request" EntitySet="resetpassword_request" />
+          </AssociationSet>
+          <EntitySet Name="categories" EntityType="betterlimitedModel.category" />
+          <AssociationSet Name="FKBuyOrdercustomerID" Association="betterlimitedModel.FKBuyOrdercustomerID">
+            <End Role="customer" EntitySet="customers" />
+            <End Role="buyorder" EntitySet="buyorders" />
+          </AssociationSet>
+          <AssociationSet Name="FKproductCategoryID" Association="betterlimitedModel.FKproductCategoryID">
+            <End Role="category" EntitySet="categories" />
+            <End Role="product" EntitySet="products" />
+          </AssociationSet>
         </EntityContainer>
         <Association Name="position_department_department_ID_fk">
           <End Type="betterlimitedModel.department" Role="department" Multiplicity="0..1" />
@@ -1630,6 +1715,59 @@
             </Principal>
             <Dependent Role="position">
               <PropertyRef Name="department_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="resetpassword_request">
+          <Key>
+            <PropertyRef Name="request_code" />
+          </Key>
+          <Property Name="request_code" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="staff_ID" Type="Int32" Nullable="false" />
+          <Property Name="request_time" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKstaffID" FromRole="resetpassword_request" ToRole="staff" />
+        </EntityType>
+        <Association Name="FKstaffID">
+          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1" />
+          <End Type="betterlimitedModel.resetpassword_request" Role="resetpassword_request" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_ID" />
+            </Principal>
+            <Dependent Role="resetpassword_request">
+              <PropertyRef Name="staff_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="category_ID" />
+          </Key>
+          <Property Name="category_ID" Type="Int32" Nullable="false" />
+          <Property Name="category_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="products" Relationship="betterlimitedModel.FKproductCategoryID" FromRole="category" ToRole="product" />
+        </EntityType>
+        <Association Name="FKBuyOrdercustomerID">
+          <End Type="betterlimitedModel.customer" Role="customer" Multiplicity="1" />
+          <End Type="betterlimitedModel.buyorder" Role="buyorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="user_ID" />
+            </Principal>
+            <Dependent Role="buyorder">
+              <PropertyRef Name="customer_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKproductCategoryID">
+          <End Type="betterlimitedModel.category" Role="category" Multiplicity="1" />
+          <End Type="betterlimitedModel.product" Role="product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="category">
+              <PropertyRef Name="category_ID" />
+            </Principal>
+            <Dependent Role="product">
+              <PropertyRef Name="category_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1757,6 +1895,7 @@
           <EntitySetMapping Name="products">
             <EntityTypeMapping TypeName="betterlimitedModel.product">
               <MappingFragment StoreEntitySet="product">
+                <ScalarProperty Name="image" ColumnName="image" />
                 <ScalarProperty Name="product_ID" ColumnName="product_ID" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="category_ID" ColumnName="category_ID" />
@@ -1894,6 +2033,23 @@
                 <ScalarProperty Name="hire_date" ColumnName="hire_date" />
                 <ScalarProperty Name="DOB" ColumnName="DOB" />
                 <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="resetpassword_request">
+            <EntityTypeMapping TypeName="betterlimitedModel.resetpassword_request">
+              <MappingFragment StoreEntitySet="resetpassword_request">
+                <ScalarProperty Name="request_time" ColumnName="request_time" />
+                <ScalarProperty Name="staff_ID" ColumnName="staff_ID" />
+                <ScalarProperty Name="request_code" ColumnName="request_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categories">
+            <EntityTypeMapping TypeName="betterlimitedModel.category">
+              <MappingFragment StoreEntitySet="category">
+                <ScalarProperty Name="category_name" ColumnName="category_name" />
+                <ScalarProperty Name="category_ID" ColumnName="category_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

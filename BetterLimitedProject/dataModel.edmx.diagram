@@ -59,6 +59,11 @@
         <AssociationConnector Association="betterlimitedModel.FKWarehouse741635" ManuallyRouted="false" />
         <AssociationConnector Association="betterlimitedModel.FKWarehouse_192567" ManuallyRouted="false" />
         <AssociationConnector Association="betterlimitedModel.position_department_department_ID_fk" />
+        <EntityTypeShape EntityType="betterlimitedModel.resetpassword_request" Width="1.5" PointX="5.25" PointY="11" />
+        <AssociationConnector Association="betterlimitedModel.FKstaffID" />
+        <EntityTypeShape EntityType="betterlimitedModel.category" Width="1.5" PointX="8.25" PointY="2.5" />
+        <AssociationConnector Association="betterlimitedModel.FKBuyOrdercustomerID" />
+        <AssociationConnector Association="betterlimitedModel.FKproductCategoryID" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

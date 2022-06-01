@@ -34,6 +34,7 @@ namespace BetterLimitedProject
         public float weight { get; set; }
         public string dimension { get; set; }
         public string image_link { get; set; }
+        public byte[] image { get; set; }
     
         public virtual ICollection<defect> defects { get; set; }
         public virtual ICollection<orderline> orderlines { get; set; }
@@ -41,5 +42,6 @@ namespace BetterLimitedProject
         public virtual ICollection<reservation> reservations { get; set; }
         public virtual ICollection<retail_store_product> retail_store_product { get; set; }
         public virtual ICollection<warehouse_product> warehouse_product { get; set; }
+        public virtual category category { get; set; }
     }
 }
