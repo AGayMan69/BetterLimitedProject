@@ -116,6 +116,12 @@
     <Compile Include="department.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ForgetPasswdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPasswdForm.Designer.cs">
+      <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory\InventoryArraDeliveryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,12 @@
     <Compile Include="reservation.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ResetPasswdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPasswdForm.Designer.cs">
+      <DependentUpon>ResetPasswdForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="retail_store.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
@@ -331,6 +343,9 @@
     <EmbeddedResource Include="Accounting\AccountingVwStockForm.resx">
       <DependentUpon>AccountingVwStockForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPasswdForm.resx">
+      <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryArraDeliveryForm.resx">
       <DependentUpon>InventoryArraDeliveryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPasswdForm.resx">
+      <DependentUpon>ResetPasswdForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesCreaOrderForm.resx">
       <DependentUpon>SalesCreaOrderForm.cs</DependentUpon>

@@ -30,20 +30,20 @@ namespace BetterLimitedProject
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblPasswd = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.passwordPic = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +57,17 @@ namespace BetterLimitedProject
             this.panel1.Padding = new System.Windows.Forms.Padding(70, 0, 70, 0);
             this.panel1.Size = new System.Drawing.Size(507, 681);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::BetterLimitedProject.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(70, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(367, 681);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -100,16 +111,17 @@ namespace BetterLimitedProject
             this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
             this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
             // 
-            // label3
+            // lblPasswd
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.label3.Location = new System.Drawing.Point(928, 440);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 21);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Forgot your password?";
+            this.lblPasswd.AutoSize = true;
+            this.lblPasswd.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.lblPasswd.Location = new System.Drawing.Point(928, 440);
+            this.lblPasswd.Name = "lblPasswd";
+            this.lblPasswd.Size = new System.Drawing.Size(182, 21);
+            this.lblPasswd.TabIndex = 8;
+            this.lblPasswd.Text = "Forgot your password?";
+            this.lblPasswd.Click += new System.EventHandler(this.lblPasswd_Click);
             // 
             // btnLogin
             // 
@@ -167,17 +179,6 @@ namespace BetterLimitedProject
             this.passwordPic.TabStop = false;
             this.passwordPic.Click += new System.EventHandler(this.passwordPic_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::BetterLimitedProject.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(367, 681);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -197,7 +198,7 @@ namespace BetterLimitedProject
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblPasswd);
             this.Controls.Add(this.passwordPic);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbPassword);
@@ -213,8 +214,8 @@ namespace BetterLimitedProject
             this.Text = "Better Limited - Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,7 +232,7 @@ namespace BetterLimitedProject
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.PictureBox passwordPic;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPasswd;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.TextBox tbUsername;

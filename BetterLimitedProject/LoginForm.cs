@@ -173,5 +173,13 @@ namespace BetterLimitedProject
             regfrm.ShowDialog();
             this.Show();
         }
+
+        private void lblPasswd_Click(object sender, EventArgs e)
+        {
+            ForgetPasswdForm forgetPasswdForm = new ForgetPasswdForm();
+            this.Hide();
+            forgetPasswdForm.ShowDialog();
+            this.Show();
+        }
     }
 } 
