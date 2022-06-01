@@ -36,12 +36,17 @@
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,6 +88,11 @@
     <Compile Include="Accounting\AccountingVwStockForm.Designer.cs">
       <DependentUpon>AccountingVwStockForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="betterlimitedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>betterlimitedDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="buyorder.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
@@ -121,6 +131,12 @@
     </Compile>
     <Compile Include="ForgetPasswdForm.Designer.cs">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProduct.Designer.cs">
+      <DependentUpon>EditProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\InventoryArraDeliveryForm.cs">
       <SubType>Form</SubType>
@@ -343,6 +359,9 @@
     <EmbeddedResource Include="Accounting\AccountingVwStockForm.resx">
       <DependentUpon>AccountingVwStockForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgetPasswdForm.resx">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -438,6 +457,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>dataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="betterlimitedDataSet.xsc">
+      <DependentUpon>betterlimitedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="betterlimitedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>betterlimitedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="betterlimitedDataSet.xss">
+      <DependentUpon>betterlimitedDataSet.xsd</DependentUpon>
+    </None>
     <None Include="dataModel.edmx.diagram">
       <DependentUpon>dataModel.edmx</DependentUpon>
     </None>
