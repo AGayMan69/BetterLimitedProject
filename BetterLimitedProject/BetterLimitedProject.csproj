@@ -53,11 +53,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accounting\Accounting.cs">
+    <Compile Include="Accounting\AccountingDashBoardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Accounting\Accounting.Designer.cs">
-      <DependentUpon>Accounting.cs</DependentUpon>
+    <Compile Include="Accounting\AccountingDashBoardForm.Designer.cs">
+      <DependentUpon>AccountingDashBoardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\AccountingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountingForm.Designer.cs">
+      <DependentUpon>AccountingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\AccountingHomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountingHomeForm.Designer.cs">
+      <DependentUpon>AccountingHomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\AccountingVwOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountingVwOrderForm.Designer.cs">
+      <DependentUpon>AccountingVwOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\AccountingVwStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountingVwStockForm.Designer.cs">
+      <DependentUpon>AccountingVwStockForm.cs</DependentUpon>
     </Compile>
     <Compile Include="buyorder.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
@@ -92,11 +116,53 @@
     <Compile Include="department.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\Inventory.cs">
+    <Compile Include="Inventory\InventoryArraDeliveryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory\Inventory.Designer.cs">
-      <DependentUpon>Inventory.cs</DependentUpon>
+    <Compile Include="Inventory\InventoryArraDeliveryForm.Designer.cs">
+      <DependentUpon>InventoryArraDeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryHomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryHomeForm.Designer.cs">
+      <DependentUpon>InventoryHomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryPurGoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryPurGoodForm.Designer.cs">
+      <DependentUpon>InventoryPurGoodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryRestockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryRestockForm.Designer.cs">
+      <DependentUpon>InventoryRestockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryVwDeliveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryVwDeliveryForm.Designer.cs">
+      <DependentUpon>InventoryVwDeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryVwGoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryVwGoodForm.Designer.cs">
+      <DependentUpon>InventoryVwGoodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryVwStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryVwStockForm.Designer.cs">
+      <DependentUpon>InventoryVwStockForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -121,14 +187,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Purchase\Purchase.cs">
+    <Compile Include="Purchase\PurchaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purchase\Purchase.Designer.cs">
-      <DependentUpon>Purchase.cs</DependentUpon>
+    <Compile Include="Purchase\PurchaseForm.Designer.cs">
+      <DependentUpon>PurchaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="purchaseorder.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PurchaseHdlDefectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\PurchaseHdlDefectForm.Designer.cs">
+      <DependentUpon>PurchaseHdlDefectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PurchaseHomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\PurchaseHomeForm.Designer.cs">
+      <DependentUpon>PurchaseHomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PurchaseVwPurchaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\PurchaseVwPurchaseForm.Designer.cs">
+      <DependentUpon>PurchaseVwPurchaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
@@ -154,20 +238,74 @@
     <Compile Include="retail_store_product.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Sales\Sales.cs">
+    <Compile Include="Sales\SalesCreaOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sales\Sales.Designer.cs">
-      <DependentUpon>Sales.cs</DependentUpon>
+    <Compile Include="Sales\SalesCreaOrderForm.Designer.cs">
+      <DependentUpon>SalesCreaOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesDefectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesDefectForm.Designer.cs">
+      <DependentUpon>SalesDefectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesHomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesHomeForm.Designer.cs">
+      <DependentUpon>SalesHomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesPayReserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesPayReserForm.Designer.cs">
+      <DependentUpon>SalesPayReserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesForm.Designer.cs">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesVwOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesVwOrderForm.Designer.cs">
+      <DependentUpon>SalesVwOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesVwStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesVwStockForm.Designer.cs">
+      <DependentUpon>SalesVwStockForm.cs</DependentUpon>
     </Compile>
     <Compile Include="staff.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Technical\Technical.cs">
+    <Compile Include="Technical\TechnicalArraInstallationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Technical\Technical.Designer.cs">
-      <DependentUpon>Technical.cs</DependentUpon>
+    <Compile Include="Technical\TechnicalArraInstallationForm.Designer.cs">
+      <DependentUpon>TechnicalArraInstallationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Technical\TechnicalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Technical\TechnicalForm.Designer.cs">
+      <DependentUpon>TechnicalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Technical\TechnicalHomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Technical\TechnicalHomeForm.Designer.cs">
+      <DependentUpon>TechnicalHomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Technical\TechnicalVwInstallationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Technical\TechnicalVwInstallationForm.Designer.cs">
+      <DependentUpon>TechnicalVwInstallationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="warehouse.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
@@ -178,11 +316,44 @@
     <Compile Include="worker.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Accounting\Accounting.resx">
-      <DependentUpon>Accounting.cs</DependentUpon>
+    <EmbeddedResource Include="Accounting\AccountingDashBoardForm.resx">
+      <DependentUpon>AccountingDashBoardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\Inventory.resx">
-      <DependentUpon>Inventory.cs</DependentUpon>
+    <EmbeddedResource Include="Accounting\AccountingForm.resx">
+      <DependentUpon>AccountingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AccountingHomeForm.resx">
+      <DependentUpon>AccountingHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AccountingVwOrderForm.resx">
+      <DependentUpon>AccountingVwOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AccountingVwStockForm.resx">
+      <DependentUpon>AccountingVwStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryArraDeliveryForm.resx">
+      <DependentUpon>InventoryArraDeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryHomeForm.resx">
+      <DependentUpon>InventoryHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryPurGoodForm.resx">
+      <DependentUpon>InventoryPurGoodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryRestockForm.resx">
+      <DependentUpon>InventoryRestockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryVwDeliveryForm.resx">
+      <DependentUpon>InventoryVwDeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryVwGoodForm.resx">
+      <DependentUpon>InventoryVwGoodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryVwStockForm.resx">
+      <DependentUpon>InventoryVwStockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -197,17 +368,53 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Purchase\Purchase.resx">
-      <DependentUpon>Purchase.cs</DependentUpon>
+    <EmbeddedResource Include="Purchase\PurchaseForm.resx">
+      <DependentUpon>PurchaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PurchaseHdlDefectForm.resx">
+      <DependentUpon>PurchaseHdlDefectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PurchaseHomeForm.resx">
+      <DependentUpon>PurchaseHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PurchaseVwPurchaseForm.resx">
+      <DependentUpon>PurchaseVwPurchaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sales\Sales.resx">
-      <DependentUpon>Sales.cs</DependentUpon>
+    <EmbeddedResource Include="Sales\SalesCreaOrderForm.resx">
+      <DependentUpon>SalesCreaOrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Technical\Technical.resx">
-      <DependentUpon>Technical.cs</DependentUpon>
+    <EmbeddedResource Include="Sales\SalesDefectForm.resx">
+      <DependentUpon>SalesDefectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesHomeForm.resx">
+      <DependentUpon>SalesHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesForm.resx">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesPayReserForm.resx">
+      <DependentUpon>SalesPayReserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesVwOrderForm.resx">
+      <DependentUpon>SalesVwOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesVwStockForm.resx">
+      <DependentUpon>SalesVwStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical\TechnicalArraInstallationForm.resx">
+      <DependentUpon>TechnicalArraInstallationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical\TechnicalForm.resx">
+      <DependentUpon>TechnicalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical\TechnicalHomeForm.resx">
+      <DependentUpon>TechnicalHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical\TechnicalVwInstallationForm.resx">
+      <DependentUpon>TechnicalVwInstallationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="dataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -241,6 +448,7 @@
       <DependentUpon>dataModel.edmx</DependentUpon>
       <LastGenOutput>dataModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\logout-icon.png" />
     <None Include="Resources\login-icon.png" />
     <None Include="Resources\login-icon1.png" />
     <None Include="Resources\login-icon1.jpg" />

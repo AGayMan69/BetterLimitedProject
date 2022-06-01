@@ -1,7 +1,7 @@
 ﻿
-namespace BetterLimitedProject
+namespace BetterLimitedProject.Inventory
 {
-    partial class Technical
+    partial class InventoryVwGoodForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,21 @@ namespace BetterLimitedProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(141, 171);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-9, 263);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(454, 108);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Technical";
+            this.label1.Size = new System.Drawing.Size(1003, 108);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "View Received Goods";
             // 
-            // Technical
+            // InventoryVwGoodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 642);
             this.Controls.Add(this.label1);
-            this.Name = "Technical";
-            this.Text = "Technical";
+            this.Name = "InventoryVwGoodForm";
+            this.Text = "InventoryVwGoodForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

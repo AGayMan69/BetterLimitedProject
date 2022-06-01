@@ -1,7 +1,7 @@
 ﻿
-namespace BetterLimitedProject
+namespace BetterLimitedProject.Technical
 {
-    partial class Inventory
+    partial class TechnicalHomeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,21 @@ namespace BetterLimitedProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(141, 171);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(251, 260);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(439, 108);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Inventory";
+            this.label1.Size = new System.Drawing.Size(304, 108);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Home";
             // 
-            // Inventory
+            // TechnicalHomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 642);
             this.Controls.Add(this.label1);
-            this.Name = "Inventory";
-            this.Text = "Inventory";
+            this.Name = "TechnicalHomeForm";
+            this.Text = "TechnicalHomeForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

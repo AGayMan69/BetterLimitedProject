@@ -135,23 +135,23 @@ namespace BetterLimitedProject
                         switch (user.department_ID)
                         {
                             case 1:
-                                Sales salefrm = new Sales();
+                                SalesForm salefrm = new SalesForm();
                                 salefrm.ShowDialog();
                                 break;
                             case 2:
-                                Inventory invenfrm = new Inventory();
+                                InventoryForm invenfrm = new InventoryForm();
                                 invenfrm.ShowDialog();
                                 break;
                             case 3:
-                                Technical techfrm = new Technical();
+                                TechnicalForm techfrm = new TechnicalForm();
                                 techfrm.ShowDialog();
                                 break;
                             case 4:
-                                Accounting accfrm = new Accounting();
+                                AccountingForm accfrm = new AccountingForm();
                                 accfrm.ShowDialog();
                                 break;
                             case 5:
-                                Purchase purfrm = new Purchase();
+                                PurchaseForm purfrm = new PurchaseForm();
                                 purfrm.ShowDialog();
                                 break;
                         } 

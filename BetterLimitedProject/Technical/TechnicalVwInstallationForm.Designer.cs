@@ -1,7 +1,7 @@
 ﻿
-namespace BetterLimitedProject
+namespace BetterLimitedProject.Technical
 {
-    partial class Accounting
+    partial class TechnicalVwInstallationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,21 @@ namespace BetterLimitedProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(111, 153);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(117, 266);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(518, 108);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Accounting";
+            this.label1.Size = new System.Drawing.Size(752, 108);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "View Installation";
             // 
-            // Accounting
+            // TechnicalVwInstallationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 642);
             this.Controls.Add(this.label1);
-            this.Name = "Accounting";
-            this.Text = "Accounting";
+            this.Name = "TechnicalVwInstallationForm";
+            this.Text = "TechnicalVwInstallationForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

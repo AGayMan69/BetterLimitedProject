@@ -55,11 +55,6 @@ namespace BetterLimitedProject
             }
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Abort;

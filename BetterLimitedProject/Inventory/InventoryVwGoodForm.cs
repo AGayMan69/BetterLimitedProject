@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BetterLimitedProject
+namespace BetterLimitedProject.Inventory
 {
-    public partial class Technical : Form
+    public partial class InventoryVwGoodForm : Form
     {
-        public Technical()
+        public InventoryVwGoodForm()
         {
             InitializeComponent();
         }

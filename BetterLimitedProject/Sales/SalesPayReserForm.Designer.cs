@@ -1,7 +1,7 @@
 ﻿
-namespace BetterLimitedProject
+namespace BetterLimitedProject.Sales
 {
-    partial class Purchase
+    partial class SalesPayReserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,21 @@ namespace BetterLimitedProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(141, 171);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(80, 259);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(523, 108);
+            this.label1.Size = new System.Drawing.Size(761, 108);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Purchasing";
+            this.label1.Text = "Pay Reservation";
             // 
-            // Purchase
+            // SalesPayReserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 642);
             this.Controls.Add(this.label1);
-            this.Name = "Purchase";
-            this.Text = "Purchase";
+            this.Name = "SalesPayReserForm";
+            this.Text = "PayReserForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
