@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace BetterLimitedProject
 {
@@ -62,9 +63,98 @@ namespace BetterLimitedProject
 
         private void tbName_Validating(object sender, CancelEventArgs e)
         {
-            if(string.IsNullOrEmpty(tbName.Text))
+            string e1 = "*Please Enter Your Name";
+            if (string.IsNullOrEmpty(tbName.Text))
             {
+                lblErrName.Visible = true;
+                lblErrName.Text = e1;
+            }
+            else
+            {
+                lblErrName.Visible = false;
+                lblErrName.Text = "";
+            }
+        }
 
+        private void tbPassword_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbUsername_Validating(object sender, CancelEventArgs e)
+        {
+            string e1 = "*Please Enter Your Username";
+            string e2 = "*Invalid Username";
+            if (string.IsNullOrEmpty(tbUsername.Text))
+            {
+                lblErrUsername.Visible = true;
+                lblErrUsername.Text = e1;
+            }
+            else
+            {
+                lblErrUsername.Visible = false;
+                lblErrUsername.Text = "";
+            }
+        }
+
+        private void tbPassword_Validating(object sender, CancelEventArgs e)
+        {
+            string e1 = "*Please Enter Your Password";
+            if(string.IsNullOrEmpty(tbPassword.Text))
+            {
+                lblErrPW.Visible = true;
+                lblErrPW.Text = e1;
+            }
+            else
+            {
+                lblErrPW.Visible = false;
+                lblErrPW.Text = "";
+            }
+        }
+
+        private void tbPasswordConfirm_Validating(object sender, CancelEventArgs e)
+        {
+            string e1 = "*Please Confirm Your Password";
+            string e2 = "Your Confirm Password is incorrect";
+            string pw = tbPassword.Text;
+            string cpw = tbPasswordConfirm.Text;
+            if(string.IsNullOrEmpty(tbPasswordConfirm.Text))
+            {
+                lblErrCPW.Visible = true;
+                lblErrCPW.Text = e1;
+            }
+            else if(cpw!=pw)
+            {
+                lblErrCPW.Visible = true;
+                lblErrCPW.Text = e2;
+            }
+            else
+            {
+                lblErrCPW.Visible = false;
+                lblErrCPW.Text = "";
+            }
+            
+        }
+
+        private void tbEmail_Validating(object sender, CancelEventArgs e)
+        {
+            string e1 = "*Please Enter Your Email Address";
+            string e2 = "*Invalid Email Address";
+            // string pattern = "/.+[@].+[.].+/";
+            if (string.IsNullOrEmpty(tbEmail.Text))
+            {
+                lblErrEmail.Visible = true;
+                lblErrEmail.Text = e1;
+            }
+            //if(Regex.IsMatch(tbEmail.Text, pattern))
+           // {
+           //     lblErrEmail.Visible = false;
+           //     lblErrEmail.Text = "";
+           // }
+            else
+            {
+                lblErrEmail.Visible = true;
+                lblErrEmail.Text = e2;
             }
         }
 
