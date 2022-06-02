@@ -4,20 +4,7 @@
     <projectFile>BetterLimitedProject/BetterLimitedProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="Sales POS 2">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_40_PM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_40_PM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_58_PM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_58_PM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_2_6_2022_12_02_AM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_2_6_2022_12_02_AM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="in tab control in create order" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +71,7 @@
       <updated>1654097627923</updated>
       <workItem from="1654097631088" duration="635000" />
       <workItem from="1654098982729" duration="1794000" />
-      <workItem from="1654174789308" duration="323000" />
+      <workItem from="1654174789308" duration="970000" />
     </task>
     <task id="LOCAL-00001" summary="easy">
       <created>1654108350566</created>
@@ -107,7 +94,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654175020821</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="relevant shit">
+      <created>1654175134196</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654175134196</updated>
+    </task>
+    <task id="LOCAL-00005" summary="in tab control in create order">
+      <created>1654178712791</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654178712791</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +133,8 @@
     <MESSAGE value="easy" />
     <MESSAGE value="Sales POS" />
     <MESSAGE value="Sales POS 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sales POS 2" />
+    <MESSAGE value="relevant shit" />
+    <MESSAGE value="in tab control in create order" />
+    <option name="LAST_COMMIT_MESSAGE" value="in tab control in create order" />
   </component>
 </project>
