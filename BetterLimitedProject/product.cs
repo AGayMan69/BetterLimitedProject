@@ -36,12 +36,12 @@ namespace BetterLimitedProject
         public string image_link { get; set; }
         public byte[] image { get; set; }
     
+        public virtual category category { get; set; }
         public virtual ICollection<defect> defects { get; set; }
         public virtual ICollection<orderline> orderlines { get; set; }
         public virtual ICollection<replenishment_product> replenishment_product { get; set; }
         public virtual ICollection<reservation> reservations { get; set; }
         public virtual ICollection<retail_store_product> retail_store_product { get; set; }
         public virtual ICollection<warehouse_product> warehouse_product { get; set; }
-        public virtual category category { get; set; }
     }
 }

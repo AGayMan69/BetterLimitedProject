@@ -30,6 +30,5 @@ namespace BetterLimitedProject
         public virtual delivery delivery { get; set; }
         public virtual ICollection<installation> installations { get; set; }
         public virtual ICollection<orderline> orderlines { get; set; }
-        public virtual customer customer { get; set; }
     }
 }

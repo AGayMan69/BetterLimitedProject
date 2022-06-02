@@ -53,7 +53,7 @@ namespace BetterLimitedProject
 
                 MessageBox.Show("Password Updated.");
             }
-            catch
+            catch (Exception ex)
             {
                 MessageBox.Show("Failed to save password");
             }

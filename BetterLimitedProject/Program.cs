@@ -16,7 +16,7 @@ namespace BetterLimitedProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VerifyResetPasswdForm());
+            Application.Run(new SalesForm());
         }
     }
 }

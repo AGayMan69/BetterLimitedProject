@@ -108,7 +108,6 @@
           <Property Name="product_ID" Type="int" Nullable="false" />
           <Property Name="order_ID" Type="int" Nullable="false" />
           <Property Name="quantity" Type="int" />
-          <Property Name="BuyOrderorder_ID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="position">
           <Key>
@@ -277,18 +276,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKBuyOrdercustomerID">
-          <End Role="customer" Type="Self.customer" Multiplicity="1" />
-          <End Role="buyorder" Type="Self.buyorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="customer">
-              <PropertyRef Name="user_ID" />
-            </Principal>
-            <Dependent Role="buyorder">
-              <PropertyRef Name="customer_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FKDefect544799">
           <End Role="product" Type="Self.product" Multiplicity="1" />
           <End Role="defect" Type="Self.defect" Multiplicity="*" />
@@ -385,18 +372,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKOrderLine431184">
-          <End Role="buyorder" Type="Self.buyorder" Multiplicity="1" />
-          <End Role="orderline" Type="Self.orderline" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="buyorder">
-              <PropertyRef Name="order_ID" />
-            </Principal>
-            <Dependent Role="orderline">
-              <PropertyRef Name="BuyOrderorder_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FKOrderLine592221">
           <End Role="product" Type="Self.product" Multiplicity="1" />
           <End Role="orderline" Type="Self.orderline" Multiplicity="*" />
@@ -406,6 +381,18 @@
             </Principal>
             <Dependent Role="orderline">
               <PropertyRef Name="product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOrderLineOrderID">
+          <End Role="buyorder" Type="Self.buyorder" Multiplicity="1" />
+          <End Role="orderline" Type="Self.orderline" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="buyorder">
+              <PropertyRef Name="order_ID" />
+            </Principal>
+            <Dependent Role="orderline">
+              <PropertyRef Name="order_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -714,10 +701,6 @@
             <End Role="delivery" EntitySet="delivery" />
             <End Role="buyorder" EntitySet="buyorder" />
           </AssociationSet>
-          <AssociationSet Name="FKBuyOrdercustomerID" Association="Self.FKBuyOrdercustomerID">
-            <End Role="customer" EntitySet="customer" />
-            <End Role="buyorder" EntitySet="buyorder" />
-          </AssociationSet>
           <AssociationSet Name="FKDefect544799" Association="Self.FKDefect544799">
             <End Role="product" EntitySet="product" />
             <End Role="defect" EntitySet="defect" />
@@ -750,12 +733,12 @@
             <End Role="delivery" EntitySet="delivery" />
             <End Role="installation" EntitySet="installation" />
           </AssociationSet>
-          <AssociationSet Name="FKOrderLine431184" Association="Self.FKOrderLine431184">
-            <End Role="buyorder" EntitySet="buyorder" />
-            <End Role="orderline" EntitySet="orderline" />
-          </AssociationSet>
           <AssociationSet Name="FKOrderLine592221" Association="Self.FKOrderLine592221">
             <End Role="product" EntitySet="product" />
+            <End Role="orderline" EntitySet="orderline" />
+          </AssociationSet>
+          <AssociationSet Name="FKOrderLineOrderID" Association="Self.FKOrderLineOrderID">
+            <End Role="buyorder" EntitySet="buyorder" />
             <End Role="orderline" EntitySet="orderline" />
           </AssociationSet>
           <AssociationSet Name="FKproductCategoryID" Association="Self.FKproductCategoryID">
@@ -855,6 +838,168 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="betterlimitedModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="betterlimitedEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="buyorders" EntityType="betterlimitedModel.buyorder" />
+          <EntitySet Name="categories" EntityType="betterlimitedModel.category" />
+          <EntitySet Name="customers" EntityType="betterlimitedModel.customer" />
+          <EntitySet Name="defects" EntityType="betterlimitedModel.defect" />
+          <EntitySet Name="deliveries" EntityType="betterlimitedModel.delivery" />
+          <EntitySet Name="delivery_assignment" EntityType="betterlimitedModel.delivery_assignment" />
+          <EntitySet Name="departments" EntityType="betterlimitedModel.department" />
+          <EntitySet Name="installations" EntityType="betterlimitedModel.installation" />
+          <EntitySet Name="installation_assignment" EntityType="betterlimitedModel.installation_assignment" />
+          <EntitySet Name="orderlines" EntityType="betterlimitedModel.orderline" />
+          <EntitySet Name="positions" EntityType="betterlimitedModel.position" />
+          <EntitySet Name="products" EntityType="betterlimitedModel.product" />
+          <EntitySet Name="purchaseorders" EntityType="betterlimitedModel.purchaseorder" />
+          <EntitySet Name="reorders" EntityType="betterlimitedModel.reorder" />
+          <EntitySet Name="replenishments" EntityType="betterlimitedModel.replenishment" />
+          <EntitySet Name="replenishment_product" EntityType="betterlimitedModel.replenishment_product" />
+          <EntitySet Name="reservations" EntityType="betterlimitedModel.reservation" />
+          <EntitySet Name="resetpassword_request" EntityType="betterlimitedModel.resetpassword_request" />
+          <EntitySet Name="retail_store" EntityType="betterlimitedModel.retail_store" />
+          <EntitySet Name="retail_store_product" EntityType="betterlimitedModel.retail_store_product" />
+          <EntitySet Name="staffs" EntityType="betterlimitedModel.staff" />
+          <EntitySet Name="warehouses" EntityType="betterlimitedModel.warehouse" />
+          <EntitySet Name="warehouse_product" EntityType="betterlimitedModel.warehouse_product" />
+          <EntitySet Name="workers" EntityType="betterlimitedModel.worker" />
+          <AssociationSet Name="FKBuyOrder843053" Association="betterlimitedModel.FKBuyOrder843053">
+            <End Role="delivery" EntitySet="deliveries" />
+            <End Role="buyorder" EntitySet="buyorders" />
+          </AssociationSet>
+          <AssociationSet Name="FKInstallati134709" Association="betterlimitedModel.FKInstallati134709">
+            <End Role="buyorder" EntitySet="buyorders" />
+            <End Role="installation" EntitySet="installations" />
+          </AssociationSet>
+          <AssociationSet Name="FKOrderLineOrderID" Association="betterlimitedModel.FKOrderLineOrderID">
+            <End Role="buyorder" EntitySet="buyorders" />
+            <End Role="orderline" EntitySet="orderlines" />
+          </AssociationSet>
+          <AssociationSet Name="FKproductCategoryID" Association="betterlimitedModel.FKproductCategoryID">
+            <End Role="category" EntitySet="categories" />
+            <End Role="product" EntitySet="products" />
+          </AssociationSet>
+          <AssociationSet Name="FKReservatio648681" Association="betterlimitedModel.FKReservatio648681">
+            <End Role="customer" EntitySet="customers" />
+            <End Role="reservation" EntitySet="reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FKDefect544799" Association="betterlimitedModel.FKDefect544799">
+            <End Role="product" EntitySet="products" />
+            <End Role="defect" EntitySet="defects" />
+          </AssociationSet>
+          <AssociationSet Name="FKDefect662396" Association="betterlimitedModel.FKDefect662396">
+            <End Role="delivery" EntitySet="deliveries" />
+            <End Role="defect" EntitySet="defects" />
+          </AssociationSet>
+          <AssociationSet Name="FKDelivery_A413752" Association="betterlimitedModel.FKDelivery_A413752">
+            <End Role="delivery" EntitySet="deliveries" />
+            <End Role="delivery_assignment" EntitySet="delivery_assignment" />
+          </AssociationSet>
+          <AssociationSet Name="FKInstallati996707" Association="betterlimitedModel.FKInstallati996707">
+            <End Role="delivery" EntitySet="deliveries" />
+            <End Role="installation" EntitySet="installations" />
+          </AssociationSet>
+          <AssociationSet Name="FKReplenishm649741" Association="betterlimitedModel.FKReplenishm649741">
+            <End Role="delivery" EntitySet="deliveries" />
+            <End Role="replenishment" EntitySet="replenishments" />
+          </AssociationSet>
+          <AssociationSet Name="FKDelivery_A888474" Association="betterlimitedModel.FKDelivery_A888474">
+            <End Role="worker" EntitySet="workers" />
+            <End Role="delivery_assignment" EntitySet="delivery_assignment" />
+          </AssociationSet>
+          <AssociationSet Name="FKdepartmentID" Association="betterlimitedModel.FKdepartmentID">
+            <End Role="department" EntitySet="departments" />
+            <End Role="staff" EntitySet="staffs" />
+          </AssociationSet>
+          <AssociationSet Name="position_department_department_ID_fk" Association="betterlimitedModel.position_department_department_ID_fk">
+            <End Role="department" EntitySet="departments" />
+            <End Role="position" EntitySet="positions" />
+          </AssociationSet>
+          <AssociationSet Name="FKInstallati60270" Association="betterlimitedModel.FKInstallati60270">
+            <End Role="installation" EntitySet="installations" />
+            <End Role="installation_assignment" EntitySet="installation_assignment" />
+          </AssociationSet>
+          <AssociationSet Name="FKOrderLine592221" Association="betterlimitedModel.FKOrderLine592221">
+            <End Role="product" EntitySet="products" />
+            <End Role="orderline" EntitySet="orderlines" />
+          </AssociationSet>
+          <AssociationSet Name="FKStaff255574" Association="betterlimitedModel.FKStaff255574">
+            <End Role="position" EntitySet="positions" />
+            <End Role="staff" EntitySet="staffs" />
+          </AssociationSet>
+          <AssociationSet Name="FKWorker808068" Association="betterlimitedModel.FKWorker808068">
+            <End Role="position" EntitySet="positions" />
+            <End Role="worker" EntitySet="workers" />
+          </AssociationSet>
+          <AssociationSet Name="FKReplenishm931267" Association="betterlimitedModel.FKReplenishm931267">
+            <End Role="product" EntitySet="products" />
+            <End Role="replenishment_product" EntitySet="replenishment_product" />
+          </AssociationSet>
+          <AssociationSet Name="FKReservatio826341" Association="betterlimitedModel.FKReservatio826341">
+            <End Role="product" EntitySet="products" />
+            <End Role="reservation" EntitySet="reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FKRetail_Sto859037" Association="betterlimitedModel.FKRetail_Sto859037">
+            <End Role="product" EntitySet="products" />
+            <End Role="retail_store_product" EntitySet="retail_store_product" />
+          </AssociationSet>
+          <AssociationSet Name="FKWarehouse_549814" Association="betterlimitedModel.FKWarehouse_549814">
+            <End Role="product" EntitySet="products" />
+            <End Role="warehouse_product" EntitySet="warehouse_product" />
+          </AssociationSet>
+          <AssociationSet Name="FKPurchaseOr784407" Association="betterlimitedModel.FKPurchaseOr784407">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="purchaseorder" EntitySet="purchaseorders" />
+          </AssociationSet>
+          <AssociationSet Name="FKReorder820023" Association="betterlimitedModel.FKReorder820023">
+            <End Role="purchaseorder" EntitySet="purchaseorders" />
+            <End Role="reorder" EntitySet="reorders" />
+          </AssociationSet>
+          <AssociationSet Name="FKReorder24757" Association="betterlimitedModel.FKReorder24757">
+            <End Role="warehouse" EntitySet="warehouses" />
+            <End Role="reorder" EntitySet="reorders" />
+          </AssociationSet>
+          <AssociationSet Name="FKReorder355225" Association="betterlimitedModel.FKReorder355225">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="reorder" EntitySet="reorders" />
+          </AssociationSet>
+          <AssociationSet Name="FKReorder868636" Association="betterlimitedModel.FKReorder868636">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="reorder" EntitySet="reorders" />
+          </AssociationSet>
+          <AssociationSet Name="FKReplenishm241066" Association="betterlimitedModel.FKReplenishm241066">
+            <End Role="replenishment" EntitySet="replenishments" />
+            <End Role="replenishment_product" EntitySet="replenishment_product" />
+          </AssociationSet>
+          <AssociationSet Name="FKReplenishm316808" Association="betterlimitedModel.FKReplenishm316808">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="replenishment" EntitySet="replenishments" />
+          </AssociationSet>
+          <AssociationSet Name="FKReplenishm606577" Association="betterlimitedModel.FKReplenishm606577">
+            <End Role="retail_store" EntitySet="retail_store" />
+            <End Role="replenishment" EntitySet="replenishments" />
+          </AssociationSet>
+          <AssociationSet Name="FKstaffID" Association="betterlimitedModel.FKstaffID">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="resetpassword_request" EntitySet="resetpassword_request" />
+          </AssociationSet>
+          <AssociationSet Name="FKRetail_Sto624655" Association="betterlimitedModel.FKRetail_Sto624655">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="retail_store" EntitySet="retail_store" />
+          </AssociationSet>
+          <AssociationSet Name="FKRetail_Sto91839" Association="betterlimitedModel.FKRetail_Sto91839">
+            <End Role="retail_store" EntitySet="retail_store" />
+            <End Role="retail_store_product" EntitySet="retail_store_product" />
+          </AssociationSet>
+          <AssociationSet Name="FKWarehouse741635" Association="betterlimitedModel.FKWarehouse741635">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="warehouse" EntitySet="warehouses" />
+          </AssociationSet>
+          <AssociationSet Name="FKWarehouse_192567" Association="betterlimitedModel.FKWarehouse_192567">
+            <End Role="warehouse" EntitySet="warehouses" />
+            <End Role="warehouse_product" EntitySet="warehouse_product" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="buyorder">
           <Key>
             <PropertyRef Name="order_ID" />
@@ -865,22 +1010,28 @@
           <Property Name="delivery_ID" Type="Int32" Nullable="false" />
           <Property Name="installation_ID" Type="Int32" />
           <Property Name="total_price" Type="Single" Nullable="false" />
-          <NavigationProperty Name="delivery" Relationship="Self.FKBuyOrder843053" FromRole="buyorder" ToRole="delivery" />
-          <NavigationProperty Name="installations" Relationship="Self.FKInstallati134709" FromRole="buyorder" ToRole="installation" />
-          <NavigationProperty Name="orderlines" Relationship="Self.FKOrderLine431184" FromRole="buyorder" ToRole="orderline" />
-          <NavigationProperty Name="customer" Relationship="betterlimitedModel.FKBuyOrdercustomerID" FromRole="buyorder" ToRole="customer" />
+          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKBuyOrder843053" FromRole="buyorder" ToRole="delivery" />
+          <NavigationProperty Name="installations" Relationship="betterlimitedModel.FKInstallati134709" FromRole="buyorder" ToRole="installation" />
+          <NavigationProperty Name="orderlines" Relationship="betterlimitedModel.FKOrderLineOrderID" FromRole="buyorder" ToRole="orderline" />
+        </EntityType>
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="category_ID" />
+          </Key>
+          <Property Name="category_ID" Type="Int32" Nullable="false" />
+          <Property Name="category_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="products" Relationship="betterlimitedModel.FKproductCategoryID" FromRole="category" ToRole="product" />
         </EntityType>
         <EntityType Name="customer">
           <Key>
             <PropertyRef Name="user_ID" />
           </Key>
           <Property Name="user_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="phone_No" Type="Int32" Nullable="false" />
-          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="reservations" Relationship="Self.FKReservatio648681" FromRole="customer" ToRole="reservation" />
-          <NavigationProperty Name="buyorders" Relationship="betterlimitedModel.FKBuyOrdercustomerID" FromRole="customer" ToRole="buyorder" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="reservations" Relationship="betterlimitedModel.FKReservatio648681" FromRole="customer" ToRole="reservation" />
         </EntityType>
         <EntityType Name="defect">
           <Key>
@@ -892,19 +1043,19 @@
           <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="qty" Type="Int32" Nullable="false" />
           <Property Name="damage_tier" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="product" Relationship="Self.FKDefect544799" FromRole="defect" ToRole="product" />
-          <NavigationProperty Name="delivery" Relationship="Self.FKDefect662396" FromRole="defect" ToRole="delivery" />
+          <NavigationProperty Name="product" Relationship="betterlimitedModel.FKDefect544799" FromRole="defect" ToRole="product" />
+          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKDefect662396" FromRole="defect" ToRole="delivery" />
         </EntityType>
         <EntityType Name="delivery">
           <Key>
             <PropertyRef Name="delivery_ID" />
           </Key>
           <Property Name="delivery_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="delivery_type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="delivery_type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="sender" Type="Int32" Nullable="false" />
           <Property Name="status" Type="Int32" Nullable="false" />
           <Property Name="net_weight" Type="Single" Nullable="false" />
-          <Property Name="dimension" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dimension" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="approve_time" Type="DateTime" />
           <Property Name="complete_time" Type="DateTime" />
           <Property Name="assignment_ID" Type="Int32" Nullable="false" />
@@ -912,11 +1063,11 @@
           <Property Name="time_session" Type="DateTime" Nullable="false" />
           <Property Name="Delivery_Assignmentdelivery_ID" Type="Int32" Nullable="false" />
           <Property Name="Delivery_Assignmentworker_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="buyorders" Relationship="Self.FKBuyOrder843053" FromRole="delivery" ToRole="buyorder" />
-          <NavigationProperty Name="defects" Relationship="Self.FKDefect662396" FromRole="delivery" ToRole="defect" />
-          <NavigationProperty Name="delivery_assignment" Relationship="Self.FKDelivery_A413752" FromRole="delivery" ToRole="delivery_assignment" />
-          <NavigationProperty Name="installations" Relationship="Self.FKInstallati996707" FromRole="delivery" ToRole="installation" />
-          <NavigationProperty Name="replenishment" Relationship="Self.FKReplenishm649741" FromRole="delivery" ToRole="replenishment" />
+          <NavigationProperty Name="buyorders" Relationship="betterlimitedModel.FKBuyOrder843053" FromRole="delivery" ToRole="buyorder" />
+          <NavigationProperty Name="defects" Relationship="betterlimitedModel.FKDefect662396" FromRole="delivery" ToRole="defect" />
+          <NavigationProperty Name="delivery_assignment" Relationship="betterlimitedModel.FKDelivery_A413752" FromRole="delivery" ToRole="delivery_assignment" />
+          <NavigationProperty Name="installations" Relationship="betterlimitedModel.FKInstallati996707" FromRole="delivery" ToRole="installation" />
+          <NavigationProperty Name="replenishment" Relationship="betterlimitedModel.FKReplenishm649741" FromRole="delivery" ToRole="replenishment" />
         </EntityType>
         <EntityType Name="delivery_assignment">
           <Key>
@@ -926,17 +1077,17 @@
           <Property Name="assignment_ID" Type="Int32" Nullable="false" />
           <Property Name="delivery_ID" Type="Int32" Nullable="false" />
           <Property Name="worker_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="delivery" Relationship="Self.FKDelivery_A413752" FromRole="delivery_assignment" ToRole="delivery" />
-          <NavigationProperty Name="worker" Relationship="Self.FKDelivery_A888474" FromRole="delivery_assignment" ToRole="worker" />
+          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKDelivery_A413752" FromRole="delivery_assignment" ToRole="delivery" />
+          <NavigationProperty Name="worker" Relationship="betterlimitedModel.FKDelivery_A888474" FromRole="delivery_assignment" ToRole="worker" />
         </EntityType>
         <EntityType Name="department">
           <Key>
             <PropertyRef Name="department_ID" />
           </Key>
           <Property Name="department_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="department_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="department_head" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="staffs" Relationship="Self.FKStaff656231" FromRole="department" ToRole="staff" />
+          <Property Name="department_name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="department_head" Type="Int32" />
+          <NavigationProperty Name="staffs" Relationship="betterlimitedModel.FKdepartmentID" FromRole="department" ToRole="staff" />
           <NavigationProperty Name="positions" Relationship="betterlimitedModel.position_department_department_ID_fk" FromRole="department" ToRole="position" />
         </EntityType>
         <EntityType Name="installation">
@@ -950,9 +1101,9 @@
           <Property Name="delivery_date" Type="DateTime" />
           <Property Name="assignment_ID" Type="Int32" Nullable="false" />
           <Property Name="order_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="buyorder" Relationship="Self.FKInstallati134709" FromRole="installation" ToRole="buyorder" />
-          <NavigationProperty Name="delivery" Relationship="Self.FKInstallati996707" FromRole="installation" ToRole="delivery" />
-          <NavigationProperty Name="installation_assignment" Relationship="Self.FKInstallati60270" FromRole="installation" ToRole="installation_assignment" />
+          <NavigationProperty Name="buyorder" Relationship="betterlimitedModel.FKInstallati134709" FromRole="installation" ToRole="buyorder" />
+          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKInstallati996707" FromRole="installation" ToRole="delivery" />
+          <NavigationProperty Name="installation_assignment" Relationship="betterlimitedModel.FKInstallati60270" FromRole="installation" ToRole="installation_assignment" />
         </EntityType>
         <EntityType Name="installation_assignment">
           <Key>
@@ -962,7 +1113,7 @@
           <Property Name="assignment_ID" Type="Int32" Nullable="false" />
           <Property Name="installation_ID" Type="Int32" Nullable="false" />
           <Property Name="worker_ID" Type="Int32" />
-          <NavigationProperty Name="installation" Relationship="Self.FKInstallati60270" FromRole="installation_assignment" ToRole="installation" />
+          <NavigationProperty Name="installation" Relationship="betterlimitedModel.FKInstallati60270" FromRole="installation_assignment" ToRole="installation" />
         </EntityType>
         <EntityType Name="orderline">
           <Key>
@@ -972,45 +1123,44 @@
           <Property Name="product_ID" Type="Int32" Nullable="false" />
           <Property Name="order_ID" Type="Int32" Nullable="false" />
           <Property Name="quantity" Type="Int32" />
-          <Property Name="BuyOrderorder_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="buyorder" Relationship="Self.FKOrderLine431184" FromRole="orderline" ToRole="buyorder" />
-          <NavigationProperty Name="product" Relationship="Self.FKOrderLine592221" FromRole="orderline" ToRole="product" />
+          <NavigationProperty Name="buyorder" Relationship="betterlimitedModel.FKOrderLineOrderID" FromRole="orderline" ToRole="buyorder" />
+          <NavigationProperty Name="product" Relationship="betterlimitedModel.FKOrderLine592221" FromRole="orderline" ToRole="product" />
         </EntityType>
         <EntityType Name="position">
           <Key>
             <PropertyRef Name="positionID" />
           </Key>
           <Property Name="positionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="position_title" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="position_title" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="min_salarly" Type="Single" Nullable="false" />
           <Property Name="max_salary" Type="Single" Nullable="false" />
-          <NavigationProperty Name="staffs" Relationship="Self.FKStaff255574" FromRole="position" ToRole="staff" />
-          <NavigationProperty Name="workers" Relationship="Self.FKWorker808068" FromRole="position" ToRole="worker" />
           <Property Name="department_ID" Type="Int32" />
           <NavigationProperty Name="department" Relationship="betterlimitedModel.position_department_department_ID_fk" FromRole="position" ToRole="department" />
+          <NavigationProperty Name="staffs" Relationship="betterlimitedModel.FKStaff255574" FromRole="position" ToRole="staff" />
+          <NavigationProperty Name="workers" Relationship="betterlimitedModel.FKWorker808068" FromRole="position" ToRole="worker" />
         </EntityType>
         <EntityType Name="product">
           <Key>
             <PropertyRef Name="product_ID" />
           </Key>
           <Property Name="product_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="category_ID" Type="Int32" Nullable="false" />
           <Property Name="supplier_ID" Type="Int32" Nullable="false" />
           <Property Name="phaseout_stat" Type="Int32" Nullable="false" />
           <Property Name="restock_level" Type="Int32" Nullable="false" />
           <Property Name="price" Type="Single" Nullable="false" />
           <Property Name="weight" Type="Single" Nullable="false" />
-          <Property Name="dimension" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dimension" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="image_link" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="defects" Relationship="Self.FKDefect544799" FromRole="product" ToRole="defect" />
-          <NavigationProperty Name="orderlines" Relationship="Self.FKOrderLine592221" FromRole="product" ToRole="orderline" />
-          <NavigationProperty Name="replenishment_product" Relationship="Self.FKReplenishm931267" FromRole="product" ToRole="replenishment_product" />
-          <NavigationProperty Name="reservations" Relationship="Self.FKReservatio826341" FromRole="product" ToRole="reservation" />
-          <NavigationProperty Name="retail_store_product" Relationship="Self.FKRetail_Sto859037" FromRole="product" ToRole="retail_store_product" />
-          <NavigationProperty Name="warehouse_product" Relationship="Self.FKWarehouse_549814" FromRole="product" ToRole="warehouse_product" />
           <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="category" Relationship="betterlimitedModel.FKproductCategoryID" FromRole="product" ToRole="category" />
+          <NavigationProperty Name="defects" Relationship="betterlimitedModel.FKDefect544799" FromRole="product" ToRole="defect" />
+          <NavigationProperty Name="orderlines" Relationship="betterlimitedModel.FKOrderLine592221" FromRole="product" ToRole="orderline" />
+          <NavigationProperty Name="replenishment_product" Relationship="betterlimitedModel.FKReplenishm931267" FromRole="product" ToRole="replenishment_product" />
+          <NavigationProperty Name="reservations" Relationship="betterlimitedModel.FKReservatio826341" FromRole="product" ToRole="reservation" />
+          <NavigationProperty Name="retail_store_product" Relationship="betterlimitedModel.FKRetail_Sto859037" FromRole="product" ToRole="retail_store_product" />
+          <NavigationProperty Name="warehouse_product" Relationship="betterlimitedModel.FKWarehouse_549814" FromRole="product" ToRole="warehouse_product" />
         </EntityType>
         <EntityType Name="purchaseorder">
           <Key>
@@ -1021,8 +1171,8 @@
           <Property Name="supplier_ID" Type="Int32" Nullable="false" />
           <Property Name="total" Type="Single" Nullable="false" />
           <Property Name="invoice_link" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="staff" Relationship="Self.FKPurchaseOr784407" FromRole="purchaseorder" ToRole="staff" />
-          <NavigationProperty Name="reorders" Relationship="Self.FKReorder820023" FromRole="purchaseorder" ToRole="reorder" />
+          <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKPurchaseOr784407" FromRole="purchaseorder" ToRole="staff" />
+          <NavigationProperty Name="reorders" Relationship="betterlimitedModel.FKReorder820023" FromRole="purchaseorder" ToRole="reorder" />
         </EntityType>
         <EntityType Name="reorder">
           <Key>
@@ -1033,10 +1183,10 @@
           <Property Name="receiver_ID" Type="Int32" Nullable="false" />
           <Property Name="warehouse_ID" Type="Int32" Nullable="false" />
           <Property Name="purchase_order_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="purchaseorder" Relationship="Self.FKReorder820023" FromRole="reorder" ToRole="purchaseorder" />
-          <NavigationProperty Name="warehouse" Relationship="Self.FKReorder24757" FromRole="reorder" ToRole="warehouse" />
-          <NavigationProperty Name="staff" Relationship="Self.FKReorder355225" FromRole="reorder" ToRole="staff" />
-          <NavigationProperty Name="staff1" Relationship="Self.FKReorder868636" FromRole="reorder" ToRole="staff" />
+          <NavigationProperty Name="purchaseorder" Relationship="betterlimitedModel.FKReorder820023" FromRole="reorder" ToRole="purchaseorder" />
+          <NavigationProperty Name="warehouse" Relationship="betterlimitedModel.FKReorder24757" FromRole="reorder" ToRole="warehouse" />
+          <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKReorder355225" FromRole="reorder" ToRole="staff" />
+          <NavigationProperty Name="staff1" Relationship="betterlimitedModel.FKReorder868636" FromRole="reorder" ToRole="staff" />
         </EntityType>
         <EntityType Name="replenishment">
           <Key>
@@ -1046,10 +1196,10 @@
           <Property Name="salesID" Type="Int32" Nullable="false" />
           <Property Name="store_ID" Type="Int32" Nullable="false" />
           <Property Name="request_date" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="delivery" Relationship="Self.FKReplenishm649741" FromRole="replenishment" ToRole="delivery" />
-          <NavigationProperty Name="replenishment_product" Relationship="Self.FKReplenishm241066" FromRole="replenishment" ToRole="replenishment_product" />
-          <NavigationProperty Name="staff" Relationship="Self.FKReplenishm316808" FromRole="replenishment" ToRole="staff" />
-          <NavigationProperty Name="retail_store" Relationship="Self.FKReplenishm606577" FromRole="replenishment" ToRole="retail_store" />
+          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKReplenishm649741" FromRole="replenishment" ToRole="delivery" />
+          <NavigationProperty Name="replenishment_product" Relationship="betterlimitedModel.FKReplenishm241066" FromRole="replenishment" ToRole="replenishment_product" />
+          <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKReplenishm316808" FromRole="replenishment" ToRole="staff" />
+          <NavigationProperty Name="retail_store" Relationship="betterlimitedModel.FKReplenishm606577" FromRole="replenishment" ToRole="retail_store" />
         </EntityType>
         <EntityType Name="replenishment_product">
           <Key>
@@ -1059,8 +1209,8 @@
           <Property Name="product_ID" Type="Int32" Nullable="false" />
           <Property Name="delivery_ID" Type="Int32" Nullable="false" />
           <Property Name="qty" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="product" Relationship="Self.FKReplenishm931267" FromRole="replenishment_product" ToRole="product" />
-          <NavigationProperty Name="replenishment" Relationship="Self.FKReplenishm241066" FromRole="replenishment_product" ToRole="replenishment" />
+          <NavigationProperty Name="product" Relationship="betterlimitedModel.FKReplenishm931267" FromRole="replenishment_product" ToRole="product" />
+          <NavigationProperty Name="replenishment" Relationship="betterlimitedModel.FKReplenishm241066" FromRole="replenishment_product" ToRole="replenishment" />
         </EntityType>
         <EntityType Name="reservation">
           <Key>
@@ -1072,23 +1222,32 @@
           <Property Name="qty" Type="Int32" Nullable="false" />
           <Property Name="reservation_date" Type="DateTime" Nullable="false" />
           <Property Name="complete_date" Type="DateTime" />
-          <NavigationProperty Name="customer1" Relationship="Self.FKReservatio648681" FromRole="reservation" ToRole="customer" />
-          <NavigationProperty Name="product" Relationship="Self.FKReservatio826341" FromRole="reservation" ToRole="product" />
+          <NavigationProperty Name="customer1" Relationship="betterlimitedModel.FKReservatio648681" FromRole="reservation" ToRole="customer" />
+          <NavigationProperty Name="product" Relationship="betterlimitedModel.FKReservatio826341" FromRole="reservation" ToRole="product" />
+        </EntityType>
+        <EntityType Name="resetpassword_request">
+          <Key>
+            <PropertyRef Name="request_code" />
+          </Key>
+          <Property Name="request_code" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="staff_ID" Type="Int32" Nullable="false" />
+          <Property Name="request_time" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKstaffID" FromRole="resetpassword_request" ToRole="staff" />
         </EntityType>
         <EntityType Name="retail_store">
           <Key>
             <PropertyRef Name="store_ID" />
           </Key>
           <Property Name="store_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="address" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="contact_number" Type="Int32" Nullable="false" />
           <Property Name="opening_hour" Type="Time" Nullable="false" />
           <Property Name="closing_hour" Type="Time" Nullable="false" />
-          <Property Name="contact_email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="contact_email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="manager" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="replenishments" Relationship="Self.FKReplenishm606577" FromRole="retail_store" ToRole="replenishment" />
-          <NavigationProperty Name="staff" Relationship="Self.FKRetail_Sto624655" FromRole="retail_store" ToRole="staff" />
-          <NavigationProperty Name="retail_store_product" Relationship="Self.FKRetail_Sto91839" FromRole="retail_store" ToRole="retail_store_product" />
+          <NavigationProperty Name="replenishments" Relationship="betterlimitedModel.FKReplenishm606577" FromRole="retail_store" ToRole="replenishment" />
+          <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKRetail_Sto624655" FromRole="retail_store" ToRole="staff" />
+          <NavigationProperty Name="retail_store_product" Relationship="betterlimitedModel.FKRetail_Sto91839" FromRole="retail_store" ToRole="retail_store_product" />
         </EntityType>
         <EntityType Name="retail_store_product">
           <Key>
@@ -1101,44 +1260,44 @@
           <Property Name="product_ID" Type="Int32" Nullable="false" />
           <Property Name="qty" Type="Int32" Nullable="false" />
           <Property Name="store_date" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="product" Relationship="Self.FKRetail_Sto859037" FromRole="retail_store_product" ToRole="product" />
-          <NavigationProperty Name="retail_store" Relationship="Self.FKRetail_Sto91839" FromRole="retail_store_product" ToRole="retail_store" />
+          <NavigationProperty Name="product" Relationship="betterlimitedModel.FKRetail_Sto859037" FromRole="retail_store_product" ToRole="product" />
+          <NavigationProperty Name="retail_store" Relationship="betterlimitedModel.FKRetail_Sto91839" FromRole="retail_store_product" ToRole="retail_store" />
         </EntityType>
         <EntityType Name="staff">
           <Key>
             <PropertyRef Name="staff_ID" />
           </Key>
           <Property Name="staff_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="phone_no" Type="Int32" Nullable="false" />
-          <Property Name="email" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
           <Property Name="position_ID" Type="Int32" Nullable="false" />
           <Property Name="department_ID" Type="Int32" Nullable="false" />
-          <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="hire_date" Type="DateTime" Nullable="false" />
           <Property Name="DOB" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="department" Relationship="Self.FKStaff656231" FromRole="staff" ToRole="department" />
-          <NavigationProperty Name="position" Relationship="Self.FKStaff255574" FromRole="staff" ToRole="position" />
-          <NavigationProperty Name="purchaseorders" Relationship="Self.FKPurchaseOr784407" FromRole="staff" ToRole="purchaseorder" />
-          <NavigationProperty Name="reorders" Relationship="Self.FKReorder355225" FromRole="staff" ToRole="reorder" />
-          <NavigationProperty Name="reorders1" Relationship="Self.FKReorder868636" FromRole="staff" ToRole="reorder" />
-          <NavigationProperty Name="replenishments" Relationship="Self.FKReplenishm316808" FromRole="staff" ToRole="replenishment" />
-          <NavigationProperty Name="retail_store" Relationship="Self.FKRetail_Sto624655" FromRole="staff" ToRole="retail_store" />
-          <NavigationProperty Name="warehouses" Relationship="Self.FKWarehouse741635" FromRole="staff" ToRole="warehouse" />
+          <NavigationProperty Name="department" Relationship="betterlimitedModel.FKdepartmentID" FromRole="staff" ToRole="department" />
+          <NavigationProperty Name="position" Relationship="betterlimitedModel.FKStaff255574" FromRole="staff" ToRole="position" />
+          <NavigationProperty Name="purchaseorders" Relationship="betterlimitedModel.FKPurchaseOr784407" FromRole="staff" ToRole="purchaseorder" />
+          <NavigationProperty Name="reorders" Relationship="betterlimitedModel.FKReorder355225" FromRole="staff" ToRole="reorder" />
+          <NavigationProperty Name="reorders1" Relationship="betterlimitedModel.FKReorder868636" FromRole="staff" ToRole="reorder" />
+          <NavigationProperty Name="replenishments" Relationship="betterlimitedModel.FKReplenishm316808" FromRole="staff" ToRole="replenishment" />
           <NavigationProperty Name="resetpassword_request" Relationship="betterlimitedModel.FKstaffID" FromRole="staff" ToRole="resetpassword_request" />
+          <NavigationProperty Name="retail_store" Relationship="betterlimitedModel.FKRetail_Sto624655" FromRole="staff" ToRole="retail_store" />
+          <NavigationProperty Name="warehouses" Relationship="betterlimitedModel.FKWarehouse741635" FromRole="staff" ToRole="warehouse" />
         </EntityType>
         <EntityType Name="warehouse">
           <Key>
             <PropertyRef Name="warehouse_ID" />
           </Key>
           <Property Name="warehouse_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="address" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="zip_code" Type="Int32" Nullable="false" />
           <Property Name="warehouse_head" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="reorders" Relationship="Self.FKReorder24757" FromRole="warehouse" ToRole="reorder" />
-          <NavigationProperty Name="staff" Relationship="Self.FKWarehouse741635" FromRole="warehouse" ToRole="staff" />
-          <NavigationProperty Name="warehouse_product" Relationship="Self.FKWarehouse_192567" FromRole="warehouse" ToRole="warehouse_product" />
+          <NavigationProperty Name="reorders" Relationship="betterlimitedModel.FKReorder24757" FromRole="warehouse" ToRole="reorder" />
+          <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKWarehouse741635" FromRole="warehouse" ToRole="staff" />
+          <NavigationProperty Name="warehouse_product" Relationship="betterlimitedModel.FKWarehouse_192567" FromRole="warehouse" ToRole="warehouse_product" />
         </EntityType>
         <EntityType Name="warehouse_product">
           <Key>
@@ -1151,26 +1310,26 @@
           <Property Name="sector_ID" Type="Int32" Nullable="false" />
           <Property Name="qty" Type="Int32" Nullable="false" />
           <Property Name="store_date" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="product" Relationship="Self.FKWarehouse_549814" FromRole="warehouse_product" ToRole="product" />
-          <NavigationProperty Name="warehouse" Relationship="Self.FKWarehouse_192567" FromRole="warehouse_product" ToRole="warehouse" />
+          <NavigationProperty Name="product" Relationship="betterlimitedModel.FKWarehouse_549814" FromRole="warehouse_product" ToRole="product" />
+          <NavigationProperty Name="warehouse" Relationship="betterlimitedModel.FKWarehouse_192567" FromRole="warehouse_product" ToRole="warehouse" />
         </EntityType>
         <EntityType Name="worker">
           <Key>
             <PropertyRef Name="worker_ID" />
           </Key>
           <Property Name="worker_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="work_type" Type="Int32" Nullable="false" />
           <Property Name="hire_date" Type="DateTime" Nullable="false" />
           <Property Name="DOB" Type="DateTime" Nullable="false" />
           <Property Name="phone_no" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="delivery_assignment" Relationship="Self.FKDelivery_A888474" FromRole="worker" ToRole="delivery_assignment" />
-          <NavigationProperty Name="position" Relationship="Self.FKWorker808068" FromRole="worker" ToRole="position" />
+          <NavigationProperty Name="delivery_assignment" Relationship="betterlimitedModel.FKDelivery_A888474" FromRole="worker" ToRole="delivery_assignment" />
+          <NavigationProperty Name="position" Relationship="betterlimitedModel.FKWorker808068" FromRole="worker" ToRole="position" />
         </EntityType>
         <Association Name="FKBuyOrder843053">
-          <End Role="delivery" Type="Self.delivery" Multiplicity="1" />
-          <End Role="buyorder" Type="Self.buyorder" Multiplicity="*" />
+          <End Type="betterlimitedModel.delivery" Role="delivery" Multiplicity="1" />
+          <End Type="betterlimitedModel.buyorder" Role="buyorder" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="delivery">
               <PropertyRef Name="delivery_ID" />
@@ -1181,8 +1340,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FKInstallati134709">
-          <End Role="buyorder" Type="Self.buyorder" Multiplicity="1" />
-          <End Role="installation" Type="Self.installation" Multiplicity="*" />
+          <End Type="betterlimitedModel.buyorder" Role="buyorder" Multiplicity="1" />
+          <End Type="betterlimitedModel.installation" Role="installation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="buyorder">
               <PropertyRef Name="order_ID" />
@@ -1192,570 +1351,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKOrderLine431184">
-          <End Role="buyorder" Type="Self.buyorder" Multiplicity="1" />
-          <End Role="orderline" Type="Self.orderline" Multiplicity="*" />
+        <Association Name="FKOrderLineOrderID">
+          <End Type="betterlimitedModel.buyorder" Role="buyorder" Multiplicity="1" />
+          <End Type="betterlimitedModel.orderline" Role="orderline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="buyorder">
               <PropertyRef Name="order_ID" />
             </Principal>
             <Dependent Role="orderline">
-              <PropertyRef Name="BuyOrderorder_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReservatio648681">
-          <End Role="customer" Type="Self.customer" Multiplicity="1" />
-          <End Role="reservation" Type="Self.reservation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="customer">
-              <PropertyRef Name="user_ID" />
-            </Principal>
-            <Dependent Role="reservation">
-              <PropertyRef Name="customer" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKDefect544799">
-          <End Role="product" Type="Self.product" Multiplicity="1" />
-          <End Role="defect" Type="Self.defect" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="product">
-              <PropertyRef Name="product_ID" />
-            </Principal>
-            <Dependent Role="defect">
-              <PropertyRef Name="product_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKDefect662396">
-          <End Role="delivery" Type="Self.delivery" Multiplicity="1" />
-          <End Role="defect" Type="Self.defect" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="delivery">
-              <PropertyRef Name="delivery_ID" />
-            </Principal>
-            <Dependent Role="defect">
-              <PropertyRef Name="delivery_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKDelivery_A413752">
-          <End Role="delivery" Type="Self.delivery" Multiplicity="1" />
-          <End Role="delivery_assignment" Type="Self.delivery_assignment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="delivery">
-              <PropertyRef Name="delivery_ID" />
-            </Principal>
-            <Dependent Role="delivery_assignment">
-              <PropertyRef Name="delivery_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKInstallati996707">
-          <End Role="delivery" Type="Self.delivery" Multiplicity="1" />
-          <End Role="installation" Type="Self.installation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="delivery">
-              <PropertyRef Name="delivery_ID" />
-            </Principal>
-            <Dependent Role="installation">
-              <PropertyRef Name="delivery_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReplenishm649741">
-          <End Role="delivery" Type="Self.delivery" Multiplicity="1" />
-          <End Role="replenishment" Type="Self.replenishment" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="delivery">
-              <PropertyRef Name="delivery_ID" />
-            </Principal>
-            <Dependent Role="replenishment">
-              <PropertyRef Name="delivery_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKDelivery_A888474">
-          <End Role="worker" Type="Self.worker" Multiplicity="1" />
-          <End Role="delivery_assignment" Type="Self.delivery_assignment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="worker">
-              <PropertyRef Name="worker_ID" />
-            </Principal>
-            <Dependent Role="delivery_assignment">
-              <PropertyRef Name="worker_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKStaff656231">
-          <End Role="department" Type="Self.department" Multiplicity="1" />
-          <End Role="staff" Type="Self.staff" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="department">
-              <PropertyRef Name="department_ID" />
-            </Principal>
-            <Dependent Role="staff">
-              <PropertyRef Name="department_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKInstallati60270">
-          <End Role="installation" Type="Self.installation" Multiplicity="1" />
-          <End Role="installation_assignment" Type="Self.installation_assignment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="installation">
-              <PropertyRef Name="installation_ID" />
-            </Principal>
-            <Dependent Role="installation_assignment">
-              <PropertyRef Name="installation_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKOrderLine592221">
-          <End Role="product" Type="Self.product" Multiplicity="1" />
-          <End Role="orderline" Type="Self.orderline" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="product">
-              <PropertyRef Name="product_ID" />
-            </Principal>
-            <Dependent Role="orderline">
-              <PropertyRef Name="product_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKStaff255574">
-          <End Role="position" Type="Self.position" Multiplicity="1" />
-          <End Role="staff" Type="Self.staff" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="position">
-              <PropertyRef Name="positionID" />
-            </Principal>
-            <Dependent Role="staff">
-              <PropertyRef Name="position_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKWorker808068">
-          <End Role="position" Type="Self.position" Multiplicity="1" />
-          <End Role="worker" Type="Self.worker" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="position">
-              <PropertyRef Name="positionID" />
-            </Principal>
-            <Dependent Role="worker">
-              <PropertyRef Name="work_type" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReplenishm931267">
-          <End Role="product" Type="Self.product" Multiplicity="1" />
-          <End Role="replenishment_product" Type="Self.replenishment_product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="product">
-              <PropertyRef Name="product_ID" />
-            </Principal>
-            <Dependent Role="replenishment_product">
-              <PropertyRef Name="product_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReservatio826341">
-          <End Role="product" Type="Self.product" Multiplicity="1" />
-          <End Role="reservation" Type="Self.reservation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="product">
-              <PropertyRef Name="product_ID" />
-            </Principal>
-            <Dependent Role="reservation">
-              <PropertyRef Name="productID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKRetail_Sto859037">
-          <End Role="product" Type="Self.product" Multiplicity="1" />
-          <End Role="retail_store_product" Type="Self.retail_store_product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="product">
-              <PropertyRef Name="product_ID" />
-            </Principal>
-            <Dependent Role="retail_store_product">
-              <PropertyRef Name="product_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKWarehouse_549814">
-          <End Role="product" Type="Self.product" Multiplicity="1" />
-          <End Role="warehouse_product" Type="Self.warehouse_product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="product">
-              <PropertyRef Name="product_ID" />
-            </Principal>
-            <Dependent Role="warehouse_product">
-              <PropertyRef Name="product_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKPurchaseOr784407">
-          <End Role="staff" Type="Self.staff" Multiplicity="1" />
-          <End Role="purchaseorder" Type="Self.purchaseorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="purchaseorder">
-              <PropertyRef Name="sent_by" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReorder820023">
-          <End Role="purchaseorder" Type="Self.purchaseorder" Multiplicity="1" />
-          <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="purchaseorder">
-              <PropertyRef Name="purchase_order_ID" />
-            </Principal>
-            <Dependent Role="reorder">
-              <PropertyRef Name="purchase_order_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReorder24757">
-          <End Role="warehouse" Type="Self.warehouse" Multiplicity="1" />
-          <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="warehouse">
-              <PropertyRef Name="warehouse_ID" />
-            </Principal>
-            <Dependent Role="reorder">
-              <PropertyRef Name="warehouse_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReorder355225">
-          <End Role="staff" Type="Self.staff" Multiplicity="1" />
-          <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="reorder">
-              <PropertyRef Name="receiver_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReorder868636">
-          <End Role="staff" Type="Self.staff" Multiplicity="1" />
-          <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="reorder">
-              <PropertyRef Name="sender_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReplenishm241066">
-          <End Role="replenishment" Type="Self.replenishment" Multiplicity="1" />
-          <End Role="replenishment_product" Type="Self.replenishment_product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="replenishment">
-              <PropertyRef Name="delivery_ID" />
-            </Principal>
-            <Dependent Role="replenishment_product">
-              <PropertyRef Name="delivery_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReplenishm316808">
-          <End Role="staff" Type="Self.staff" Multiplicity="1" />
-          <End Role="replenishment" Type="Self.replenishment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="replenishment">
-              <PropertyRef Name="salesID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReplenishm606577">
-          <End Role="retail_store" Type="Self.retail_store" Multiplicity="1" />
-          <End Role="replenishment" Type="Self.replenishment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="retail_store">
-              <PropertyRef Name="store_ID" />
-            </Principal>
-            <Dependent Role="replenishment">
-              <PropertyRef Name="store_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKRetail_Sto624655">
-          <End Role="staff" Type="Self.staff" Multiplicity="1" />
-          <End Role="retail_store" Type="Self.retail_store" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="retail_store">
-              <PropertyRef Name="manager" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKRetail_Sto91839">
-          <End Role="retail_store" Type="Self.retail_store" Multiplicity="1" />
-          <End Role="retail_store_product" Type="Self.retail_store_product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="retail_store">
-              <PropertyRef Name="store_ID" />
-            </Principal>
-            <Dependent Role="retail_store_product">
-              <PropertyRef Name="store_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKWarehouse741635">
-          <End Role="staff" Type="Self.staff" Multiplicity="1" />
-          <End Role="warehouse" Type="Self.warehouse" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="warehouse">
-              <PropertyRef Name="warehouse_head" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKWarehouse_192567">
-          <End Role="warehouse" Type="Self.warehouse" Multiplicity="1" />
-          <End Role="warehouse_product" Type="Self.warehouse_product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="warehouse">
-              <PropertyRef Name="warehouse_ID" />
-            </Principal>
-            <Dependent Role="warehouse_product">
-              <PropertyRef Name="warehouse_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="betterlimitedEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="buyorders" EntityType="Self.buyorder" />
-          <EntitySet Name="customers" EntityType="Self.customer" />
-          <EntitySet Name="defects" EntityType="Self.defect" />
-          <EntitySet Name="deliveries" EntityType="Self.delivery" />
-          <EntitySet Name="delivery_assignment" EntityType="Self.delivery_assignment" />
-          <EntitySet Name="departments" EntityType="Self.department" />
-          <EntitySet Name="installations" EntityType="Self.installation" />
-          <EntitySet Name="installation_assignment" EntityType="Self.installation_assignment" />
-          <EntitySet Name="orderlines" EntityType="Self.orderline" />
-          <EntitySet Name="positions" EntityType="Self.position" />
-          <EntitySet Name="products" EntityType="Self.product" />
-          <EntitySet Name="purchaseorders" EntityType="Self.purchaseorder" />
-          <EntitySet Name="reorders" EntityType="Self.reorder" />
-          <EntitySet Name="replenishments" EntityType="Self.replenishment" />
-          <EntitySet Name="replenishment_product" EntityType="Self.replenishment_product" />
-          <EntitySet Name="reservations" EntityType="Self.reservation" />
-          <EntitySet Name="retail_store" EntityType="Self.retail_store" />
-          <EntitySet Name="retail_store_product" EntityType="Self.retail_store_product" />
-          <EntitySet Name="staffs" EntityType="Self.staff" />
-          <EntitySet Name="warehouses" EntityType="Self.warehouse" />
-          <EntitySet Name="warehouse_product" EntityType="Self.warehouse_product" />
-          <EntitySet Name="workers" EntityType="Self.worker" />
-          <AssociationSet Name="FKBuyOrder843053" Association="Self.FKBuyOrder843053">
-            <End Role="delivery" EntitySet="deliveries" />
-            <End Role="buyorder" EntitySet="buyorders" />
-          </AssociationSet>
-          <AssociationSet Name="FKInstallati134709" Association="Self.FKInstallati134709">
-            <End Role="buyorder" EntitySet="buyorders" />
-            <End Role="installation" EntitySet="installations" />
-          </AssociationSet>
-          <AssociationSet Name="FKOrderLine431184" Association="Self.FKOrderLine431184">
-            <End Role="buyorder" EntitySet="buyorders" />
-            <End Role="orderline" EntitySet="orderlines" />
-          </AssociationSet>
-          <AssociationSet Name="FKReservatio648681" Association="Self.FKReservatio648681">
-            <End Role="customer" EntitySet="customers" />
-            <End Role="reservation" EntitySet="reservations" />
-          </AssociationSet>
-          <AssociationSet Name="FKDefect544799" Association="Self.FKDefect544799">
-            <End Role="product" EntitySet="products" />
-            <End Role="defect" EntitySet="defects" />
-          </AssociationSet>
-          <AssociationSet Name="FKDefect662396" Association="Self.FKDefect662396">
-            <End Role="delivery" EntitySet="deliveries" />
-            <End Role="defect" EntitySet="defects" />
-          </AssociationSet>
-          <AssociationSet Name="FKDelivery_A413752" Association="Self.FKDelivery_A413752">
-            <End Role="delivery" EntitySet="deliveries" />
-            <End Role="delivery_assignment" EntitySet="delivery_assignment" />
-          </AssociationSet>
-          <AssociationSet Name="FKInstallati996707" Association="Self.FKInstallati996707">
-            <End Role="delivery" EntitySet="deliveries" />
-            <End Role="installation" EntitySet="installations" />
-          </AssociationSet>
-          <AssociationSet Name="FKReplenishm649741" Association="Self.FKReplenishm649741">
-            <End Role="delivery" EntitySet="deliveries" />
-            <End Role="replenishment" EntitySet="replenishments" />
-          </AssociationSet>
-          <AssociationSet Name="FKDelivery_A888474" Association="Self.FKDelivery_A888474">
-            <End Role="worker" EntitySet="workers" />
-            <End Role="delivery_assignment" EntitySet="delivery_assignment" />
-          </AssociationSet>
-          <AssociationSet Name="FKStaff656231" Association="Self.FKStaff656231">
-            <End Role="department" EntitySet="departments" />
-            <End Role="staff" EntitySet="staffs" />
-          </AssociationSet>
-          <AssociationSet Name="FKInstallati60270" Association="Self.FKInstallati60270">
-            <End Role="installation" EntitySet="installations" />
-            <End Role="installation_assignment" EntitySet="installation_assignment" />
-          </AssociationSet>
-          <AssociationSet Name="FKOrderLine592221" Association="Self.FKOrderLine592221">
-            <End Role="product" EntitySet="products" />
-            <End Role="orderline" EntitySet="orderlines" />
-          </AssociationSet>
-          <AssociationSet Name="FKStaff255574" Association="Self.FKStaff255574">
-            <End Role="position" EntitySet="positions" />
-            <End Role="staff" EntitySet="staffs" />
-          </AssociationSet>
-          <AssociationSet Name="FKWorker808068" Association="Self.FKWorker808068">
-            <End Role="position" EntitySet="positions" />
-            <End Role="worker" EntitySet="workers" />
-          </AssociationSet>
-          <AssociationSet Name="FKReplenishm931267" Association="Self.FKReplenishm931267">
-            <End Role="product" EntitySet="products" />
-            <End Role="replenishment_product" EntitySet="replenishment_product" />
-          </AssociationSet>
-          <AssociationSet Name="FKReservatio826341" Association="Self.FKReservatio826341">
-            <End Role="product" EntitySet="products" />
-            <End Role="reservation" EntitySet="reservations" />
-          </AssociationSet>
-          <AssociationSet Name="FKRetail_Sto859037" Association="Self.FKRetail_Sto859037">
-            <End Role="product" EntitySet="products" />
-            <End Role="retail_store_product" EntitySet="retail_store_product" />
-          </AssociationSet>
-          <AssociationSet Name="FKWarehouse_549814" Association="Self.FKWarehouse_549814">
-            <End Role="product" EntitySet="products" />
-            <End Role="warehouse_product" EntitySet="warehouse_product" />
-          </AssociationSet>
-          <AssociationSet Name="FKPurchaseOr784407" Association="Self.FKPurchaseOr784407">
-            <End Role="staff" EntitySet="staffs" />
-            <End Role="purchaseorder" EntitySet="purchaseorders" />
-          </AssociationSet>
-          <AssociationSet Name="FKReorder820023" Association="Self.FKReorder820023">
-            <End Role="purchaseorder" EntitySet="purchaseorders" />
-            <End Role="reorder" EntitySet="reorders" />
-          </AssociationSet>
-          <AssociationSet Name="FKReorder24757" Association="Self.FKReorder24757">
-            <End Role="warehouse" EntitySet="warehouses" />
-            <End Role="reorder" EntitySet="reorders" />
-          </AssociationSet>
-          <AssociationSet Name="FKReorder355225" Association="Self.FKReorder355225">
-            <End Role="staff" EntitySet="staffs" />
-            <End Role="reorder" EntitySet="reorders" />
-          </AssociationSet>
-          <AssociationSet Name="FKReorder868636" Association="Self.FKReorder868636">
-            <End Role="staff" EntitySet="staffs" />
-            <End Role="reorder" EntitySet="reorders" />
-          </AssociationSet>
-          <AssociationSet Name="FKReplenishm241066" Association="Self.FKReplenishm241066">
-            <End Role="replenishment" EntitySet="replenishments" />
-            <End Role="replenishment_product" EntitySet="replenishment_product" />
-          </AssociationSet>
-          <AssociationSet Name="FKReplenishm316808" Association="Self.FKReplenishm316808">
-            <End Role="staff" EntitySet="staffs" />
-            <End Role="replenishment" EntitySet="replenishments" />
-          </AssociationSet>
-          <AssociationSet Name="FKReplenishm606577" Association="Self.FKReplenishm606577">
-            <End Role="retail_store" EntitySet="retail_store" />
-            <End Role="replenishment" EntitySet="replenishments" />
-          </AssociationSet>
-          <AssociationSet Name="FKRetail_Sto624655" Association="Self.FKRetail_Sto624655">
-            <End Role="staff" EntitySet="staffs" />
-            <End Role="retail_store" EntitySet="retail_store" />
-          </AssociationSet>
-          <AssociationSet Name="FKRetail_Sto91839" Association="Self.FKRetail_Sto91839">
-            <End Role="retail_store" EntitySet="retail_store" />
-            <End Role="retail_store_product" EntitySet="retail_store_product" />
-          </AssociationSet>
-          <AssociationSet Name="FKWarehouse741635" Association="Self.FKWarehouse741635">
-            <End Role="staff" EntitySet="staffs" />
-            <End Role="warehouse" EntitySet="warehouses" />
-          </AssociationSet>
-          <AssociationSet Name="FKWarehouse_192567" Association="Self.FKWarehouse_192567">
-            <End Role="warehouse" EntitySet="warehouses" />
-            <End Role="warehouse_product" EntitySet="warehouse_product" />
-          </AssociationSet>
-          <AssociationSet Name="position_department_department_ID_fk" Association="betterlimitedModel.position_department_department_ID_fk">
-            <End Role="department" EntitySet="departments" />
-            <End Role="position" EntitySet="positions" />
-          </AssociationSet>
-          <EntitySet Name="resetpassword_request" EntityType="betterlimitedModel.resetpassword_request" />
-          <AssociationSet Name="FKstaffID" Association="betterlimitedModel.FKstaffID">
-            <End Role="staff" EntitySet="staffs" />
-            <End Role="resetpassword_request" EntitySet="resetpassword_request" />
-          </AssociationSet>
-          <EntitySet Name="categories" EntityType="betterlimitedModel.category" />
-          <AssociationSet Name="FKBuyOrdercustomerID" Association="betterlimitedModel.FKBuyOrdercustomerID">
-            <End Role="customer" EntitySet="customers" />
-            <End Role="buyorder" EntitySet="buyorders" />
-          </AssociationSet>
-          <AssociationSet Name="FKproductCategoryID" Association="betterlimitedModel.FKproductCategoryID">
-            <End Role="category" EntitySet="categories" />
-            <End Role="product" EntitySet="products" />
-          </AssociationSet>
-        </EntityContainer>
-        <Association Name="position_department_department_ID_fk">
-          <End Type="betterlimitedModel.department" Role="department" Multiplicity="0..1" />
-          <End Type="betterlimitedModel.position" Role="position" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="department">
-              <PropertyRef Name="department_ID" />
-            </Principal>
-            <Dependent Role="position">
-              <PropertyRef Name="department_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="resetpassword_request">
-          <Key>
-            <PropertyRef Name="request_code" />
-          </Key>
-          <Property Name="request_code" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="staff_ID" Type="Int32" Nullable="false" />
-          <Property Name="request_time" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKstaffID" FromRole="resetpassword_request" ToRole="staff" />
-        </EntityType>
-        <Association Name="FKstaffID">
-          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1" />
-          <End Type="betterlimitedModel.resetpassword_request" Role="resetpassword_request" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="resetpassword_request">
-              <PropertyRef Name="staff_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="category">
-          <Key>
-            <PropertyRef Name="category_ID" />
-          </Key>
-          <Property Name="category_ID" Type="Int32" Nullable="false" />
-          <Property Name="category_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="products" Relationship="betterlimitedModel.FKproductCategoryID" FromRole="category" ToRole="product" />
-        </EntityType>
-        <Association Name="FKBuyOrdercustomerID">
-          <End Type="betterlimitedModel.customer" Role="customer" Multiplicity="1" />
-          <End Type="betterlimitedModel.buyorder" Role="buyorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="customer">
-              <PropertyRef Name="user_ID" />
-            </Principal>
-            <Dependent Role="buyorder">
-              <PropertyRef Name="customer_ID" />
+              <PropertyRef Name="order_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1771,7 +1375,367 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <Association Name="FKReservatio648681">
+          <End Type="betterlimitedModel.customer" Role="customer" Multiplicity="1" />
+          <End Type="betterlimitedModel.reservation" Role="reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="user_ID" />
+            </Principal>
+            <Dependent Role="reservation">
+              <PropertyRef Name="customer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDefect544799">
+          <End Type="betterlimitedModel.product" Role="product" Multiplicity="1" />
+          <End Type="betterlimitedModel.defect" Role="defect" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_ID" />
+            </Principal>
+            <Dependent Role="defect">
+              <PropertyRef Name="product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDefect662396">
+          <End Type="betterlimitedModel.delivery" Role="delivery" Multiplicity="1" />
+          <End Type="betterlimitedModel.defect" Role="defect" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="delivery">
+              <PropertyRef Name="delivery_ID" />
+            </Principal>
+            <Dependent Role="defect">
+              <PropertyRef Name="delivery_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDelivery_A413752">
+          <End Type="betterlimitedModel.delivery" Role="delivery" Multiplicity="1" />
+          <End Type="betterlimitedModel.delivery_assignment" Role="delivery_assignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="delivery">
+              <PropertyRef Name="delivery_ID" />
+            </Principal>
+            <Dependent Role="delivery_assignment">
+              <PropertyRef Name="delivery_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKInstallati996707">
+          <End Type="betterlimitedModel.delivery" Role="delivery" Multiplicity="1" />
+          <End Type="betterlimitedModel.installation" Role="installation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="delivery">
+              <PropertyRef Name="delivery_ID" />
+            </Principal>
+            <Dependent Role="installation">
+              <PropertyRef Name="delivery_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReplenishm649741">
+          <End Type="betterlimitedModel.delivery" Role="delivery" Multiplicity="1" />
+          <End Type="betterlimitedModel.replenishment" Role="replenishment" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="delivery">
+              <PropertyRef Name="delivery_ID" />
+            </Principal>
+            <Dependent Role="replenishment">
+              <PropertyRef Name="delivery_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDelivery_A888474">
+          <End Type="betterlimitedModel.worker" Role="worker" Multiplicity="1" />
+          <End Type="betterlimitedModel.delivery_assignment" Role="delivery_assignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="worker">
+              <PropertyRef Name="worker_ID" />
+            </Principal>
+            <Dependent Role="delivery_assignment">
+              <PropertyRef Name="worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKdepartmentID">
+          <End Type="betterlimitedModel.department" Role="department" Multiplicity="1" />
+          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="department_ID" />
+            </Principal>
+            <Dependent Role="staff">
+              <PropertyRef Name="department_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="position_department_department_ID_fk">
+          <End Type="betterlimitedModel.department" Role="department" Multiplicity="0..1" />
+          <End Type="betterlimitedModel.position" Role="position" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="department_ID" />
+            </Principal>
+            <Dependent Role="position">
+              <PropertyRef Name="department_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKInstallati60270">
+          <End Type="betterlimitedModel.installation" Role="installation" Multiplicity="1" />
+          <End Type="betterlimitedModel.installation_assignment" Role="installation_assignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="installation">
+              <PropertyRef Name="installation_ID" />
+            </Principal>
+            <Dependent Role="installation_assignment">
+              <PropertyRef Name="installation_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOrderLine592221">
+          <End Type="betterlimitedModel.product" Role="product" Multiplicity="1" />
+          <End Type="betterlimitedModel.orderline" Role="orderline" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_ID" />
+            </Principal>
+            <Dependent Role="orderline">
+              <PropertyRef Name="product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKStaff255574">
+          <End Type="betterlimitedModel.position" Role="position" Multiplicity="1" />
+          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="position">
+              <PropertyRef Name="positionID" />
+            </Principal>
+            <Dependent Role="staff">
+              <PropertyRef Name="position_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKWorker808068">
+          <End Type="betterlimitedModel.position" Role="position" Multiplicity="1" />
+          <End Type="betterlimitedModel.worker" Role="worker" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="position">
+              <PropertyRef Name="positionID" />
+            </Principal>
+            <Dependent Role="worker">
+              <PropertyRef Name="work_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReplenishm931267">
+          <End Type="betterlimitedModel.product" Role="product" Multiplicity="1" />
+          <End Type="betterlimitedModel.replenishment_product" Role="replenishment_product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_ID" />
+            </Principal>
+            <Dependent Role="replenishment_product">
+              <PropertyRef Name="product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReservatio826341">
+          <End Type="betterlimitedModel.product" Role="product" Multiplicity="1" />
+          <End Type="betterlimitedModel.reservation" Role="reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_ID" />
+            </Principal>
+            <Dependent Role="reservation">
+              <PropertyRef Name="productID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKRetail_Sto859037">
+          <End Type="betterlimitedModel.product" Role="product" Multiplicity="1" />
+          <End Type="betterlimitedModel.retail_store_product" Role="retail_store_product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_ID" />
+            </Principal>
+            <Dependent Role="retail_store_product">
+              <PropertyRef Name="product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKWarehouse_549814">
+          <End Type="betterlimitedModel.product" Role="product" Multiplicity="1" />
+          <End Type="betterlimitedModel.warehouse_product" Role="warehouse_product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_ID" />
+            </Principal>
+            <Dependent Role="warehouse_product">
+              <PropertyRef Name="product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPurchaseOr784407">
+          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1" />
+          <End Type="betterlimitedModel.purchaseorder" Role="purchaseorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_ID" />
+            </Principal>
+            <Dependent Role="purchaseorder">
+              <PropertyRef Name="sent_by" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReorder820023">
+          <End Type="betterlimitedModel.purchaseorder" Role="purchaseorder" Multiplicity="1" />
+          <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="purchaseorder">
+              <PropertyRef Name="purchase_order_ID" />
+            </Principal>
+            <Dependent Role="reorder">
+              <PropertyRef Name="purchase_order_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReorder24757">
+          <End Type="betterlimitedModel.warehouse" Role="warehouse" Multiplicity="1" />
+          <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="warehouse">
+              <PropertyRef Name="warehouse_ID" />
+            </Principal>
+            <Dependent Role="reorder">
+              <PropertyRef Name="warehouse_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReorder355225">
+          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1" />
+          <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_ID" />
+            </Principal>
+            <Dependent Role="reorder">
+              <PropertyRef Name="receiver_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReorder868636">
+          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1" />
+          <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_ID" />
+            </Principal>
+            <Dependent Role="reorder">
+              <PropertyRef Name="sender_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReplenishm241066">
+          <End Type="betterlimitedModel.replenishment" Role="replenishment" Multiplicity="1" />
+          <End Type="betterlimitedModel.replenishment_product" Role="replenishment_product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="replenishment">
+              <PropertyRef Name="delivery_ID" />
+            </Principal>
+            <Dependent Role="replenishment_product">
+              <PropertyRef Name="delivery_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReplenishm316808">
+          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1" />
+          <End Type="betterlimitedModel.replenishment" Role="replenishment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_ID" />
+            </Principal>
+            <Dependent Role="replenishment">
+              <PropertyRef Name="salesID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReplenishm606577">
+          <End Type="betterlimitedModel.retail_store" Role="retail_store" Multiplicity="1" />
+          <End Type="betterlimitedModel.replenishment" Role="replenishment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="retail_store">
+              <PropertyRef Name="store_ID" />
+            </Principal>
+            <Dependent Role="replenishment">
+              <PropertyRef Name="store_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKstaffID">
+          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1" />
+          <End Type="betterlimitedModel.resetpassword_request" Role="resetpassword_request" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_ID" />
+            </Principal>
+            <Dependent Role="resetpassword_request">
+              <PropertyRef Name="staff_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKRetail_Sto624655">
+          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1" />
+          <End Type="betterlimitedModel.retail_store" Role="retail_store" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_ID" />
+            </Principal>
+            <Dependent Role="retail_store">
+              <PropertyRef Name="manager" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKRetail_Sto91839">
+          <End Type="betterlimitedModel.retail_store" Role="retail_store" Multiplicity="1" />
+          <End Type="betterlimitedModel.retail_store_product" Role="retail_store_product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="retail_store">
+              <PropertyRef Name="store_ID" />
+            </Principal>
+            <Dependent Role="retail_store_product">
+              <PropertyRef Name="store_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKWarehouse741635">
+          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1" />
+          <End Type="betterlimitedModel.warehouse" Role="warehouse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_ID" />
+            </Principal>
+            <Dependent Role="warehouse">
+              <PropertyRef Name="warehouse_head" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKWarehouse_192567">
+          <End Type="betterlimitedModel.warehouse" Role="warehouse" Multiplicity="1" />
+          <End Type="betterlimitedModel.warehouse_product" Role="warehouse_product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="warehouse">
+              <PropertyRef Name="warehouse_ID" />
+            </Principal>
+            <Dependent Role="warehouse_product">
+              <PropertyRef Name="warehouse_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1780,104 +1744,111 @@
           <EntitySetMapping Name="buyorders">
             <EntityTypeMapping TypeName="betterlimitedModel.buyorder">
               <MappingFragment StoreEntitySet="buyorder">
-                <ScalarProperty Name="order_ID" ColumnName="order_ID" />
-                <ScalarProperty Name="customer_ID" ColumnName="customer_ID" />
-                <ScalarProperty Name="order_date" ColumnName="order_date" />
-                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
-                <ScalarProperty Name="installation_ID" ColumnName="installation_ID" />
                 <ScalarProperty Name="total_price" ColumnName="total_price" />
+                <ScalarProperty Name="installation_ID" ColumnName="installation_ID" />
+                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
+                <ScalarProperty Name="order_date" ColumnName="order_date" />
+                <ScalarProperty Name="customer_ID" ColumnName="customer_ID" />
+                <ScalarProperty Name="order_ID" ColumnName="order_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categories">
+            <EntityTypeMapping TypeName="betterlimitedModel.category">
+              <MappingFragment StoreEntitySet="category">
+                <ScalarProperty Name="category_name" ColumnName="category_name" />
+                <ScalarProperty Name="category_ID" ColumnName="category_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="customers">
             <EntityTypeMapping TypeName="betterlimitedModel.customer">
               <MappingFragment StoreEntitySet="customer">
-                <ScalarProperty Name="user_ID" ColumnName="user_ID" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="phone_No" ColumnName="phone_No" />
-                <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone_No" ColumnName="phone_No" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="user_ID" ColumnName="user_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="defects">
             <EntityTypeMapping TypeName="betterlimitedModel.defect">
               <MappingFragment StoreEntitySet="defect">
-                <ScalarProperty Name="defect_ID" ColumnName="defect_ID" />
-                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
-                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
-                <ScalarProperty Name="description" ColumnName="description" />
-                <ScalarProperty Name="qty" ColumnName="qty" />
                 <ScalarProperty Name="damage_tier" ColumnName="damage_tier" />
+                <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
+                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
+                <ScalarProperty Name="defect_ID" ColumnName="defect_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="deliveries">
             <EntityTypeMapping TypeName="betterlimitedModel.delivery">
               <MappingFragment StoreEntitySet="delivery">
-                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
-                <ScalarProperty Name="delivery_type" ColumnName="delivery_type" />
-                <ScalarProperty Name="sender" ColumnName="sender" />
-                <ScalarProperty Name="status" ColumnName="status" />
-                <ScalarProperty Name="net_weight" ColumnName="net_weight" />
-                <ScalarProperty Name="dimension" ColumnName="dimension" />
-                <ScalarProperty Name="approve_time" ColumnName="approve_time" />
-                <ScalarProperty Name="complete_time" ColumnName="complete_time" />
-                <ScalarProperty Name="assignment_ID" ColumnName="assignment_ID" />
-                <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
-                <ScalarProperty Name="time_session" ColumnName="time_session" />
-                <ScalarProperty Name="Delivery_Assignmentdelivery_ID" ColumnName="Delivery_Assignmentdelivery_ID" />
                 <ScalarProperty Name="Delivery_Assignmentworker_ID" ColumnName="Delivery_Assignmentworker_ID" />
+                <ScalarProperty Name="Delivery_Assignmentdelivery_ID" ColumnName="Delivery_Assignmentdelivery_ID" />
+                <ScalarProperty Name="time_session" ColumnName="time_session" />
+                <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
+                <ScalarProperty Name="assignment_ID" ColumnName="assignment_ID" />
+                <ScalarProperty Name="complete_time" ColumnName="complete_time" />
+                <ScalarProperty Name="approve_time" ColumnName="approve_time" />
+                <ScalarProperty Name="dimension" ColumnName="dimension" />
+                <ScalarProperty Name="net_weight" ColumnName="net_weight" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="sender" ColumnName="sender" />
+                <ScalarProperty Name="delivery_type" ColumnName="delivery_type" />
+                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="delivery_assignment">
             <EntityTypeMapping TypeName="betterlimitedModel.delivery_assignment">
               <MappingFragment StoreEntitySet="delivery_assignment">
-                <ScalarProperty Name="assignment_ID" ColumnName="assignment_ID" />
-                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
                 <ScalarProperty Name="worker_ID" ColumnName="worker_ID" />
+                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
+                <ScalarProperty Name="assignment_ID" ColumnName="assignment_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="departments">
             <EntityTypeMapping TypeName="betterlimitedModel.department">
               <MappingFragment StoreEntitySet="department">
-                <ScalarProperty Name="department_ID" ColumnName="department_ID" />
-                <ScalarProperty Name="department_name" ColumnName="department_name" />
                 <ScalarProperty Name="department_head" ColumnName="department_head" />
+                <ScalarProperty Name="department_name" ColumnName="department_name" />
+                <ScalarProperty Name="department_ID" ColumnName="department_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="installations">
             <EntityTypeMapping TypeName="betterlimitedModel.installation">
               <MappingFragment StoreEntitySet="installation">
-                <ScalarProperty Name="installation_ID" ColumnName="installation_ID" />
-                <ScalarProperty Name="installation_type" ColumnName="installation_type" />
-                <ScalarProperty Name="installation_date" ColumnName="installation_date" />
-                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
-                <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
-                <ScalarProperty Name="assignment_ID" ColumnName="assignment_ID" />
                 <ScalarProperty Name="order_ID" ColumnName="order_ID" />
+                <ScalarProperty Name="assignment_ID" ColumnName="assignment_ID" />
+                <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
+                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
+                <ScalarProperty Name="installation_date" ColumnName="installation_date" />
+                <ScalarProperty Name="installation_type" ColumnName="installation_type" />
+                <ScalarProperty Name="installation_ID" ColumnName="installation_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="installation_assignment">
             <EntityTypeMapping TypeName="betterlimitedModel.installation_assignment">
               <MappingFragment StoreEntitySet="installation_assignment">
-                <ScalarProperty Name="assignment_ID" ColumnName="assignment_ID" />
-                <ScalarProperty Name="installation_ID" ColumnName="installation_ID" />
                 <ScalarProperty Name="worker_ID" ColumnName="worker_ID" />
+                <ScalarProperty Name="installation_ID" ColumnName="installation_ID" />
+                <ScalarProperty Name="assignment_ID" ColumnName="assignment_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="orderlines">
             <EntityTypeMapping TypeName="betterlimitedModel.orderline">
               <MappingFragment StoreEntitySet="orderline">
-                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
-                <ScalarProperty Name="order_ID" ColumnName="order_ID" />
                 <ScalarProperty Name="quantity" ColumnName="quantity" />
-                <ScalarProperty Name="BuyOrderorder_ID" ColumnName="BuyOrderorder_ID" />
+                <ScalarProperty Name="order_ID" ColumnName="order_ID" />
+                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1885,10 +1856,10 @@
             <EntityTypeMapping TypeName="betterlimitedModel.position">
               <MappingFragment StoreEntitySet="position">
                 <ScalarProperty Name="department_ID" ColumnName="department_ID" />
-                <ScalarProperty Name="positionID" ColumnName="positionID" />
-                <ScalarProperty Name="position_title" ColumnName="position_title" />
-                <ScalarProperty Name="min_salarly" ColumnName="min_salarly" />
                 <ScalarProperty Name="max_salary" ColumnName="max_salary" />
+                <ScalarProperty Name="min_salarly" ColumnName="min_salarly" />
+                <ScalarProperty Name="position_title" ColumnName="position_title" />
+                <ScalarProperty Name="positionID" ColumnName="positionID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1896,143 +1867,69 @@
             <EntityTypeMapping TypeName="betterlimitedModel.product">
               <MappingFragment StoreEntitySet="product">
                 <ScalarProperty Name="image" ColumnName="image" />
-                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="category_ID" ColumnName="category_ID" />
-                <ScalarProperty Name="supplier_ID" ColumnName="supplier_ID" />
-                <ScalarProperty Name="phaseout_stat" ColumnName="phaseout_stat" />
-                <ScalarProperty Name="restock_level" ColumnName="restock_level" />
-                <ScalarProperty Name="price" ColumnName="price" />
-                <ScalarProperty Name="weight" ColumnName="weight" />
-                <ScalarProperty Name="dimension" ColumnName="dimension" />
                 <ScalarProperty Name="image_link" ColumnName="image_link" />
+                <ScalarProperty Name="dimension" ColumnName="dimension" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="restock_level" ColumnName="restock_level" />
+                <ScalarProperty Name="phaseout_stat" ColumnName="phaseout_stat" />
+                <ScalarProperty Name="supplier_ID" ColumnName="supplier_ID" />
+                <ScalarProperty Name="category_ID" ColumnName="category_ID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="purchaseorders">
             <EntityTypeMapping TypeName="betterlimitedModel.purchaseorder">
               <MappingFragment StoreEntitySet="purchaseorder">
-                <ScalarProperty Name="purchase_order_ID" ColumnName="purchase_order_ID" />
-                <ScalarProperty Name="sent_by" ColumnName="sent_by" />
-                <ScalarProperty Name="supplier_ID" ColumnName="supplier_ID" />
-                <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="invoice_link" ColumnName="invoice_link" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="supplier_ID" ColumnName="supplier_ID" />
+                <ScalarProperty Name="sent_by" ColumnName="sent_by" />
+                <ScalarProperty Name="purchase_order_ID" ColumnName="purchase_order_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="reorders">
             <EntityTypeMapping TypeName="betterlimitedModel.reorder">
               <MappingFragment StoreEntitySet="reorder">
-                <ScalarProperty Name="reorder_ID" ColumnName="reorder_ID" />
-                <ScalarProperty Name="sender_ID" ColumnName="sender_ID" />
-                <ScalarProperty Name="receiver_ID" ColumnName="receiver_ID" />
-                <ScalarProperty Name="warehouse_ID" ColumnName="warehouse_ID" />
                 <ScalarProperty Name="purchase_order_ID" ColumnName="purchase_order_ID" />
+                <ScalarProperty Name="warehouse_ID" ColumnName="warehouse_ID" />
+                <ScalarProperty Name="receiver_ID" ColumnName="receiver_ID" />
+                <ScalarProperty Name="sender_ID" ColumnName="sender_ID" />
+                <ScalarProperty Name="reorder_ID" ColumnName="reorder_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="replenishments">
             <EntityTypeMapping TypeName="betterlimitedModel.replenishment">
               <MappingFragment StoreEntitySet="replenishment">
-                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
-                <ScalarProperty Name="salesID" ColumnName="salesID" />
-                <ScalarProperty Name="store_ID" ColumnName="store_ID" />
                 <ScalarProperty Name="request_date" ColumnName="request_date" />
+                <ScalarProperty Name="store_ID" ColumnName="store_ID" />
+                <ScalarProperty Name="salesID" ColumnName="salesID" />
+                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="replenishment_product">
             <EntityTypeMapping TypeName="betterlimitedModel.replenishment_product">
               <MappingFragment StoreEntitySet="replenishment_product">
-                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
-                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
                 <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
+                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="reservations">
             <EntityTypeMapping TypeName="betterlimitedModel.reservation">
               <MappingFragment StoreEntitySet="reservation">
-                <ScalarProperty Name="reservation_ID" ColumnName="reservation_ID" />
-                <ScalarProperty Name="customer" ColumnName="customer" />
-                <ScalarProperty Name="productID" ColumnName="productID" />
-                <ScalarProperty Name="qty" ColumnName="qty" />
-                <ScalarProperty Name="reservation_date" ColumnName="reservation_date" />
                 <ScalarProperty Name="complete_date" ColumnName="complete_date" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="retail_store">
-            <EntityTypeMapping TypeName="betterlimitedModel.retail_store">
-              <MappingFragment StoreEntitySet="retail_store">
-                <ScalarProperty Name="store_ID" ColumnName="store_ID" />
-                <ScalarProperty Name="address" ColumnName="address" />
-                <ScalarProperty Name="contact_number" ColumnName="contact_number" />
-                <ScalarProperty Name="opening_hour" ColumnName="opening_hour" />
-                <ScalarProperty Name="closing_hour" ColumnName="closing_hour" />
-                <ScalarProperty Name="contact_email" ColumnName="contact_email" />
-                <ScalarProperty Name="manager" ColumnName="manager" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="retail_store_product">
-            <EntityTypeMapping TypeName="betterlimitedModel.retail_store_product">
-              <MappingFragment StoreEntitySet="retail_store_product">
-                <ScalarProperty Name="store_ID" ColumnName="store_ID" />
-                <ScalarProperty Name="sector_ID" ColumnName="sector_ID" />
-                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
+                <ScalarProperty Name="reservation_date" ColumnName="reservation_date" />
                 <ScalarProperty Name="qty" ColumnName="qty" />
-                <ScalarProperty Name="store_date" ColumnName="store_date" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="staffs">
-            <EntityTypeMapping TypeName="betterlimitedModel.staff">
-              <MappingFragment StoreEntitySet="staff">
-                <ScalarProperty Name="staff_ID" ColumnName="staff_ID" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="phone_no" ColumnName="phone_no" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="position_ID" ColumnName="position_ID" />
-                <ScalarProperty Name="department_ID" ColumnName="department_ID" />
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="hire_date" ColumnName="hire_date" />
-                <ScalarProperty Name="DOB" ColumnName="DOB" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="warehouses">
-            <EntityTypeMapping TypeName="betterlimitedModel.warehouse">
-              <MappingFragment StoreEntitySet="warehouse">
-                <ScalarProperty Name="warehouse_ID" ColumnName="warehouse_ID" />
-                <ScalarProperty Name="address" ColumnName="address" />
-                <ScalarProperty Name="zip_code" ColumnName="zip_code" />
-                <ScalarProperty Name="warehouse_head" ColumnName="warehouse_head" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="warehouse_product">
-            <EntityTypeMapping TypeName="betterlimitedModel.warehouse_product">
-              <MappingFragment StoreEntitySet="warehouse_product">
-                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
-                <ScalarProperty Name="warehouse_ID" ColumnName="warehouse_ID" />
-                <ScalarProperty Name="sector_ID" ColumnName="sector_ID" />
-                <ScalarProperty Name="qty" ColumnName="qty" />
-                <ScalarProperty Name="store_date" ColumnName="store_date" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="workers">
-            <EntityTypeMapping TypeName="betterlimitedModel.worker">
-              <MappingFragment StoreEntitySet="worker">
-                <ScalarProperty Name="worker_ID" ColumnName="worker_ID" />
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="work_type" ColumnName="work_type" />
-                <ScalarProperty Name="hire_date" ColumnName="hire_date" />
-                <ScalarProperty Name="DOB" ColumnName="DOB" />
-                <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+                <ScalarProperty Name="productID" ColumnName="productID" />
+                <ScalarProperty Name="customer" ColumnName="customer" />
+                <ScalarProperty Name="reservation_ID" ColumnName="reservation_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2045,11 +1942,77 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="categories">
-            <EntityTypeMapping TypeName="betterlimitedModel.category">
-              <MappingFragment StoreEntitySet="category">
-                <ScalarProperty Name="category_name" ColumnName="category_name" />
-                <ScalarProperty Name="category_ID" ColumnName="category_ID" />
+          <EntitySetMapping Name="retail_store">
+            <EntityTypeMapping TypeName="betterlimitedModel.retail_store">
+              <MappingFragment StoreEntitySet="retail_store">
+                <ScalarProperty Name="manager" ColumnName="manager" />
+                <ScalarProperty Name="contact_email" ColumnName="contact_email" />
+                <ScalarProperty Name="closing_hour" ColumnName="closing_hour" />
+                <ScalarProperty Name="opening_hour" ColumnName="opening_hour" />
+                <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="store_ID" ColumnName="store_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="retail_store_product">
+            <EntityTypeMapping TypeName="betterlimitedModel.retail_store_product">
+              <MappingFragment StoreEntitySet="retail_store_product">
+                <ScalarProperty Name="store_date" ColumnName="store_date" />
+                <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
+                <ScalarProperty Name="sector_ID" ColumnName="sector_ID" />
+                <ScalarProperty Name="store_ID" ColumnName="store_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="staffs">
+            <EntityTypeMapping TypeName="betterlimitedModel.staff">
+              <MappingFragment StoreEntitySet="staff">
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="hire_date" ColumnName="hire_date" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="department_ID" ColumnName="department_ID" />
+                <ScalarProperty Name="position_ID" ColumnName="position_ID" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="staff_ID" ColumnName="staff_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="warehouses">
+            <EntityTypeMapping TypeName="betterlimitedModel.warehouse">
+              <MappingFragment StoreEntitySet="warehouse">
+                <ScalarProperty Name="warehouse_head" ColumnName="warehouse_head" />
+                <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="warehouse_ID" ColumnName="warehouse_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="warehouse_product">
+            <EntityTypeMapping TypeName="betterlimitedModel.warehouse_product">
+              <MappingFragment StoreEntitySet="warehouse_product">
+                <ScalarProperty Name="store_date" ColumnName="store_date" />
+                <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="sector_ID" ColumnName="sector_ID" />
+                <ScalarProperty Name="warehouse_ID" ColumnName="warehouse_ID" />
+                <ScalarProperty Name="product_ID" ColumnName="product_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="workers">
+            <EntityTypeMapping TypeName="betterlimitedModel.worker">
+              <MappingFragment StoreEntitySet="worker">
+                <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="hire_date" ColumnName="hire_date" />
+                <ScalarProperty Name="work_type" ColumnName="work_type" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="worker_ID" ColumnName="worker_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -146,6 +146,12 @@
     <Compile Include="ForgetPasswdForm.Designer.cs">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImageTestingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageTestingForm.Designer.cs">
+      <DependentUpon>ImageTestingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory\InventoryArraDeliveryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,11 +283,29 @@
     <Compile Include="retail_store_product.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Sales\POSOrderLineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\POSOrderLineControl.Designer.cs">
+      <DependentUpon>POSOrderLineControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\POSProductControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\POSProductControl.Designer.cs">
+      <DependentUpon>POSProductControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\SalesCreaOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sales\SalesCreaOrderForm.Designer.cs">
       <DependentUpon>SalesCreaOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesCreaOrderOptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesCreaOrderOptionForm.Designer.cs">
+      <DependentUpon>SalesCreaOrderOptionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\SalesDefectForm.cs">
       <SubType>Form</SubType>
@@ -379,6 +403,9 @@
     <EmbeddedResource Include="ForgetPasswdForm.resx">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImageTestingForm.resx">
+      <DependentUpon>ImageTestingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryArraDeliveryForm.resx">
       <DependentUpon>InventoryArraDeliveryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,8 +461,17 @@
     <EmbeddedResource Include="ResetPasswdForm.resx">
       <DependentUpon>ResetPasswdForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\POSOrderLineControl.resx">
+      <DependentUpon>POSOrderLineControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\POSProductControl.resx">
+      <DependentUpon>POSProductControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesCreaOrderForm.resx">
       <DependentUpon>SalesCreaOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesCreaOrderOptionForm.resx">
+      <DependentUpon>SalesCreaOrderOptionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesDefectForm.resx">
       <DependentUpon>SalesDefectForm.cs</DependentUpon>
@@ -502,11 +538,14 @@
       <DependentUpon>dataModel.edmx</DependentUpon>
       <LastGenOutput>dataModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\deposit.png" />
+    <None Include="Resources\delivery.png" />
+    <None Include="Resources\customerpickup.png" />
+    <None Include="Resources\search_btn_icon.png" />
+    <None Include="Resources\search_icon.png" />
     <None Include="Resources\logout-icon.png" />
     <None Include="Resources\login-icon.png" />
-    <None Include="Resources\login-icon1.png" />
     <None Include="Resources\login-icon1.jpg" />
-    <None Include="Resources\login-icon.jpg" />
     <None Include="Resources\password-show2.png" />
     <None Include="Resources\password-hide.png" />
     <None Include="Resources\password-show.png" />
