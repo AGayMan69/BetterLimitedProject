@@ -301,12 +301,6 @@
     <Compile Include="Sales\SalesCreaOrderForm.Designer.cs">
       <DependentUpon>SalesCreaOrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sales\SalesCreaOrderOptionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sales\SalesCreaOrderOptionForm.Designer.cs">
-      <DependentUpon>SalesCreaOrderOptionForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Sales\SalesDefectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -469,9 +463,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesCreaOrderForm.resx">
       <DependentUpon>SalesCreaOrderForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sales\SalesCreaOrderOptionForm.resx">
-      <DependentUpon>SalesCreaOrderOptionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesDefectForm.resx">
       <DependentUpon>SalesDefectForm.cs</DependentUpon>

@@ -16,6 +16,7 @@ namespace BetterLimitedProject.Sales
         private IQueryable<product> productList;
         private betterlimitedEntities betterDb;
         private List<orderline> shoppingCart;
+        private int cartCount;
         private buyorder order;
         private string categorySearch;
         private string nameSearch;
@@ -105,6 +106,8 @@ namespace BetterLimitedProject.Sales
 
             }
             UpdatePrice();
+            cartCount++;
+            MessageBox.Show($"You have {cartCount} item(s) in your cart");
         }
 
         internal void UpdatePrice()
@@ -126,6 +129,8 @@ namespace BetterLimitedProject.Sales
         {
             var removeItem = shoppingCart.SingleOrDefault(x => x.product_ID == line.product_ID);
             shoppingCart.Remove(removeItem);
+            cartCount--;
+            MessageBox.Show($"You have {cartCount} item(s) in your cart");
             UpdatePrice();
         }
 
@@ -167,6 +172,25 @@ namespace BetterLimitedProject.Sales
         {
             nameSearch = tbSearch.Text;
             loadProduct();
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+
+            // at least 1 item to checkout
+            if (cartCount < 1)
+            {
+                MessageBox.Show("Please select at least 1 item before checkout!!");
+            }
+            else
+            {
+                tabControl.SelectedTab = tpOption;
+            }
+        }
+
+        private void btnBackCart_Click(object sender, EventArgs e)
+        {
+            tabControl.SelectedTab = tpShoppingCart;
         }
     }
 }
