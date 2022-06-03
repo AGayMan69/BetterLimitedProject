@@ -67,8 +67,7 @@ namespace BetterLimitedProject.Sales
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbChange = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panPayList = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -91,6 +90,7 @@ namespace BetterLimitedProject.Sales
             this.lblSub = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.numCash = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tpShoppingCart.SuspendLayout();
@@ -100,6 +100,7 @@ namespace BetterLimitedProject.Sales
             this.tpFillInfo.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCash)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCheckout
@@ -174,7 +175,7 @@ namespace BetterLimitedProject.Sales
             // flpanProduct
             // 
             this.flpanProduct.AutoScroll = true;
-            this.flpanProduct.BackColor = System.Drawing.Color.White;
+            this.flpanProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
             this.flpanProduct.Location = new System.Drawing.Point(22, 68);
             this.flpanProduct.Name = "flpanProduct";
             this.flpanProduct.Size = new System.Drawing.Size(568, 565);
@@ -561,9 +562,9 @@ namespace BetterLimitedProject.Sales
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.numCash);
+            this.panel2.Controls.Add(this.tbChange);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Location = new System.Drawing.Point(614, 25);
             this.panel2.Name = "panel2";
@@ -582,26 +583,16 @@ namespace BetterLimitedProject.Sales
             this.label11.TabIndex = 36;
             this.label11.Text = "Cash";
             // 
-            // textBox1
+            // tbChange
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox1.Location = new System.Drawing.Point(27, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(237, 29);
-            this.textBox1.TabIndex = 36;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox2.Location = new System.Drawing.Point(27, 394);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.Size = new System.Drawing.Size(237, 29);
-            this.textBox2.TabIndex = 37;
+            this.tbChange.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbChange.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbChange.Location = new System.Drawing.Point(27, 394);
+            this.tbChange.Name = "tbChange";
+            this.tbChange.ReadOnly = true;
+            this.tbChange.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbChange.Size = new System.Drawing.Size(237, 29);
+            this.tbChange.TabIndex = 37;
             // 
             // label12
             // 
@@ -906,6 +897,19 @@ namespace BetterLimitedProject.Sales
             this.lblTotalPrice.Text = "Total";
             this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // numCash
+            // 
+            this.numCash.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numCash.Location = new System.Drawing.Point(27, 66);
+            this.numCash.Maximum = new decimal(new int[] {
+            276447231,
+            23283,
+            0,
+            0});
+            this.numCash.Name = "numCash";
+            this.numCash.Size = new System.Drawing.Size(237, 33);
+            this.numCash.TabIndex = 39;
+            // 
             // SalesCreaOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -931,6 +935,7 @@ namespace BetterLimitedProject.Sales
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCash)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -985,9 +990,8 @@ namespace BetterLimitedProject.Sales
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panPayList;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbChange;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
@@ -998,5 +1002,6 @@ namespace BetterLimitedProject.Sales
         private System.Windows.Forms.Label lblSub;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label lblDiscount;
+        private System.Windows.Forms.NumericUpDown numCash;
     }
 }

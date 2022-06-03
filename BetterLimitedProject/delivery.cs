@@ -29,7 +29,7 @@ namespace BetterLimitedProject
         public Nullable<System.DateTime> approve_time { get; set; }
         public Nullable<System.DateTime> complete_time { get; set; }
         public Nullable<int> assignment_ID { get; set; }
-        public System.DateTime delivery_date { get; set; }
+        public Nullable<System.DateTime> delivery_date { get; set; }
     
         public virtual ICollection<buyorder> buyorders { get; set; }
         public virtual ICollection<defect> defects { get; set; }

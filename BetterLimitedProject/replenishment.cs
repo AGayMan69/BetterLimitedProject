@@ -22,7 +22,7 @@ namespace BetterLimitedProject
         public int delivery_ID { get; set; }
         public int salesID { get; set; }
         public int store_ID { get; set; }
-        public System.DateTime request_date { get; set; }
+        public Nullable<System.DateTime> request_date { get; set; }
     
         public virtual delivery delivery { get; set; }
         public virtual ICollection<replenishment_product> replenishment_product { get; set; }

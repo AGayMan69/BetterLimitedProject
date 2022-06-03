@@ -13,6 +13,7 @@ namespace BetterLimitedProject.Sales
     public partial class POSOrderLineControl : UserControl
     {
         internal orderline line;
+        internal product product;
         private SalesCreaOrderForm parent;
 
         public POSOrderLineControl()
@@ -28,8 +29,8 @@ namespace BetterLimitedProject.Sales
 
         private void POSOrderLineControl_Load(object sender, EventArgs e)
         {
-            lblProductName.Text = line.product.name;
-            lblPrice.Text = "$" + (line.quantity * line.product.price).ToString();
+            lblProductName.Text = product.name;
+            lblPrice.Text = "$" + (line.quantity * product.price).ToString();
             numUpDwnQty.Value = (decimal)line.quantity;
         }
 

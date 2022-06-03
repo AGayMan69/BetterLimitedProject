@@ -25,6 +25,7 @@ namespace BetterLimitedProject
         public int phone_No { get; set; }
         public string email { get; set; }
         public string address { get; set; }
+        public Nullable<System.DateTime> create_date { get; set; }
     
         public virtual ICollection<buyorder> buyorders { get; set; }
         public virtual ICollection<reservation> reservations { get; set; }

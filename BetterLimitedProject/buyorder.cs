@@ -22,7 +22,7 @@ namespace BetterLimitedProject
     
         public int order_ID { get; set; }
         public int customer_ID { get; set; }
-        public System.DateTime order_date { get; set; }
+        public Nullable<System.DateTime> order_date { get; set; }
         public Nullable<int> delivery_ID { get; set; }
         public Nullable<int> installation_ID { get; set; }
         public float total_price { get; set; }

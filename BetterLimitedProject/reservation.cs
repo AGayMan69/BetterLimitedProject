@@ -18,7 +18,7 @@ namespace BetterLimitedProject
         public int customerID { get; set; }
         public int productID { get; set; }
         public int qty { get; set; }
-        public System.DateTime reservation_date { get; set; }
+        public Nullable<System.DateTime> reservation_date { get; set; }
         public Nullable<System.DateTime> complete_date { get; set; }
     
         public virtual customer customer { get; set; }

@@ -48,18 +48,18 @@ namespace BetterLimitedProject.Sales
             int tempID = year * (int)Math.Pow(10, 5);
 
             int newOrderID;
-            int latestOrderID = (from buyorderRec in betterDb.buyorders
-                                 where buyorderRec.order_ID >= tempID
-                                 orderby buyorderRec.order_ID descending
-                                 select buyorderRec.order_ID).FirstOrDefault();
+            var latestOrder = (from buyorderRec in betterDb.buyorders
+                               where buyorderRec.order_ID >= tempID
+                               orderby buyorderRec.order_ID descending
+                               select buyorderRec).AsNoTracking().FirstOrDefault();
 
-            if (latestOrderID == 0)
+            if (latestOrder == null)
             {
                 newOrderID = tempID;
             }
             else
             {
-                newOrderID = latestOrderID + 1;
+                newOrderID = latestOrder.order_ID + 1;
             }
             order = new buyorder();
             order.order_ID = newOrderID;
@@ -68,7 +68,6 @@ namespace BetterLimitedProject.Sales
             UpdatePrice();
             categorySearch = "";
             nameSearch = "";
-            loadProduct();
             loadComboBox();
             lblBuyOrder.Text = $"Order ID: {order.order_ID}";
         }
@@ -124,14 +123,14 @@ namespace BetterLimitedProject.Sales
             {
                 orderline orderln = new orderline();
 
-                orderln.buyorder = order;
-                orderln.product = addedProduct;
                 orderln.product_ID = addedProduct.product_ID;
                 orderln.order_ID = order.order_ID;
+                orderln.product = addedProduct;
                 orderln.quantity = 1;
                 shoppingCart.Add(orderln);
                 POSOrderLineControl orderLineControl = new POSOrderLineControl(this) { Dock = DockStyle.Top };
                 orderLineControl.line = orderln;
+                orderLineControl.product = addedProduct;
                 panOrderLine.Controls.Add(orderLineControl);
 
             }
@@ -174,8 +173,8 @@ namespace BetterLimitedProject.Sales
         private void loadComboBox()
         {
             cboCategory.SelectedIndex = 0;
-            var cat = from catRec in betterDb.categories
-                      select catRec.category_name;
+            var cat = (from catRec in betterDb.categories
+                       select catRec.category_name).AsNoTracking();
             foreach (var categoryitem in cat.ToList())
             {
                 cboCategory.Items.Add(categoryitem);
@@ -259,8 +258,8 @@ namespace BetterLimitedProject.Sales
                     var userResult = (from userRec in betterDB.customers
                                       where userRec.user_ID != 1000000000
                                       orderby userRec.user_ID descending
-                                      select userRec.user_ID).FirstOrDefault();
-                    newCustomerID = userResult + 1;
+                                      select userRec).AsNoTracking().FirstOrDefault();
+                    newCustomerID = userResult.user_ID + 1;
                     MessageBox.Show($"{newCustomerID}");
                 }
             }
@@ -295,20 +294,21 @@ namespace BetterLimitedProject.Sales
             newCustomer.phone_No = Int32.Parse(tbPhone.Text);
             newCustomer.email = tbEmail.Text;
             newCustomer.address = tbAddress.Text;
+            newCustomer.create_date = DateTime.Now;
         }
 
         private List<reservation> newReserList;
         private void createReservation(customer cust, orderline line, int reserID)
         {
 
-                    reservation newReservation = new reservation();
-                    newReservation.reservation_ID = reserID;
-                    newReservation.product = line.product;
-                    newReservation.qty = (int) line.quantity;
-                    newReservation.productID = newReservation.product.product_ID;
-                    newReservation.customer = cust;
-                    newReservation.customerID = newReservation.customer.user_ID;
-                    newReserList.Add(newReservation);
+            reservation newReservation = new reservation();
+            newReservation.reservation_ID = reserID;
+            newReservation.product = line.product;
+            newReservation.qty = (int)line.quantity;
+            newReservation.productID = line.product_ID;
+            newReservation.customerID = cust.user_ID;
+            newReservation.reservation_date = DateTime.Now;
+            newReserList.Add(newReservation);
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -326,18 +326,18 @@ namespace BetterLimitedProject.Sales
                     int tempID = year * (int)Math.Pow(10, 5);
 
                     int newDeliveryID;
-                    int latestDeliveryID = (from deliveryRec in betterDb.deliveries
-                                            where deliveryRec.delivery_ID >= tempID
-                                            orderby deliveryRec.delivery_ID descending
-                                            select deliveryRec.delivery_ID).FirstOrDefault();
+                    var latestDelivery = (from deliveryRec in betterDb.deliveries
+                                          where deliveryRec.delivery_ID >= tempID
+                                          orderby deliveryRec.delivery_ID descending
+                                          select deliveryRec).AsNoTracking().FirstOrDefault();
 
-                    if (latestDeliveryID == 0)
+                    if (latestDelivery == null)
                     {
                         newDeliveryID = tempID;
                     }
                     else
                     {
-                        newDeliveryID = latestDeliveryID + 1;
+                        newDeliveryID = latestDelivery.delivery_ID + 1;
                     }
 
                     newDelivery = new delivery();
@@ -367,18 +367,18 @@ namespace BetterLimitedProject.Sales
                     int tempID = year * (int)Math.Pow(10, 5);
 
                     int newReservationID;
-                    int latestReservationID = (from reserRec in betterDb.reservations
-                                            where reserRec.reservation_ID >= tempID
-                                            orderby reserRec.reservation_ID descending
-                                            select reserRec.reservation_ID).FirstOrDefault();
+                    var latestReservation = (from reserRec in betterDb.reservations
+                                             where reserRec.reservation_ID >= tempID
+                                             orderby reserRec.reservation_ID descending
+                                             select reserRec).AsNoTracking().FirstOrDefault();
 
-                    if (latestReservationID == 0)
+                    if (latestReservation == null)
                     {
                         newReservationID = tempID;
                     }
                     else
                     {
-                        newReservationID = latestReservationID + 1;
+                        newReservationID = latestReservation.reservation_ID + 1;
                     }
                     foreach (var line in shoppingCart)
                     {
@@ -397,8 +397,10 @@ namespace BetterLimitedProject.Sales
         // =========================================== Payment Page Section =======================================================
         private int discount = 0;
         private float totalPrice = 0;
+        private bool confirmPay;
         private void payOnLoad()
         {
+            confirmPay = false;
             if (ordOption == OrderOption.LevelCUSTOMER || ordOption == OrderOption.LevelDelivery)
             {
                 loadFullPayment();
@@ -418,7 +420,7 @@ namespace BetterLimitedProject.Sales
             panPayList.Controls.Clear();
             foreach (var line in shoppingCart)
             {
-                PayControl payItemRow = new PayControl(){Dock = DockStyle.Top};
+                PayControl payItemRow = new PayControl() { Dock = DockStyle.Top };
                 payItemRow.nameText = line.product.name;
                 payItemRow.qtyText = (line.quantity).ToString();
                 payItemRow.priceText = $"$HK{line.product.price:.}";
@@ -456,7 +458,7 @@ namespace BetterLimitedProject.Sales
                     payItemRow.priceText = $"0";
                     total = 0;
                 }
-                totalPrice += (float) total;
+                totalPrice += (float)total;
                 payItemRow.totalText = $"$HK{total}";
                 panPayList.Controls.Add(payItemRow);
 
@@ -491,20 +493,43 @@ namespace BetterLimitedProject.Sales
 
         private void btnConfirmPayment_Click(object sender, EventArgs e)
         {
-            createOrder();
-            tabControl.SelectedTab = tpPrintReceipt;
+            if (!(confirmPay))
+            {
+                float cash = (float)numCash.Value;
+                if (cash >= totalPrice)
+                {
+                    confirmPay = true;
+                    float change = cash - totalPrice;
+                    tbChange.Text = $"${change}";
+                    btnPpReturn.Hide();
+                    btnConfirmPayment.Text = "Continue";
+                }
+                else
+                {
+                    MessageBox.Show("Please enter sufficient balance!!");
+                }
+
+            }
+            else
+            {
+                createOrder();
+                tabControl.SelectedTab = tpPrintReceipt;
+            }
         }
 
         private void createOrder()
         {
+            foreach (var line in shoppingCart)
+            {
+                line.product = null;
+            }
             order.order_date = DateTime.Now;
             order.total_price = totalPrice;
             if (ordOption == OrderOption.LevelCUSTOMER)
             {
                 var walkinCustomer = (from customerRec in betterDb.customers
-                    where customerRec.user_ID == 1000000000
-                    select customerRec).FirstOrDefault();
-                order.customer = walkinCustomer;
+                                      where customerRec.user_ID == 1000000000
+                                      select customerRec).AsNoTracking().FirstOrDefault();
                 order.customer_ID = walkinCustomer.user_ID;
                 betterDb.buyorders.Add(order);
                 foreach (var line in shoppingCart)
@@ -516,10 +541,8 @@ namespace BetterLimitedProject.Sales
             }
             else if (ordOption == OrderOption.LevelDelivery)
             {
-                order.customer = newCustomer;
-                order.customer_ID = order.customer.user_ID;
-                order.delivery = newDelivery;
-                order.delivery_ID = order.delivery.delivery_ID;
+                order.customer_ID = newCustomer.user_ID;
+                order.delivery_ID = newDelivery.delivery_ID;
                 betterDb.customers.Add(newCustomer);
                 betterDb.buyorders.Add(order);
                 foreach (var line in shoppingCart)
@@ -535,6 +558,14 @@ namespace BetterLimitedProject.Sales
             else if (ordOption == OrderOption.LevelDeposit)
             {
                 MessageBox.Show("Creating deposit");
+                betterDb.customers.Add(newCustomer);
+                foreach (var reser in newReserList)
+                {
+                    reser.product = null;
+                    betterDb.reservations.Add(reser);
+                }
+
+                betterDb.SaveChanges();
             }
             else
             {
@@ -553,10 +584,19 @@ namespace BetterLimitedProject.Sales
         private void createReceipt()
         {
             MessageBox.Show("Create Receipt");
-            if (ordOption == OrderOption.LevelDelivery)
+            if (ordOption == OrderOption.LevelCUSTOMER)
             {
 
             }
+            else if (ordOption == OrderOption.LevelDelivery)
+            {
+
+            }
+            else
+            {
+
+            }
+            betterDb.Dispose();
         }
         // =========================================== Receipt Page Section =======================================================
     }

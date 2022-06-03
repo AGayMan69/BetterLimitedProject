@@ -11,7 +11,7 @@
           </Key>
           <Property Name="order_ID" Type="int" Nullable="false" />
           <Property Name="customer_ID" Type="int" Nullable="false" />
-          <Property Name="order_date" Type="date" Nullable="false" />
+          <Property Name="order_date" Type="timestamp" Precision="0" />
           <Property Name="delivery_ID" Type="int" />
           <Property Name="installation_ID" Type="int" />
           <Property Name="total_price" Type="float" Nullable="false" />
@@ -32,6 +32,7 @@
           <Property Name="phone_No" Type="int" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="address" Type="varchar" MaxLength="255" />
+          <Property Name="create_date" Type="timestamp" Precision="0" />
         </EntityType>
         <EntityType Name="defect">
           <Key>
@@ -52,10 +53,10 @@
           <Property Name="type" Type="int" Nullable="false" />
           <Property Name="status" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="net_weight" Type="float" Nullable="false" />
-          <Property Name="approve_time" Type="date" />
-          <Property Name="complete_time" Type="date" />
+          <Property Name="approve_time" Type="timestamp" Precision="0" />
+          <Property Name="complete_time" Type="timestamp" Precision="0" />
           <Property Name="assignment_ID" Type="int" />
-          <Property Name="delivery_date" Type="date" Nullable="false" />
+          <Property Name="delivery_date" Type="timestamp" Precision="0" />
         </EntityType>
         <EntityType Name="delivery_assignment">
           <Key>
@@ -87,9 +88,8 @@
           </Key>
           <Property Name="installation_ID" Type="int" Nullable="false" />
           <Property Name="installation_type" Type="int" />
-          <Property Name="installation_date" Type="date" />
+          <Property Name="installation_date" Type="timestamp" Precision="0" />
           <Property Name="delivery_ID" Type="int" Nullable="false" />
-          <Property Name="delivery_date" Type="date" />
           <Property Name="order_ID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="installation_assignment">
@@ -109,7 +109,6 @@
           <Property Name="product_ID" Type="int" Nullable="false" />
           <Property Name="order_ID" Type="int" Nullable="false" />
           <Property Name="quantity" Type="int" />
-          <Property Name="BuyOrderorder_ID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="position">
           <Key>
@@ -163,7 +162,7 @@
           <Property Name="delivery_ID" Type="int" Nullable="false" />
           <Property Name="salesID" Type="int" Nullable="false" />
           <Property Name="store_ID" Type="int" Nullable="false" />
-          <Property Name="request_date" Type="date" Nullable="false" />
+          <Property Name="request_date" Type="timestamp" Precision="0" />
         </EntityType>
         <EntityType Name="replenishment_product">
           <Key>
@@ -182,8 +181,8 @@
           <Property Name="customerID" Type="int" Nullable="false" />
           <Property Name="productID" Type="int" Nullable="false" />
           <Property Name="qty" Type="int" Nullable="false" />
-          <Property Name="reservation_date" Type="date" Nullable="false" />
-          <Property Name="complete_date" Type="date" />
+          <Property Name="reservation_date" Type="timestamp" Precision="0" />
+          <Property Name="complete_date" Type="timestamp" Precision="0" />
         </EntityType>
         <EntityType Name="resetpassword_request">
           <Key>
@@ -191,7 +190,7 @@
           </Key>
           <Property Name="request_code" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="staff_ID" Type="int" Nullable="false" />
-          <Property Name="request_time" Type="date" Nullable="false" />
+          <Property Name="request_time" Type="timestamp" Precision="0" />
         </EntityType>
         <EntityType Name="retail_store">
           <Key>
@@ -251,7 +250,7 @@
           <Property Name="warehouse_ID" Type="int" Nullable="false" />
           <Property Name="sector_ID" Type="int" Nullable="false" />
           <Property Name="qty" Type="int" Nullable="false" />
-          <Property Name="store_date" Type="date" Nullable="false" />
+          <Property Name="store_date" Type="timestamp" Precision="0" Nullable="false" />
         </EntityType>
         <EntityType Name="worker">
           <Key>
@@ -1049,7 +1048,7 @@
           </Key>
           <Property Name="order_ID" Type="Int32" Nullable="false" />
           <Property Name="customer_ID" Type="Int32" Nullable="false" />
-          <Property Name="order_date" Type="DateTime" Nullable="false" />
+          <Property Name="order_date" Type="DateTime" />
           <Property Name="delivery_ID" Type="Int32" />
           <Property Name="installation_ID" Type="Int32" />
           <Property Name="total_price" Type="Single" Nullable="false" />
@@ -1075,6 +1074,7 @@
           <Property Name="phone_No" Type="Int32" Nullable="false" />
           <Property Name="email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="create_date" Type="DateTime" />
           <NavigationProperty Name="buyorders" Relationship="betterlimitedModel.FKBuyOrdercustomerID" FromRole="customer" ToRole="buyorder" />
           <NavigationProperty Name="reservations" Relationship="betterlimitedModel.FKRerservationCustomerID" FromRole="customer" ToRole="reservation" />
         </EntityType>
@@ -1102,7 +1102,7 @@
           <Property Name="approve_time" Type="DateTime" />
           <Property Name="complete_time" Type="DateTime" />
           <Property Name="assignment_ID" Type="Int32" />
-          <Property Name="delivery_date" Type="DateTime" Nullable="false" />
+          <Property Name="delivery_date" Type="DateTime" />
           <NavigationProperty Name="buyorders" Relationship="betterlimitedModel.FKOrderDeliveryID" FromRole="delivery" ToRole="buyorder" />
           <NavigationProperty Name="defects" Relationship="betterlimitedModel.FKDefectDeliveryID" FromRole="delivery" ToRole="defect" />
           <NavigationProperty Name="delivery_assignment" Relationship="betterlimitedModel.FKDeliveryAssDeliveryID" FromRole="delivery" ToRole="delivery_assignment" />
@@ -1147,7 +1147,6 @@
           <Property Name="installation_type" Type="Int32" />
           <Property Name="installation_date" Type="DateTime" />
           <Property Name="delivery_ID" Type="Int32" Nullable="false" />
-          <Property Name="delivery_date" Type="DateTime" />
           <Property Name="order_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="buyorder" Relationship="betterlimitedModel.FKInstallationOrderID" FromRole="installation" ToRole="buyorder" />
           <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKInstallationDeliveryID" FromRole="installation" ToRole="delivery" />
@@ -1171,7 +1170,6 @@
           <Property Name="product_ID" Type="Int32" Nullable="false" />
           <Property Name="order_ID" Type="Int32" Nullable="false" />
           <Property Name="quantity" Type="Int32" />
-          <Property Name="BuyOrderorder_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="buyorder" Relationship="betterlimitedModel.FKOrderLineOrderID" FromRole="orderline" ToRole="buyorder" />
           <NavigationProperty Name="product" Relationship="betterlimitedModel.FKOrderLine592221" FromRole="orderline" ToRole="product" />
         </EntityType>
@@ -1243,7 +1241,7 @@
           <Property Name="delivery_ID" Type="Int32" Nullable="false" />
           <Property Name="salesID" Type="Int32" Nullable="false" />
           <Property Name="store_ID" Type="Int32" Nullable="false" />
-          <Property Name="request_date" Type="DateTime" Nullable="false" />
+          <Property Name="request_date" Type="DateTime" />
           <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKReplenishmDeliveryID" FromRole="replenishment" ToRole="delivery" />
           <NavigationProperty Name="replenishment_product" Relationship="betterlimitedModel.FKReplenishm241066" FromRole="replenishment" ToRole="replenishment_product" />
           <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKReplenishm316808" FromRole="replenishment" ToRole="staff" />
@@ -1268,7 +1266,7 @@
           <Property Name="customerID" Type="Int32" Nullable="false" />
           <Property Name="productID" Type="Int32" Nullable="false" />
           <Property Name="qty" Type="Int32" Nullable="false" />
-          <Property Name="reservation_date" Type="DateTime" Nullable="false" />
+          <Property Name="reservation_date" Type="DateTime" />
           <Property Name="complete_date" Type="DateTime" />
           <NavigationProperty Name="customer" Relationship="betterlimitedModel.FKRerservationCustomerID" FromRole="reservation" ToRole="customer" />
           <NavigationProperty Name="product" Relationship="betterlimitedModel.FKReservatio826341" FromRole="reservation" ToRole="product" />
@@ -1279,7 +1277,7 @@
           </Key>
           <Property Name="request_code" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="staff_ID" Type="Int32" Nullable="false" />
-          <Property Name="request_time" Type="DateTime" Nullable="false" />
+          <Property Name="request_time" Type="DateTime" />
           <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKstaffID" FromRole="resetpassword_request" ToRole="staff" />
         </EntityType>
         <EntityType Name="retail_store">
@@ -1836,6 +1834,7 @@
           <EntitySetMapping Name="customers">
             <EntityTypeMapping TypeName="betterlimitedModel.customer">
               <MappingFragment StoreEntitySet="customer">
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
                 <ScalarProperty Name="address" ColumnName="address" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="phone_No" ColumnName="phone_No" />
@@ -1900,7 +1899,6 @@
             <EntityTypeMapping TypeName="betterlimitedModel.installation">
               <MappingFragment StoreEntitySet="installation">
                 <ScalarProperty Name="order_ID" ColumnName="order_ID" />
-                <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
                 <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
                 <ScalarProperty Name="installation_date" ColumnName="installation_date" />
                 <ScalarProperty Name="installation_type" ColumnName="installation_type" />
@@ -1920,7 +1918,6 @@
           <EntitySetMapping Name="orderlines">
             <EntityTypeMapping TypeName="betterlimitedModel.orderline">
               <MappingFragment StoreEntitySet="orderline">
-                <ScalarProperty Name="BuyOrderorder_ID" ColumnName="BuyOrderorder_ID" />
                 <ScalarProperty Name="quantity" ColumnName="quantity" />
                 <ScalarProperty Name="order_ID" ColumnName="order_ID" />
                 <ScalarProperty Name="product_ID" ColumnName="product_ID" />
