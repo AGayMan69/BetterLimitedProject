@@ -4,26 +4,17 @@
     <projectFile>BetterLimitedProject/BetterLimitedProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="workspace.xml doesn't matter">
+    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="create order">
+      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/PayControl.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/PayControl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/PayControl.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/App.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BetterLimitedProject/BetterLimitedProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/BetterLimitedProject.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Properties/Resources.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Properties/Resources.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/POSProductControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/POSProductControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/buyorder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/buyorder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/customer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/dataModel.Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/dataModel.Context.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx.diagram" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx.diagram" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/delivery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/delivery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/orderline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/orderline.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/reservation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/reservation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +83,7 @@
       <workItem from="1654097631088" duration="635000" />
       <workItem from="1654098982729" duration="1794000" />
       <workItem from="1654174789308" duration="2966000" />
-      <workItem from="1654242528652" duration="377000" />
+      <workItem from="1654242528652" duration="2933000" />
     </task>
     <task id="LOCAL-00001" summary="easy">
       <created>1654108350566</created>
@@ -136,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654179421704</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="create order">
+      <created>1654244071009</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654244071009</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +162,7 @@
     <MESSAGE value="relevant shit" />
     <MESSAGE value="in tab control in create order" />
     <MESSAGE value="workspace.xml doesn't matter" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml doesn't matter" />
+    <MESSAGE value="create order" />
+    <option name="LAST_COMMIT_MESSAGE" value="create order" />
   </component>
 </project>

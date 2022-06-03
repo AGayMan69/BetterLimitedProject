@@ -5,47 +5,47 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="156604ff508441c5a9ba6b2ad23da8a3" Name="Diagram1">
-        <EntityTypeShape EntityType="betterlimitedModel.buyorder" Width="1.5" PointX="15" PointY="18.5" />
-        <EntityTypeShape EntityType="betterlimitedModel.category" Width="1.5" PointX="8.25" PointY="8.125" />
-        <EntityTypeShape EntityType="betterlimitedModel.customer" Width="1.5" PointX="12.75" PointY="4.875" />
-        <EntityTypeShape EntityType="betterlimitedModel.defect" Width="1.5" PointX="14.75" PointY="22.625" />
-        <EntityTypeShape EntityType="betterlimitedModel.delivery" Width="1.5" PointX="7.5" PointY="31.25" />
+        <EntityTypeShape EntityType="betterlimitedModel.buyorder" Width="1.5" PointX="15" PointY="18.625" />
+        <EntityTypeShape EntityType="betterlimitedModel.category" Width="1.5" PointX="5.25" PointY="7.5" />
+        <EntityTypeShape EntityType="betterlimitedModel.customer" Width="1.5" PointX="9.75" PointY="4.875" />
+        <EntityTypeShape EntityType="betterlimitedModel.defect" Width="1.5" PointX="12.75" PointY="24.375" />
+        <EntityTypeShape EntityType="betterlimitedModel.delivery" Width="1.5" PointX="7.5" PointY="31.625" />
         <EntityTypeShape EntityType="betterlimitedModel.delivery_assignment" Width="1.5" PointX="7.5" PointY="24" />
-        <EntityTypeShape EntityType="betterlimitedModel.delivery_type" Width="1.5" PointX="5.25" PointY="32.375" />
+        <EntityTypeShape EntityType="betterlimitedModel.delivery_type" Width="1.5" PointX="5.25" PointY="32.75" />
         <EntityTypeShape EntityType="betterlimitedModel.department" Width="1.5" PointX="0.75" PointY="10.875" />
-        <EntityTypeShape EntityType="betterlimitedModel.installation" Width="1.5" PointX="17.25" PointY="25.25" />
-        <EntityTypeShape EntityType="betterlimitedModel.installation_assignment" Width="1.5" PointX="19.5" PointY="25.875" />
-        <EntityTypeShape EntityType="betterlimitedModel.orderline" Width="1.5" PointX="17.25" PointY="13" />
+        <EntityTypeShape EntityType="betterlimitedModel.installation" Width="1.5" PointX="17.25" PointY="25.625" />
+        <EntityTypeShape EntityType="betterlimitedModel.installation_assignment" Width="1.5" PointX="19.5" PointY="26.125" />
+        <EntityTypeShape EntityType="betterlimitedModel.orderline" Width="1.5" PointX="17.25" PointY="12.75" />
         <EntityTypeShape EntityType="betterlimitedModel.position" Width="1.5" PointX="3" PointY="23.75" />
-        <EntityTypeShape EntityType="betterlimitedModel.product" Width="1.5" PointX="10.5" PointY="6.625" />
-        <EntityTypeShape EntityType="betterlimitedModel.purchaseorder" Width="1.5" PointX="7.5" PointY="12.375" />
-        <EntityTypeShape EntityType="betterlimitedModel.reorder" Width="1.5" PointX="9.75" PointY="15.25" />
-        <EntityTypeShape EntityType="betterlimitedModel.replenishment" Width="1.5" PointX="9.75" PointY="21.875" />
-        <EntityTypeShape EntityType="betterlimitedModel.replenishment_product" Width="1.5" PointX="12" PointY="22.125" />
-        <EntityTypeShape EntityType="betterlimitedModel.reservation" Width="1.5" PointX="15" PointY="6.75" />
-        <EntityTypeShape EntityType="betterlimitedModel.resetpassword_request" Width="1.5" PointX="7.5" PointY="19" />
-        <EntityTypeShape EntityType="betterlimitedModel.retail_store" Width="1.5" PointX="7.5" PointY="27.25" />
-        <EntityTypeShape EntityType="betterlimitedModel.retail_store_product" Width="1.5" PointX="9.75" PointY="27.5" />
+        <EntityTypeShape EntityType="betterlimitedModel.product" Width="1.5" PointX="7.5" PointY="6" />
+        <EntityTypeShape EntityType="betterlimitedModel.purchaseorder" Width="1.5" PointX="7.5" PointY="27.875" />
+        <EntityTypeShape EntityType="betterlimitedModel.reorder" Width="1.5" PointX="12.75" PointY="20.25" />
+        <EntityTypeShape EntityType="betterlimitedModel.replenishment" Width="1.5" PointX="9.75" PointY="19.25" />
+        <EntityTypeShape EntityType="betterlimitedModel.replenishment_product" Width="1.5" PointX="12" PointY="16.5" />
+        <EntityTypeShape EntityType="betterlimitedModel.reservation" Width="1.5" PointX="12" PointY="6.375" />
+        <EntityTypeShape EntityType="betterlimitedModel.resetpassword_request" Width="1.5" PointX="7.5" PointY="12.375" />
+        <EntityTypeShape EntityType="betterlimitedModel.retail_store" Width="1.5" PointX="7.5" PointY="19.875" />
+        <EntityTypeShape EntityType="betterlimitedModel.retail_store_product" Width="1.5" PointX="9.75" PointY="23.25" />
         <EntityTypeShape EntityType="betterlimitedModel.staff" Width="1.5" PointX="5.25" PointY="16.125" />
-        <EntityTypeShape EntityType="betterlimitedModel.warehouse" Width="1.5" PointX="7.5" PointY="15.75" />
-        <EntityTypeShape EntityType="betterlimitedModel.warehouse_product" Width="1.5" PointX="12.75" PointY="15.75" />
+        <EntityTypeShape EntityType="betterlimitedModel.warehouse" Width="1.5" PointX="7.5" PointY="15.125" />
+        <EntityTypeShape EntityType="betterlimitedModel.warehouse_product" Width="1.5" PointX="9.75" PointY="15.125" />
         <EntityTypeShape EntityType="betterlimitedModel.worker" Width="1.5" PointX="5.25" PointY="23.625" />
-        <AssociationConnector Association="betterlimitedModel.FKBuyOrder843053" />
         <AssociationConnector Association="betterlimitedModel.FKBuyOrdercustomerID" />
-        <AssociationConnector Association="betterlimitedModel.FKInstallati134709" />
-        <AssociationConnector Association="betterlimitedModel.FKOrderLine431184" />
+        <AssociationConnector Association="betterlimitedModel.FKInstallationOrderID" />
+        <AssociationConnector Association="betterlimitedModel.FKOrderDeliveryID" />
+        <AssociationConnector Association="betterlimitedModel.FKOrderLineOrderID" />
         <AssociationConnector Association="betterlimitedModel.FKproductCategoryID" />
-        <AssociationConnector Association="betterlimitedModel.FKReservatio648681" />
+        <AssociationConnector Association="betterlimitedModel.FKRerservationCustomerID" />
         <AssociationConnector Association="betterlimitedModel.FKDefect544799" />
-        <AssociationConnector Association="betterlimitedModel.FKDefect662396" />
-        <AssociationConnector Association="betterlimitedModel.FKDelivery_A413752" />
+        <AssociationConnector Association="betterlimitedModel.FKDefectDeliveryID" />
+        <AssociationConnector Association="betterlimitedModel.FKDeliveryAssDeliveryID" />
         <AssociationConnector Association="betterlimitedModel.FKDeliveryDeliveryType" />
-        <AssociationConnector Association="betterlimitedModel.FKInstallati996707" />
-        <AssociationConnector Association="betterlimitedModel.FKReplenishm649741" />
+        <AssociationConnector Association="betterlimitedModel.FKInstallationDeliveryID" />
+        <AssociationConnector Association="betterlimitedModel.FKReplenishmDeliveryID" />
         <AssociationConnector Association="betterlimitedModel.FKDelivery_A888474" />
         <AssociationConnector Association="betterlimitedModel.FKdepartmentID" />
         <AssociationConnector Association="betterlimitedModel.position_department_department_ID_fk" />
-        <AssociationConnector Association="betterlimitedModel.FKInstallati60270" />
+        <AssociationConnector Association="betterlimitedModel.FKInstallationAssInstallationID" />
         <AssociationConnector Association="betterlimitedModel.FKOrderLine592221" />
         <AssociationConnector Association="betterlimitedModel.FKStaff255574" />
         <AssociationConnector Association="betterlimitedModel.FKWorker808068" />

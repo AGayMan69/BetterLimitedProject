@@ -48,14 +48,7 @@ namespace BetterLimitedProject.Sales
             this.tpPay = new System.Windows.Forms.TabPage();
             this.tpPrintReceipt = new System.Windows.Forms.TabPage();
             this.tpFillInfo = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnSelectDeposit = new System.Windows.Forms.Button();
-            this.btnSelectDelivery = new System.Windows.Forms.Button();
-            this.btnSelectCustomer = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
@@ -71,6 +64,33 @@ namespace BetterLimitedProject.Sales
             this.btnConfirmPayment = new System.Windows.Forms.Button();
             this.dtpDeliveryTime = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panPayList = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnSelectDeposit = new System.Windows.Forms.Button();
+            this.btnSelectDelivery = new System.Windows.Forms.Button();
+            this.btnSelectCustomer = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.lblSub = new System.Windows.Forms.Label();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tpShoppingCart.SuspendLayout();
@@ -78,6 +98,8 @@ namespace BetterLimitedProject.Sales
             this.tpPay.SuspendLayout();
             this.tpPrintReceipt.SuspendLayout();
             this.tpFillInfo.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCheckout
@@ -286,9 +308,13 @@ namespace BetterLimitedProject.Sales
             // tpPay
             // 
             this.tpPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.tpPay.Controls.Add(this.label17);
+            this.tpPay.Controls.Add(this.label15);
+            this.tpPay.Controls.Add(this.label14);
+            this.tpPay.Controls.Add(this.panel2);
             this.tpPay.Controls.Add(this.btnConfirmPayment);
             this.tpPay.Controls.Add(this.btnPpReturn);
-            this.tpPay.Controls.Add(this.label2);
+            this.tpPay.Controls.Add(this.panel4);
             this.tpPay.Location = new System.Drawing.Point(4, 5);
             this.tpPay.Name = "tpPay";
             this.tpPay.Padding = new System.Windows.Forms.Padding(3);
@@ -332,15 +358,6 @@ namespace BetterLimitedProject.Sales
             this.tpFillInfo.TabIndex = 4;
             this.tpFillInfo.Text = "tabPage3";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(398, 201);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Pay";
-            // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
@@ -350,111 +367,6 @@ namespace BetterLimitedProject.Sales
             this.label5.Size = new System.Drawing.Size(842, 144);
             this.label5.TabIndex = 42;
             this.label5.Text = "Thank you for the purchase!!!";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Black;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.btnSearch.Location = new System.Drawing.Point(322, 24);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(47, 38);
-            this.btnSearch.TabIndex = 31;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnSelectDeposit
-            // 
-            this.btnSelectDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(52)))), ((int)(((byte)(19)))));
-            this.btnSelectDeposit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSelectDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectDeposit.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectDeposit.ForeColor = System.Drawing.Color.White;
-            this.btnSelectDeposit.Image = global::BetterLimitedProject.Properties.Resources.deposit;
-            this.btnSelectDeposit.Location = new System.Drawing.Point(641, 117);
-            this.btnSelectDeposit.Name = "btnSelectDeposit";
-            this.btnSelectDeposit.Size = new System.Drawing.Size(244, 433);
-            this.btnSelectDeposit.TabIndex = 40;
-            this.btnSelectDeposit.Text = "Deposit";
-            this.btnSelectDeposit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSelectDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnSelectDeposit.UseVisualStyleBackColor = false;
-            this.btnSelectDeposit.Click += new System.EventHandler(this.btnSelectDeposit_Click);
-            // 
-            // btnSelectDelivery
-            // 
-            this.btnSelectDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
-            this.btnSelectDelivery.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSelectDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectDelivery.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectDelivery.ForeColor = System.Drawing.Color.White;
-            this.btnSelectDelivery.Image = global::BetterLimitedProject.Properties.Resources.delivery;
-            this.btnSelectDelivery.Location = new System.Drawing.Point(333, 117);
-            this.btnSelectDelivery.Name = "btnSelectDelivery";
-            this.btnSelectDelivery.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnSelectDelivery.Size = new System.Drawing.Size(244, 433);
-            this.btnSelectDelivery.TabIndex = 39;
-            this.btnSelectDelivery.Text = "Delivery";
-            this.btnSelectDelivery.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSelectDelivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnSelectDelivery.UseVisualStyleBackColor = false;
-            this.btnSelectDelivery.Click += new System.EventHandler(this.btnSelectDelivery_Click);
-            // 
-            // btnSelectCustomer
-            // 
-            this.btnSelectCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
-            this.btnSelectCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSelectCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectCustomer.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnSelectCustomer.Image = global::BetterLimitedProject.Properties.Resources.customerpickup;
-            this.btnSelectCustomer.Location = new System.Drawing.Point(31, 117);
-            this.btnSelectCustomer.Name = "btnSelectCustomer";
-            this.btnSelectCustomer.Size = new System.Drawing.Size(244, 433);
-            this.btnSelectCustomer.TabIndex = 38;
-            this.btnSelectCustomer.Text = "Customer Pickup";
-            this.btnSelectCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSelectCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnSelectCustomer.UseVisualStyleBackColor = false;
-            this.btnSelectCustomer.Click += new System.EventHandler(this.btnSelectCustomer_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::BetterLimitedProject.Properties.Resources.icon_viewdocument;
-            this.button1.Location = new System.Drawing.Point(82, 162);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(325, 433);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "View Receipt";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::BetterLimitedProject.Properties.Resources.icon_printdocument;
-            this.button2.Location = new System.Drawing.Point(507, 162);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(325, 433);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Print Receipt";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -587,11 +499,11 @@ namespace BetterLimitedProject.Sales
             this.btnPpReturn.BackColor = System.Drawing.Color.White;
             this.btnPpReturn.FlatAppearance.BorderSize = 5;
             this.btnPpReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPpReturn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPpReturn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPpReturn.ForeColor = System.Drawing.Color.Black;
-            this.btnPpReturn.Location = new System.Drawing.Point(125, 486);
+            this.btnPpReturn.Location = new System.Drawing.Point(27, 568);
             this.btnPpReturn.Name = "btnPpReturn";
-            this.btnPpReturn.Size = new System.Drawing.Size(213, 65);
+            this.btnPpReturn.Size = new System.Drawing.Size(147, 43);
             this.btnPpReturn.TabIndex = 32;
             this.btnPpReturn.Text = "Return";
             this.btnPpReturn.UseVisualStyleBackColor = false;
@@ -602,11 +514,11 @@ namespace BetterLimitedProject.Sales
             this.btnConfirmPayment.BackColor = System.Drawing.Color.Black;
             this.btnConfirmPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnConfirmPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmPayment.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.btnConfirmPayment.Location = new System.Drawing.Point(592, 486);
+            this.btnConfirmPayment.Location = new System.Drawing.Point(614, 568);
             this.btnConfirmPayment.Name = "btnConfirmPayment";
-            this.btnConfirmPayment.Size = new System.Drawing.Size(241, 65);
+            this.btnConfirmPayment.Size = new System.Drawing.Size(289, 43);
             this.btnConfirmPayment.TabIndex = 33;
             this.btnConfirmPayment.Text = "Confirm Payment";
             this.btnConfirmPayment.UseVisualStyleBackColor = false;
@@ -634,6 +546,366 @@ namespace BetterLimitedProject.Sales
             this.label10.TabIndex = 33;
             this.label10.Text = "Delivery Time";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.label2.Location = new System.Drawing.Point(7, 18);
+            this.label2.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 32);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Item List";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Location = new System.Drawing.Point(614, 25);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(289, 488);
+            this.panel2.TabIndex = 35;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(21, 18);
+            this.label11.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 32);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Cash";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textBox1.Location = new System.Drawing.Point(27, 53);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(237, 29);
+            this.textBox1.TabIndex = 36;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textBox2.Location = new System.Drawing.Point(27, 394);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox2.Size = new System.Drawing.Size(237, 29);
+            this.textBox2.TabIndex = 37;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(21, 359);
+            this.label12.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(121, 32);
+            this.label12.TabIndex = 38;
+            this.label12.Text = "Change";
+            // 
+            // panPayList
+            // 
+            this.panPayList.AutoScroll = true;
+            this.panPayList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
+            this.panPayList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panPayList.Location = new System.Drawing.Point(13, 87);
+            this.panPayList.Name = "panPayList";
+            this.panPayList.Size = new System.Drawing.Size(533, 289);
+            this.panPayList.TabIndex = 36;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(8, 391);
+            this.label13.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(105, 28);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Subtotal";
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(354, 404);
+            this.label14.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(219, 0);
+            this.label14.TabIndex = 38;
+            this.label14.Text = "HK$10000";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
+            this.label15.Location = new System.Drawing.Point(354, 447);
+            this.label15.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(219, 0);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "HK$10000";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
+            this.label16.Location = new System.Drawing.Point(9, 431);
+            this.label16.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(74, 19);
+            this.label16.TabIndex = 39;
+            this.label16.Text = "Discount";
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(354, 514);
+            this.label17.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(219, 0);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "HK$10000";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.label18.Location = new System.Drawing.Point(7, 473);
+            this.label18.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(75, 32);
+            this.label18.TabIndex = 41;
+            this.label18.Text = "Total";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Black;
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.btnSearch.Location = new System.Drawing.Point(322, 24);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(47, 38);
+            this.btnSearch.TabIndex = 31;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnSelectDeposit
+            // 
+            this.btnSelectDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(52)))), ((int)(((byte)(19)))));
+            this.btnSelectDeposit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSelectDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectDeposit.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectDeposit.ForeColor = System.Drawing.Color.White;
+            this.btnSelectDeposit.Image = global::BetterLimitedProject.Properties.Resources.deposit;
+            this.btnSelectDeposit.Location = new System.Drawing.Point(641, 117);
+            this.btnSelectDeposit.Name = "btnSelectDeposit";
+            this.btnSelectDeposit.Size = new System.Drawing.Size(244, 433);
+            this.btnSelectDeposit.TabIndex = 40;
+            this.btnSelectDeposit.Text = "Deposit";
+            this.btnSelectDeposit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSelectDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSelectDeposit.UseVisualStyleBackColor = false;
+            this.btnSelectDeposit.Click += new System.EventHandler(this.btnSelectDeposit_Click);
+            // 
+            // btnSelectDelivery
+            // 
+            this.btnSelectDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
+            this.btnSelectDelivery.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSelectDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectDelivery.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectDelivery.ForeColor = System.Drawing.Color.White;
+            this.btnSelectDelivery.Image = global::BetterLimitedProject.Properties.Resources.delivery;
+            this.btnSelectDelivery.Location = new System.Drawing.Point(333, 117);
+            this.btnSelectDelivery.Name = "btnSelectDelivery";
+            this.btnSelectDelivery.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnSelectDelivery.Size = new System.Drawing.Size(244, 433);
+            this.btnSelectDelivery.TabIndex = 39;
+            this.btnSelectDelivery.Text = "Delivery";
+            this.btnSelectDelivery.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSelectDelivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSelectDelivery.UseVisualStyleBackColor = false;
+            this.btnSelectDelivery.Click += new System.EventHandler(this.btnSelectDelivery_Click);
+            // 
+            // btnSelectCustomer
+            // 
+            this.btnSelectCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
+            this.btnSelectCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSelectCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectCustomer.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnSelectCustomer.Image = global::BetterLimitedProject.Properties.Resources.customerpickup;
+            this.btnSelectCustomer.Location = new System.Drawing.Point(31, 117);
+            this.btnSelectCustomer.Name = "btnSelectCustomer";
+            this.btnSelectCustomer.Size = new System.Drawing.Size(244, 433);
+            this.btnSelectCustomer.TabIndex = 38;
+            this.btnSelectCustomer.Text = "Customer Pickup";
+            this.btnSelectCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSelectCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSelectCustomer.UseVisualStyleBackColor = false;
+            this.btnSelectCustomer.Click += new System.EventHandler(this.btnSelectCustomer_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::BetterLimitedProject.Properties.Resources.icon_viewdocument;
+            this.button1.Location = new System.Drawing.Point(82, 162);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(325, 433);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "View Receipt";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::BetterLimitedProject.Properties.Resources.icon_printdocument;
+            this.button2.Location = new System.Drawing.Point(507, 162);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(325, 433);
+            this.button2.TabIndex = 40;
+            this.button2.Text = "Print Receipt";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(9, 63);
+            this.label19.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(58, 19);
+            this.label19.TabIndex = 43;
+            this.label19.Text = "Name";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(40)))), ((int)(((byte)(55)))));
+            this.panel4.Controls.Add(this.lblTotalPrice);
+            this.panel4.Controls.Add(this.lblDiscount);
+            this.panel4.Controls.Add(this.lblSub);
+            this.panel4.Controls.Add(this.label25);
+            this.panel4.Controls.Add(this.label24);
+            this.panel4.Controls.Add(this.label23);
+            this.panel4.Controls.Add(this.label19);
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.panPayList);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Location = new System.Drawing.Point(27, 25);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(559, 537);
+            this.panel4.TabIndex = 44;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(221, 63);
+            this.label23.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(74, 19);
+            this.label23.TabIndex = 47;
+            this.label23.Text = "Quantity";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(329, 63);
+            this.label24.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(47, 19);
+            this.label24.TabIndex = 48;
+            this.label24.Text = "Price";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(447, 63);
+            this.label25.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(45, 19);
+            this.label25.TabIndex = 49;
+            this.label25.Text = "Total";
+            // 
+            // lblSub
+            // 
+            this.lblSub.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSub.ForeColor = System.Drawing.Color.White;
+            this.lblSub.Location = new System.Drawing.Point(395, 391);
+            this.lblSub.MaximumSize = new System.Drawing.Size(250, 28);
+            this.lblSub.Name = "lblSub";
+            this.lblSub.Size = new System.Drawing.Size(151, 28);
+            this.lblSub.TabIndex = 50;
+            this.lblSub.Text = "Subtotal";
+            this.lblSub.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblDiscount
+            // 
+            this.lblDiscount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
+            this.lblDiscount.Location = new System.Drawing.Point(439, 431);
+            this.lblDiscount.MaximumSize = new System.Drawing.Size(250, 28);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(107, 19);
+            this.lblDiscount.TabIndex = 51;
+            this.lblDiscount.Text = "Discount";
+            this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblTotalPrice
+            // 
+            this.lblTotalPrice.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold);
+            this.lblTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.lblTotalPrice.Location = new System.Drawing.Point(357, 473);
+            this.lblTotalPrice.MaximumSize = new System.Drawing.Size(250, 32);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(189, 32);
+            this.lblTotalPrice.TabIndex = 52;
+            this.lblTotalPrice.Text = "Total";
+            this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // SalesCreaOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -652,10 +924,13 @@ namespace BetterLimitedProject.Sales
             this.tpOption.ResumeLayout(false);
             this.tpOption.PerformLayout();
             this.tpPay.ResumeLayout(false);
-            this.tpPay.PerformLayout();
             this.tpPrintReceipt.ResumeLayout(false);
             this.tpFillInfo.ResumeLayout(false);
             this.tpFillInfo.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -684,7 +959,6 @@ namespace BetterLimitedProject.Sales
         private System.Windows.Forms.TabPage tpPay;
         private System.Windows.Forms.TabPage tpPrintReceipt;
         private System.Windows.Forms.TabPage tpFillInfo;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
@@ -703,5 +977,26 @@ namespace BetterLimitedProject.Sales
         private System.Windows.Forms.Button btnConfirmPayment;
         private System.Windows.Forms.DateTimePicker dtpDeliveryTime;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panPayList;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblSub;
+        private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.Label lblDiscount;
     }
 }

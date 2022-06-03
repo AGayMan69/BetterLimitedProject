@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="order_ID" />
           </Key>
-          <Property Name="order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="order_ID" Type="int" Nullable="false" />
           <Property Name="customer_ID" Type="int" Nullable="false" />
           <Property Name="order_date" Type="date" Nullable="false" />
           <Property Name="delivery_ID" Type="int" />
@@ -27,7 +27,7 @@
           <Key>
             <PropertyRef Name="user_ID" />
           </Key>
-          <Property Name="user_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_ID" Type="int" Nullable="false" />
           <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="phone_No" Type="int" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
@@ -37,7 +37,7 @@
           <Key>
             <PropertyRef Name="defect_ID" />
           </Key>
-          <Property Name="defect_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="defect_ID" Type="int" Nullable="false" />
           <Property Name="delivery_ID" Type="int" Nullable="false" />
           <Property Name="product_ID" Type="int" Nullable="false" />
           <Property Name="description" Type="varchar" MaxLength="255" />
@@ -48,7 +48,7 @@
           <Key>
             <PropertyRef Name="delivery_ID" />
           </Key>
-          <Property Name="delivery_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="delivery_ID" Type="int" Nullable="false" />
           <Property Name="type" Type="int" Nullable="false" />
           <Property Name="status" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="net_weight" Type="float" Nullable="false" />
@@ -85,12 +85,11 @@
           <Key>
             <PropertyRef Name="installation_ID" />
           </Key>
-          <Property Name="installation_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="installation_ID" Type="int" Nullable="false" />
           <Property Name="installation_type" Type="int" />
           <Property Name="installation_date" Type="date" />
           <Property Name="delivery_ID" Type="int" Nullable="false" />
           <Property Name="delivery_date" Type="date" />
-          <Property Name="assignment_ID" Type="int" Nullable="false" />
           <Property Name="order_ID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="installation_assignment">
@@ -179,8 +178,8 @@
           <Key>
             <PropertyRef Name="reservation_ID" />
           </Key>
-          <Property Name="reservation_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="customer" Type="int" Nullable="false" />
+          <Property Name="reservation_ID" Type="int" Nullable="false" />
+          <Property Name="customerID" Type="int" Nullable="false" />
           <Property Name="productID" Type="int" Nullable="false" />
           <Property Name="qty" Type="int" Nullable="false" />
           <Property Name="reservation_date" Type="date" Nullable="false" />
@@ -266,18 +265,6 @@
           <Property Name="DOB" Type="date" Nullable="false" />
           <Property Name="phone_no" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FKBuyOrder843053">
-          <End Role="delivery" Type="Self.delivery" Multiplicity="0..1" />
-          <End Role="buyorder" Type="Self.buyorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="delivery">
-              <PropertyRef Name="delivery_ID" />
-            </Principal>
-            <Dependent Role="buyorder">
-              <PropertyRef Name="delivery_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FKBuyOrdercustomerID">
           <End Role="customer" Type="Self.customer" Multiplicity="1" />
           <End Role="buyorder" Type="Self.buyorder" Multiplicity="*" />
@@ -302,7 +289,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKDefect662396">
+        <Association Name="FKDefectDeliveryID">
           <End Role="delivery" Type="Self.delivery" Multiplicity="1" />
           <End Role="defect" Type="Self.defect" Multiplicity="*" />
           <ReferentialConstraint>
@@ -310,18 +297,6 @@
               <PropertyRef Name="delivery_ID" />
             </Principal>
             <Dependent Role="defect">
-              <PropertyRef Name="delivery_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKDelivery_A413752">
-          <End Role="delivery" Type="Self.delivery" Multiplicity="1" />
-          <End Role="delivery_assignment" Type="Self.delivery_assignment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="delivery">
-              <PropertyRef Name="delivery_ID" />
-            </Principal>
-            <Dependent Role="delivery_assignment">
               <PropertyRef Name="delivery_ID" />
             </Dependent>
           </ReferentialConstraint>
@@ -335,6 +310,18 @@
             </Principal>
             <Dependent Role="delivery_assignment">
               <PropertyRef Name="worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKDeliveryAssDeliveryID">
+          <End Role="delivery" Type="Self.delivery" Multiplicity="1" />
+          <End Role="delivery_assignment" Type="Self.delivery_assignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="delivery">
+              <PropertyRef Name="delivery_ID" />
+            </Principal>
+            <Dependent Role="delivery_assignment">
+              <PropertyRef Name="delivery_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -362,19 +349,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKInstallati134709">
-          <End Role="buyorder" Type="Self.buyorder" Multiplicity="1" />
-          <End Role="installation" Type="Self.installation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="buyorder">
-              <PropertyRef Name="order_ID" />
-            </Principal>
-            <Dependent Role="installation">
-              <PropertyRef Name="order_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKInstallati60270">
+        <Association Name="FKInstallationAssInstallationID">
           <End Role="installation" Type="Self.installation" Multiplicity="1" />
           <End Role="installation_assignment" Type="Self.installation_assignment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -386,7 +361,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKInstallati996707">
+        <Association Name="FKInstallationDeliveryID">
           <End Role="delivery" Type="Self.delivery" Multiplicity="1" />
           <End Role="installation" Type="Self.installation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -398,15 +373,27 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKOrderLine431184">
+        <Association Name="FKInstallationOrderID">
           <End Role="buyorder" Type="Self.buyorder" Multiplicity="1" />
-          <End Role="orderline" Type="Self.orderline" Multiplicity="*" />
+          <End Role="installation" Type="Self.installation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="buyorder">
               <PropertyRef Name="order_ID" />
             </Principal>
-            <Dependent Role="orderline">
-              <PropertyRef Name="BuyOrderorder_ID" />
+            <Dependent Role="installation">
+              <PropertyRef Name="order_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOrderDeliveryID">
+          <End Role="delivery" Type="Self.delivery" Multiplicity="0..1" />
+          <End Role="buyorder" Type="Self.buyorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="delivery">
+              <PropertyRef Name="delivery_ID" />
+            </Principal>
+            <Dependent Role="buyorder">
+              <PropertyRef Name="delivery_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -419,6 +406,18 @@
             </Principal>
             <Dependent Role="orderline">
               <PropertyRef Name="product_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOrderLineOrderID">
+          <End Role="buyorder" Type="Self.buyorder" Multiplicity="1" />
+          <End Role="orderline" Type="Self.orderline" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="buyorder">
+              <PropertyRef Name="order_ID" />
+            </Principal>
+            <Dependent Role="orderline">
+              <PropertyRef Name="order_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -530,18 +529,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKReplenishm649741">
-          <End Role="delivery" Type="Self.delivery" Multiplicity="1" />
-          <End Role="replenishment" Type="Self.replenishment" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="delivery">
-              <PropertyRef Name="delivery_ID" />
-            </Principal>
-            <Dependent Role="replenishment">
-              <PropertyRef Name="delivery_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FKReplenishm931267">
           <End Role="product" Type="Self.product" Multiplicity="1" />
           <End Role="replenishment_product" Type="Self.replenishment_product" Multiplicity="*" />
@@ -554,7 +541,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKReservatio648681">
+        <Association Name="FKReplenishmDeliveryID">
+          <End Role="delivery" Type="Self.delivery" Multiplicity="1" />
+          <End Role="replenishment" Type="Self.replenishment" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="delivery">
+              <PropertyRef Name="delivery_ID" />
+            </Principal>
+            <Dependent Role="replenishment">
+              <PropertyRef Name="delivery_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKRerservationCustomerID">
           <End Role="customer" Type="Self.customer" Multiplicity="1" />
           <End Role="reservation" Type="Self.reservation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -562,7 +561,7 @@
               <PropertyRef Name="user_ID" />
             </Principal>
             <Dependent Role="reservation">
-              <PropertyRef Name="customer" />
+              <PropertyRef Name="customerID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -724,10 +723,6 @@
           <EntitySet Name="warehouse" EntityType="Self.warehouse" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="warehouse_product" EntityType="Self.warehouse_product" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="worker" EntityType="Self.worker" Schema="betterlimited" store:Type="Tables" />
-          <AssociationSet Name="FKBuyOrder843053" Association="Self.FKBuyOrder843053">
-            <End Role="delivery" EntitySet="delivery" />
-            <End Role="buyorder" EntitySet="buyorder" />
-          </AssociationSet>
           <AssociationSet Name="FKBuyOrdercustomerID" Association="Self.FKBuyOrdercustomerID">
             <End Role="customer" EntitySet="customer" />
             <End Role="buyorder" EntitySet="buyorder" />
@@ -736,16 +731,16 @@
             <End Role="product" EntitySet="product" />
             <End Role="defect" EntitySet="defect" />
           </AssociationSet>
-          <AssociationSet Name="FKDefect662396" Association="Self.FKDefect662396">
+          <AssociationSet Name="FKDefectDeliveryID" Association="Self.FKDefectDeliveryID">
             <End Role="delivery" EntitySet="delivery" />
             <End Role="defect" EntitySet="defect" />
           </AssociationSet>
-          <AssociationSet Name="FKDelivery_A413752" Association="Self.FKDelivery_A413752">
-            <End Role="delivery" EntitySet="delivery" />
-            <End Role="delivery_assignment" EntitySet="delivery_assignment" />
-          </AssociationSet>
           <AssociationSet Name="FKDelivery_A888474" Association="Self.FKDelivery_A888474">
             <End Role="worker" EntitySet="worker" />
+            <End Role="delivery_assignment" EntitySet="delivery_assignment" />
+          </AssociationSet>
+          <AssociationSet Name="FKDeliveryAssDeliveryID" Association="Self.FKDeliveryAssDeliveryID">
+            <End Role="delivery" EntitySet="delivery" />
             <End Role="delivery_assignment" EntitySet="delivery_assignment" />
           </AssociationSet>
           <AssociationSet Name="FKDeliveryDeliveryType" Association="Self.FKDeliveryDeliveryType">
@@ -756,24 +751,28 @@
             <End Role="department" EntitySet="department" />
             <End Role="staff" EntitySet="staff" />
           </AssociationSet>
-          <AssociationSet Name="FKInstallati134709" Association="Self.FKInstallati134709">
-            <End Role="buyorder" EntitySet="buyorder" />
-            <End Role="installation" EntitySet="installation" />
-          </AssociationSet>
-          <AssociationSet Name="FKInstallati60270" Association="Self.FKInstallati60270">
+          <AssociationSet Name="FKInstallationAssInstallationID" Association="Self.FKInstallationAssInstallationID">
             <End Role="installation" EntitySet="installation" />
             <End Role="installation_assignment" EntitySet="installation_assignment" />
           </AssociationSet>
-          <AssociationSet Name="FKInstallati996707" Association="Self.FKInstallati996707">
+          <AssociationSet Name="FKInstallationDeliveryID" Association="Self.FKInstallationDeliveryID">
             <End Role="delivery" EntitySet="delivery" />
             <End Role="installation" EntitySet="installation" />
           </AssociationSet>
-          <AssociationSet Name="FKOrderLine431184" Association="Self.FKOrderLine431184">
+          <AssociationSet Name="FKInstallationOrderID" Association="Self.FKInstallationOrderID">
             <End Role="buyorder" EntitySet="buyorder" />
-            <End Role="orderline" EntitySet="orderline" />
+            <End Role="installation" EntitySet="installation" />
+          </AssociationSet>
+          <AssociationSet Name="FKOrderDeliveryID" Association="Self.FKOrderDeliveryID">
+            <End Role="delivery" EntitySet="delivery" />
+            <End Role="buyorder" EntitySet="buyorder" />
           </AssociationSet>
           <AssociationSet Name="FKOrderLine592221" Association="Self.FKOrderLine592221">
             <End Role="product" EntitySet="product" />
+            <End Role="orderline" EntitySet="orderline" />
+          </AssociationSet>
+          <AssociationSet Name="FKOrderLineOrderID" Association="Self.FKOrderLineOrderID">
+            <End Role="buyorder" EntitySet="buyorder" />
             <End Role="orderline" EntitySet="orderline" />
           </AssociationSet>
           <AssociationSet Name="FKproductCategoryID" Association="Self.FKproductCategoryID">
@@ -812,15 +811,15 @@
             <End Role="retail_store" EntitySet="retail_store" />
             <End Role="replenishment" EntitySet="replenishment" />
           </AssociationSet>
-          <AssociationSet Name="FKReplenishm649741" Association="Self.FKReplenishm649741">
-            <End Role="delivery" EntitySet="delivery" />
-            <End Role="replenishment" EntitySet="replenishment" />
-          </AssociationSet>
           <AssociationSet Name="FKReplenishm931267" Association="Self.FKReplenishm931267">
             <End Role="product" EntitySet="product" />
             <End Role="replenishment_product" EntitySet="replenishment_product" />
           </AssociationSet>
-          <AssociationSet Name="FKReservatio648681" Association="Self.FKReservatio648681">
+          <AssociationSet Name="FKReplenishmDeliveryID" Association="Self.FKReplenishmDeliveryID">
+            <End Role="delivery" EntitySet="delivery" />
+            <End Role="replenishment" EntitySet="replenishment" />
+          </AssociationSet>
+          <AssociationSet Name="FKRerservationCustomerID" Association="Self.FKRerservationCustomerID">
             <End Role="customer" EntitySet="customer" />
             <End Role="reservation" EntitySet="reservation" />
           </AssociationSet>
@@ -899,19 +898,19 @@
           <EntitySet Name="warehouses" EntityType="betterlimitedModel.warehouse" />
           <EntitySet Name="warehouse_product" EntityType="betterlimitedModel.warehouse_product" />
           <EntitySet Name="workers" EntityType="betterlimitedModel.worker" />
-          <AssociationSet Name="FKBuyOrder843053" Association="betterlimitedModel.FKBuyOrder843053">
-            <End Role="delivery" EntitySet="deliveries" />
-            <End Role="buyorder" EntitySet="buyorders" />
-          </AssociationSet>
           <AssociationSet Name="FKBuyOrdercustomerID" Association="betterlimitedModel.FKBuyOrdercustomerID">
             <End Role="customer" EntitySet="customers" />
             <End Role="buyorder" EntitySet="buyorders" />
           </AssociationSet>
-          <AssociationSet Name="FKInstallati134709" Association="betterlimitedModel.FKInstallati134709">
+          <AssociationSet Name="FKInstallationOrderID" Association="betterlimitedModel.FKInstallationOrderID">
             <End Role="buyorder" EntitySet="buyorders" />
             <End Role="installation" EntitySet="installations" />
           </AssociationSet>
-          <AssociationSet Name="FKOrderLine431184" Association="betterlimitedModel.FKOrderLine431184">
+          <AssociationSet Name="FKOrderDeliveryID" Association="betterlimitedModel.FKOrderDeliveryID">
+            <End Role="delivery" EntitySet="deliveries" />
+            <End Role="buyorder" EntitySet="buyorders" />
+          </AssociationSet>
+          <AssociationSet Name="FKOrderLineOrderID" Association="betterlimitedModel.FKOrderLineOrderID">
             <End Role="buyorder" EntitySet="buyorders" />
             <End Role="orderline" EntitySet="orderlines" />
           </AssociationSet>
@@ -919,7 +918,7 @@
             <End Role="category" EntitySet="categories" />
             <End Role="product" EntitySet="products" />
           </AssociationSet>
-          <AssociationSet Name="FKReservatio648681" Association="betterlimitedModel.FKReservatio648681">
+          <AssociationSet Name="FKRerservationCustomerID" Association="betterlimitedModel.FKRerservationCustomerID">
             <End Role="customer" EntitySet="customers" />
             <End Role="reservation" EntitySet="reservations" />
           </AssociationSet>
@@ -927,11 +926,11 @@
             <End Role="product" EntitySet="products" />
             <End Role="defect" EntitySet="defects" />
           </AssociationSet>
-          <AssociationSet Name="FKDefect662396" Association="betterlimitedModel.FKDefect662396">
+          <AssociationSet Name="FKDefectDeliveryID" Association="betterlimitedModel.FKDefectDeliveryID">
             <End Role="delivery" EntitySet="deliveries" />
             <End Role="defect" EntitySet="defects" />
           </AssociationSet>
-          <AssociationSet Name="FKDelivery_A413752" Association="betterlimitedModel.FKDelivery_A413752">
+          <AssociationSet Name="FKDeliveryAssDeliveryID" Association="betterlimitedModel.FKDeliveryAssDeliveryID">
             <End Role="delivery" EntitySet="deliveries" />
             <End Role="delivery_assignment" EntitySet="delivery_assignment" />
           </AssociationSet>
@@ -939,11 +938,11 @@
             <End Role="delivery_type" EntitySet="delivery_type" />
             <End Role="delivery" EntitySet="deliveries" />
           </AssociationSet>
-          <AssociationSet Name="FKInstallati996707" Association="betterlimitedModel.FKInstallati996707">
+          <AssociationSet Name="FKInstallationDeliveryID" Association="betterlimitedModel.FKInstallationDeliveryID">
             <End Role="delivery" EntitySet="deliveries" />
             <End Role="installation" EntitySet="installations" />
           </AssociationSet>
-          <AssociationSet Name="FKReplenishm649741" Association="betterlimitedModel.FKReplenishm649741">
+          <AssociationSet Name="FKReplenishmDeliveryID" Association="betterlimitedModel.FKReplenishmDeliveryID">
             <End Role="delivery" EntitySet="deliveries" />
             <End Role="replenishment" EntitySet="replenishments" />
           </AssociationSet>
@@ -959,7 +958,7 @@
             <End Role="department" EntitySet="departments" />
             <End Role="position" EntitySet="positions" />
           </AssociationSet>
-          <AssociationSet Name="FKInstallati60270" Association="betterlimitedModel.FKInstallati60270">
+          <AssociationSet Name="FKInstallationAssInstallationID" Association="betterlimitedModel.FKInstallationAssInstallationID">
             <End Role="installation" EntitySet="installations" />
             <End Role="installation_assignment" EntitySet="installation_assignment" />
           </AssociationSet>
@@ -1048,16 +1047,16 @@
           <Key>
             <PropertyRef Name="order_ID" />
           </Key>
-          <Property Name="order_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="order_ID" Type="Int32" Nullable="false" />
           <Property Name="customer_ID" Type="Int32" Nullable="false" />
           <Property Name="order_date" Type="DateTime" Nullable="false" />
           <Property Name="delivery_ID" Type="Int32" />
           <Property Name="installation_ID" Type="Int32" />
           <Property Name="total_price" Type="Single" Nullable="false" />
-          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKBuyOrder843053" FromRole="buyorder" ToRole="delivery" />
           <NavigationProperty Name="customer" Relationship="betterlimitedModel.FKBuyOrdercustomerID" FromRole="buyorder" ToRole="customer" />
-          <NavigationProperty Name="installations" Relationship="betterlimitedModel.FKInstallati134709" FromRole="buyorder" ToRole="installation" />
-          <NavigationProperty Name="orderlines" Relationship="betterlimitedModel.FKOrderLine431184" FromRole="buyorder" ToRole="orderline" />
+          <NavigationProperty Name="installations" Relationship="betterlimitedModel.FKInstallationOrderID" FromRole="buyorder" ToRole="installation" />
+          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKOrderDeliveryID" FromRole="buyorder" ToRole="delivery" />
+          <NavigationProperty Name="orderlines" Relationship="betterlimitedModel.FKOrderLineOrderID" FromRole="buyorder" ToRole="orderline" />
         </EntityType>
         <EntityType Name="category">
           <Key>
@@ -1071,32 +1070,32 @@
           <Key>
             <PropertyRef Name="user_ID" />
           </Key>
-          <Property Name="user_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_ID" Type="Int32" Nullable="false" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="phone_No" Type="Int32" Nullable="false" />
           <Property Name="email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="buyorders" Relationship="betterlimitedModel.FKBuyOrdercustomerID" FromRole="customer" ToRole="buyorder" />
-          <NavigationProperty Name="reservations" Relationship="betterlimitedModel.FKReservatio648681" FromRole="customer" ToRole="reservation" />
+          <NavigationProperty Name="reservations" Relationship="betterlimitedModel.FKRerservationCustomerID" FromRole="customer" ToRole="reservation" />
         </EntityType>
         <EntityType Name="defect">
           <Key>
             <PropertyRef Name="defect_ID" />
           </Key>
-          <Property Name="defect_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="defect_ID" Type="Int32" Nullable="false" />
           <Property Name="delivery_ID" Type="Int32" Nullable="false" />
           <Property Name="product_ID" Type="Int32" Nullable="false" />
           <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="qty" Type="Int32" Nullable="false" />
           <Property Name="damage_tier" Type="Int32" Nullable="false" />
           <NavigationProperty Name="product" Relationship="betterlimitedModel.FKDefect544799" FromRole="defect" ToRole="product" />
-          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKDefect662396" FromRole="defect" ToRole="delivery" />
+          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKDefectDeliveryID" FromRole="defect" ToRole="delivery" />
         </EntityType>
         <EntityType Name="delivery">
           <Key>
             <PropertyRef Name="delivery_ID" />
           </Key>
-          <Property Name="delivery_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="delivery_ID" Type="Int32" Nullable="false" />
           <Property Name="type" Type="Int32" Nullable="false" />
           <Property Name="status" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="net_weight" Type="Single" Nullable="false" />
@@ -1104,12 +1103,12 @@
           <Property Name="complete_time" Type="DateTime" />
           <Property Name="assignment_ID" Type="Int32" />
           <Property Name="delivery_date" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="buyorders" Relationship="betterlimitedModel.FKBuyOrder843053" FromRole="delivery" ToRole="buyorder" />
-          <NavigationProperty Name="defects" Relationship="betterlimitedModel.FKDefect662396" FromRole="delivery" ToRole="defect" />
-          <NavigationProperty Name="delivery_assignment" Relationship="betterlimitedModel.FKDelivery_A413752" FromRole="delivery" ToRole="delivery_assignment" />
+          <NavigationProperty Name="buyorders" Relationship="betterlimitedModel.FKOrderDeliveryID" FromRole="delivery" ToRole="buyorder" />
+          <NavigationProperty Name="defects" Relationship="betterlimitedModel.FKDefectDeliveryID" FromRole="delivery" ToRole="defect" />
+          <NavigationProperty Name="delivery_assignment" Relationship="betterlimitedModel.FKDeliveryAssDeliveryID" FromRole="delivery" ToRole="delivery_assignment" />
           <NavigationProperty Name="delivery_type" Relationship="betterlimitedModel.FKDeliveryDeliveryType" FromRole="delivery" ToRole="delivery_type" />
-          <NavigationProperty Name="installations" Relationship="betterlimitedModel.FKInstallati996707" FromRole="delivery" ToRole="installation" />
-          <NavigationProperty Name="replenishment" Relationship="betterlimitedModel.FKReplenishm649741" FromRole="delivery" ToRole="replenishment" />
+          <NavigationProperty Name="installations" Relationship="betterlimitedModel.FKInstallationDeliveryID" FromRole="delivery" ToRole="installation" />
+          <NavigationProperty Name="replenishment" Relationship="betterlimitedModel.FKReplenishmDeliveryID" FromRole="delivery" ToRole="replenishment" />
         </EntityType>
         <EntityType Name="delivery_assignment">
           <Key>
@@ -1119,7 +1118,7 @@
           <Property Name="assignment_ID" Type="Int32" Nullable="false" />
           <Property Name="delivery_ID" Type="Int32" Nullable="false" />
           <Property Name="worker_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKDelivery_A413752" FromRole="delivery_assignment" ToRole="delivery" />
+          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKDeliveryAssDeliveryID" FromRole="delivery_assignment" ToRole="delivery" />
           <NavigationProperty Name="worker" Relationship="betterlimitedModel.FKDelivery_A888474" FromRole="delivery_assignment" ToRole="worker" />
         </EntityType>
         <EntityType Name="delivery_type">
@@ -1144,16 +1143,15 @@
           <Key>
             <PropertyRef Name="installation_ID" />
           </Key>
-          <Property Name="installation_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="installation_ID" Type="Int32" Nullable="false" />
           <Property Name="installation_type" Type="Int32" />
           <Property Name="installation_date" Type="DateTime" />
           <Property Name="delivery_ID" Type="Int32" Nullable="false" />
           <Property Name="delivery_date" Type="DateTime" />
-          <Property Name="assignment_ID" Type="Int32" Nullable="false" />
           <Property Name="order_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="buyorder" Relationship="betterlimitedModel.FKInstallati134709" FromRole="installation" ToRole="buyorder" />
-          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKInstallati996707" FromRole="installation" ToRole="delivery" />
-          <NavigationProperty Name="installation_assignment" Relationship="betterlimitedModel.FKInstallati60270" FromRole="installation" ToRole="installation_assignment" />
+          <NavigationProperty Name="buyorder" Relationship="betterlimitedModel.FKInstallationOrderID" FromRole="installation" ToRole="buyorder" />
+          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKInstallationDeliveryID" FromRole="installation" ToRole="delivery" />
+          <NavigationProperty Name="installation_assignment" Relationship="betterlimitedModel.FKInstallationAssInstallationID" FromRole="installation" ToRole="installation_assignment" />
         </EntityType>
         <EntityType Name="installation_assignment">
           <Key>
@@ -1163,7 +1161,7 @@
           <Property Name="assignment_ID" Type="Int32" Nullable="false" />
           <Property Name="installation_ID" Type="Int32" Nullable="false" />
           <Property Name="worker_ID" Type="Int32" />
-          <NavigationProperty Name="installation" Relationship="betterlimitedModel.FKInstallati60270" FromRole="installation_assignment" ToRole="installation" />
+          <NavigationProperty Name="installation" Relationship="betterlimitedModel.FKInstallationAssInstallationID" FromRole="installation_assignment" ToRole="installation" />
         </EntityType>
         <EntityType Name="orderline">
           <Key>
@@ -1174,7 +1172,7 @@
           <Property Name="order_ID" Type="Int32" Nullable="false" />
           <Property Name="quantity" Type="Int32" />
           <Property Name="BuyOrderorder_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="buyorder" Relationship="betterlimitedModel.FKOrderLine431184" FromRole="orderline" ToRole="buyorder" />
+          <NavigationProperty Name="buyorder" Relationship="betterlimitedModel.FKOrderLineOrderID" FromRole="orderline" ToRole="buyorder" />
           <NavigationProperty Name="product" Relationship="betterlimitedModel.FKOrderLine592221" FromRole="orderline" ToRole="product" />
         </EntityType>
         <EntityType Name="position">
@@ -1246,7 +1244,7 @@
           <Property Name="salesID" Type="Int32" Nullable="false" />
           <Property Name="store_ID" Type="Int32" Nullable="false" />
           <Property Name="request_date" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKReplenishm649741" FromRole="replenishment" ToRole="delivery" />
+          <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKReplenishmDeliveryID" FromRole="replenishment" ToRole="delivery" />
           <NavigationProperty Name="replenishment_product" Relationship="betterlimitedModel.FKReplenishm241066" FromRole="replenishment" ToRole="replenishment_product" />
           <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKReplenishm316808" FromRole="replenishment" ToRole="staff" />
           <NavigationProperty Name="retail_store" Relationship="betterlimitedModel.FKReplenishm606577" FromRole="replenishment" ToRole="retail_store" />
@@ -1266,13 +1264,13 @@
           <Key>
             <PropertyRef Name="reservation_ID" />
           </Key>
-          <Property Name="reservation_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="customer" Type="Int32" Nullable="false" />
+          <Property Name="reservation_ID" Type="Int32" Nullable="false" />
+          <Property Name="customerID" Type="Int32" Nullable="false" />
           <Property Name="productID" Type="Int32" Nullable="false" />
           <Property Name="qty" Type="Int32" Nullable="false" />
           <Property Name="reservation_date" Type="DateTime" Nullable="false" />
           <Property Name="complete_date" Type="DateTime" />
-          <NavigationProperty Name="customer1" Relationship="betterlimitedModel.FKReservatio648681" FromRole="reservation" ToRole="customer" />
+          <NavigationProperty Name="customer" Relationship="betterlimitedModel.FKRerservationCustomerID" FromRole="reservation" ToRole="customer" />
           <NavigationProperty Name="product" Relationship="betterlimitedModel.FKReservatio826341" FromRole="reservation" ToRole="product" />
         </EntityType>
         <EntityType Name="resetpassword_request">
@@ -1377,18 +1375,6 @@
           <NavigationProperty Name="delivery_assignment" Relationship="betterlimitedModel.FKDelivery_A888474" FromRole="worker" ToRole="delivery_assignment" />
           <NavigationProperty Name="position" Relationship="betterlimitedModel.FKWorker808068" FromRole="worker" ToRole="position" />
         </EntityType>
-        <Association Name="FKBuyOrder843053">
-          <End Type="betterlimitedModel.delivery" Role="delivery" Multiplicity="0..1" />
-          <End Type="betterlimitedModel.buyorder" Role="buyorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="delivery">
-              <PropertyRef Name="delivery_ID" />
-            </Principal>
-            <Dependent Role="buyorder">
-              <PropertyRef Name="delivery_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FKBuyOrdercustomerID">
           <End Type="betterlimitedModel.customer" Role="customer" Multiplicity="1" />
           <End Type="betterlimitedModel.buyorder" Role="buyorder" Multiplicity="*" />
@@ -1401,7 +1387,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKInstallati134709">
+        <Association Name="FKInstallationOrderID">
           <End Type="betterlimitedModel.buyorder" Role="buyorder" Multiplicity="1" />
           <End Type="betterlimitedModel.installation" Role="installation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1413,7 +1399,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKOrderLine431184">
+        <Association Name="FKOrderDeliveryID">
+          <End Type="betterlimitedModel.delivery" Role="delivery" Multiplicity="0..1" />
+          <End Type="betterlimitedModel.buyorder" Role="buyorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="delivery">
+              <PropertyRef Name="delivery_ID" />
+            </Principal>
+            <Dependent Role="buyorder">
+              <PropertyRef Name="delivery_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOrderLineOrderID">
           <End Type="betterlimitedModel.buyorder" Role="buyorder" Multiplicity="1" />
           <End Type="betterlimitedModel.orderline" Role="orderline" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1421,7 +1419,7 @@
               <PropertyRef Name="order_ID" />
             </Principal>
             <Dependent Role="orderline">
-              <PropertyRef Name="BuyOrderorder_ID" />
+              <PropertyRef Name="order_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1437,7 +1435,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKReservatio648681">
+        <Association Name="FKRerservationCustomerID">
           <End Type="betterlimitedModel.customer" Role="customer" Multiplicity="1" />
           <End Type="betterlimitedModel.reservation" Role="reservation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1445,7 +1443,7 @@
               <PropertyRef Name="user_ID" />
             </Principal>
             <Dependent Role="reservation">
-              <PropertyRef Name="customer" />
+              <PropertyRef Name="customerID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1461,7 +1459,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKDefect662396">
+        <Association Name="FKDefectDeliveryID">
           <End Type="betterlimitedModel.delivery" Role="delivery" Multiplicity="1" />
           <End Type="betterlimitedModel.defect" Role="defect" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1473,7 +1471,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKDelivery_A413752">
+        <Association Name="FKDeliveryAssDeliveryID">
           <End Type="betterlimitedModel.delivery" Role="delivery" Multiplicity="1" />
           <End Type="betterlimitedModel.delivery_assignment" Role="delivery_assignment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1497,7 +1495,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKInstallati996707">
+        <Association Name="FKInstallationDeliveryID">
           <End Type="betterlimitedModel.delivery" Role="delivery" Multiplicity="1" />
           <End Type="betterlimitedModel.installation" Role="installation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1509,7 +1507,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKReplenishm649741">
+        <Association Name="FKReplenishmDeliveryID">
           <End Type="betterlimitedModel.delivery" Role="delivery" Multiplicity="1" />
           <End Type="betterlimitedModel.replenishment" Role="replenishment" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -1557,7 +1555,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKInstallati60270">
+        <Association Name="FKInstallationAssInstallationID">
           <End Type="betterlimitedModel.installation" Role="installation" Multiplicity="1" />
           <End Type="betterlimitedModel.installation_assignment" Role="installation_assignment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1902,7 +1900,6 @@
             <EntityTypeMapping TypeName="betterlimitedModel.installation">
               <MappingFragment StoreEntitySet="installation">
                 <ScalarProperty Name="order_ID" ColumnName="order_ID" />
-                <ScalarProperty Name="assignment_ID" ColumnName="assignment_ID" />
                 <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
                 <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
                 <ScalarProperty Name="installation_date" ColumnName="installation_date" />
@@ -2005,7 +2002,7 @@
                 <ScalarProperty Name="reservation_date" ColumnName="reservation_date" />
                 <ScalarProperty Name="qty" ColumnName="qty" />
                 <ScalarProperty Name="productID" ColumnName="productID" />
-                <ScalarProperty Name="customer" ColumnName="customer" />
+                <ScalarProperty Name="customerID" ColumnName="customerID" />
                 <ScalarProperty Name="reservation_ID" ColumnName="reservation_ID" />
               </MappingFragment>
             </EntityTypeMapping>

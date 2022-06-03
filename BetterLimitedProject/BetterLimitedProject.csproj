@@ -39,6 +39,9 @@
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.8.6.3\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="MailKit, Version=3.2.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
       <HintPath>..\packages\MailKit.3.2.0\lib\net452\MailKit.dll</HintPath>
     </Reference>
@@ -145,6 +148,7 @@
     <Compile Include="department.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="exampleValidator.cs" />
     <Compile Include="ForgetPasswdForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +291,12 @@
     </Compile>
     <Compile Include="retail_store_product.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\PayControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\PayControl.Designer.cs">
+      <DependentUpon>PayControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\POSOrderLineControl.cs">
       <SubType>UserControl</SubType>
@@ -459,6 +469,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ResetPasswdForm.resx">
       <DependentUpon>ResetPasswdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\PayControl.resx">
+      <DependentUpon>PayControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\POSOrderLineControl.resx">
       <DependentUpon>POSOrderLineControl.cs</DependentUpon>

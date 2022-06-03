@@ -27,9 +27,9 @@ namespace BetterLimitedProject
         public Nullable<int> installation_ID { get; set; }
         public float total_price { get; set; }
     
-        public virtual delivery delivery { get; set; }
         public virtual customer customer { get; set; }
         public virtual ICollection<installation> installations { get; set; }
+        public virtual delivery delivery { get; set; }
         public virtual ICollection<orderline> orderlines { get; set; }
     }
 }
