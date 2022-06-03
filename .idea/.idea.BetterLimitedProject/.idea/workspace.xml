@@ -4,7 +4,27 @@
     <projectFile>BetterLimitedProject/BetterLimitedProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="in tab control in create order" />
+    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="workspace.xml doesn't matter">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/App.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/BetterLimitedProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/BetterLimitedProject.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Properties/Resources.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Properties/Resources.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/POSProductControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/POSProductControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/buyorder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/buyorder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/dataModel.Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/dataModel.Context.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx.diagram" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx.diagram" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/delivery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/delivery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/orderline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/orderline.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/product.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,15 +52,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="BetterLimitedProject" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -71,7 +91,8 @@
       <updated>1654097627923</updated>
       <workItem from="1654097631088" duration="635000" />
       <workItem from="1654098982729" duration="1794000" />
-      <workItem from="1654174789308" duration="970000" />
+      <workItem from="1654174789308" duration="2966000" />
+      <workItem from="1654242528652" duration="377000" />
     </task>
     <task id="LOCAL-00001" summary="easy">
       <created>1654108350566</created>
@@ -108,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654178712791</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="workspace.xml doesn't matter">
+      <created>1654179421704</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654179421704</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +163,7 @@
     <MESSAGE value="Sales POS 2" />
     <MESSAGE value="relevant shit" />
     <MESSAGE value="in tab control in create order" />
-    <option name="LAST_COMMIT_MESSAGE" value="in tab control in create order" />
+    <MESSAGE value="workspace.xml doesn't matter" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml doesn't matter" />
   </component>
 </project>

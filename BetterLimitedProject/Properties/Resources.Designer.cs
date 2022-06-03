@@ -93,6 +93,26 @@ namespace BetterLimitedProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_printdocument {
+            get {
+                object obj = ResourceManager.GetObject("icon_printdocument", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_viewdocument {
+            get {
+                object obj = ResourceManager.GetObject("icon_viewdocument", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_icon {
             get {
                 object obj = ResourceManager.GetObject("login_icon", resourceCulture);

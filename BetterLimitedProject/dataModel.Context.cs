@@ -31,6 +31,7 @@ namespace BetterLimitedProject
         public DbSet<defect> defects { get; set; }
         public DbSet<delivery> deliveries { get; set; }
         public DbSet<delivery_assignment> delivery_assignment { get; set; }
+        public DbSet<delivery_type> delivery_type { get; set; }
         public DbSet<department> departments { get; set; }
         public DbSet<installation> installations { get; set; }
         public DbSet<installation_assignment> installation_assignment { get; set; }

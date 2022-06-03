@@ -29,8 +29,15 @@ namespace BetterLimitedProject.Sales
             set
             {
                 MemoryStream ms = new MemoryStream(value);
-                //Image image = Image.FromStream(ms);
-                //pbProduct.Image = Image.FromStream(imageStream);
+                try
+                {
+                    Image image = Image.FromStream(ms);
+                    pbProduct.Image = image;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show($"{productName} can not be converted");
+                }
             }
         }
         public POSProductControl(SalesCreaOrderForm parentform)

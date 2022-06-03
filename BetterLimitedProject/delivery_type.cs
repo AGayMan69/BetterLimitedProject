@@ -12,21 +12,16 @@ namespace BetterLimitedProject
     using System;
     using System.Collections.Generic;
     
-    public partial class customer
+    public partial class delivery_type
     {
-        public customer()
+        public delivery_type()
         {
-            this.buyorders = new HashSet<buyorder>();
-            this.reservations = new HashSet<reservation>();
+            this.deliveries = new HashSet<delivery>();
         }
     
-        public int user_ID { get; set; }
-        public string name { get; set; }
-        public int phone_No { get; set; }
-        public string email { get; set; }
-        public string address { get; set; }
+        public int deliveryTypeID { get; set; }
+        public string deliveryTypeName { get; set; }
     
-        public virtual ICollection<buyorder> buyorders { get; set; }
-        public virtual ICollection<reservation> reservations { get; set; }
+        public virtual ICollection<delivery> deliveries { get; set; }
     }
 }

@@ -34,25 +34,50 @@ namespace BetterLimitedProject.Sales
             this.btnClear = new System.Windows.Forms.Button();
             this.lblPrice = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.flpanProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tbSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.cboCategory = new System.Windows.Forms.ComboBox();
             this.lblBuyOrder = new System.Windows.Forms.Label();
             this.panOrderLine = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tpShoppingCart = new System.Windows.Forms.TabPage();
             this.tpOption = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnBackCart = new System.Windows.Forms.Button();
+            this.tpPay = new System.Windows.Forms.TabPage();
+            this.tpPrintReceipt = new System.Windows.Forms.TabPage();
+            this.tpFillInfo = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnSelectDeposit = new System.Windows.Forms.Button();
+            this.btnSelectDelivery = new System.Windows.Forms.Button();
+            this.btnSelectCustomer = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbAddress = new System.Windows.Forms.TextBox();
+            this.btnBackOption = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnPpReturn = new System.Windows.Forms.Button();
+            this.btnConfirmPayment = new System.Windows.Forms.Button();
+            this.dtpDeliveryTime = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tpShoppingCart.SuspendLayout();
             this.tpOption.SuspendLayout();
+            this.tpPay.SuspendLayout();
+            this.tpPrintReceipt.SuspendLayout();
+            this.tpFillInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCheckout
@@ -111,6 +136,19 @@ namespace BetterLimitedProject.Sales
             this.panel1.Size = new System.Drawing.Size(317, 44);
             this.panel1.TabIndex = 39;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.label3.Location = new System.Drawing.Point(3, 8);
+            this.label3.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 23);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Total";
+            // 
             // flpanProduct
             // 
             this.flpanProduct.AutoScroll = true;
@@ -141,21 +179,6 @@ namespace BetterLimitedProject.Sales
             this.tbSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbSearch.Size = new System.Drawing.Size(164, 29);
             this.tbSearch.TabIndex = 28;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Black;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.btnSearch.Location = new System.Drawing.Point(322, 24);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(47, 38);
-            this.btnSearch.TabIndex = 31;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cboCategory
             // 
@@ -191,24 +214,14 @@ namespace BetterLimitedProject.Sales
             this.panOrderLine.Size = new System.Drawing.Size(317, 460);
             this.panOrderLine.TabIndex = 36;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.label3.Location = new System.Drawing.Point(3, 8);
-            this.label3.MaximumSize = new System.Drawing.Size(250, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 23);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Total";
-            // 
             // tabControl
             // 
             this.tabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl.Controls.Add(this.tpShoppingCart);
             this.tabControl.Controls.Add(this.tpOption);
+            this.tabControl.Controls.Add(this.tpPay);
+            this.tabControl.Controls.Add(this.tpPrintReceipt);
+            this.tabControl.Controls.Add(this.tpFillInfo);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.ItemSize = new System.Drawing.Size(0, 1);
             this.tabControl.Location = new System.Drawing.Point(0, 0);
@@ -217,6 +230,7 @@ namespace BetterLimitedProject.Sales
             this.tabControl.Size = new System.Drawing.Size(934, 642);
             this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl.TabIndex = 40;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tpShoppingCart
             // 
@@ -242,67 +256,15 @@ namespace BetterLimitedProject.Sales
             // 
             this.tpOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.tpOption.Controls.Add(this.btnBackCart);
-            this.tpOption.Controls.Add(this.button2);
-            this.tpOption.Controls.Add(this.button1);
-            this.tpOption.Controls.Add(this.button3);
+            this.tpOption.Controls.Add(this.btnSelectDeposit);
+            this.tpOption.Controls.Add(this.btnSelectDelivery);
+            this.tpOption.Controls.Add(this.btnSelectCustomer);
             this.tpOption.Location = new System.Drawing.Point(4, 5);
             this.tpOption.Name = "tpOption";
             this.tpOption.Padding = new System.Windows.Forms.Padding(3);
             this.tpOption.Size = new System.Drawing.Size(926, 633);
             this.tpOption.TabIndex = 1;
             this.tpOption.Text = "tabPage2";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(52)))), ((int)(((byte)(19)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::BetterLimitedProject.Properties.Resources.deposit;
-            this.button2.Location = new System.Drawing.Point(641, 117);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(244, 433);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Deposit";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::BetterLimitedProject.Properties.Resources.delivery;
-            this.button1.Location = new System.Drawing.Point(333, 117);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(244, 433);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Delivery";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::BetterLimitedProject.Properties.Resources.customerpickup;
-            this.button3.Location = new System.Drawing.Point(31, 117);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(244, 433);
-            this.button3.TabIndex = 38;
-            this.button3.Text = "Customer Pickup";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // btnBackCart
             // 
@@ -321,6 +283,357 @@ namespace BetterLimitedProject.Sales
             this.btnBackCart.UseVisualStyleBackColor = false;
             this.btnBackCart.Click += new System.EventHandler(this.btnBackCart_Click);
             // 
+            // tpPay
+            // 
+            this.tpPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.tpPay.Controls.Add(this.btnConfirmPayment);
+            this.tpPay.Controls.Add(this.btnPpReturn);
+            this.tpPay.Controls.Add(this.label2);
+            this.tpPay.Location = new System.Drawing.Point(4, 5);
+            this.tpPay.Name = "tpPay";
+            this.tpPay.Padding = new System.Windows.Forms.Padding(3);
+            this.tpPay.Size = new System.Drawing.Size(926, 633);
+            this.tpPay.TabIndex = 2;
+            this.tpPay.Text = "Payment";
+            // 
+            // tpPrintReceipt
+            // 
+            this.tpPrintReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.tpPrintReceipt.Controls.Add(this.button1);
+            this.tpPrintReceipt.Controls.Add(this.button2);
+            this.tpPrintReceipt.Controls.Add(this.label5);
+            this.tpPrintReceipt.Location = new System.Drawing.Point(4, 5);
+            this.tpPrintReceipt.Name = "tpPrintReceipt";
+            this.tpPrintReceipt.Padding = new System.Windows.Forms.Padding(3);
+            this.tpPrintReceipt.Size = new System.Drawing.Size(926, 633);
+            this.tpPrintReceipt.TabIndex = 3;
+            this.tpPrintReceipt.Text = "tabPage2";
+            // 
+            // tpFillInfo
+            // 
+            this.tpFillInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.tpFillInfo.Controls.Add(this.label10);
+            this.tpFillInfo.Controls.Add(this.dtpDeliveryTime);
+            this.tpFillInfo.Controls.Add(this.btnBackOption);
+            this.tpFillInfo.Controls.Add(this.btnSubmit);
+            this.tpFillInfo.Controls.Add(this.label9);
+            this.tpFillInfo.Controls.Add(this.tbAddress);
+            this.tpFillInfo.Controls.Add(this.label8);
+            this.tpFillInfo.Controls.Add(this.tbEmail);
+            this.tpFillInfo.Controls.Add(this.label7);
+            this.tpFillInfo.Controls.Add(this.tbPhone);
+            this.tpFillInfo.Controls.Add(this.label6);
+            this.tpFillInfo.Controls.Add(this.tbName);
+            this.tpFillInfo.Controls.Add(this.label4);
+            this.tpFillInfo.Location = new System.Drawing.Point(4, 5);
+            this.tpFillInfo.Name = "tpFillInfo";
+            this.tpFillInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpFillInfo.Size = new System.Drawing.Size(926, 633);
+            this.tpFillInfo.TabIndex = 4;
+            this.tpFillInfo.Text = "tabPage3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(398, 201);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(25, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Pay";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(71, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(842, 144);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Thank you for the purchase!!!";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Black;
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.btnSearch.Location = new System.Drawing.Point(322, 24);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(47, 38);
+            this.btnSearch.TabIndex = 31;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnSelectDeposit
+            // 
+            this.btnSelectDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(52)))), ((int)(((byte)(19)))));
+            this.btnSelectDeposit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSelectDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectDeposit.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectDeposit.ForeColor = System.Drawing.Color.White;
+            this.btnSelectDeposit.Image = global::BetterLimitedProject.Properties.Resources.deposit;
+            this.btnSelectDeposit.Location = new System.Drawing.Point(641, 117);
+            this.btnSelectDeposit.Name = "btnSelectDeposit";
+            this.btnSelectDeposit.Size = new System.Drawing.Size(244, 433);
+            this.btnSelectDeposit.TabIndex = 40;
+            this.btnSelectDeposit.Text = "Deposit";
+            this.btnSelectDeposit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSelectDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSelectDeposit.UseVisualStyleBackColor = false;
+            this.btnSelectDeposit.Click += new System.EventHandler(this.btnSelectDeposit_Click);
+            // 
+            // btnSelectDelivery
+            // 
+            this.btnSelectDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
+            this.btnSelectDelivery.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSelectDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectDelivery.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectDelivery.ForeColor = System.Drawing.Color.White;
+            this.btnSelectDelivery.Image = global::BetterLimitedProject.Properties.Resources.delivery;
+            this.btnSelectDelivery.Location = new System.Drawing.Point(333, 117);
+            this.btnSelectDelivery.Name = "btnSelectDelivery";
+            this.btnSelectDelivery.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnSelectDelivery.Size = new System.Drawing.Size(244, 433);
+            this.btnSelectDelivery.TabIndex = 39;
+            this.btnSelectDelivery.Text = "Delivery";
+            this.btnSelectDelivery.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSelectDelivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSelectDelivery.UseVisualStyleBackColor = false;
+            this.btnSelectDelivery.Click += new System.EventHandler(this.btnSelectDelivery_Click);
+            // 
+            // btnSelectCustomer
+            // 
+            this.btnSelectCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
+            this.btnSelectCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSelectCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectCustomer.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnSelectCustomer.Image = global::BetterLimitedProject.Properties.Resources.customerpickup;
+            this.btnSelectCustomer.Location = new System.Drawing.Point(31, 117);
+            this.btnSelectCustomer.Name = "btnSelectCustomer";
+            this.btnSelectCustomer.Size = new System.Drawing.Size(244, 433);
+            this.btnSelectCustomer.TabIndex = 38;
+            this.btnSelectCustomer.Text = "Customer Pickup";
+            this.btnSelectCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSelectCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSelectCustomer.UseVisualStyleBackColor = false;
+            this.btnSelectCustomer.Click += new System.EventHandler(this.btnSelectCustomer_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::BetterLimitedProject.Properties.Resources.icon_viewdocument;
+            this.button1.Location = new System.Drawing.Point(82, 162);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(325, 433);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "View Receipt";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::BetterLimitedProject.Properties.Resources.icon_printdocument;
+            this.button2.Location = new System.Drawing.Point(507, 162);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(325, 433);
+            this.button2.TabIndex = 40;
+            this.button2.Text = "Print Receipt";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(147, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(596, 56);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Fill Customer Information";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(157, 114);
+            this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label6.Size = new System.Drawing.Size(64, 25);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Name";
+            // 
+            // tbName
+            // 
+            this.tbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbName.Location = new System.Drawing.Point(157, 142);
+            this.tbName.Name = "tbName";
+            this.tbName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbName.Size = new System.Drawing.Size(237, 29);
+            this.tbName.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(156, 207);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label7.Size = new System.Drawing.Size(69, 25);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Phone";
+            // 
+            // tbPhone
+            // 
+            this.tbPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPhone.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbPhone.Location = new System.Drawing.Point(156, 235);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbPhone.Size = new System.Drawing.Size(237, 29);
+            this.tbPhone.TabIndex = 24;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(527, 207);
+            this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label8.Size = new System.Drawing.Size(135, 25);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Email Address";
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbEmail.Location = new System.Drawing.Point(527, 235);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbEmail.Size = new System.Drawing.Size(237, 29);
+            this.tbEmail.TabIndex = 26;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(157, 287);
+            this.label9.Name = "label9";
+            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label9.Size = new System.Drawing.Size(83, 25);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Address";
+            // 
+            // tbAddress
+            // 
+            this.tbAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbAddress.Location = new System.Drawing.Point(157, 315);
+            this.tbAddress.Multiline = true;
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbAddress.Size = new System.Drawing.Size(608, 139);
+            this.tbAddress.TabIndex = 28;
+            // 
+            // btnBackOption
+            // 
+            this.btnBackOption.BackColor = System.Drawing.Color.White;
+            this.btnBackOption.FlatAppearance.BorderSize = 5;
+            this.btnBackOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackOption.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackOption.ForeColor = System.Drawing.Color.Black;
+            this.btnBackOption.Location = new System.Drawing.Point(157, 546);
+            this.btnBackOption.Name = "btnBackOption";
+            this.btnBackOption.Size = new System.Drawing.Size(213, 65);
+            this.btnBackOption.TabIndex = 31;
+            this.btnBackOption.Text = "Return";
+            this.btnBackOption.UseVisualStyleBackColor = false;
+            this.btnBackOption.Click += new System.EventHandler(this.btnBackOption_Click);
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.Black;
+            this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.btnSubmit.Location = new System.Drawing.Point(590, 546);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(174, 65);
+            this.btnSubmit.TabIndex = 30;
+            this.btnSubmit.Text = "Continue";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnPpReturn
+            // 
+            this.btnPpReturn.BackColor = System.Drawing.Color.White;
+            this.btnPpReturn.FlatAppearance.BorderSize = 5;
+            this.btnPpReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPpReturn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPpReturn.ForeColor = System.Drawing.Color.Black;
+            this.btnPpReturn.Location = new System.Drawing.Point(125, 486);
+            this.btnPpReturn.Name = "btnPpReturn";
+            this.btnPpReturn.Size = new System.Drawing.Size(213, 65);
+            this.btnPpReturn.TabIndex = 32;
+            this.btnPpReturn.Text = "Return";
+            this.btnPpReturn.UseVisualStyleBackColor = false;
+            this.btnPpReturn.Click += new System.EventHandler(this.btnPpReturn_Click);
+            // 
+            // btnConfirmPayment
+            // 
+            this.btnConfirmPayment.BackColor = System.Drawing.Color.Black;
+            this.btnConfirmPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnConfirmPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmPayment.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.btnConfirmPayment.Location = new System.Drawing.Point(592, 486);
+            this.btnConfirmPayment.Name = "btnConfirmPayment";
+            this.btnConfirmPayment.Size = new System.Drawing.Size(241, 65);
+            this.btnConfirmPayment.TabIndex = 33;
+            this.btnConfirmPayment.Text = "Confirm Payment";
+            this.btnConfirmPayment.UseVisualStyleBackColor = false;
+            this.btnConfirmPayment.Click += new System.EventHandler(this.btnConfirmPayment_Click);
+            // 
+            // dtpDeliveryTime
+            // 
+            this.dtpDeliveryTime.CalendarFont = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDeliveryTime.CustomFormat = "MM / dd / yyyy \'at\' HH: mm";
+            this.dtpDeliveryTime.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDeliveryTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDeliveryTime.Location = new System.Drawing.Point(157, 498);
+            this.dtpDeliveryTime.Name = "dtpDeliveryTime";
+            this.dtpDeliveryTime.Size = new System.Drawing.Size(256, 33);
+            this.dtpDeliveryTime.TabIndex = 32;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(156, 470);
+            this.label10.Name = "label10";
+            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label10.Size = new System.Drawing.Size(133, 25);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Delivery Time";
+            // 
             // SalesCreaOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,6 +651,11 @@ namespace BetterLimitedProject.Sales
             this.tpShoppingCart.PerformLayout();
             this.tpOption.ResumeLayout(false);
             this.tpOption.PerformLayout();
+            this.tpPay.ResumeLayout(false);
+            this.tpPay.PerformLayout();
+            this.tpPrintReceipt.ResumeLayout(false);
+            this.tpFillInfo.ResumeLayout(false);
+            this.tpFillInfo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -359,9 +677,31 @@ namespace BetterLimitedProject.Sales
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tpShoppingCart;
         private System.Windows.Forms.TabPage tpOption;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSelectDeposit;
+        private System.Windows.Forms.Button btnSelectDelivery;
+        private System.Windows.Forms.Button btnSelectCustomer;
         private System.Windows.Forms.Button btnBackCart;
+        private System.Windows.Forms.TabPage tpPay;
+        private System.Windows.Forms.TabPage tpPrintReceipt;
+        private System.Windows.Forms.TabPage tpFillInfo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbAddress;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbPhone;
+        private System.Windows.Forms.Button btnBackOption;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnPpReturn;
+        private System.Windows.Forms.Button btnConfirmPayment;
+        private System.Windows.Forms.DateTimePicker dtpDeliveryTime;
+        private System.Windows.Forms.Label label10;
     }
 }

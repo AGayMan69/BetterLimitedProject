@@ -33,8 +33,7 @@ namespace BetterLimitedProject
         public float price { get; set; }
         public float weight { get; set; }
         public string dimension { get; set; }
-        public string image_link { get; set; }
-        public byte[] image { get; set; }
+        public byte[] product_image { get; set; }
     
         public virtual category category { get; set; }
         public virtual ICollection<defect> defects { get; set; }
