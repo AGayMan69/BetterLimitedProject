@@ -32,7 +32,7 @@ namespace BetterLimitedProject.Sales
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRestock = new System.Windows.Forms.Button();
             this.lblQty = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@ namespace BetterLimitedProject.Sales
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnRestock);
             this.panel2.Controls.Add(this.lblQty);
             this.panel2.Controls.Add(this.lblCategory);
             this.panel2.Controls.Add(this.lblName);
@@ -86,20 +86,21 @@ namespace BetterLimitedProject.Sales
             this.button2.Text = "EDIT";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnRestock
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(692, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 71);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "RESTOCK";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnRestock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
+            this.btnRestock.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRestock.FlatAppearance.BorderSize = 0;
+            this.btnRestock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestock.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestock.ForeColor = System.Drawing.Color.White;
+            this.btnRestock.Location = new System.Drawing.Point(692, 0);
+            this.btnRestock.Name = "btnRestock";
+            this.btnRestock.Size = new System.Drawing.Size(91, 71);
+            this.btnRestock.TabIndex = 5;
+            this.btnRestock.Text = "RESTOCK";
+            this.btnRestock.UseVisualStyleBackColor = false;
+            this.btnRestock.Click += new System.EventHandler(this.btnRestock_Click);
             // 
             // lblQty
             // 
@@ -191,7 +192,7 @@ namespace BetterLimitedProject.Sales
         private System.Windows.Forms.Label lblInStock;
         private System.Windows.Forms.Label lblOutStock;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRestock;
         private System.Windows.Forms.Label lblQty;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label lblName;

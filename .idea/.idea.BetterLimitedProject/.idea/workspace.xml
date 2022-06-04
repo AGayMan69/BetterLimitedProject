@@ -4,24 +4,9 @@
     <projectFile>BetterLimitedProject/BetterLimitedProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="Added View, Delete Sales Order Function">
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesProductControl.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesProductControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesProductControl.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/BetterLimitedProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/BetterLimitedProject.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx.diagram" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx.diagram" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/retail_store_product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/retail_store_product.cs" afterDir="false" />
+    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="view store stock">
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.resx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +76,7 @@
       <workItem from="1654098982729" duration="1794000" />
       <workItem from="1654174789308" duration="2966000" />
       <workItem from="1654242528652" duration="4295000" />
-      <workItem from="1654315727712" duration="3003000" />
+      <workItem from="1654315727712" duration="3736000" />
     </task>
     <task id="LOCAL-00001" summary="easy">
       <created>1654108350566</created>
@@ -163,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654335505226</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="view store stock">
+      <created>1654353124394</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654353124394</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +187,7 @@
     <MESSAGE value="create Order" />
     <MESSAGE value="Fixing bug in Create Order" />
     <MESSAGE value="Added View, Delete Sales Order Function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added View, Delete Sales Order Function" />
+    <MESSAGE value="view store stock" />
+    <option name="LAST_COMMIT_MESSAGE" value="view store stock" />
   </component>
 </project>
