@@ -4,7 +4,7 @@
     <projectFile>BetterLimitedProject/BetterLimitedProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="create Order">
+    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,11 +24,22 @@
     <option name="onto" value="8bf5fb4ba21a9bac876a596e904a3b032efb4c36" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/Sales/POSOrderLineControl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/Sales/SalesCreaOrderForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/Sales/SalesCreaOrderForm.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/buyorder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/buyorder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/customer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/delivery.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/installation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/installation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/orderline.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/replenishment.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/reservation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/reservation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/resetpassword_request.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -81,7 +92,7 @@
       <workItem from="1654097631088" duration="635000" />
       <workItem from="1654098982729" duration="1794000" />
       <workItem from="1654174789308" duration="2966000" />
-      <workItem from="1654242528652" duration="3608000" />
+      <workItem from="1654242528652" duration="4295000" />
     </task>
     <task id="LOCAL-00001" summary="easy">
       <created>1654108350566</created>
@@ -139,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654263058531</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixing bug in Create Order">
+      <created>1654270293967</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654270293968</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +187,7 @@
     <MESSAGE value="workspace.xml doesn't matter" />
     <MESSAGE value="create order" />
     <MESSAGE value="create Order" />
-    <option name="LAST_COMMIT_MESSAGE" value="create Order" />
+    <MESSAGE value="Fixing bug in Create Order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing bug in Create Order" />
   </component>
 </project>

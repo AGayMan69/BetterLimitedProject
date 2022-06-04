@@ -133,6 +133,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="defect.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
@@ -328,6 +329,12 @@
     <Compile Include="Sales\SalesHomeForm.Designer.cs">
       <DependentUpon>SalesHomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\SalesOrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesOrderControl.Designer.cs">
+      <DependentUpon>SalesOrderControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\SalesPayReserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -490,6 +497,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesOrderControl.resx">
+      <DependentUpon>SalesOrderControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesPayReserForm.resx">
       <DependentUpon>SalesPayReserForm.cs</DependentUpon>
