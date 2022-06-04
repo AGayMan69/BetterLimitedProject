@@ -18,7 +18,7 @@ namespace BetterLimitedProject
         public int sector_ID { get; set; }
         public int product_ID { get; set; }
         public int qty { get; set; }
-        public System.DateTime store_date { get; set; }
+        public Nullable<System.DateTime> store_date { get; set; }
     
         public virtual product product { get; set; }
         public virtual retail_store retail_store { get; set; }
