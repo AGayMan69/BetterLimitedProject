@@ -58,6 +58,10 @@ namespace BetterLimitedProject
             this.lblErrCPW = new System.Windows.Forms.Label();
             this.lblErrUsername = new System.Windows.Forms.Label();
             this.lblErrPW = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.lblErrPhone = new System.Windows.Forms.Label();
+            this.pnlPW = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,8 +74,8 @@ namespace BetterLimitedProject
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(70, 0, 70, 0);
-            this.panel1.Size = new System.Drawing.Size(314, 681);
+            this.panel1.Padding = new System.Windows.Forms.Padding(69, 0, 69, 0);
+            this.panel1.Size = new System.Drawing.Size(314, 680);
             this.panel1.TabIndex = 1;
             // 
             // btnLogin
@@ -84,7 +88,7 @@ namespace BetterLimitedProject
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
             this.btnLogin.Location = new System.Drawing.Point(0, 613);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(314, 65);
+            this.btnLogin.Size = new System.Drawing.Size(314, 64);
             this.btnLogin.TabIndex = 42;
             this.btnLogin.Text = "Back To Login";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -96,9 +100,9 @@ namespace BetterLimitedProject
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::BetterLimitedProject.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(69, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 681);
+            this.pictureBox1.Size = new System.Drawing.Size(176, 680);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -108,7 +112,7 @@ namespace BetterLimitedProject
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(345, 23);
+            this.label2.Location = new System.Drawing.Point(345, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(208, 56);
             this.label2.TabIndex = 3;
@@ -121,9 +125,9 @@ namespace BetterLimitedProject
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.btnSubmit.Location = new System.Drawing.Point(1068, 593);
+            this.btnSubmit.Location = new System.Drawing.Point(1068, 594);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(174, 65);
+            this.btnSubmit.Size = new System.Drawing.Size(174, 64);
             this.btnSubmit.TabIndex = 11;
             this.btnSubmit.Text = "SUBMIT";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -136,9 +140,9 @@ namespace BetterLimitedProject
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.Black;
-            this.btnNext.Location = new System.Drawing.Point(868, 593);
+            this.btnNext.Location = new System.Drawing.Point(868, 594);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(174, 65);
+            this.btnNext.Size = new System.Drawing.Size(174, 64);
             this.btnNext.TabIndex = 13;
             this.btnNext.Text = "CLEAR";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -191,7 +195,7 @@ namespace BetterLimitedProject
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(365, 198);
+            this.label3.Location = new System.Drawing.Point(365, 197);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(97, 25);
@@ -202,19 +206,19 @@ namespace BetterLimitedProject
             // 
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.tbPassword.Location = new System.Drawing.Point(365, 226);
+            this.tbPassword.Location = new System.Drawing.Point(365, 225);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbPassword.Size = new System.Drawing.Size(237, 29);
             this.tbPassword.TabIndex = 24;
-            this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             this.tbPassword.Validating += new System.ComponentModel.CancelEventHandler(this.tbPassword_Validating);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(653, 198);
+            this.label5.Location = new System.Drawing.Point(653, 197);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(175, 25);
@@ -225,7 +229,7 @@ namespace BetterLimitedProject
             // 
             this.tbPasswordConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPasswordConfirm.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.tbPasswordConfirm.Location = new System.Drawing.Point(653, 226);
+            this.tbPasswordConfirm.Location = new System.Drawing.Point(653, 225);
             this.tbPasswordConfirm.Name = "tbPasswordConfirm";
             this.tbPasswordConfirm.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbPasswordConfirm.Size = new System.Drawing.Size(237, 29);
@@ -269,7 +273,7 @@ namespace BetterLimitedProject
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(371, 408);
+            this.label8.Location = new System.Drawing.Point(372, 485);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label8.Size = new System.Drawing.Size(120, 25);
@@ -280,7 +284,7 @@ namespace BetterLimitedProject
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(659, 408);
+            this.label9.Location = new System.Drawing.Point(660, 485);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label9.Size = new System.Drawing.Size(84, 25);
@@ -291,7 +295,7 @@ namespace BetterLimitedProject
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(371, 485);
+            this.label10.Location = new System.Drawing.Point(653, 389);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label10.Size = new System.Drawing.Size(96, 25);
@@ -309,9 +313,9 @@ namespace BetterLimitedProject
             // 
             this.cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDepartment.FormattingEnabled = true;
-            this.cboDepartment.Location = new System.Drawing.Point(365, 436);
+            this.cboDepartment.Location = new System.Drawing.Point(365, 513);
             this.cboDepartment.Name = "cboDepartment";
-            this.cboDepartment.Size = new System.Drawing.Size(231, 29);
+            this.cboDepartment.Size = new System.Drawing.Size(232, 29);
             this.cboDepartment.TabIndex = 39;
             this.cboDepartment.SelectedValueChanged += new System.EventHandler(this.cboDepartment_SelectedValueChanged);
             // 
@@ -319,14 +323,14 @@ namespace BetterLimitedProject
             // 
             this.cboPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPosition.FormattingEnabled = true;
-            this.cboPosition.Location = new System.Drawing.Point(653, 436);
+            this.cboPosition.Location = new System.Drawing.Point(653, 513);
             this.cboPosition.Name = "cboPosition";
-            this.cboPosition.Size = new System.Drawing.Size(231, 29);
+            this.cboPosition.Size = new System.Drawing.Size(232, 29);
             this.cboPosition.TabIndex = 40;
             // 
             // dtpHireDate
             // 
-            this.dtpHireDate.Location = new System.Drawing.Point(365, 523);
+            this.dtpHireDate.Location = new System.Drawing.Point(653, 417);
             this.dtpHireDate.Name = "dtpHireDate";
             this.dtpHireDate.Size = new System.Drawing.Size(283, 29);
             this.dtpHireDate.TabIndex = 41;
@@ -345,7 +349,7 @@ namespace BetterLimitedProject
             // 
             this.lblErrEmail.AutoSize = true;
             this.lblErrEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblErrEmail.Location = new System.Drawing.Point(374, 357);
+            this.lblErrEmail.Location = new System.Drawing.Point(368, 353);
             this.lblErrEmail.Name = "lblErrEmail";
             this.lblErrEmail.Size = new System.Drawing.Size(0, 21);
             this.lblErrEmail.TabIndex = 43;
@@ -355,7 +359,7 @@ namespace BetterLimitedProject
             // 
             this.lblErrCPW.AutoSize = true;
             this.lblErrCPW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblErrCPW.Location = new System.Drawing.Point(659, 262);
+            this.lblErrCPW.Location = new System.Drawing.Point(656, 262);
             this.lblErrCPW.Name = "lblErrCPW";
             this.lblErrCPW.Size = new System.Drawing.Size(0, 21);
             this.lblErrCPW.TabIndex = 44;
@@ -365,7 +369,7 @@ namespace BetterLimitedProject
             // 
             this.lblErrUsername.AutoSize = true;
             this.lblErrUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblErrUsername.Location = new System.Drawing.Point(663, 172);
+            this.lblErrUsername.Location = new System.Drawing.Point(656, 168);
             this.lblErrUsername.Name = "lblErrUsername";
             this.lblErrUsername.Size = new System.Drawing.Size(0, 21);
             this.lblErrUsername.TabIndex = 45;
@@ -375,18 +379,62 @@ namespace BetterLimitedProject
             // 
             this.lblErrPW.AutoSize = true;
             this.lblErrPW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblErrPW.Location = new System.Drawing.Point(378, 262);
+            this.lblErrPW.Location = new System.Drawing.Point(368, 262);
             this.lblErrPW.Name = "lblErrPW";
             this.lblErrPW.Size = new System.Drawing.Size(0, 21);
             this.lblErrPW.TabIndex = 46;
             this.lblErrPW.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(365, 389);
+            this.label11.Name = "label11";
+            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label11.Size = new System.Drawing.Size(69, 25);
+            this.label11.TabIndex = 47;
+            this.label11.Text = "Phone";
+            // 
+            // tbPhone
+            // 
+            this.tbPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPhone.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbPhone.Location = new System.Drawing.Point(365, 417);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbPhone.Size = new System.Drawing.Size(237, 29);
+            this.tbPhone.TabIndex = 48;
+            this.tbPhone.Validating += new System.ComponentModel.CancelEventHandler(this.tbPhone_Validating);
+            // 
+            // lblErrPhone
+            // 
+            this.lblErrPhone.AutoSize = true;
+            this.lblErrPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblErrPhone.Location = new System.Drawing.Point(370, 449);
+            this.lblErrPhone.Name = "lblErrPhone";
+            this.lblErrPhone.Size = new System.Drawing.Size(0, 21);
+            this.lblErrPhone.TabIndex = 49;
+            this.lblErrPhone.Visible = false;
+            // 
+            // pnlPW
+            // 
+            this.pnlPW.Location = new System.Drawing.Point(365, 256);
+            this.pnlPW.Name = "pnlPW";
+            this.pnlPW.Size = new System.Drawing.Size(232, 3);
+            this.pnlPW.TabIndex = 50;
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1264, 680);
+            this.Controls.Add(this.pnlPW);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblErrPhone);
+            this.Controls.Add(this.tbPhone);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.lblErrPW);
             this.Controls.Add(this.lblErrUsername);
             this.Controls.Add(this.lblErrCPW);
@@ -412,10 +460,9 @@ namespace BetterLimitedProject
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BetterLimited - Register";
@@ -458,5 +505,9 @@ namespace BetterLimitedProject
         private System.Windows.Forms.Label lblErrCPW;
         private System.Windows.Forms.Label lblErrUsername;
         private System.Windows.Forms.Label lblErrPW;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbPhone;
+        private System.Windows.Forms.Label lblErrPhone;
+        private System.Windows.Forms.Panel pnlPW;
     }
 }

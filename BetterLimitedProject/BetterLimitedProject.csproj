@@ -156,12 +156,6 @@
     <Compile Include="ForgetPasswdForm.Designer.cs">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageTestingForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ImageTestingForm.Designer.cs">
-      <DependentUpon>ImageTestingForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="installation.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
@@ -436,9 +430,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ForgetPasswdForm.resx">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ImageTestingForm.resx">
-      <DependentUpon>ImageTestingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryArraDeliveryForm.resx">
       <DependentUpon>InventoryArraDeliveryForm.cs</DependentUpon>
