@@ -61,6 +61,7 @@ namespace BetterLimitedProject
             this.label11 = new System.Windows.Forms.Label();
             this.tbPhone = new System.Windows.Forms.TextBox();
             this.lblErrPhone = new System.Windows.Forms.Label();
+            this.pnlPW = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -210,6 +211,7 @@ namespace BetterLimitedProject
             this.tbPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbPassword.Size = new System.Drawing.Size(237, 29);
             this.tbPassword.TabIndex = 24;
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             this.tbPassword.Validating += new System.ComponentModel.CancelEventHandler(this.tbPassword_Validating);
             // 
             // label5
@@ -347,7 +349,7 @@ namespace BetterLimitedProject
             // 
             this.lblErrEmail.AutoSize = true;
             this.lblErrEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblErrEmail.Location = new System.Drawing.Point(692, 449);
+            this.lblErrEmail.Location = new System.Drawing.Point(368, 353);
             this.lblErrEmail.Name = "lblErrEmail";
             this.lblErrEmail.Size = new System.Drawing.Size(0, 21);
             this.lblErrEmail.TabIndex = 43;
@@ -357,7 +359,7 @@ namespace BetterLimitedProject
             // 
             this.lblErrCPW.AutoSize = true;
             this.lblErrCPW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblErrCPW.Location = new System.Drawing.Point(660, 262);
+            this.lblErrCPW.Location = new System.Drawing.Point(656, 262);
             this.lblErrCPW.Name = "lblErrCPW";
             this.lblErrCPW.Size = new System.Drawing.Size(0, 21);
             this.lblErrCPW.TabIndex = 44;
@@ -367,7 +369,7 @@ namespace BetterLimitedProject
             // 
             this.lblErrUsername.AutoSize = true;
             this.lblErrUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblErrUsername.Location = new System.Drawing.Point(663, 172);
+            this.lblErrUsername.Location = new System.Drawing.Point(656, 168);
             this.lblErrUsername.Name = "lblErrUsername";
             this.lblErrUsername.Size = new System.Drawing.Size(0, 21);
             this.lblErrUsername.TabIndex = 45;
@@ -377,7 +379,7 @@ namespace BetterLimitedProject
             // 
             this.lblErrPW.AutoSize = true;
             this.lblErrPW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblErrPW.Location = new System.Drawing.Point(378, 262);
+            this.lblErrPW.Location = new System.Drawing.Point(368, 262);
             this.lblErrPW.Name = "lblErrPW";
             this.lblErrPW.Size = new System.Drawing.Size(0, 21);
             this.lblErrPW.TabIndex = 46;
@@ -409,11 +411,18 @@ namespace BetterLimitedProject
             // 
             this.lblErrPhone.AutoSize = true;
             this.lblErrPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblErrPhone.Location = new System.Drawing.Point(378, 449);
+            this.lblErrPhone.Location = new System.Drawing.Point(370, 449);
             this.lblErrPhone.Name = "lblErrPhone";
             this.lblErrPhone.Size = new System.Drawing.Size(0, 21);
             this.lblErrPhone.TabIndex = 49;
             this.lblErrPhone.Visible = false;
+            // 
+            // pnlPW
+            // 
+            this.pnlPW.Location = new System.Drawing.Point(365, 256);
+            this.pnlPW.Name = "pnlPW";
+            this.pnlPW.Size = new System.Drawing.Size(232, 3);
+            this.pnlPW.TabIndex = 50;
             // 
             // RegisterForm
             // 
@@ -421,6 +430,8 @@ namespace BetterLimitedProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1264, 680);
+            this.Controls.Add(this.pnlPW);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblErrPhone);
             this.Controls.Add(this.tbPhone);
             this.Controls.Add(this.label11);
@@ -449,7 +460,6 @@ namespace BetterLimitedProject
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -498,5 +508,6 @@ namespace BetterLimitedProject
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbPhone;
         private System.Windows.Forms.Label lblErrPhone;
+        private System.Windows.Forms.Panel pnlPW;
     }
 }

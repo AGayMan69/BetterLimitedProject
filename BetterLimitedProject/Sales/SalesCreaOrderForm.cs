@@ -583,6 +583,7 @@ namespace BetterLimitedProject.Sales
 
         private void createReceipt()
         {
+            betterDb.Dispose();
             MessageBox.Show("Create Receipt");
             if (ordOption == OrderOption.LevelCUSTOMER)
             {
@@ -596,7 +597,7 @@ namespace BetterLimitedProject.Sales
             {
 
             }
-            betterDb.Dispose();
+            
         }
         // =========================================== Receipt Page Section =======================================================
     }

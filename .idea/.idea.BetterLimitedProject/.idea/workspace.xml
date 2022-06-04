@@ -4,24 +4,20 @@
     <projectFile>BetterLimitedProject/BetterLimitedProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="Added View, Delete Sales Order Function">
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesProductControl.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesProductControl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesProductControl.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.resx" afterDir="false" />
+    <list default="true" id="0850e68d-d5dd-4e0a-b28d-5e0442a85949" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_40_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_40_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_58_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_58_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_2_6_2022_12_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_2_6_2022_12_02_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BetterLimitedProject/BetterLimitedProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/BetterLimitedProject.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwStockForm.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx.diagram" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/dataModel.edmx.diagram" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/retail_store_product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/retail_store_product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/RegisterForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/RegisterForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/RegisterForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/RegisterForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +34,10 @@
   </component>
   <component name="GitRewordedCommitMessages">
     <option name="onto" value="8bf5fb4ba21a9bac876a596e904a3b032efb4c36" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/osacr/source/repos/AGayMan69/BetterLimitedProject/BetterLimitedProject/RegisterForm.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/osacr/source/repos/AGayMan69/BetterLimitedProject/BetterLimitedProject/RegisterForm.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
