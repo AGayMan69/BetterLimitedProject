@@ -30,6 +30,7 @@ namespace BetterLimitedProject
         public int supplier_ID { get; set; }
         public int phaseout_stat { get; set; }
         public int restock_level { get; set; }
+        public int irestock_level { get; set; }
         public float price { get; set; }
         public float weight { get; set; }
         public string dimension { get; set; }

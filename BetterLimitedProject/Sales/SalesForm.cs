@@ -57,7 +57,7 @@ namespace BetterLimitedProject
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.Image = (Image)new Bitmap(BetterLimitedProject.Properties.Resources.logout_icon, new Size(16,16));
             clearSubformLoader();
-            SalesVwOrderForm hmfrm = new SalesVwOrderForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            SalesVwStockForm hmfrm = new SalesVwStockForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(hmfrm);
         }
 
