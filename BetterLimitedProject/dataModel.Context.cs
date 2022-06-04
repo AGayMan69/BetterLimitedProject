@@ -26,10 +26,12 @@ namespace BetterLimitedProject
         }
     
         public DbSet<buyorder> buyorders { get; set; }
+        public DbSet<category> categories { get; set; }
         public DbSet<customer> customers { get; set; }
         public DbSet<defect> defects { get; set; }
         public DbSet<delivery> deliveries { get; set; }
         public DbSet<delivery_assignment> delivery_assignment { get; set; }
+        public DbSet<delivery_type> delivery_type { get; set; }
         public DbSet<department> departments { get; set; }
         public DbSet<installation> installations { get; set; }
         public DbSet<installation_assignment> installation_assignment { get; set; }
@@ -41,6 +43,7 @@ namespace BetterLimitedProject
         public DbSet<replenishment> replenishments { get; set; }
         public DbSet<replenishment_product> replenishment_product { get; set; }
         public DbSet<reservation> reservations { get; set; }
+        public DbSet<resetpassword_request> resetpassword_request { get; set; }
         public DbSet<retail_store> retail_store { get; set; }
         public DbSet<retail_store_product> retail_store_product { get; set; }
         public DbSet<staff> staffs { get; set; }

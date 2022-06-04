@@ -22,7 +22,7 @@ namespace BetterLimitedProject
     
         public int department_ID { get; set; }
         public string department_name { get; set; }
-        public int department_head { get; set; }
+        public Nullable<int> department_head { get; set; }
     
         public virtual ICollection<staff> staffs { get; set; }
         public virtual ICollection<position> positions { get; set; }

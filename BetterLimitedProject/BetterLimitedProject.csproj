@@ -39,12 +39,17 @@
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.8.6.3\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="MailKit, Version=3.2.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
       <HintPath>..\packages\MailKit.3.2.0\lib\net452\MailKit.dll</HintPath>
     </Reference>
     <Reference Include="MimeKit, Version=3.2.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
       <HintPath>..\packages\MimeKit.3.2.0\lib\net452\MimeKit.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.dll</HintPath>
@@ -107,6 +112,9 @@
     <Compile Include="buyorder.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="category.cs">
+      <DependentUpon>dataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="customer.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
@@ -125,6 +133,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="defect.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
@@ -134,14 +143,30 @@
     <Compile Include="delivery_assignment.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="delivery_type.cs">
+      <DependentUpon>dataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="department.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="exampleValidator.cs" />
     <Compile Include="ForgetPasswdForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ForgetPasswdForm.Designer.cs">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageTestingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageTestingForm.Designer.cs">
+      <DependentUpon>ImageTestingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="installation.cs">
+      <DependentUpon>dataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="installation_assignment.cs">
+      <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Inventory\InventoryArraDeliveryForm.cs">
       <SubType>Form</SubType>
@@ -197,12 +222,6 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="installation.cs">
-      <DependentUpon>dataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="installation_assignment.cs">
-      <DependentUpon>dataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="orderline.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
@@ -214,14 +233,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purchaseorder.cs">
+      <DependentUpon>dataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\PurchaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Purchase\PurchaseForm.Designer.cs">
       <DependentUpon>PurchaseForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="purchaseorder.cs">
-      <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Purchase\PurchaseHdlDefectForm.cs">
       <SubType>Form</SubType>
@@ -265,11 +284,32 @@
     <Compile Include="ResetPasswdForm.Designer.cs">
       <DependentUpon>ResetPasswdForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="resetpassword_request.cs">
+      <DependentUpon>dataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="retail_store.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="retail_store_product.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\PayControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\PayControl.Designer.cs">
+      <DependentUpon>PayControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\POSOrderLineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\POSOrderLineControl.Designer.cs">
+      <DependentUpon>POSOrderLineControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\POSProductControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\POSProductControl.Designer.cs">
+      <DependentUpon>POSProductControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\SalesCreaOrderForm.cs">
       <SubType>Form</SubType>
@@ -289,6 +329,12 @@
     <Compile Include="Sales\SalesHomeForm.Designer.cs">
       <DependentUpon>SalesHomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\SalesOrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesOrderControl.Designer.cs">
+      <DependentUpon>SalesOrderControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\SalesPayReserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +346,18 @@
     </Compile>
     <Compile Include="Sales\SalesForm.Designer.cs">
       <DependentUpon>SalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesProductControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesProductControl.Designer.cs">
+      <DependentUpon>SalesProductControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesRestockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesRestockForm.Designer.cs">
+      <DependentUpon>SalesRestockForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\SalesVwOrderForm.cs">
       <SubType>Form</SubType>
@@ -373,6 +431,9 @@
     <EmbeddedResource Include="ForgetPasswdForm.resx">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImageTestingForm.resx">
+      <DependentUpon>ImageTestingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryArraDeliveryForm.resx">
       <DependentUpon>InventoryArraDeliveryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -428,6 +489,15 @@
     <EmbeddedResource Include="ResetPasswdForm.resx">
       <DependentUpon>ResetPasswdForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\PayControl.resx">
+      <DependentUpon>PayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\POSOrderLineControl.resx">
+      <DependentUpon>POSOrderLineControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\POSProductControl.resx">
+      <DependentUpon>POSProductControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesCreaOrderForm.resx">
       <DependentUpon>SalesCreaOrderForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -440,8 +510,17 @@
     <EmbeddedResource Include="Sales\SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesOrderControl.resx">
+      <DependentUpon>SalesOrderControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesPayReserForm.resx">
       <DependentUpon>SalesPayReserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesProductControl.resx">
+      <DependentUpon>SalesProductControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesRestockForm.resx">
+      <DependentUpon>SalesRestockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesVwOrderForm.resx">
       <DependentUpon>SalesVwOrderForm.cs</DependentUpon>
@@ -486,21 +565,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dataModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>dataModel.Context.cs</LastGenOutput>
-      <DependentUpon>dataModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="dataModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>dataModel.edmx</DependentUpon>
-      <LastGenOutput>dataModel.cs</LastGenOutput>
-    </Content>
+    <None Include="Resources\icon_printdocument.png" />
+    <None Include="Resources\icon_viewdocument.png" />
+    <None Include="Resources\deposit.png" />
+    <None Include="Resources\delivery.png" />
+    <None Include="Resources\customerpickup.png" />
+    <None Include="Resources\search_btn_icon.png" />
+    <None Include="Resources\search_icon.png" />
     <None Include="Resources\logout-icon.png" />
     <None Include="Resources\login-icon.png" />
-    <None Include="Resources\login-icon1.png" />
     <None Include="Resources\login-icon1.jpg" />
-    <None Include="Resources\login-icon.jpg" />
     <None Include="Resources\password-show2.png" />
     <None Include="Resources\password-hide.png" />
     <None Include="Resources\password-show.png" />
@@ -511,6 +585,17 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="dataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dataModel.edmx</DependentUpon>
+      <LastGenOutput>dataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="dataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dataModel.edmx</DependentUpon>
+      <LastGenOutput>dataModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

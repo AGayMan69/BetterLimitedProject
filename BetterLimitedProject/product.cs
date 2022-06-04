@@ -30,11 +30,13 @@ namespace BetterLimitedProject
         public int supplier_ID { get; set; }
         public int phaseout_stat { get; set; }
         public int restock_level { get; set; }
+        public int irestock_level { get; set; }
         public float price { get; set; }
         public float weight { get; set; }
         public string dimension { get; set; }
-        public string image_link { get; set; }
+        public byte[] product_image { get; set; }
     
+        public virtual category category { get; set; }
         public virtual ICollection<defect> defects { get; set; }
         public virtual ICollection<orderline> orderlines { get; set; }
         public virtual ICollection<replenishment_product> replenishment_product { get; set; }

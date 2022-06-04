@@ -23,22 +23,18 @@ namespace BetterLimitedProject
         }
     
         public int delivery_ID { get; set; }
-        public string delivery_type { get; set; }
-        public int sender { get; set; }
-        public int status { get; set; }
+        public int type { get; set; }
+        public string status { get; set; }
         public float net_weight { get; set; }
-        public string dimension { get; set; }
         public Nullable<System.DateTime> approve_time { get; set; }
         public Nullable<System.DateTime> complete_time { get; set; }
-        public int assignment_ID { get; set; }
-        public System.DateTime delivery_date { get; set; }
-        public System.DateTime time_session { get; set; }
-        public int Delivery_Assignmentdelivery_ID { get; set; }
-        public int Delivery_Assignmentworker_ID { get; set; }
+        public Nullable<int> assignment_ID { get; set; }
+        public Nullable<System.DateTime> delivery_date { get; set; }
     
         public virtual ICollection<buyorder> buyorders { get; set; }
         public virtual ICollection<defect> defects { get; set; }
         public virtual ICollection<delivery_assignment> delivery_assignment { get; set; }
+        public virtual delivery_type delivery_type { get; set; }
         public virtual ICollection<installation> installations { get; set; }
         public virtual replenishment replenishment { get; set; }
     }

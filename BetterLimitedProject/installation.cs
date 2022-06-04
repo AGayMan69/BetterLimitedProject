@@ -23,8 +23,6 @@ namespace BetterLimitedProject
         public Nullable<int> installation_type { get; set; }
         public Nullable<System.DateTime> installation_date { get; set; }
         public int delivery_ID { get; set; }
-        public Nullable<System.DateTime> delivery_date { get; set; }
-        public int assignment_ID { get; set; }
         public int order_ID { get; set; }
     
         public virtual buyorder buyorder { get; set; }

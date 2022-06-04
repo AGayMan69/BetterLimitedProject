@@ -20,6 +20,7 @@ namespace BetterLimitedProject
             this.reorders = new HashSet<reorder>();
             this.reorders1 = new HashSet<reorder>();
             this.replenishments = new HashSet<replenishment>();
+            this.resetpassword_request = new HashSet<resetpassword_request>();
             this.retail_store = new HashSet<retail_store>();
             this.warehouses = new HashSet<warehouse>();
         }
@@ -41,6 +42,7 @@ namespace BetterLimitedProject
         public virtual ICollection<reorder> reorders { get; set; }
         public virtual ICollection<reorder> reorders1 { get; set; }
         public virtual ICollection<replenishment> replenishments { get; set; }
+        public virtual ICollection<resetpassword_request> resetpassword_request { get; set; }
         public virtual ICollection<retail_store> retail_store { get; set; }
         public virtual ICollection<warehouse> warehouses { get; set; }
     }

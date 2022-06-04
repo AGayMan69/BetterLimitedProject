@@ -15,13 +15,13 @@ namespace BetterLimitedProject
     public partial class reservation
     {
         public int reservation_ID { get; set; }
-        public int customer { get; set; }
+        public int customerID { get; set; }
         public int productID { get; set; }
         public int qty { get; set; }
-        public System.DateTime reservation_date { get; set; }
+        public Nullable<System.DateTime> reservation_date { get; set; }
         public Nullable<System.DateTime> complete_date { get; set; }
     
-        public virtual customer customer1 { get; set; }
+        public virtual customer customer { get; set; }
         public virtual product product { get; set; }
     }
 }

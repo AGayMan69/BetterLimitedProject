@@ -31,6 +31,7 @@ namespace BetterLimitedProject
         {
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@ namespace BetterLimitedProject
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnForgotPassword = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,17 @@ namespace BetterLimitedProject
             this.panel1.Padding = new System.Windows.Forms.Padding(70, 0, 70, 0);
             this.panel1.Size = new System.Drawing.Size(314, 681);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::BetterLimitedProject.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(70, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 681);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -112,7 +123,7 @@ namespace BetterLimitedProject
             this.tbUsername.ForeColor = System.Drawing.SystemColors.InfoText;
             this.tbUsername.Location = new System.Drawing.Point(564, 305);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbUsername.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbUsername.Size = new System.Drawing.Size(487, 29);
             this.tbUsername.TabIndex = 23;
             // 
@@ -122,7 +133,7 @@ namespace BetterLimitedProject
             this.tbEmail.ForeColor = System.Drawing.SystemColors.InfoText;
             this.tbEmail.Location = new System.Drawing.Point(564, 405);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbEmail.Size = new System.Drawing.Size(487, 29);
             this.tbEmail.TabIndex = 25;
             // 
@@ -151,17 +162,6 @@ namespace BetterLimitedProject
             this.btnForgotPassword.Text = "Forgot Password";
             this.btnForgotPassword.UseVisualStyleBackColor = false;
             this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::BetterLimitedProject.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 681);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // ForgetPasswdForm
             // 

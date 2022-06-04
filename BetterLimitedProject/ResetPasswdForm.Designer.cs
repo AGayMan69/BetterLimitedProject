@@ -33,9 +33,9 @@ namespace BetterLimitedProject
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbPasswordConf = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbUsername = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnResetPassword = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -95,15 +95,15 @@ namespace BetterLimitedProject
             this.panel1.Size = new System.Drawing.Size(314, 681);
             this.panel1.TabIndex = 6;
             // 
-            // tbEmail
+            // tbPasswordConf
             // 
-            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.tbEmail.Location = new System.Drawing.Point(569, 361);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbEmail.Size = new System.Drawing.Size(487, 29);
-            this.tbEmail.TabIndex = 29;
+            this.tbPasswordConf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPasswordConf.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbPasswordConf.Location = new System.Drawing.Point(569, 361);
+            this.tbPasswordConf.Name = "tbPasswordConf";
+            this.tbPasswordConf.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbPasswordConf.Size = new System.Drawing.Size(487, 29);
+            this.tbPasswordConf.TabIndex = 29;
             // 
             // label4
             // 
@@ -116,15 +116,15 @@ namespace BetterLimitedProject
             this.label4.TabIndex = 28;
             this.label4.Text = "Confirm Password";
             // 
-            // tbUsername
+            // tbPassword
             // 
-            this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsername.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.tbUsername.Location = new System.Drawing.Point(569, 261);
-            this.tbUsername.Name = "tbUsername";
-            this.tbUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbUsername.Size = new System.Drawing.Size(487, 29);
-            this.tbUsername.TabIndex = 27;
+            this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassword.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbPassword.Location = new System.Drawing.Point(569, 261);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbPassword.Size = new System.Drawing.Size(487, 29);
+            this.tbPassword.TabIndex = 27;
             // 
             // label3
             // 
@@ -172,15 +172,16 @@ namespace BetterLimitedProject
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnResetPassword);
-            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.tbPasswordConf);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.tbUsername);
+            this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Name = "ResetPasswdForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResetPasswdForm";
+            this.Load += new System.EventHandler(this.ResetPasswdForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -194,9 +195,9 @@ namespace BetterLimitedProject
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.TextBox tbPasswordConf;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbUsername;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnResetPassword;
         private System.Windows.Forms.Label label5;

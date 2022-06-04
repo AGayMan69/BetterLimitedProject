@@ -11,11 +11,15 @@ using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
 using MimeKit.Text;
+using Org.BouncyCastle.Bcpg;
 
 namespace BetterLimitedProject
 {
     public partial class ForgetPasswdForm : Form
     {
+        private string name;
+        private int staffID;
+
         public ForgetPasswdForm()
         {
             InitializeComponent();
@@ -23,13 +27,18 @@ namespace BetterLimitedProject
 
         private void generateForgotPasswordRequest()
         {
+            // generate UUID
+            Guid uuid = Guid.NewGuid();
+            String g = uuid.ToString();
+            MessageBox.Show($"uuid {g}");
+
             // create email message
             var email = new MimeMessage();
             email.From.Add(MailboxAddress.Parse("limitedbetter@outlook.com"));
-            email.To.Add(MailboxAddress.Parse("sendbetter4915m@gmail.com"));
+            email.To.Add(MailboxAddress.Parse("testbetterlimited@outlook.com"));
             email.Subject = "Better Limited: Reset Password";
             var emailBuilder = new BodyBuilder();
-            emailBuilder.HtmlBody = "<h2>Dear Username, </h2>To reset your password, please copy & enter the verification code<br/><br/>dsfsdfsdfsd2342";
+            emailBuilder.HtmlBody = $"<h2>Dear {name}, </h2>To reset your password, please copy & enter the verification code<br/><br/>{g}";
             email.Body = emailBuilder.ToMessageBody();
 
             // send email
@@ -37,10 +46,43 @@ namespace BetterLimitedProject
             {
                 smtp.Connect("smtp-mail.outlook.com", 587, SecureSocketOptions.StartTls);
                 smtp.Authenticate("limitedbetter@outlook.com", "itp4915m");
-                smtp.Send(email);
-                MessageBox.Show("Sending email");
-                smtp.Disconnect(true);
+                try
+                {
+
+                    smtp.Send(email);
+                    MessageBox.Show("Sending email");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("fail to send email");
+                }
+                finally
+                {
+                    smtp.Disconnect(true);
+                }
             }
+
+            // create reset password request
+            using (var betterDB = new betterlimitedEntities())
+            {
+                resetpassword_request request = new resetpassword_request();
+                request.staff_ID = staffID;
+                request.request_code = g;
+                request.request_time = DateTime.Now;
+                betterDB.resetpassword_request.Add(request);
+
+                try
+                {
+                    betterDB.SaveChanges();
+                    MessageBox.Show("Request generated successfully!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error creating request.");
+                }
+            }
+
+
         }
 
         private bool clickValidUser()
@@ -53,7 +95,16 @@ namespace BetterLimitedProject
                 var userResult = (from result in betterDb.staffs
                                   where result.username.Equals(username) && result.email.Equals(email)
                                   select result).FirstOrDefault();
-                return (userResult != null);
+                if (userResult == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    name = userResult.name;
+                    staffID = userResult.staff_ID;
+                    return true;
+                }
             }
 
         }

@@ -68,6 +68,7 @@ namespace BetterLimitedProject
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label5
             // 
@@ -102,7 +103,7 @@ namespace BetterLimitedProject
             this.tbVerification.ForeColor = System.Drawing.SystemColors.InfoText;
             this.tbVerification.Location = new System.Drawing.Point(547, 323);
             this.tbVerification.Name = "tbVerification";
-            this.tbVerification.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbVerification.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbVerification.Size = new System.Drawing.Size(487, 29);
             this.tbVerification.TabIndex = 38;
             // 
@@ -153,6 +154,7 @@ namespace BetterLimitedProject
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Name = "VerifyResetPasswdForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VerifyResetPasswdForm";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

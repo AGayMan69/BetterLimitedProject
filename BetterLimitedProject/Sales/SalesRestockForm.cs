@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BetterLimitedProject
+namespace BetterLimitedProject.Sales
 {
-    public partial class EditProduct : Form
+    public partial class SalesRestockForm : Form
     {
-        public EditProduct()
+        public SalesRestockForm()
         {
             InitializeComponent();
         }
-
-        private void EditProduct_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

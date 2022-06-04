@@ -32,6 +32,7 @@ namespace BetterLimitedProject
             this.panSide = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panNavHightLight = new System.Windows.Forms.Panel();
+            this.btnDefect = new System.Windows.Forms.Button();
             this.btnVwStock = new System.Windows.Forms.Button();
             this.btnPayReser = new System.Windows.Forms.Button();
             this.btnCreaOrder = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@ namespace BetterLimitedProject
             this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panSubFormLoader = new System.Windows.Forms.Panel();
-            this.btnDefect = new System.Windows.Forms.Button();
             this.panSide.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panLogo.SuspendLayout();
@@ -82,6 +82,24 @@ namespace BetterLimitedProject
             this.panNavHightLight.Name = "panNavHightLight";
             this.panNavHightLight.Size = new System.Drawing.Size(10, 65);
             this.panNavHightLight.TabIndex = 4;
+            // 
+            // btnDefect
+            // 
+            this.btnDefect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.btnDefect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDefect.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDefect.FlatAppearance.BorderSize = 0;
+            this.btnDefect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDefect.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDefect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.btnDefect.Location = new System.Drawing.Point(0, 325);
+            this.btnDefect.Name = "btnDefect";
+            this.btnDefect.Size = new System.Drawing.Size(314, 65);
+            this.btnDefect.TabIndex = 50;
+            this.btnDefect.Text = "Defect Item";
+            this.btnDefect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDefect.UseVisualStyleBackColor = false;
+            this.btnDefect.Click += new System.EventHandler(this.btnDefect_Click);
             // 
             // btnVwStock
             // 
@@ -221,24 +239,6 @@ namespace BetterLimitedProject
             this.panSubFormLoader.Size = new System.Drawing.Size(950, 681);
             this.panSubFormLoader.TabIndex = 4;
             // 
-            // btnDefect
-            // 
-            this.btnDefect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.btnDefect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDefect.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDefect.FlatAppearance.BorderSize = 0;
-            this.btnDefect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDefect.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDefect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnDefect.Location = new System.Drawing.Point(0, 325);
-            this.btnDefect.Name = "btnDefect";
-            this.btnDefect.Size = new System.Drawing.Size(314, 65);
-            this.btnDefect.TabIndex = 50;
-            this.btnDefect.Text = "Defect Item";
-            this.btnDefect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDefect.UseVisualStyleBackColor = false;
-            this.btnDefect.Click += new System.EventHandler(this.btnDefect_Click);
-            // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +248,7 @@ namespace BetterLimitedProject
             this.Controls.Add(this.panSubFormLoader);
             this.Controls.Add(this.panSide);
             this.Name = "SalesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SalesForm";
             this.Load += new System.EventHandler(this.Sales_Load);
             this.panSide.ResumeLayout(false);
