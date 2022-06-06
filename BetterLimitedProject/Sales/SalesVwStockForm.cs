@@ -19,23 +19,6 @@ namespace BetterLimitedProject
         private bool haveInput;
         private string targetProduct;
 
-        private class productRow
-        {
-            internal int product_ID;
-            internal string name;
-            internal string category_name;
-            internal int qty;
-            internal int restock_level;
-
-            public productRow(int productId, string name, string categoryName, int qty, int restockLevel)
-            {
-                product_ID = productId;
-                this.name = name;
-                category_name = categoryName;
-                this.qty = qty;
-                restock_level = restockLevel;
-            }
-        }
 
         public SalesVwStockForm()
         {
@@ -224,6 +207,7 @@ namespace BetterLimitedProject
                     newReplenishmentProduct.product_ID = productID;
                     newReplenishmentProduct.delivery_ID = newDeliveryID;
                     newReplenishmentProduct.qty = restockForm.reStockAmount;
+                    newDelivery.creation_time = DateTime.Now;
 
                     betterDb.deliveries.Add(newDelivery);
                     betterDb.replenishments.Add(newReplenishment);

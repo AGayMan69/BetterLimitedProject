@@ -178,7 +178,7 @@ namespace BetterLimitedProject
             this.btnArraDelivery.Name = "btnArraDelivery";
             this.btnArraDelivery.Size = new System.Drawing.Size(314, 65);
             this.btnArraDelivery.TabIndex = 49;
-            this.btnArraDelivery.Text = "Arrange Delivery";
+            this.btnArraDelivery.Text = "Assign Delivery";
             this.btnArraDelivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnArraDelivery.UseVisualStyleBackColor = false;
             this.btnArraDelivery.Click += new System.EventHandler(this.btnArraDelivery_Click);
@@ -268,6 +268,7 @@ namespace BetterLimitedProject
             this.Controls.Add(this.panSubFormLoader);
             this.Controls.Add(this.panSide);
             this.Name = "InventoryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.Inventory_Load);
             this.panSide.ResumeLayout(false);

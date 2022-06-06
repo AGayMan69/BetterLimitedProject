@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,7 @@ namespace BetterLimitedProject.Sales
         private string categorySearch;
         private string nameSearch;
         private OrderOption ordOption;
+        private int newOrderID;
 
 
 
@@ -47,7 +49,6 @@ namespace BetterLimitedProject.Sales
             int year = Int32.Parse(strYear.Remove(0, 2));
             int tempID = year * (int)Math.Pow(10, 5);
 
-            int newOrderID;
             var latestOrder = (from buyorderRec in betterDb.buyorders
                                where buyorderRec.order_ID >= tempID
                                orderby buyorderRec.order_ID descending
@@ -549,7 +550,7 @@ namespace BetterLimitedProject.Sales
                 {
                     betterDb.orderlines.Add(line);
                 }
-
+                newDelivery.creation_time = DateTime.Now;
                 betterDb.deliveries.Add(newDelivery);
 
 
@@ -578,26 +579,160 @@ namespace BetterLimitedProject.Sales
         // =========================================== Receipt Page Section =======================================================
         private void receiptOnLoad()
         {
-            createReceipt();
+            betterDb.Dispose();
         }
 
+        private bool receiptCreated = false;
         private void createReceipt()
         {
-            betterDb.Dispose();
-            MessageBox.Show("Create Receipt");
-            if (ordOption == OrderOption.LevelCUSTOMER)
+            try
             {
-
+                PrintDocument pd = new PrintDocument();
+                pd.DefaultPageSettings.PaperSize = new PaperSize("Receipt", 600, 800);
+                PrinterSettings ps = new PrinterSettings();
+                pd.PrintPage += generateReceipt;
+                pd.Print();
             }
-            else if (ordOption == OrderOption.LevelDelivery)
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
-            else
+
+        }
+        private void generateReceipt(object sender, PrintPageEventArgs ev)
+        {
+            //====================================================================================================
+            using (var betterDB = new betterlimitedEntities())
             {
+                var retailstore = (from storeRec in betterDB.retail_store
+                                   where storeRec.store_ID == 1
+                                   select storeRec).AsNoTracking().FirstOrDefault();
 
+                //====================================================================================================
+                Font CompanyName = new Font("Century Gothic", 25, FontStyle.Bold);
+                Font bold = new Font("Times New Roman", 9, FontStyle.Bold);
+                Font normal = new Font("Arial", 8, FontStyle.Regular);
+                Font linenormal = new Font("Arial", 8, FontStyle.Regular);
+
+                string line = new string('═', 100);
+                float height = 30;
+                string delivery = $"Order ID: {newOrderID}";
+                ev.Graphics.DrawString(delivery, bold, Brushes.Gray, 20, height, new StringFormat());
+                int hourX = 720;
+                int realHX = hourX + 50;
+                ev.Graphics.DrawString("Opening Hour", bold, Brushes.Black, hourX, height, new StringFormat());
+                height += 15;
+                ev.Graphics.DrawString(new DateTime(retailstore.opening_hour.Ticks).ToString("HH:mm"), normal, Brushes.Gray, realHX, height, new StringFormat());
+                height += 25;
+                ev.Graphics.DrawString("Closing Hour", bold, Brushes.Black, hourX, height, new StringFormat());
+                height += 15;
+                ev.Graphics.DrawString(new DateTime(retailstore.closing_hour.Ticks).ToString("HH:mm"), normal, Brushes.Gray, realHX, height, new StringFormat());
+
+                height = 60;
+
+
+                ev.Graphics.DrawString("Better Limited", CompanyName, Brushes.Black, 300, height, new StringFormat());
+                height += 80;
+                ev.Graphics.DrawString("Address : " + retailstore.address, bold, Brushes.Black, 20, height, new StringFormat());
+                height += 30;
+                ev.Graphics.DrawString("Contact Number : " + retailstore.contact_number.ToString(), bold, Brushes.Black, 20, height, new StringFormat());
+                height += 80;
+                height += 17;
+                ev.Graphics.DrawString(line, linenormal, Brushes.Black, 20, height, new StringFormat());
+                height += 17;
+                int productX = 20;
+                int priceX = productX + 580;
+                int quantX = priceX + 80;
+                int totalX = quantX + 70;
+                ev.Graphics.DrawString("Product", bold, Brushes.Black, productX, height, new StringFormat());
+                ev.Graphics.DrawString("Price", bold, Brushes.Black, priceX, height, new StringFormat());
+                ev.Graphics.DrawString("Quant.", bold, Brushes.Black, quantX, height, new StringFormat());
+                ev.Graphics.DrawString("Total Price", bold, Brushes.Black, totalX, height, new StringFormat());
+                height += 25;
+                ev.Graphics.DrawString(line, linenormal, Brushes.Black, 20, height, new StringFormat());
+                height += 25;
+
+                if (ordOption == OrderOption.LevelDelivery || ordOption == OrderOption.LevelCUSTOMER)
+                {
+                    var buyorderResult = (from orderRec in betterDB.buyorders
+                                          where orderRec.order_ID == newOrderID
+                                          select orderRec).AsNoTracking().FirstOrDefault();
+
+                    ev.Graphics.DrawString("Order Date : " + buyorderResult.order_date.ToString(), bold, Brushes.Black, 20, 250, new StringFormat());
+                    foreach (var orderline in buyorderResult.orderlines)
+                    {
+                        string productName = orderline.product.name;
+                        string price = "$" + orderline.product.price.ToString();
+                        string qty = orderline.quantity.ToString();
+                        string total = "$" + (orderline.quantity * orderline.product.price).ToString();
+                        var priceWid = ev.Graphics.MeasureString(price, normal);
+                        var qtyWid = ev.Graphics.MeasureString(qty, normal);
+                        var totalWid = ev.Graphics.MeasureString("$" + total, normal);
+
+                        ev.Graphics.DrawString(productName, normal, Brushes.Black, productX, height, new StringFormat());
+                        ev.Graphics.DrawString(price, normal, Brushes.Black, priceX + (50 - priceWid.Width), height, new StringFormat());
+                        ev.Graphics.DrawString(qty, normal, Brushes.Black, quantX + (30 - qtyWid.Width), height, new StringFormat());
+                        ev.Graphics.DrawString(total, normal, Brushes.Black, totalX + (70 - totalWid.Width), height, new StringFormat());
+                        height += 20;
+                    }
+                    string allTotal = buyorderResult.total_price.ToString();
+                    var allTotalWid = ev.Graphics.MeasureString(allTotal, normal);
+                    ev.Graphics.DrawString("$" + allTotal, normal, Brushes.Black, totalX + (70 - allTotalWid.Width), 720, new StringFormat());
+                }
+                else if (ordOption == OrderOption.LevelDeposit)
+                {
+                    var reserResults = (from reserRec in betterDB.reservations
+                        where reserRec.customerID == newCustomerID
+                        select new {reserRec.product.name, reserRec.product.price, reserRec.qty});
+
+                    //ev.Graphics.DrawString("Order Date : " + reserResults.FirstOrDefault().reservation_date.ToString(), bold, Brushes.Black, 20, 250, new StringFormat());
+                    foreach (var reser in reserResults)
+                    {
+                        string productName = reser.name;
+                        ev.Graphics.DrawString(productName, normal, Brushes.Black, productX, height, new StringFormat());
+
+                        string price = ((reser.price > 5000) ? reser.price * 0.2 : 0).ToString();
+                        string total = "$" + (reser.qty * Int32.Parse(price)).ToString();
+                        price = "$" + price;
+                        var priceWid = ev.Graphics.MeasureString(price, normal);
+                        ev.Graphics.DrawString(price, normal, Brushes.Black, priceX + (50 - priceWid.Width), height, new StringFormat());
+
+                        string qty = reser.qty.ToString();
+                        var qtyWid = ev.Graphics.MeasureString(qty, normal);
+                        ev.Graphics.DrawString(qty, normal, Brushes.Black, quantX + (30 - qtyWid.Width), height, new StringFormat());
+
+                        var totalWid = ev.Graphics.MeasureString("$" + total, normal);
+                        ev.Graphics.DrawString(total, normal, Brushes.Black, totalX + (70 - totalWid.Width), height, new StringFormat());
+
+                        height += 20;
+                    }
+                }
+
+                height = 700;
+                ev.Graphics.DrawString(line, linenormal, Brushes.Black, 20, height, new StringFormat());
+
+                height = 850;
+                int tyX = 300;
+                ev.Graphics.DrawString("Thank you for your payment!!", bold, Brushes.Black, tyX, height, new StringFormat());
+
+
+
+
+                ev.HasMorePages = false;
             }
-            
+        }
+        private void btnGenerateReceipt_Click(object sender, EventArgs e)
+        {
+            createReceipt();
+            receiptCreated = true;
+        }
+
+        private void btnViewReceipt_Click(object sender, EventArgs e)
+        {
+            if (!(receiptCreated))
+            {
+                return;
+            }
         }
         // =========================================== Receipt Page Section =======================================================
     }

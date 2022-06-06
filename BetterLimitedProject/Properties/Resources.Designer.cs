@@ -63,6 +63,46 @@ namespace BetterLimitedProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap approved_status {
+            get {
+                object obj = ResourceManager.GetObject("approved_status", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancel_status {
+            get {
+                object obj = ResourceManager.GetObject("cancel_status", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checkicon {
+            get {
+                object obj = ResourceManager.GetObject("checkicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap completed_status {
+            get {
+                object obj = ResourceManager.GetObject("completed_status", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customerpickup {
             get {
                 object obj = ResourceManager.GetObject("customerpickup", resourceCulture);
@@ -173,6 +213,16 @@ namespace BetterLimitedProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pending_status {
+            get {
+                object obj = ResourceManager.GetObject("pending_status", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search_btn_icon {
             get {
                 object obj = ResourceManager.GetObject("search_btn_icon", resourceCulture);
@@ -186,6 +236,16 @@ namespace BetterLimitedProject.Properties {
         internal static System.Drawing.Bitmap search_icon {
             get {
                 object obj = ResourceManager.GetObject("search_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warningicon {
+            get {
+                object obj = ResourceManager.GetObject("warningicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

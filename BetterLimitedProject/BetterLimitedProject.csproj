@@ -60,6 +60,7 @@
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\netstandard1.1\System.Memory.dll</HintPath>
     </Reference>
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
@@ -156,17 +157,77 @@
     <Compile Include="ForgetPasswdForm.Designer.cs">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTestReceipt1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestReceipt1.Designer.cs">
+      <DependentUpon>frmTestReceipt1.cs</DependentUpon>
+    </Compile>
     <Compile Include="installation.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="installation_assignment.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\InventoryArraDeliveryForm.cs">
+    <Compile Include="Inventory\InventoryArrangeReplenishForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory\InventoryArraDeliveryForm.Designer.cs">
-      <DependentUpon>InventoryArraDeliveryForm.cs</DependentUpon>
+    <Compile Include="Inventory\InventoryArrangeReplenishForm.Designer.cs">
+      <DependentUpon>InventoryArrangeReplenishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryAssDeliveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryAssDeliveryForm.Designer.cs">
+      <DependentUpon>InventoryAssDeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryArrangeCustomerDelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryArrangeCustomerDelForm.Designer.cs">
+      <DependentUpon>InventoryArrangeCustomerDelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryArrangeDefectDelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryArrangeDefectDelForm.Designer.cs">
+      <DependentUpon>InventoryArrangeDefectDelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryAssWorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryAssWorkerForm.Designer.cs">
+      <DependentUpon>InventoryAssWorkerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryDeliveryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryDeliveryControl.Designer.cs">
+      <DependentUpon>InventoryDeliveryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryDeliveryDutyAfternoonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryDeliveryDutyAfternoonForm.Designer.cs">
+      <DependentUpon>InventoryDeliveryDutyAfternoonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryDeliveryDutyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryDeliveryDutyControl.Designer.cs">
+      <DependentUpon>InventoryDeliveryDutyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryDeliveryDutyEveningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryDeliveryDutyEveningForm.Designer.cs">
+      <DependentUpon>InventoryDeliveryDutyEveningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryDeliveryDutyMorningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryDeliveryDutyMorningForm.Designer.cs">
+      <DependentUpon>InventoryDeliveryDutyMorningForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\InventoryForm.cs">
       <SubType>Form</SubType>
@@ -179,6 +240,12 @@
     </Compile>
     <Compile Include="Inventory\InventoryHomeForm.Designer.cs">
       <DependentUpon>InventoryHomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryProductControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryProductControl.Designer.cs">
+      <DependentUpon>InventoryProductControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\InventoryPurGoodForm.cs">
       <SubType>Form</SubType>
@@ -431,14 +498,47 @@
     <EmbeddedResource Include="ForgetPasswdForm.resx">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\InventoryArraDeliveryForm.resx">
-      <DependentUpon>InventoryArraDeliveryForm.cs</DependentUpon>
+    <EmbeddedResource Include="frmTestReceipt1.resx">
+      <DependentUpon>frmTestReceipt1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryArrangeCustomerDelForm.resx">
+      <DependentUpon>InventoryArrangeCustomerDelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryArrangeDefectDelForm.resx">
+      <DependentUpon>InventoryArrangeDefectDelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryArrangeReplenishForm.resx">
+      <DependentUpon>InventoryArrangeReplenishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryAssDeliveryForm.resx">
+      <DependentUpon>InventoryAssDeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryAssWorkerForm.resx">
+      <DependentUpon>InventoryAssWorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryDeliveryControl.resx">
+      <DependentUpon>InventoryDeliveryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryDeliveryDutyAfternoonForm.resx">
+      <DependentUpon>InventoryDeliveryDutyAfternoonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryDeliveryDutyControl.resx">
+      <DependentUpon>InventoryDeliveryDutyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryDeliveryDutyEveningForm.resx">
+      <DependentUpon>InventoryDeliveryDutyEveningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryDeliveryDutyMorningForm.resx">
+      <DependentUpon>InventoryDeliveryDutyMorningForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryHomeForm.resx">
       <DependentUpon>InventoryHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryProductControl.resx">
+      <DependentUpon>InventoryProductControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryPurGoodForm.resx">
       <DependentUpon>InventoryPurGoodForm.cs</DependentUpon>
@@ -596,6 +696,12 @@
       <DependentUpon>dataModel.edmx</DependentUpon>
       <LastGenOutput>dataModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\warningicon.png" />
+    <None Include="Resources\checkicon.png" />
+    <None Include="Resources\completed_status.png" />
+    <None Include="Resources\approved_status.png" />
+    <None Include="Resources\pending_status.png" />
+    <None Include="Resources\cancel_status.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

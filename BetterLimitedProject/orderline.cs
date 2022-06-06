@@ -16,7 +16,7 @@ namespace BetterLimitedProject
     {
         public int product_ID { get; set; }
         public int order_ID { get; set; }
-        public Nullable<int> quantity { get; set; }
+        public int quantity { get; set; }
     
         public virtual buyorder buyorder { get; set; }
         public virtual product product { get; set; }

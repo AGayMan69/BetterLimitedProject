@@ -4,9 +4,9 @@
     <projectFile>BetterLimitedProject/BetterLimitedProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="view store stock">
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesRestockForm.resx" afterDir="false" />
+    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,7 @@
       <workItem from="1654098982729" duration="1794000" />
       <workItem from="1654174789308" duration="2966000" />
       <workItem from="1654242528652" duration="4295000" />
-      <workItem from="1654315727712" duration="3736000" />
+      <workItem from="1654315727712" duration="4593000" />
     </task>
     <task id="LOCAL-00001" summary="easy">
       <created>1654108350566</created>
@@ -155,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654353124394</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Sales Restock function">
+      <created>1654363791493</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654363791493</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +195,7 @@
     <MESSAGE value="Fixing bug in Create Order" />
     <MESSAGE value="Added View, Delete Sales Order Function" />
     <MESSAGE value="view store stock" />
-    <option name="LAST_COMMIT_MESSAGE" value="view store stock" />
+    <MESSAGE value="Sales Restock function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sales Restock function" />
   </component>
 </project>
