@@ -217,5 +217,16 @@ namespace BetterLimitedProject
                 }
             }
         }
+
+        internal void editStock(int productID)
+        {
+            SalesEditStockForm editStock = new SalesEditStockForm();
+            editStock.productID = productID;
+            var dialog = editStock.ShowDialog();
+            if (dialog == DialogResult.OK)
+            {
+                loadStock();
+            }
+        }
     }
 }

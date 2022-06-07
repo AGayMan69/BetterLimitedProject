@@ -390,6 +390,12 @@
     <Compile Include="Sales\SalesEditOrderForm.Designer.cs">
       <DependentUpon>SalesEditOrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\SalesEditStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesEditStockForm.Designer.cs">
+      <DependentUpon>SalesEditStockForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\SalesHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -603,6 +609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesEditOrderForm.resx">
       <DependentUpon>SalesEditOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesEditStockForm.resx">
+      <DependentUpon>SalesEditStockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesHomeForm.resx">
       <DependentUpon>SalesHomeForm.cs</DependentUpon>

@@ -51,5 +51,10 @@ namespace BetterLimitedProject.Sales
         {
             _parent.reStock(productID);
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            _parent.editStock(productID);
+        }
     }
 }

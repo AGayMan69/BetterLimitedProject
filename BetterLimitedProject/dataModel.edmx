@@ -209,7 +209,6 @@
         <EntityType Name="retail_store_product">
           <Key>
             <PropertyRef Name="store_ID" />
-            <PropertyRef Name="sector_ID" />
             <PropertyRef Name="product_ID" />
           </Key>
           <Property Name="store_ID" Type="int" Nullable="false" />
@@ -640,7 +639,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKRetail_Sto859037">
+        <Association Name="FKRetail_StoPProductID">
           <End Role="product" Type="Self.product" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -654,7 +653,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKRetail_Sto91839">
+        <Association Name="FKRetail_StoPStoreID">
           <End Role="retail_store" Type="Self.retail_store" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -886,11 +885,11 @@
             <End Role="staff" EntitySet="staff" />
             <End Role="retail_store" EntitySet="retail_store" />
           </AssociationSet>
-          <AssociationSet Name="FKRetail_Sto859037" Association="Self.FKRetail_Sto859037">
+          <AssociationSet Name="FKRetail_StoPProductID" Association="Self.FKRetail_StoPProductID">
             <End Role="product" EntitySet="product" />
             <End Role="retail_store_product" EntitySet="retail_store_product" />
           </AssociationSet>
-          <AssociationSet Name="FKRetail_Sto91839" Association="Self.FKRetail_Sto91839">
+          <AssociationSet Name="FKRetail_StoPStoreID" Association="Self.FKRetail_StoPStoreID">
             <End Role="retail_store" EntitySet="retail_store" />
             <End Role="retail_store_product" EntitySet="retail_store_product" />
           </AssociationSet>
@@ -1029,7 +1028,7 @@
             <End Role="product" EntitySet="products" />
             <End Role="reservation" EntitySet="reservations" />
           </AssociationSet>
-          <AssociationSet Name="FKRetail_Sto859037" Association="betterlimitedModel.FKRetail_Sto859037">
+          <AssociationSet Name="FKRetail_StoPProductID" Association="betterlimitedModel.FKRetail_StoPProductID">
             <End Role="product" EntitySet="products" />
             <End Role="retail_store_product" EntitySet="retail_store_product" />
           </AssociationSet>
@@ -1077,7 +1076,7 @@
             <End Role="staff" EntitySet="staffs" />
             <End Role="retail_store" EntitySet="retail_store" />
           </AssociationSet>
-          <AssociationSet Name="FKRetail_Sto91839" Association="betterlimitedModel.FKRetail_Sto91839">
+          <AssociationSet Name="FKRetail_StoPStoreID" Association="betterlimitedModel.FKRetail_StoPStoreID">
             <End Role="retail_store" EntitySet="retail_store" />
             <End Role="retail_store_product" EntitySet="retail_store_product" />
           </AssociationSet>
@@ -1254,7 +1253,7 @@
           <NavigationProperty Name="orderlines" Relationship="betterlimitedModel.FKOrderLine592221" FromRole="product" ToRole="orderline" />
           <NavigationProperty Name="replenishment_product" Relationship="betterlimitedModel.FKReplenishm931267" FromRole="product" ToRole="replenishment_product" />
           <NavigationProperty Name="reservations" Relationship="betterlimitedModel.FKReservatio826341" FromRole="product" ToRole="reservation" />
-          <NavigationProperty Name="retail_store_product" Relationship="betterlimitedModel.FKRetail_Sto859037" FromRole="product" ToRole="retail_store_product" />
+          <NavigationProperty Name="retail_store_product" Relationship="betterlimitedModel.FKRetail_StoPProductID" FromRole="product" ToRole="retail_store_product" />
           <NavigationProperty Name="warehouse_product" Relationship="betterlimitedModel.FKWarehouse_549814" FromRole="product" ToRole="warehouse_product" />
         </EntityType>
         <EntityType Name="purchaseorder">
@@ -1342,12 +1341,11 @@
           <Property Name="manager" Type="Int32" Nullable="false" />
           <NavigationProperty Name="replenishments" Relationship="betterlimitedModel.FKReplenishm606577" FromRole="retail_store" ToRole="replenishment" />
           <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKRetail_Sto624655" FromRole="retail_store" ToRole="staff" />
-          <NavigationProperty Name="retail_store_product" Relationship="betterlimitedModel.FKRetail_Sto91839" FromRole="retail_store" ToRole="retail_store_product" />
+          <NavigationProperty Name="retail_store_product" Relationship="betterlimitedModel.FKRetail_StoPStoreID" FromRole="retail_store" ToRole="retail_store_product" />
         </EntityType>
         <EntityType Name="retail_store_product">
           <Key>
             <PropertyRef Name="store_ID" />
-            <PropertyRef Name="sector_ID" />
             <PropertyRef Name="product_ID" />
           </Key>
           <Property Name="store_ID" Type="Int32" Nullable="false" />
@@ -1355,8 +1353,8 @@
           <Property Name="product_ID" Type="Int32" Nullable="false" />
           <Property Name="qty" Type="Int32" Nullable="false" />
           <Property Name="store_date" Type="DateTime" />
-          <NavigationProperty Name="product" Relationship="betterlimitedModel.FKRetail_Sto859037" FromRole="retail_store_product" ToRole="product" />
-          <NavigationProperty Name="retail_store" Relationship="betterlimitedModel.FKRetail_Sto91839" FromRole="retail_store_product" ToRole="retail_store" />
+          <NavigationProperty Name="product" Relationship="betterlimitedModel.FKRetail_StoPProductID" FromRole="retail_store_product" ToRole="product" />
+          <NavigationProperty Name="retail_store" Relationship="betterlimitedModel.FKRetail_StoPStoreID" FromRole="retail_store_product" ToRole="retail_store" />
         </EntityType>
         <EntityType Name="staff">
           <Key>
@@ -1697,7 +1695,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKRetail_Sto859037">
+        <Association Name="FKRetail_StoPProductID">
           <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -1865,7 +1863,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKRetail_Sto91839">
+        <Association Name="FKRetail_StoPStoreID">
           <End Type="betterlimitedModel.retail_store" Role="retail_store" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
