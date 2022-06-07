@@ -4,7 +4,11 @@
     <projectFile>BetterLimitedProject/BetterLimitedProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="Inventory view stock, Accounting View Order" />
+    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="Inventory view stock, Accounting View Order">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/RegisterForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/RegisterForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +24,6 @@
   </component>
   <component name="GitRewordedCommitMessages">
     <option name="onto" value="8bf5fb4ba21a9bac876a596e904a3b032efb4c36" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/Inventory/InventoryVwDeliveryForm.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

@@ -582,10 +582,6 @@ namespace BetterLimitedProject.Sales
             createReceipt();
         }
 
-        private void createReceipt()
-        {
-            betterDb.Dispose();
-        }
 
         private bool receiptCreated = false;
         private void createReceipt()

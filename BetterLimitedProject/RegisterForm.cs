@@ -275,11 +275,23 @@ namespace BetterLimitedProject
                     {
                         lblErrPhone.Visible = true;
                         lblErrPhone.Text = "*This Phone number has been used";
+                        return;
                     }
                     else
                     {
-                        lblErrPhone.Visible = true;
+                        lblErrPhone.Visible = false;
                         lblErrPhone.Text = "";
+                    }
+                    if(!(emailResult ==null))
+                    {
+                        lblErrEmail.Visible = true;
+                        lblErrEmail.Text = "*This Phone number has been used";
+                        return;
+                    }
+                    else
+                    {
+                        lblErrEmail.Visible = false;
+                        lblErrEmail.Text = "";
                     }
                     newstaff.name = tbName.Text;
                     newstaff.phone_no = (int)Convert.ToDouble(tbPhone.Text);
@@ -296,6 +308,7 @@ namespace BetterLimitedProject
                     betterdb.staffs.Add(newstaff);
                     betterdb.SaveChanges();
                     MessageBox.Show("You have successfully registered");
+                    this.DialogResult = DialogResult.OK;
                 }
             }
             else
