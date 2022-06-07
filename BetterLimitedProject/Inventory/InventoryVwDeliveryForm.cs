@@ -100,18 +100,26 @@ namespace BetterLimitedProject.Inventory
             if (cboOrderDate.SelectedItem.ToString() == "Today")
             {
                 lowerBound = DateTime.Today;
-                upperBound = DateTime.Now.GetTodayUpperBound();
+                upperBound = DateTime.Today.GetTodayUpperBound();
             }
             else if (cboOrderDate.SelectedItem.ToString() == "This Week")
             {
                 lowerBound = DateTime.Now.GetThisWeekLowerBound();
                 upperBound = DateTime.Now.GetThisWeekUpperBound();
             }
+            else if (cboOrderDate.SelectedItem.ToString() == "This Month")
+            {
+                lowerBound = DateTime.Now.GetThisMonthLowerBound();
+                upperBound = DateTime.Now.GetThisMonthUpperBound();
+            }
             else
             {
                 lowerBound = DateTime.Now.GetThisYearLowerBound();
                 upperBound = DateTime.Now.GetThisYearUpperBound();
             }
+
+            MessageBox.Show($"UpperBound {upperBound}");
+            MessageBox.Show($"LowerBound {lowerBound}");
             panDeliveryLoader.Controls.Clear();
             using (var betterDB = new betterlimitedEntities())
             {

@@ -37,13 +37,13 @@ namespace BetterLimitedProject.Inventory
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panDeliveryLoader = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,7 @@ namespace BetterLimitedProject.Inventory
             this.cboOrderDate.Items.AddRange(new object[] {
             "Today",
             "This Week",
+            "This Month",
             "This Year"});
             this.cboOrderDate.Location = new System.Drawing.Point(167, 23);
             this.cboOrderDate.Name = "cboOrderDate";
@@ -139,6 +140,58 @@ namespace BetterLimitedProject.Inventory
             this.panel1.Size = new System.Drawing.Size(875, 537);
             this.panel1.TabIndex = 40;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label7.Location = new System.Drawing.Point(540, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 21);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Delivery Date";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label4.Location = new System.Drawing.Point(387, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 21);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Creation Date";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label3.Location = new System.Drawing.Point(287, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 21);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Type";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label6.Location = new System.Drawing.Point(200, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(27, 21);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "ID";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.panel2.Location = new System.Drawing.Point(21, 58);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(833, 2);
+            this.panel2.TabIndex = 8;
+            // 
             // panDeliveryLoader
             // 
             this.panDeliveryLoader.AutoScroll = true;
@@ -161,58 +214,6 @@ namespace BetterLimitedProject.Inventory
             this.btnSearch.TabIndex = 38;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.panel2.Location = new System.Drawing.Point(21, 58);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(833, 2);
-            this.panel2.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label6.Location = new System.Drawing.Point(200, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 21);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "ID";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label3.Location = new System.Drawing.Point(287, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 21);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Type";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label4.Location = new System.Drawing.Point(387, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 21);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Creation Date";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label7.Location = new System.Drawing.Point(540, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 21);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Delivery Date";
             // 
             // InventoryVwDeliveryForm
             // 

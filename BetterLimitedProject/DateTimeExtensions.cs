@@ -26,7 +26,17 @@ namespace BetterLimitedProject
 
         public static DateTime GetThisWeekUpperBound(this DateTime dt)
         {
-            return dt.StartOfWeek(DayOfWeek.Saturday).AddDays(2).AddTicks(-1);
+            return dt.StartOfWeek(DayOfWeek.Monday).AddDays(7).AddTicks(-1);
+        }
+
+        public static DateTime GetThisMonthLowerBound(this DateTime dt)
+        {
+            return new DateTime(dt.Year, dt.Month, 1);
+        }
+
+        public static DateTime GetThisMonthUpperBound(this DateTime dt)
+        {
+            return new DateTime(dt.Year, dt.Month, 1).AddMonths(1).AddTicks(-1);
         }
 
         public static DateTime GetThisYearLowerBound(this DateTime dt)

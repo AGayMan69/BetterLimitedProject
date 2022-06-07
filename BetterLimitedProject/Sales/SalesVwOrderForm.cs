@@ -66,7 +66,7 @@ namespace BetterLimitedProject.Sales
             }
             else
             {
-                MessageBox.Show("Loading Product...");
+                //MessageBox.Show("Loading Product...");
                 panSalesLoad.Controls.Clear();
                 // get search input
                 if (tbSearch.Text == "")
@@ -102,14 +102,19 @@ namespace BetterLimitedProject.Sales
                     upperBound = DateTime.Now.GetThisWeekUpperBound();
                     lowerBound = DateTime.Now.GetThisWeekLowerBound();
                 }
+                else if (cboOrderDate.SelectedItem == "This Month")
+                {
+                    upperBound = DateTime.Now.GetThisMonthUpperBound();
+                    lowerBound = DateTime.Now.GetThisMonthLowerBound();
+                }
                 else
                 {
                     upperBound = DateTime.Now.GetThisYearUpperBound();
                     lowerBound = DateTime.Now.GetThisYearLowerBound();
                 }
 
-                MessageBox.Show($"Lower Bound {lowerBound.ToString("yyyy-MM-dd HH:mm:ss")}");
-                MessageBox.Show($"Upper Bound {upperBound.ToString("yyyy-MM-dd HH:mm:ss")}");
+                //MessageBox.Show($"Lower Bound {lowerBound.ToString("yyyy-MM-dd HH:mm:ss")}");
+                //MessageBox.Show($"Upper Bound {upperBound.ToString("yyyy-MM-dd HH:mm:ss")}");
 
                 // get customer type
                 int walkINCustomerID = 1000000000;

@@ -38,6 +38,8 @@ namespace BetterLimitedProject.Sales
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panSalesLoad = new System.Windows.Forms.Panel();
+            this.salesOrderControl2 = new BetterLimitedProject.Sales.SalesOrderControl();
+            this.salesOrderControl1 = new BetterLimitedProject.Sales.SalesOrderControl();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@ namespace BetterLimitedProject.Sales
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.salesOrderControl2 = new BetterLimitedProject.Sales.SalesOrderControl();
-            this.salesOrderControl1 = new BetterLimitedProject.Sales.SalesOrderControl();
             this.panel1.SuspendLayout();
             this.panSalesLoad.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,7 @@ namespace BetterLimitedProject.Sales
             this.cboOrderDate.Items.AddRange(new object[] {
             "Today",
             "This Week",
+            "This Month",
             "This Year"});
             this.cboOrderDate.Location = new System.Drawing.Point(172, 33);
             this.cboOrderDate.Name = "cboOrderDate";
@@ -150,6 +151,25 @@ namespace BetterLimitedProject.Sales
             this.panSalesLoad.Name = "panSalesLoad";
             this.panSalesLoad.Size = new System.Drawing.Size(833, 448);
             this.panSalesLoad.TabIndex = 6;
+            // 
+            // salesOrderControl2
+            // 
+            this.salesOrderControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.salesOrderControl2.Location = new System.Drawing.Point(0, 123);
+            this.salesOrderControl2.Name = "salesOrderControl2";
+            this.salesOrderControl2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.salesOrderControl2.Size = new System.Drawing.Size(833, 123);
+            this.salesOrderControl2.TabIndex = 1;
+            // 
+            // salesOrderControl1
+            // 
+            this.salesOrderControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.salesOrderControl1.Location = new System.Drawing.Point(0, 0);
+            this.salesOrderControl1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 300);
+            this.salesOrderControl1.Name = "salesOrderControl1";
+            this.salesOrderControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.salesOrderControl1.Size = new System.Drawing.Size(833, 123);
+            this.salesOrderControl1.TabIndex = 0;
             // 
             // label7
             // 
@@ -225,25 +245,6 @@ namespace BetterLimitedProject.Sales
             this.btnSearch.TabIndex = 32;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // salesOrderControl2
-            // 
-            this.salesOrderControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.salesOrderControl2.Location = new System.Drawing.Point(0, 123);
-            this.salesOrderControl2.Name = "salesOrderControl2";
-            this.salesOrderControl2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.salesOrderControl2.Size = new System.Drawing.Size(833, 123);
-            this.salesOrderControl2.TabIndex = 1;
-            // 
-            // salesOrderControl1
-            // 
-            this.salesOrderControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.salesOrderControl1.Location = new System.Drawing.Point(0, 0);
-            this.salesOrderControl1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 300);
-            this.salesOrderControl1.Name = "salesOrderControl1";
-            this.salesOrderControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.salesOrderControl1.Size = new System.Drawing.Size(833, 123);
-            this.salesOrderControl1.TabIndex = 0;
             // 
             // SalesVwOrderForm
             // 
