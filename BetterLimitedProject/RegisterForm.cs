@@ -98,20 +98,24 @@ namespace BetterLimitedProject
 
         private void tbPassword_TextChanged(object sender, EventArgs e)
         {
-            string wkPW = "^[0-9].{7,20}$";
-            string normalPW = "^[0-9a-z].{7,20}$";
-            string strongPW = "^[0-9a-zA-Z].{7,20}$";
+            string wkPW = @"^\d{7,20}$";
+            string normalPW = "[^A-Z].+[a-z].[^A-Z]{7,20}";
+            string strongPW = ".+[A-Z].{7,20}";
             if (Regex.IsMatch(tbPassword.Text, wkPW))
             {
-                pnlPW.BackColor = Color.Red;
+                pnlPW.BackColor = Color.FromArgb(255, 0, 0);
             }
-            if (Regex.IsMatch(tbPassword.Text, normalPW))
+            else if (Regex.IsMatch(tbPassword.Text, normalPW))
             {
-                pnlPW.BackColor = Color.Orange;
+                pnlPW.BackColor = Color.FromArgb(255, 255, 0);
             }
-            if (Regex.IsMatch(tbPassword.Text, strongPW))
+            else if (Regex.IsMatch(tbPassword.Text, strongPW))
             {
-                pnlPW.BackColor = Color.Green;
+                pnlPW.BackColor = Color.FromArgb(0, 255, 0);
+            }
+            else
+            {
+                pnlPW.BackColor = Color.FromArgb(255, 255, 255);
             }
         }
 
@@ -119,18 +123,18 @@ namespace BetterLimitedProject
         {
             string e1 = "*Please Enter Your Password";
             string e2 = "Accept numbers and letters between 8-20";
-            string pattern = "^[0-9a-zA-Z].{7,20}$";
-            string tooWeak = "^[0-9].{7,20}$";
+            string pattern = "^[0-9a-zA-Z]{7,20}$";
+            string tooWeak = @"^\d{7,20}$";
             if (string.IsNullOrEmpty(tbPassword.Text))
             {
                 lblErrPW.Visible = true;
                 lblErrPW.Text = e1;
             }
-            if (Regex.IsMatch(tbPassword.Text, tooWeak))
+            else if (Regex.IsMatch(tbPassword.Text, tooWeak))
             {
-                MessageBox.Show("Your password is too weak!\n Please add letters in the password!");
+                MessageBox.Show("Your password is too weak!\n Please add letters in the password!\n e.g. 'W2X154dasWA'");
             }
-            if(Regex.IsMatch(tbPassword.Text,pattern))
+            else if(Regex.IsMatch(tbPassword.Text,pattern))
             {
                 lblErrPW.Visible = false;
                 lblErrPW.Text = "";
@@ -146,7 +150,7 @@ namespace BetterLimitedProject
         private void tbPasswordConfirm_Validating(object sender, CancelEventArgs e)
         {
             string e1 = "*Please Confirm Your Password";
-            string e2 = "Please Match Your Password";
+            string e2 = "*Please Match Your Password";
             string pw = tbPassword.Text;
             string cpw = tbPasswordConfirm.Text;
             if(string.IsNullOrEmpty(tbPasswordConfirm.Text))
@@ -224,9 +228,16 @@ namespace BetterLimitedProject
             
             if (nameFill && usernameFill && pwFill && cfPWFill && emailFill && phoneFill) 
             {
+                string matchPW = "*Please Match Your Password";
+                string pw = tbPassword.Text;
+                string cpw = tbPasswordConfirm.Text;
+                if (pw != cpw)
+                {
+                    lblErrCPW.Visible = true;
+                    lblErrCPW.Text = matchPW;
+                }
                 staff newstaff = new staff();
                 int phoneNumber = (int)Convert.ToDouble(tbPhone.Text);
-                
                 using (var betterdb=new betterlimitedEntities())
                 {
                     if (cboDepartment.SelectedItem == null)

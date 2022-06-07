@@ -4,21 +4,7 @@
     <projectFile>BetterLimitedProject/BetterLimitedProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0850e68d-d5dd-4e0a-b28d-5e0442a85949" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_40_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_40_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_58_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2022_11_58_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_2_6_2022_12_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_Update_at_2_6_2022_12_02_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/BetterLimitedProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/BetterLimitedProject.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/ImageTestingForm.resx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/RegisterForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/RegisterForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/RegisterForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/RegisterForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesCreaOrderForm.cs" afterDir="false" />
-    </list>
+    <list default="true" id="0850e68d-d5dd-4e0a-b28d-5e0442a85949" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,10 +20,6 @@
   </component>
   <component name="GitRewordedCommitMessages">
     <option name="onto" value="8bf5fb4ba21a9bac876a596e904a3b032efb4c36" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/osacr/source/repos/AGayMan69/BetterLimitedProject/BetterLimitedProject/RegisterForm.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/osacr/source/repos/AGayMan69/BetterLimitedProject/BetterLimitedProject/RegisterForm.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -82,7 +64,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="" />
+      <changelist id="0850e68d-d5dd-4e0a-b28d-5e0442a85949" name="Changes" comment="" />
       <created>1654097627923</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -92,6 +74,7 @@
       <workItem from="1654174789308" duration="2966000" />
       <workItem from="1654242528652" duration="4295000" />
       <workItem from="1654315727712" duration="3003000" />
+      <workItem from="1654363915711" duration="76000" />
     </task>
     <task id="LOCAL-00001" summary="easy">
       <created>1654108350566</created>
@@ -163,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654335505226</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="register 2">
+      <created>1654363944564</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654363944564</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +185,7 @@
     <MESSAGE value="create Order" />
     <MESSAGE value="Fixing bug in Create Order" />
     <MESSAGE value="Added View, Delete Sales Order Function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added View, Delete Sales Order Function" />
+    <MESSAGE value="register 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="register 2" />
   </component>
 </project>

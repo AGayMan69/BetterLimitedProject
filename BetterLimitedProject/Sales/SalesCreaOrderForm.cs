@@ -585,13 +585,15 @@ namespace BetterLimitedProject.Sales
         {
             betterDb.Dispose();
             MessageBox.Show("Create Receipt");
+            
+            
             if (ordOption == OrderOption.LevelCUSTOMER)
             {
-
+               
             }
             else if (ordOption == OrderOption.LevelDelivery)
             {
-
+                
             }
             else
             {
