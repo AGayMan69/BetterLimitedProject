@@ -579,7 +579,6 @@ namespace BetterLimitedProject.Sales
         // =========================================== Receipt Page Section =======================================================
         private void receiptOnLoad()
         {
-            createReceipt();
         }
 
 

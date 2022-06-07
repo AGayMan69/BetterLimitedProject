@@ -30,7 +30,6 @@ namespace BetterLimitedProject
             // generate UUID
             Guid uuid = Guid.NewGuid();
             String g = uuid.ToString();
-            MessageBox.Show($"uuid {g}");
 
             // create email message
             var email = new MimeMessage();

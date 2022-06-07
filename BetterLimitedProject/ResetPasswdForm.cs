@@ -62,8 +62,6 @@ namespace BetterLimitedProject
 
         private void ResetPasswdForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show($"name: {targetStaff.name}");
-            MessageBox.Show($"username: {targetStaff.username}");
         }
     }
 }
