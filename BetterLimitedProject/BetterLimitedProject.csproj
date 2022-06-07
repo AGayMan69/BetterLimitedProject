@@ -426,6 +426,12 @@
     <Compile Include="Sales\SalesOrderControl.Designer.cs">
       <DependentUpon>SalesOrderControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\SalesOrderLineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesOrderLineControl.Designer.cs">
+      <DependentUpon>SalesOrderLineControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\SalesPayReserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -645,6 +651,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesOrderControl.resx">
       <DependentUpon>SalesOrderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesOrderLineControl.resx">
+      <DependentUpon>SalesOrderLineControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesPayReserForm.resx">
       <DependentUpon>SalesPayReserForm.cs</DependentUpon>

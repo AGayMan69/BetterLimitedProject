@@ -4,14 +4,7 @@
     <projectFile>BetterLimitedProject/BetterLimitedProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="Edit item stock">
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/DateTimeExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/DateTimeExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Inventory/InventoryVwDeliveryForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Inventory/InventoryVwDeliveryForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Inventory/InventoryVwDeliveryForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Inventory/InventoryVwDeliveryForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="Inventory view stock, Accounting View Order" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +20,9 @@
   </component>
   <component name="GitRewordedCommitMessages">
     <option name="onto" value="8bf5fb4ba21a9bac876a596e904a3b032efb4c36" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/WindowsEnjoyer/source/repos/BetterLimitedProject/BetterLimitedProject/Inventory/InventoryVwDeliveryForm.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -82,7 +78,7 @@
       <workItem from="1654242528652" duration="4295000" />
       <workItem from="1654315727712" duration="4593000" />
       <workItem from="1654511710803" duration="724000" />
-      <workItem from="1654573437000" duration="643000" />
+      <workItem from="1654573437000" duration="1313000" />
     </task>
     <task id="LOCAL-00001" summary="easy">
       <created>1654108350566</created>
@@ -196,7 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654573460705</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update view function, fix bug(get this week)">
+      <created>1654574529137</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1654574529137</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Inventory view stock, Accounting View Order">
+      <created>1654576823965</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1654576823965</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +244,8 @@
     <MESSAGE value="inventory" />
     <MESSAGE value="Inventory" />
     <MESSAGE value="Edit item stock" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit item stock" />
+    <MESSAGE value="Update view function, fix bug(get this week)" />
+    <MESSAGE value="Inventory view stock, Accounting View Order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inventory view stock, Accounting View Order" />
   </component>
 </project>

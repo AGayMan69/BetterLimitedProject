@@ -127,7 +127,7 @@ namespace BetterLimitedProject.Sales
                     searchCustomerUpperBound = walkINCustomerID;
                     tbSearch.Enabled = false;
                 }
-                else if(cboType.SelectedItem == "Delivery")
+                else if (cboType.SelectedItem == "Delivery")
                 {
                     //MessageBox.Show("Searching Delivery Order");
                     searchCustomerLowerBound = 0;
@@ -153,7 +153,7 @@ namespace BetterLimitedProject.Sales
                                        where
                                             orderRec.customer_ID >= searchCustomerLowerBound
                                             && orderRec.customer_ID <= searchCustomerUpperBound
-                                            && ( orderRec.customer_ID == targetID
+                                            && (orderRec.customer_ID == targetID
                                             || orderRec.order_ID == targetID)
                                             && orderRec.order_date >= lowerBound && orderRec.order_date <= upperBound
                                        select orderRec).AsNoTracking();
@@ -178,11 +178,11 @@ namespace BetterLimitedProject.Sales
                     else if (cboSortOrder.SelectedItem == "Price")
                     {
                         orderResult = orderResult.OrderBy(order => order.total_price);
-                    } 
+                    }
                     else if (cboSortOrder.SelectedItem == "Order ID")
                     {
                         orderResult = orderResult.OrderBy(order => order.order_ID);
-                    } 
+                    }
                     else if (cboSortOrder.SelectedItem == "Customer ID")
                     {
                         orderResult = orderResult.OrderBy(order => order.customer_ID);
@@ -204,9 +204,9 @@ namespace BetterLimitedProject.Sales
             using (var betterDB = new betterlimitedEntities())
             {
                 var targetOrder = (from orderRec in betterDB.buyorders
-                                  where orderRec.order_ID == orderID
-                                  select orderRec).FirstOrDefault();
-                var delConfirm = MessageBox.Show("Are you sure to delete this record?", 
+                                   where orderRec.order_ID == orderID
+                                   select orderRec).FirstOrDefault();
+                var delConfirm = MessageBox.Show("Are you sure to delete this record?",
                     $"Deleting Order: {targetOrder.order_ID}",
                     MessageBoxButtons.YesNo);
                 if (delConfirm == DialogResult.Yes)
@@ -220,28 +220,13 @@ namespace BetterLimitedProject.Sales
 
         internal void EditOrder(int orderID)
         {
-            using (var betterDB = new betterlimitedEntities())
-            {
-                var targetOrder = (from orderRec in betterDB.buyorders
-                                  where orderRec.order_ID == orderID
-                                  select orderRec).FirstOrDefault();
-                SalesEditOrderForm editform = new SalesEditOrderForm();
-                editform.orderID = targetOrder.order_ID;
-                editform.price = targetOrder.total_price;
+            SalesEditOrderForm editform = new SalesEditOrderForm();
+            editform.orderID = orderID;
 
-                var dialogResult =  editform.ShowDialog();
-                if (dialogResult == DialogResult.OK)
-                {
-                   // db save change
-                   // 
-                   targetOrder.total_price = editform.price;
-                   betterDB.SaveChanges();
-                   MessageBox.Show("Order Updated");
-                }
-                else if (dialogResult == DialogResult.Cancel)
-                {
-                   MessageBox.Show("Cancel Edit");
-                }
+            var dialogResult = editform.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                loadOrder();
             }
         }
     }
