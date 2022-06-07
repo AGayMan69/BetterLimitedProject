@@ -54,6 +54,7 @@
           <Property Name="status" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="net_weight" Type="float" Nullable="false" />
           <Property Name="approve_time" Type="timestamp" Precision="0" />
+          <Property Name="creation_time" Type="timestamp" Precision="0" Nullable="false" />
           <Property Name="complete_time" Type="timestamp" Precision="0" />
           <Property Name="assignment_ID" Type="int" />
           <Property Name="delivery_date" Type="timestamp" Precision="0" />
@@ -108,7 +109,7 @@
           </Key>
           <Property Name="product_ID" Type="int" Nullable="false" />
           <Property Name="order_ID" Type="int" Nullable="false" />
-          <Property Name="quantity" Type="int" />
+          <Property Name="quantity" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="position">
           <Key>
@@ -258,11 +259,9 @@
             <PropertyRef Name="worker_ID" />
           </Key>
           <Property Name="worker_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="username" Type="varchar" MaxLength="30" Nullable="false" />
-          <Property Name="password" Type="varchar" MaxLength="30" Nullable="false" />
-          <Property Name="work_type" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="hire_date" Type="date" Nullable="false" />
-          <Property Name="DOB" Type="date" Nullable="false" />
           <Property Name="phone_no" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FKBuyOrdercustomerID">
@@ -739,20 +738,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKWorker808068">
-          <End Role="position" Type="Self.position" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="worker" Type="Self.worker" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="position">
-              <PropertyRef Name="positionID" />
-            </Principal>
-            <Dependent Role="worker">
-              <PropertyRef Name="work_type" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="position_department_department_ID_fk">
           <End Role="department" Type="Self.department" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -929,10 +914,6 @@
             <End Role="staff" EntitySet="staff" />
             <End Role="warehouse" EntitySet="warehouse" />
           </AssociationSet>
-          <AssociationSet Name="FKWorker808068" Association="Self.FKWorker808068">
-            <End Role="position" EntitySet="position" />
-            <End Role="worker" EntitySet="worker" />
-          </AssociationSet>
           <AssociationSet Name="position_department_department_ID_fk" Association="Self.position_department_department_ID_fk">
             <End Role="department" EntitySet="department" />
             <End Role="position" EntitySet="position" />
@@ -1039,10 +1020,6 @@
           <AssociationSet Name="FKStaff255574" Association="betterlimitedModel.FKStaff255574">
             <End Role="position" EntitySet="positions" />
             <End Role="staff" EntitySet="staffs" />
-          </AssociationSet>
-          <AssociationSet Name="FKWorker808068" Association="betterlimitedModel.FKWorker808068">
-            <End Role="position" EntitySet="positions" />
-            <End Role="worker" EntitySet="workers" />
           </AssociationSet>
           <AssociationSet Name="FKReplenishm931267" Association="betterlimitedModel.FKReplenishm931267">
             <End Role="product" EntitySet="products" />
@@ -1171,6 +1148,7 @@
           <Property Name="status" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="net_weight" Type="Single" Nullable="false" />
           <Property Name="approve_time" Type="DateTime" />
+          <Property Name="creation_time" Type="DateTime" Nullable="false" />
           <Property Name="complete_time" Type="DateTime" />
           <Property Name="assignment_ID" Type="Int32" />
           <Property Name="delivery_date" Type="DateTime" />
@@ -1240,7 +1218,7 @@
           </Key>
           <Property Name="product_ID" Type="Int32" Nullable="false" />
           <Property Name="order_ID" Type="Int32" Nullable="false" />
-          <Property Name="quantity" Type="Int32" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
           <NavigationProperty Name="buyorder" Relationship="betterlimitedModel.FKOrderLineOrderID" FromRole="orderline" ToRole="buyorder" />
           <NavigationProperty Name="product" Relationship="betterlimitedModel.FKOrderLine592221" FromRole="orderline" ToRole="product" />
         </EntityType>
@@ -1255,7 +1233,6 @@
           <Property Name="department_ID" Type="Int32" />
           <NavigationProperty Name="department" Relationship="betterlimitedModel.position_department_department_ID_fk" FromRole="position" ToRole="department" />
           <NavigationProperty Name="staffs" Relationship="betterlimitedModel.FKStaff255574" FromRole="position" ToRole="staff" />
-          <NavigationProperty Name="workers" Relationship="betterlimitedModel.FKWorker808068" FromRole="position" ToRole="worker" />
         </EntityType>
         <EntityType Name="product">
           <Key>
@@ -1436,14 +1413,11 @@
             <PropertyRef Name="worker_ID" />
           </Key>
           <Property Name="worker_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="username" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="password" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="work_type" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="hire_date" Type="DateTime" Nullable="false" />
-          <Property Name="DOB" Type="DateTime" Nullable="false" />
           <Property Name="phone_no" Type="Int32" Nullable="false" />
           <NavigationProperty Name="delivery_assignment" Relationship="betterlimitedModel.FKDelivery_A888474" FromRole="worker" ToRole="delivery_assignment" />
-          <NavigationProperty Name="position" Relationship="betterlimitedModel.FKWorker808068" FromRole="worker" ToRole="position" />
         </EntityType>
         <Association Name="FKBuyOrdercustomerID">
           <End Type="betterlimitedModel.customer" Role="customer" Multiplicity="1">
@@ -1692,20 +1666,6 @@
             </Principal>
             <Dependent Role="staff">
               <PropertyRef Name="position_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKWorker808068">
-          <End Type="betterlimitedModel.position" Role="position" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="betterlimitedModel.worker" Role="worker" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="position">
-              <PropertyRef Name="positionID" />
-            </Principal>
-            <Dependent Role="worker">
-              <PropertyRef Name="work_type" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2003,6 +1963,7 @@
                 <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
                 <ScalarProperty Name="assignment_ID" ColumnName="assignment_ID" />
                 <ScalarProperty Name="complete_time" ColumnName="complete_time" />
+                <ScalarProperty Name="creation_time" ColumnName="creation_time" />
                 <ScalarProperty Name="approve_time" ColumnName="approve_time" />
                 <ScalarProperty Name="net_weight" ColumnName="net_weight" />
                 <ScalarProperty Name="status" ColumnName="status" />
@@ -2221,11 +2182,9 @@
             <EntityTypeMapping TypeName="betterlimitedModel.worker">
               <MappingFragment StoreEntitySet="worker">
                 <ScalarProperty Name="phone_no" ColumnName="phone_no" />
-                <ScalarProperty Name="DOB" ColumnName="DOB" />
                 <ScalarProperty Name="hire_date" ColumnName="hire_date" />
-                <ScalarProperty Name="work_type" ColumnName="work_type" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="worker_ID" ColumnName="worker_ID" />
               </MappingFragment>
             </EntityTypeMapping>

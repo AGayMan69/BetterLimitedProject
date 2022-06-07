@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -86,7 +86,7 @@ namespace BetterLimitedProject
         {
             menu_Navigate(btnArraDelivery);
             clearSubformLoader();
-            InventoryArraDeliveryForm arraDeliveryForm = new InventoryArraDeliveryForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            InventoryAssDeliveryForm arraDeliveryForm = new InventoryAssDeliveryForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(arraDeliveryForm);
         }
 

@@ -46,5 +46,10 @@ namespace BetterLimitedProject.Sales
             }
 
         }
+
+        private void btnRestock_Click(object sender, EventArgs e)
+        {
+            _parent.reStock(productID);
+        }
     }
 }

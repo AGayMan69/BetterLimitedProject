@@ -220,6 +220,23 @@ namespace BetterLimitedProject.Sales
                 var targetOrder = (from orderRec in betterDB.buyorders
                                   where orderRec.order_ID == orderID
                                   select orderRec).FirstOrDefault();
+                SalesEditOrderForm editform = new SalesEditOrderForm();
+                editform.orderID = targetOrder.order_ID;
+                editform.price = targetOrder.total_price;
+
+                var dialogResult =  editform.ShowDialog();
+                if (dialogResult == DialogResult.OK)
+                {
+                   // db save change
+                   // 
+                   targetOrder.total_price = editform.price;
+                   betterDB.SaveChanges();
+                   MessageBox.Show("Order Updated");
+                }
+                else if (dialogResult == DialogResult.Cancel)
+                {
+                   MessageBox.Show("Cancel Edit");
+                }
             }
         }
     }

@@ -20,14 +20,11 @@ namespace BetterLimitedProject
         }
     
         public int worker_ID { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
-        public int work_type { get; set; }
+        public string name { get; set; }
+        public string type { get; set; }
         public System.DateTime hire_date { get; set; }
-        public System.DateTime DOB { get; set; }
         public int phone_no { get; set; }
     
         public virtual ICollection<delivery_assignment> delivery_assignment { get; set; }
-        public virtual position position { get; set; }
     }
 }

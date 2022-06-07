@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BetterLimitedProject.Inventory
 {
-    public partial class InventoryArraDeliveryForm : Form
+    public partial class InventoryArrangeDefectDelForm : Form
     {
-        public InventoryArraDeliveryForm()
+        public InventoryArrangeDefectDelForm()
         {
             InitializeComponent();
         }

@@ -19,23 +19,6 @@ namespace BetterLimitedProject
         private bool haveInput;
         private string targetProduct;
 
-        private class productRow
-        {
-            internal int product_ID;
-            internal string name;
-            internal string category_name;
-            internal int qty;
-            internal int restock_level;
-
-            public productRow(int productId, string name, string categoryName, int qty, int restockLevel)
-            {
-                product_ID = productId;
-                this.name = name;
-                category_name = categoryName;
-                this.qty = qty;
-                restock_level = restockLevel;
-            }
-        }
 
         public SalesVwStockForm()
         {
@@ -149,11 +132,11 @@ namespace BetterLimitedProject
                     // getting status
                     if (cboStatus.SelectedItem == "IN STOCK")
                     {
-                        stockControls =  stockControls.Where(control => control.qty > control.restockLevel);
+                        stockControls = stockControls.Where(control => control.qty > control.restockLevel);
                     }
                     else if (cboStatus.SelectedItem == "OUT OF STOCK")
                     {
-                        stockControls =  stockControls.Where(control => control.qty <= control.restockLevel);
+                        stockControls = stockControls.Where(control => control.qty <= control.restockLevel);
                     }
 
                     foreach (var control in stockControls)
@@ -166,9 +149,73 @@ namespace BetterLimitedProject
             }
         }
 
-        private void reStock(int productID)
+        internal void reStock(int productID)
         {
-            int reStockQty;
+            using (var betterDb = new betterlimitedEntities())
+            {
+                var stockResult = (from stRec in betterDb.retail_store_product
+                                   where stRec.product_ID == productID
+                                                  && stRec.store_ID == 1
+                                   select new
+                                   {
+                                       stRec.store_date,
+                                       stRec.product.name,
+                                       stRec.product.weight,
+                                       stRec.product.product_image
+                                   }).AsNoTracking().FirstOrDefault();
+
+                SalesRestockForm restockForm = new SalesRestockForm();
+                restockForm.name = stockResult.name;
+                restockForm.imageBlob = stockResult.product_image;
+                restockForm.restockTime = (DateTime)stockResult.store_date;
+                var restockDialog = restockForm.ShowDialog();
+                if (restockDialog == DialogResult.OK)
+                {
+                    // create replenishment
+                    MessageBox.Show($"Restocking : {restockForm.reStockAmount}");
+                    // Generating new buy order id
+                    string strYear = DateTime.Now.Year.ToString();
+                    int year = Int32.Parse(strYear.Remove(0, 2));
+                    int tempID = year * (int)Math.Pow(10, 5);
+
+                    int newDeliveryID;
+                    var latestDelivery = (from deliverRec in betterDb.deliveries
+                                       where deliverRec.delivery_ID >= tempID
+                                       orderby deliverRec.delivery_ID descending
+                                       select deliverRec).AsNoTracking().FirstOrDefault();
+
+                    if (latestDelivery == null)
+                    {
+                        newDeliveryID = tempID;
+                    }
+                    else
+                    {
+                        newDeliveryID = latestDelivery.delivery_ID + 1;
+                    }
+                    delivery newDelivery = new delivery();
+                    newDelivery.delivery_ID = newDeliveryID;
+                    newDelivery.type = 2;
+                    newDelivery.status = "Pending";
+                    newDelivery.net_weight = stockResult.weight * restockForm.reStockAmount;
+
+                    replenishment newReplenishment = new replenishment();
+                    newReplenishment.delivery_ID = newDeliveryID;
+                    newReplenishment.salesID = 3;
+                    newReplenishment.store_ID = 1;
+                    newReplenishment.request_date = DateTime.Now;
+                    replenishment_product newReplenishmentProduct = new replenishment_product();
+                    newReplenishmentProduct.product_ID = productID;
+                    newReplenishmentProduct.delivery_ID = newDeliveryID;
+                    newReplenishmentProduct.qty = restockForm.reStockAmount;
+                    newDelivery.creation_time = DateTime.Now;
+
+                    betterDb.deliveries.Add(newDelivery);
+                    betterDb.replenishments.Add(newReplenishment);
+                    betterDb.replenishment_product.Add(newReplenishmentProduct);
+
+                    betterDb.SaveChanges();
+                }
+            }
         }
     }
 }
