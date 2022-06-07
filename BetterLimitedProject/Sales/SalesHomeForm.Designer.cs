@@ -42,13 +42,14 @@ namespace BetterLimitedProject.Sales
             this.label1.TabIndex = 0;
             this.label1.Text = "Home";
             // 
-            // HomeForm
+            // SalesHomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(934, 642);
             this.Controls.Add(this.label1);
-            this.Name = "HomeForm";
+            this.Name = "SalesHomeForm";
             this.Text = "HomeForm";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -261,7 +261,7 @@ namespace BetterLimitedProject.Sales
                                       orderby userRec.user_ID descending
                                       select userRec).AsNoTracking().FirstOrDefault();
                     newCustomerID = userResult.user_ID + 1;
-                    MessageBox.Show($"{newCustomerID}");
+                    //MessageBox.Show($"{newCustomerID}");
                 }
             }
 
