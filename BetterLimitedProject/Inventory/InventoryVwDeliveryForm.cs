@@ -100,18 +100,26 @@ namespace BetterLimitedProject.Inventory
             if (cboOrderDate.SelectedItem.ToString() == "Today")
             {
                 lowerBound = DateTime.Today;
-                upperBound = DateTime.Now.GetTodayUpperBound();
+                upperBound = DateTime.Today.GetTodayUpperBound();
             }
             else if (cboOrderDate.SelectedItem.ToString() == "This Week")
             {
                 lowerBound = DateTime.Now.GetThisWeekLowerBound();
                 upperBound = DateTime.Now.GetThisWeekUpperBound();
             }
+            else if (cboOrderDate.SelectedItem.ToString() == "This Month")
+            {
+                lowerBound = DateTime.Now.GetThisMonthLowerBound();
+                upperBound = DateTime.Now.GetThisMonthUpperBound();
+            }
             else
             {
                 lowerBound = DateTime.Now.GetThisYearLowerBound();
                 upperBound = DateTime.Now.GetThisYearUpperBound();
             }
+
+            //MessageBox.Show($"UpperBound {upperBound}");
+            //MessageBox.Show($"LowerBound {lowerBound}");
             panDeliveryLoader.Controls.Clear();
             using (var betterDB = new betterlimitedEntities())
             {
@@ -186,10 +194,17 @@ namespace BetterLimitedProject.Inventory
             }
             else if (type == "Replenish")
             {
-                MessageBox.Show("Opening replenish form");
                 InventoryArrangeReplenishForm replFrm = new InventoryArrangeReplenishForm();
-                replFrm.deliveryID = deliveryID;
-                replFrm._parent = this;
+                using (var betterDB = new betterlimitedEntities())
+                {
+                    var replResult = (from replRec in betterDB.deliveries
+                                      where replRec.delivery_ID == deliveryID
+                                      select replRec.delivery_date).FirstOrDefault();
+                    deliveryTime = (DateTime)replResult;
+                    replFrm.deliveryID = deliveryID;
+                    replFrm._parent = this;
+                }
+
                 editresult = replFrm.ShowDialog();
             }
             else
@@ -206,6 +221,7 @@ namespace BetterLimitedProject.Inventory
                                           select delRec).FirstOrDefault();
                     deliveryResult.delivery_date = deliveryTime;
                     betterDB.SaveChanges();
+                    loadDelivery();
                 }
             }
         }
@@ -247,8 +263,8 @@ namespace BetterLimitedProject.Inventory
                 using (var betterDB = new betterlimitedEntities())
                 {
                     var delResult = (from delRec in betterDB.deliveries
-                        where delRec.delivery_ID == deliveryID
-                        select delRec).FirstOrDefault();
+                                     where delRec.delivery_ID == deliveryID
+                                     select delRec).FirstOrDefault();
                     delResult.status = "Approved";
                     delResult.approve_time = DateTime.Now;
                     delResult.delivery_date = deliveryTime;

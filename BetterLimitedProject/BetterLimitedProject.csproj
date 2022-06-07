@@ -98,6 +98,18 @@
     <Compile Include="Accounting\AccountingHomeForm.Designer.cs">
       <DependentUpon>AccountingHomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\AccountingOrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountingOrderControl.Designer.cs">
+      <DependentUpon>AccountingOrderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\AccountingVwOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountingVwOrderDetail.Designer.cs">
+      <DependentUpon>AccountingVwOrderDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\AccountingVwOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +289,12 @@
     <Compile Include="Inventory\InventoryVwStockForm.Designer.cs">
       <DependentUpon>InventoryVwStockForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\WareHouseProductControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\WareHouseProductControl.Designer.cs">
+      <DependentUpon>WareHouseProductControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -390,6 +408,12 @@
     <Compile Include="Sales\SalesEditOrderForm.Designer.cs">
       <DependentUpon>SalesEditOrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\SalesEditStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesEditStockForm.Designer.cs">
+      <DependentUpon>SalesEditStockForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\SalesHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -489,6 +513,9 @@
     <EmbeddedResource Include="Accounting\AccountingHomeForm.resx">
       <DependentUpon>AccountingHomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AccountingOrderControl.resx">
+      <DependentUpon>AccountingOrderControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingVwOrderForm.resx">
       <DependentUpon>AccountingVwOrderForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -555,6 +582,9 @@
     <EmbeddedResource Include="Inventory\InventoryVwStockForm.resx">
       <DependentUpon>InventoryVwStockForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\WareHouseProductControl.resx">
+      <DependentUpon>WareHouseProductControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -603,6 +633,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesEditOrderForm.resx">
       <DependentUpon>SalesEditOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesEditStockForm.resx">
+      <DependentUpon>SalesEditStockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesHomeForm.resx">
       <DependentUpon>SalesHomeForm.cs</DependentUpon>

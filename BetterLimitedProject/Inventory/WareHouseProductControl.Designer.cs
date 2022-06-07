@@ -1,7 +1,7 @@
 ﻿
-namespace BetterLimitedProject.Sales
+namespace BetterLimitedProject.Inventory
 {
-    partial class SalesProductControl
+    partial class WareHouseProductControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -52,7 +52,7 @@ namespace BetterLimitedProject.Sales
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(2);
             this.panel1.Size = new System.Drawing.Size(787, 75);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
@@ -170,15 +170,15 @@ namespace BetterLimitedProject.Sales
             this.lblOutStock.Text = "OUT OF STOCK";
             this.lblOutStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SalesProductControl
+            // WareHouseProductControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "SalesProductControl";
+            this.Name = "WareHouseProductControl";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.Size = new System.Drawing.Size(787, 85);
-            this.Load += new System.EventHandler(this.SalesProductControl_Load);
+            this.Load += new System.EventHandler(this.WareHouseProductControl_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -190,13 +190,13 @@ namespace BetterLimitedProject.Sales
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblInStock;
-        private System.Windows.Forms.Label lblOutStock;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnRestock;
         private System.Windows.Forms.Label lblQty;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblProductID;
+        private System.Windows.Forms.Label lblInStock;
+        private System.Windows.Forms.Label lblOutStock;
     }
 }

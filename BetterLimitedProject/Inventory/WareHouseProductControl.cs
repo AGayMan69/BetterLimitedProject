@@ -7,25 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
-using MimeKit;
 
-namespace BetterLimitedProject.Sales
+namespace BetterLimitedProject.Inventory
 {
-    public partial class SalesProductControl : UserControl
-    {
-        internal SalesVwStockForm _parent;
+    public partial class WareHouseProductControl : UserControl
+    {        
+        internal InventoryVwStockForm _parent;
         internal string productName;
         internal string category;
         internal int qty;
         internal int productID;
         internal int restockLevel;
-        public SalesProductControl()
+
+        public WareHouseProductControl()
         {
             InitializeComponent();
         }
 
-        private void SalesProductControl_Load(object sender, EventArgs e)
+        private void WareHouseProductControl_Load(object sender, EventArgs e)
         {
             lblInStock.Visible = false;
             lblOutStock.Visible = false;

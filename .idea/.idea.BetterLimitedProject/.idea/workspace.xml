@@ -4,9 +4,13 @@
     <projectFile>BetterLimitedProject/BetterLimitedProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BetterLimitedProject/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d85f5cde-492b-491c-aa29-ce74c8c405da" name="Changes" comment="Edit item stock">
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/DateTimeExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/DateTimeExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Inventory/InventoryVwDeliveryForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Inventory/InventoryVwDeliveryForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Inventory/InventoryVwDeliveryForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Inventory/InventoryVwDeliveryForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BetterLimitedProject/Sales/SalesVwOrderForm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +81,8 @@
       <workItem from="1654174789308" duration="2966000" />
       <workItem from="1654242528652" duration="4295000" />
       <workItem from="1654315727712" duration="4593000" />
+      <workItem from="1654511710803" duration="724000" />
+      <workItem from="1654573437000" duration="643000" />
     </task>
     <task id="LOCAL-00001" summary="easy">
       <created>1654108350566</created>
@@ -162,7 +168,35 @@
       <option name="project" value="LOCAL" />
       <updated>1654363791493</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="finish inventory function">
+      <created>1654536240374</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1654536240374</updated>
+    </task>
+    <task id="LOCAL-00014" summary="inventory">
+      <created>1654536250103</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1654536250103</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Inventory">
+      <created>1654536268420</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1654536268420</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Edit item stock">
+      <created>1654573460705</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1654573460705</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +230,10 @@
     <MESSAGE value="Added View, Delete Sales Order Function" />
     <MESSAGE value="view store stock" />
     <MESSAGE value="Sales Restock function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sales Restock function" />
+    <MESSAGE value="finish inventory function" />
+    <MESSAGE value="inventory" />
+    <MESSAGE value="Inventory" />
+    <MESSAGE value="Edit item stock" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit item stock" />
   </component>
 </project>
