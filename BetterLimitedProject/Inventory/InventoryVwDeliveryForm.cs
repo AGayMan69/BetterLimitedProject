@@ -118,8 +118,8 @@ namespace BetterLimitedProject.Inventory
                 upperBound = DateTime.Now.GetThisYearUpperBound();
             }
 
-            MessageBox.Show($"UpperBound {upperBound}");
-            MessageBox.Show($"LowerBound {lowerBound}");
+            //MessageBox.Show($"UpperBound {upperBound}");
+            //MessageBox.Show($"LowerBound {lowerBound}");
             panDeliveryLoader.Controls.Clear();
             using (var betterDB = new betterlimitedEntities())
             {
