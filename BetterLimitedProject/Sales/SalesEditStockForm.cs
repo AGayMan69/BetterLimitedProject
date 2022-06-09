@@ -167,9 +167,8 @@ namespace BetterLimitedProject.Sales
 
         private void pbProduct_DoubleClick(object sender, EventArgs e)
         {
-
             OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Filter = "Select Image |*.png";
+            openFile.Filter = "Select Image |*.png;*.jpg;*.jpeg";
             if (openFile.ShowDialog() == DialogResult.OK)
             {
                 try

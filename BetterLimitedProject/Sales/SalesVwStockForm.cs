@@ -172,7 +172,7 @@ namespace BetterLimitedProject
                 if (restockDialog == DialogResult.OK)
                 {
                     // create replenishment
-                    MessageBox.Show($"Restocking : {restockForm.reStockAmount}");
+                    //MessageBox.Show($"Restocking : {restockForm.reStockAmount}");
                     // Generating new buy order id
                     string strYear = DateTime.Now.Year.ToString();
                     int year = Int32.Parse(strYear.Remove(0, 2));

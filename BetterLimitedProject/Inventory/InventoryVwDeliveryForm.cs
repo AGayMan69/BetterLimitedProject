@@ -184,7 +184,7 @@ namespace BetterLimitedProject.Inventory
         internal void editDelivery(int deliveryID, string type)
         {
             DialogResult editresult;
-            MessageBox.Show($"Editing {type} delivery {deliveryID}");
+            //MessageBox.Show($"Editing {type} delivery {deliveryID}");
             if (type == "Customer")
             {
                 InventoryArrangeCustomerDelForm custFrm = new InventoryArrangeCustomerDelForm();
@@ -242,7 +242,7 @@ namespace BetterLimitedProject.Inventory
 
         internal void arrDelivery(int deliveryID, string type)
         {
-            MessageBox.Show($"Arranging {type} delivery {deliveryID}");
+            //MessageBox.Show($"Arranging {type} delivery {deliveryID}");
             DialogResult editresult;
             deliveryTime = DateTime.Now.AddDays(5);
             if (type == "Replenish")

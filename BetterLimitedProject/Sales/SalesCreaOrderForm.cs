@@ -583,11 +583,12 @@ namespace BetterLimitedProject.Sales
 
 
         private bool receiptCreated = false;
+        PrintDocument pd;
         private void createReceipt()
         {
             try
             {
-                PrintDocument pd = new PrintDocument();
+                pd = new PrintDocument();
                 pd.DefaultPageSettings.PaperSize = new PaperSize("Receipt", 600, 800);
                 PrinterSettings ps = new PrinterSettings();
                 pd.PrintPage += generateReceipt;
@@ -682,8 +683,8 @@ namespace BetterLimitedProject.Sales
                 else if (ordOption == OrderOption.LevelDeposit)
                 {
                     var reserResults = (from reserRec in betterDB.reservations
-                        where reserRec.customerID == newCustomerID
-                        select new {reserRec.product.name, reserRec.product.price, reserRec.qty});
+                                        where reserRec.customerID == newCustomerID
+                                        select new { reserRec.product.name, reserRec.product.price, reserRec.qty });
 
                     //ev.Graphics.DrawString("Order Date : " + reserResults.FirstOrDefault().reservation_date.ToString(), bold, Brushes.Black, 20, 250, new StringFormat());
                     foreach (var reser in reserResults)
@@ -691,8 +692,8 @@ namespace BetterLimitedProject.Sales
                         string productName = reser.name;
                         ev.Graphics.DrawString(productName, normal, Brushes.Black, productX, height, new StringFormat());
 
-                        string price = ((reser.price > 5000) ? reser.price * 0.2 : 0).ToString();
-                        string total = "$" + (reser.qty * Int32.Parse(price)).ToString();
+                        string price = (reser.price > 5000) ? (reser.price * 0.2).ToString() : "0";
+                        string total = "$" + (reser.qty * decimal.Parse(price)).ToString();
                         price = "$" + price;
                         var priceWid = ev.Graphics.MeasureString(price, normal);
                         ev.Graphics.DrawString(price, normal, Brushes.Black, priceX + (50 - priceWid.Width), height, new StringFormat());
@@ -733,6 +734,10 @@ namespace BetterLimitedProject.Sales
             {
                 return;
             }
+
+            PrintPreviewDialog printdialog = new PrintPreviewDialog();
+            printdialog.Document = pd;
+            printdialog.ShowDialog();
         }
         // =========================================== Receipt Page Section =======================================================
     }
