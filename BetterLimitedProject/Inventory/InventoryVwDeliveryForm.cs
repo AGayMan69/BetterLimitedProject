@@ -171,12 +171,14 @@ namespace BetterLimitedProject.Inventory
                     deliveryControls = deliveryControls.OrderBy(control => control.deliveryID);
                 }
 
+                panDeliveryLoader.Hide();
                 foreach (var delcontrol in deliveryControls)
                 {
                     delcontrol.Dock = DockStyle.Top;
                     delcontrol._parent = this;
                     panDeliveryLoader.Controls.Add(delcontrol);
                 }
+                panDeliveryLoader.Show();
             }
         }
 

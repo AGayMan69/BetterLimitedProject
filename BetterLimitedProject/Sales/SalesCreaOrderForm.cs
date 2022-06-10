@@ -99,6 +99,7 @@ namespace BetterLimitedProject.Sales
                            select productRec).AsNoTracking();
 
             flpanProduct.Controls.Clear();
+            flpanProduct.Hide();
             foreach (var product in productList.ToList())
             {
                 POSProductControl productControl = new POSProductControl(this);
@@ -108,6 +109,7 @@ namespace BetterLimitedProject.Sales
                 productControl.ImageBytes = product.product_image;
                 flpanProduct.Controls.Add(productControl);
             }
+            flpanProduct.Show();    
         }
 
         internal void addProduct(int productID)
@@ -589,7 +591,7 @@ namespace BetterLimitedProject.Sales
             try
             {
                 pd = new PrintDocument();
-                pd.DefaultPageSettings.PaperSize = new PaperSize("Receipt", 600, 800);
+                pd.DefaultPageSettings.PaperSize = new PaperSize("Receipt", 850, 1000);
                 PrinterSettings ps = new PrinterSettings();
                 pd.PrintPage += generateReceipt;
                 pd.Print();

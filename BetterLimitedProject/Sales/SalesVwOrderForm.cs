@@ -187,6 +187,7 @@ namespace BetterLimitedProject.Sales
                     {
                         orderResult = orderResult.OrderBy(order => order.customer_ID);
                     }
+                    panSalesLoad.Hide();
                     foreach (var order in orderResult)
                     {
 
@@ -195,6 +196,7 @@ namespace BetterLimitedProject.Sales
                         orderControl._parent = this;
                         panSalesLoad.Controls.Add(orderControl);
                     }
+                    panSalesLoad.Show();
                 }
             }
         }

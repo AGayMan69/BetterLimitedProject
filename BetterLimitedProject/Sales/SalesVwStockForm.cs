@@ -139,12 +139,14 @@ namespace BetterLimitedProject
                         stockControls = stockControls.Where(control => control.qty <= control.restockLevel);
                     }
 
+                    panProductLoad.Hide();
                     foreach (var control in stockControls)
                     {
                         control.Dock = DockStyle.Top;
                         control._parent = this;
                         panProductLoad.Controls.Add(control);
                     }
+                    panProductLoad.Show();
                 }
             }
         }
