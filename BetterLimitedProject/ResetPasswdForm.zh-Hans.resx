@@ -117,23 +117,60 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 82</value>
-  </data>
-  <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 32</value>
-  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 32</value>
+    <value>318, 56</value>
   </data>
-  <data name="lblPasswd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 21</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>重置你的密码</value>
   </data>
-  <data name="lblSwitchLang.Text" xml:space="preserve">
-    <value>zh-CN</value>
+  <data name="btnLogin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value> </value>
+  <data name="btnLogin.Text" xml:space="preserve">
+    <value>返回登入</value>
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 25</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>确认密码</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 25</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="btnResetPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnResetPassword.Text" xml:space="preserve">
+    <value>重置密码</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 25</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>强密码包括数字、字母和标点符号</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
 </root>

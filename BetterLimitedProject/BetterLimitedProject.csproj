@@ -692,7 +692,13 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm.zh-Hans.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResetPasswdForm.resx">
+      <DependentUpon>ResetPasswdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPasswdForm.zh-Hans.resx">
       <DependentUpon>ResetPasswdForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\PayControl.resx">
@@ -813,6 +819,9 @@
       <DependentUpon>TechnicalVwInstallationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerifyResetPasswdForm.resx">
+      <DependentUpon>VerifyResetPasswdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifyResetPasswdForm.zh-Hans.resx">
       <DependentUpon>VerifyResetPasswdForm.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="dataModel.edmx">
