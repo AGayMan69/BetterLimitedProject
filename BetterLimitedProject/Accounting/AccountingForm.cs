@@ -53,12 +53,12 @@ namespace BetterLimitedProject
         private void AccountingForm_Load(object sender, EventArgs e)
         {
 
-            menulist = new[] {btnHome, btnVwOrder, btnVwStock, btnDashBoard} ;
-            menu_Navigate(btnHome);
+            menulist = new[] {btnVwOrder, btnVwStock, btnDashBoard} ;
+            menu_Navigate(btnVwOrder);
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.Image = (Image)new Bitmap(BetterLimitedProject.Properties.Resources.logout_icon, new Size(16,16));
             clearSubformLoader();
-            AccountingHomeForm hmfrm = new AccountingHomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            AccountingVwOrderForm hmfrm = new AccountingVwOrderForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(hmfrm);
         }
 
@@ -67,17 +67,10 @@ namespace BetterLimitedProject
             this.DialogResult = DialogResult.Abort;
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            menu_Navigate(btnHome);
-            clearSubformLoader();
-            AccountingHomeForm hmfrm = new AccountingHomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            loadSubform(hmfrm);
-        }
 
         private void btnDashBoard_Click(object sender, EventArgs e)
         {
-            menu_Navigate(btnHome);
+            menu_Navigate(btnDashBoard);
             clearSubformLoader();
             AccountingDashBoardForm dashBoardForm = new AccountingDashBoardForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(dashBoardForm);
@@ -85,7 +78,7 @@ namespace BetterLimitedProject
 
         private void btnVwOrder_Click(object sender, EventArgs e)
         {
-            menu_Navigate(btnHome);
+            menu_Navigate(btnVwOrder);
             clearSubformLoader();
             AccountingVwOrderForm vwOrderForm = new AccountingVwOrderForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(vwOrderForm);
@@ -93,7 +86,7 @@ namespace BetterLimitedProject
 
         private void btnVwStock_Click(object sender, EventArgs e)
         {
-            menu_Navigate(btnHome);
+            menu_Navigate(btnVwStock);
             clearSubformLoader();
             AccountingVwStockForm vwStockForm = new AccountingVwStockForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(vwStockForm);

@@ -29,6 +29,7 @@ namespace BetterLimitedProject.Sales
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesReservationControl));
             this.lblReservationID = new System.Windows.Forms.Label();
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.lblReservationDate = new System.Windows.Forms.Label();
@@ -38,69 +39,42 @@ namespace BetterLimitedProject.Sales
             // 
             // lblReservationID
             // 
-            this.lblReservationID.AutoSize = true;
-            this.lblReservationID.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReservationID.Location = new System.Drawing.Point(21, 20);
+            resources.ApplyResources(this.lblReservationID, "lblReservationID");
             this.lblReservationID.Name = "lblReservationID";
-            this.lblReservationID.Size = new System.Drawing.Size(73, 21);
-            this.lblReservationID.TabIndex = 0;
-            this.lblReservationID.Text = "2200000";
             // 
             // lblCustomerName
             // 
-            this.lblCustomerName.AutoSize = true;
-            this.lblCustomerName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(181, 20);
+            resources.ApplyResources(this.lblCustomerName, "lblCustomerName");
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(103, 21);
-            this.lblCustomerName.TabIndex = 1;
-            this.lblCustomerName.Text = "Kloe Weston";
             // 
             // lblReservationDate
             // 
-            this.lblReservationDate.AutoSize = true;
-            this.lblReservationDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReservationDate.Location = new System.Drawing.Point(341, 20);
+            resources.ApplyResources(this.lblReservationDate, "lblReservationDate");
             this.lblReservationDate.Name = "lblReservationDate";
-            this.lblReservationDate.Size = new System.Drawing.Size(160, 21);
-            this.lblReservationDate.TabIndex = 2;
-            this.lblReservationDate.Text = "2022-06-06 22:50:03";
             // 
             // btnDel
             // 
+            resources.ApplyResources(this.btnDel, "btnDel");
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.btnDel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnDel.FlatAppearance.BorderSize = 0;
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(754, 0);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(86, 66);
-            this.btnDel.TabIndex = 3;
-            this.btnDel.Text = "DEL";
             this.btnDel.UseVisualStyleBackColor = false;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnPay
             // 
+            resources.ApplyResources(this.btnPay, "btnPay");
             this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
-            this.btnPay.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPay.FlatAppearance.BorderSize = 0;
-            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Location = new System.Drawing.Point(668, 0);
             this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(86, 66);
-            this.btnPay.TabIndex = 4;
-            this.btnPay.Text = "PAY";
             this.btnPay.UseVisualStyleBackColor = false;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // SalesReservationControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.btnDel);
@@ -108,7 +82,6 @@ namespace BetterLimitedProject.Sales
             this.Controls.Add(this.lblCustomerName);
             this.Controls.Add(this.lblReservationID);
             this.Name = "SalesReservationControl";
-            this.Size = new System.Drawing.Size(840, 66);
             this.Load += new System.EventHandler(this.SalesReservationControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

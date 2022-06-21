@@ -92,12 +92,6 @@
     <Compile Include="Accounting\AccountingForm.Designer.cs">
       <DependentUpon>AccountingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\AccountingHomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Accounting\AccountingHomeForm.Designer.cs">
-      <DependentUpon>AccountingHomeForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Accounting\AccountingOrderControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -246,12 +240,6 @@
     </Compile>
     <Compile Include="Inventory\InventoryForm.Designer.cs">
       <DependentUpon>InventoryForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inventory\InventoryHomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventory\InventoryHomeForm.Designer.cs">
-      <DependentUpon>InventoryHomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\InventoryProductControl.cs">
       <SubType>UserControl</SubType>
@@ -538,12 +526,6 @@
     <Compile Include="Technical\TechnicalForm.Designer.cs">
       <DependentUpon>TechnicalForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Technical\TechnicalHomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Technical\TechnicalHomeForm.Designer.cs">
-      <DependentUpon>TechnicalHomeForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Technical\TechnicalVwInstallationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -570,9 +552,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingForm.resx">
       <DependentUpon>AccountingForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\AccountingHomeForm.resx">
-      <DependentUpon>AccountingHomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingOrderControl.resx">
       <DependentUpon>AccountingOrderControl.cs</DependentUpon>
@@ -624,9 +603,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\InventoryHomeForm.resx">
-      <DependentUpon>InventoryHomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryProductControl.resx">
       <DependentUpon>InventoryProductControl.cs</DependentUpon>
@@ -746,6 +722,9 @@
     <EmbeddedResource Include="Sales\SalesOrderControl.resx">
       <DependentUpon>SalesOrderControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesOrderControl.zh-Hans.resx">
+      <DependentUpon>SalesOrderControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesOrderLineControl.resx">
       <DependentUpon>SalesOrderLineControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -765,6 +744,9 @@
       <DependentUpon>SalesReservationConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesReservationControl.resx">
+      <DependentUpon>SalesReservationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesReservationControl.zh-Hans.resx">
       <DependentUpon>SalesReservationControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesRestockForm.resx">
@@ -811,9 +793,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Technical\TechnicalForm.resx">
       <DependentUpon>TechnicalForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Technical\TechnicalHomeForm.resx">
-      <DependentUpon>TechnicalHomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Technical\TechnicalVwInstallationForm.resx">
       <DependentUpon>TechnicalVwInstallationForm.cs</DependentUpon>

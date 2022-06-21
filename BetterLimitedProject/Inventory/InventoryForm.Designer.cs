@@ -39,7 +39,6 @@ namespace BetterLimitedProject
             this.panNavHightLight = new System.Windows.Forms.Panel();
             this.btnArraDelivery = new System.Windows.Forms.Button();
             this.btnVwDelivery = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.panLogo = new System.Windows.Forms.Panel();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -78,7 +77,6 @@ namespace BetterLimitedProject
             this.panelMenu.Controls.Add(this.panNavHightLight);
             this.panelMenu.Controls.Add(this.btnArraDelivery);
             this.panelMenu.Controls.Add(this.btnVwDelivery);
-            this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(0, 140);
             this.panelMenu.Name = "panelMenu";
@@ -94,7 +92,7 @@ namespace BetterLimitedProject
             this.btnVwReceGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVwReceGood.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVwReceGood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnVwReceGood.Location = new System.Drawing.Point(0, 390);
+            this.btnVwReceGood.Location = new System.Drawing.Point(0, 325);
             this.btnVwReceGood.Name = "btnVwReceGood";
             this.btnVwReceGood.Size = new System.Drawing.Size(314, 65);
             this.btnVwReceGood.TabIndex = 53;
@@ -112,7 +110,7 @@ namespace BetterLimitedProject
             this.btnRestock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestock.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnRestock.Location = new System.Drawing.Point(0, 325);
+            this.btnRestock.Location = new System.Drawing.Point(0, 260);
             this.btnRestock.Name = "btnRestock";
             this.btnRestock.Size = new System.Drawing.Size(314, 65);
             this.btnRestock.TabIndex = 52;
@@ -130,7 +128,7 @@ namespace BetterLimitedProject
             this.btnPurGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPurGood.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPurGood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnPurGood.Location = new System.Drawing.Point(0, 260);
+            this.btnPurGood.Location = new System.Drawing.Point(0, 195);
             this.btnPurGood.Name = "btnPurGood";
             this.btnPurGood.Size = new System.Drawing.Size(314, 65);
             this.btnPurGood.TabIndex = 51;
@@ -148,7 +146,7 @@ namespace BetterLimitedProject
             this.btnVwStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVwStock.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVwStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnVwStock.Location = new System.Drawing.Point(0, 195);
+            this.btnVwStock.Location = new System.Drawing.Point(0, 130);
             this.btnVwStock.Name = "btnVwStock";
             this.btnVwStock.Size = new System.Drawing.Size(314, 65);
             this.btnVwStock.TabIndex = 50;
@@ -174,7 +172,7 @@ namespace BetterLimitedProject
             this.btnArraDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArraDelivery.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArraDelivery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnArraDelivery.Location = new System.Drawing.Point(0, 130);
+            this.btnArraDelivery.Location = new System.Drawing.Point(0, 65);
             this.btnArraDelivery.Name = "btnArraDelivery";
             this.btnArraDelivery.Size = new System.Drawing.Size(314, 65);
             this.btnArraDelivery.TabIndex = 49;
@@ -192,7 +190,7 @@ namespace BetterLimitedProject
             this.btnVwDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVwDelivery.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVwDelivery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnVwDelivery.Location = new System.Drawing.Point(0, 65);
+            this.btnVwDelivery.Location = new System.Drawing.Point(0, 0);
             this.btnVwDelivery.Name = "btnVwDelivery";
             this.btnVwDelivery.Size = new System.Drawing.Size(314, 65);
             this.btnVwDelivery.TabIndex = 46;
@@ -200,24 +198,6 @@ namespace BetterLimitedProject
             this.btnVwDelivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVwDelivery.UseVisualStyleBackColor = false;
             this.btnVwDelivery.Click += new System.EventHandler(this.btnVwDelivery_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(31)))));
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(314, 65);
-            this.btnHome.TabIndex = 45;
-            this.btnHome.Text = "Home";
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panLogo
             // 
@@ -287,7 +267,6 @@ namespace BetterLimitedProject
         private System.Windows.Forms.Panel panNavHightLight;
         private System.Windows.Forms.Button btnArraDelivery;
         private System.Windows.Forms.Button btnVwDelivery;
-        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panLogo;
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Button btnLogout;

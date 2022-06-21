@@ -52,20 +52,12 @@ namespace BetterLimitedProject
 
         private void TechnicalForm_Load(object sender, EventArgs e)
         {
-            menulist = new[] {btnHome, btnVwInstallation, btnArraInstallation} ;
-            menu_Navigate(btnHome);
+            menulist = new[] {btnVwInstallation, btnArraInstallation} ;
+            menu_Navigate(btnVwInstallation);
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.Image = (Image)new Bitmap(BetterLimitedProject.Properties.Resources.logout_icon, new Size(16,16));
             clearSubformLoader(); 
-            TechnicalHomeForm hmfrm = new TechnicalHomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            loadSubform(hmfrm);
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            menu_Navigate(btnHome);
-            clearSubformLoader();
-            TechnicalHomeForm hmfrm = new TechnicalHomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            TechnicalVwInstallationForm hmfrm = new TechnicalVwInstallationForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(hmfrm);
         }
 

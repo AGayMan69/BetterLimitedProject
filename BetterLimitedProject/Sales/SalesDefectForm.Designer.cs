@@ -59,7 +59,6 @@ namespace BetterLimitedProject.Sales
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pnlProduct);
             this.panel1.Controls.Add(this.cboTier);
@@ -70,6 +69,7 @@ namespace BetterLimitedProject.Sales
             this.panel1.Controls.Add(this.nudQty);
             this.panel1.Controls.Add(this.cboProduct);
             this.panel1.Controls.Add(this.label2);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // pnlProduct
@@ -79,8 +79,8 @@ namespace BetterLimitedProject.Sales
             // 
             // cboTier
             // 
-            resources.ApplyResources(this.cboTier, "cboTier");
             this.cboTier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cboTier, "cboTier");
             this.cboTier.FormattingEnabled = true;
             this.cboTier.Items.AddRange(new object[] {
             resources.GetString("cboTier.Items"),
@@ -130,8 +130,8 @@ namespace BetterLimitedProject.Sales
             // 
             // cboProduct
             // 
-            resources.ApplyResources(this.cboProduct, "cboProduct");
             this.cboProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cboProduct, "cboProduct");
             this.cboProduct.FormattingEnabled = true;
             this.cboProduct.Items.AddRange(new object[] {
             resources.GetString("cboProduct.Items")});
@@ -140,8 +140,8 @@ namespace BetterLimitedProject.Sales
             // 
             // btnAdd
             // 
-            resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
+            resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Name = "btnAdd";

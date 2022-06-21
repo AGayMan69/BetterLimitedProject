@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 33</value>
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>318, 56</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>添加缺陷产品</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 20</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 25</value>
@@ -130,11 +136,26 @@
   <data name="label2.Text" xml:space="preserve">
     <value>产品名称</value>
   </data>
+  <data name="pnlProduct.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 114</value>
+  </data>
+  <data name="pnlProduct.Size" type="System.Drawing.Size, System.Drawing">
+    <value>709, 56</value>
+  </data>
+  <data name="cboTier.Location" type="System.Drawing.Point, System.Drawing">
+    <value>426, 371</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 374</value>
+  </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 25</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>损坏等级</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 372</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 25</value>
@@ -142,13 +163,46 @@
   <data name="label4.Text" xml:space="preserve">
     <value>数量</value>
   </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 194</value>
+  </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 25</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>描述</value>
   </data>
+  <data name="tbDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 222</value>
+  </data>
+  <data name="tbDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>709, 128</value>
+  </data>
+  <data name="nudQty.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 372</value>
+  </data>
+  <data name="cboProduct.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 61</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 126</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>778, 438</value>
+  </data>
+  <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>726, 587</value>
+  </data>
+  <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 43</value>
+  </data>
   <data name="btnAdd.Text" xml:space="preserve">
     <value>添加</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>934, 642</value>
   </data>
 </root>

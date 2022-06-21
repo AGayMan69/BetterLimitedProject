@@ -52,26 +52,18 @@ namespace BetterLimitedProject
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            menulist = new[] { btnHome, btnVwDelivery, btnArraDelivery, btnVwStock, btnPurGood, btnRestock, btnVwReceGood };
-            menu_Navigate(btnHome);
+            menulist = new[] {btnVwDelivery, btnArraDelivery, btnVwStock, btnPurGood, btnRestock, btnVwReceGood };
+            menu_Navigate(btnVwDelivery);
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.Image = (Image)new Bitmap(BetterLimitedProject.Properties.Resources.logout_icon, new Size(16, 16));
             clearSubformLoader();
-            InventoryHomeForm hmfrm = new InventoryHomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            InventoryVwDeliveryForm hmfrm = new InventoryVwDeliveryForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(hmfrm);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Abort;
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            menu_Navigate(btnHome);
-            clearSubformLoader();
-            InventoryHomeForm hmfrm = new InventoryHomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            loadSubform(hmfrm);
         }
 
         private void btnVwDelivery_Click(object sender, EventArgs e)

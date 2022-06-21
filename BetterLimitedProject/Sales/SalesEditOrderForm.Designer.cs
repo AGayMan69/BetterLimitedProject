@@ -58,8 +58,8 @@ namespace BetterLimitedProject.Sales
             // 
             // btnSubmit
             // 
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.Name = "btnSubmit";
@@ -81,20 +81,20 @@ namespace BetterLimitedProject.Sales
             // 
             // btnRegister
             // 
-            resources.ApplyResources(this.btnRegister, "btnRegister");
             this.btnRegister.BackColor = System.Drawing.Color.White;
             this.btnRegister.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnRegister.FlatAppearance.BorderSize = 5;
+            resources.ApplyResources(this.btnRegister, "btnRegister");
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.UseVisualStyleBackColor = false;
             // 
             // panDelivery
             // 
-            resources.ApplyResources(this.panDelivery, "panDelivery");
             this.panDelivery.BackColor = System.Drawing.Color.White;
             this.panDelivery.Controls.Add(this.dtpDeliveryTime);
             this.panDelivery.Controls.Add(this.label7);
+            resources.ApplyResources(this.panDelivery, "panDelivery");
             this.panDelivery.Name = "panDelivery";
             // 
             // tbAddress
@@ -115,8 +115,8 @@ namespace BetterLimitedProject.Sales
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // label6
@@ -151,7 +151,6 @@ namespace BetterLimitedProject.Sales
             // 
             // panCustomerInfo
             // 
-            resources.ApplyResources(this.panCustomerInfo, "panCustomerInfo");
             this.panCustomerInfo.BackColor = System.Drawing.Color.White;
             this.panCustomerInfo.Controls.Add(this.tbCustomerName);
             this.panCustomerInfo.Controls.Add(this.tbPhone);
@@ -161,6 +160,7 @@ namespace BetterLimitedProject.Sales
             this.panCustomerInfo.Controls.Add(this.label5);
             this.panCustomerInfo.Controls.Add(this.label3);
             this.panCustomerInfo.Controls.Add(this.label4);
+            resources.ApplyResources(this.panCustomerInfo, "panCustomerInfo");
             this.panCustomerInfo.Name = "panCustomerInfo";
             // 
             // tbCustomerName
@@ -180,12 +180,12 @@ namespace BetterLimitedProject.Sales
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panOrderlineLoader);
             this.panel1.Controls.Add(this.panel2);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // label2
