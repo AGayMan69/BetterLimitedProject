@@ -117,392 +117,362 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;btnCreaOrder.ZOrder" xml:space="preserve">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panNavHightLight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 6</value>
+  </data>
+  <data name="panNavHightLight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 60</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panNavHightLight.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;panNavHightLight.Name" xml:space="preserve">
+    <value>panNavHightLight</value>
+  </data>
+  <data name="&gt;&gt;panNavHightLight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panNavHightLight.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;panNavHightLight.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnDefect.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;btnVwStock.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDefect.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panSide.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;panSide.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 450</value>
-  </data>
-  <data name="btnDefect.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 65</value>
-  </data>
-  <data name="ptbLogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;panSubFormLoader.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnVwOrder.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 15.75pt, style=Bold</value>
-  </data>
-  <data name="btnLogout.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnVwStock.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;btnVwStock.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="btnVwOrder.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <data name="panelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="btnDefect.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 260</value>
-  </data>
-  <data name="&gt;&gt;btnDefect.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;panNavHightLight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panNavHightLight.Name" xml:space="preserve">
-    <value>panNavHightLight</value>
-  </data>
-  <data name="panSubFormLoader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>314, 0</value>
-  </data>
-  <data name="btnPayReser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 65</value>
+  <data name="btnDefect.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="btnDefect.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btnVwStock.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="btnDefect.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 15.75pt, style=Bold</value>
   </data>
-  <data name="btnVwOrder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="btnDefect.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="btnPayReser.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="btnDefect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 240</value>
   </data>
-  <data name="btnVwOrder.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panNavHightLight.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="btnCreaOrder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 65</value>
-  </data>
-  <data name="&gt;&gt;panLogo.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="btnDefect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 60</value>
   </data>
   <data name="btnDefect.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="&gt;&gt;panSide.Name" xml:space="preserve">
-    <value>panSide</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ptbLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 30</value>
-  </data>
-  <data name="&gt;&gt;panSubFormLoader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDefect.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnCreaOrder.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnLogout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 91</value>
-  </data>
-  <data name="btnVwOrder.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
   <data name="btnDefect.Text" xml:space="preserve">
     <value>Defect Item</value>
-  </data>
-  <data name="&gt;&gt;btnVwOrder.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="panSubFormLoader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
   </data>
   <data name="btnDefect.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageBeforeText</value>
   </data>
-  <data name="panSide.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;btnDefect.Name" xml:space="preserve">
+    <value>btnDefect</value>
   </data>
-  <data name="btnVwStock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 195</value>
-  </data>
-  <data name="&gt;&gt;btnPayReser.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnDefect.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panSide.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;btnDefect.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnDefect.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="btnVwStock.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;panSide.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ptbLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 80</value>
-  </data>
-  <data name="&gt;&gt;btnVwOrder.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="btnVwStock.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;btnPayReser.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnVwStock.Text" xml:space="preserve">
-    <value>View Stock</value>
-  </data>
-  <data name="btnCreaOrder.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="panLogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="btnVwStock.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="btnVwStock.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="&gt;&gt;panLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPayReser.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="btnVwStock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 65</value>
-  </data>
-  <data name="panLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panelMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 140</value>
-  </data>
-  <data name="&gt;&gt;panNavHightLight.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnDefect.Name" xml:space="preserve">
-    <value>btnDefect</value>
-  </data>
-  <data name="btnPayReser.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SalesForm</value>
-  </data>
-  <data name="panNavHightLight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 6</value>
-  </data>
-  <data name="ptbLogo.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ptbLogo.Parent" xml:space="preserve">
-    <value>panLogo</value>
-  </data>
-  <data name="panLogo.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="btnVwOrder.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnVwStock.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <data name="btnVwStock.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 15.75pt, style=Bold</value>
   </data>
-  <data name="btnPayReser.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
+  <data name="btnVwStock.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;panNavHightLight.Parent" xml:space="preserve">
-    <value>panelMenu</value>
+  <data name="btnVwStock.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 180</value>
   </data>
-  <data name="btnPayReser.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="btnVwStock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 60</value>
+  </data>
+  <data name="btnVwStock.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="btnVwStock.Text" xml:space="preserve">
+    <value>View Stock</value>
+  </data>
+  <data name="btnVwStock.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
   </data>
   <data name="&gt;&gt;btnVwStock.Name" xml:space="preserve">
     <value>btnVwStock</value>
   </data>
-  <data name="&gt;&gt;panSubFormLoader.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnVwOrder.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;panLogo.Name" xml:space="preserve">
-    <value>panLogo</value>
-  </data>
-  <data name="btnDefect.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 15.75pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;btnLogout.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnVwStock.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnLogout.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;btnLogout.Parent" xml:space="preserve">
-    <value>panSide</value>
-  </data>
-  <data name="btnCreaOrder.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 15.75pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;btnCreaOrder.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnVwStock.Parent" xml:space="preserve">
     <value>panelMenu</value>
-  </data>
-  <data name="btnCreaOrder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 65</value>
-  </data>
-  <data name="btnCreaOrder.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;btnVwOrder.Name" xml:space="preserve">
-    <value>btnVwOrder</value>
-  </data>
-  <data name="btnVwOrder.Text" xml:space="preserve">
-    <value>View Order</value>
-  </data>
-  <data name="btnLogout.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;btnCreaOrder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPayReser.Name" xml:space="preserve">
-    <value>btnPayReser</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
-    <value>panSide</value>
-  </data>
-  <data name="btnLogout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 590</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>SalesForm</value>
-  </data>
-  <data name="btnPayReser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 130</value>
-  </data>
-  <data name="&gt;&gt;btnVwOrder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panLogo.Parent" xml:space="preserve">
-    <value>panSide</value>
-  </data>
-  <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="panSide.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 681</value>
-  </data>
-  <data name="ptbLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Name" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="btnLogout.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15.75pt, style=Bold</value>
-  </data>
-  <data name="panLogo.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>30, 30, 30, 30</value>
-  </data>
-  <data name="btnLogout.Text" xml:space="preserve">
-    <value>LOGOUT</value>
   </data>
   <data name="&gt;&gt;btnVwStock.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;btnCreaOrder.Name" xml:space="preserve">
-    <value>btnCreaOrder</value>
+  <data name="btnPayReser.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="btnCreaOrder.Text" xml:space="preserve">
-    <value>Create Order</value>
-  </data>
-  <data name="panSubFormLoader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 681</value>
-  </data>
-  <data name="btnLogout.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;ptbLogo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnCreaOrder.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;ptbLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnCreaOrder.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="btnPayReser.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panSubFormLoader.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnLogout.Name" xml:space="preserve">
-    <value>btnLogout</value>
-  </data>
-  <data name="&gt;&gt;ptbLogo.Name" xml:space="preserve">
-    <value>ptbLogo</value>
-  </data>
-  <data name="btnPayReser.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 681</value>
+  <data name="btnPayReser.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="btnPayReser.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 15.75pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnPayReser.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPayReser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 120</value>
+  </data>
+  <data name="btnPayReser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 60</value>
+  </data>
+  <data name="btnPayReser.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="btnPayReser.Text" xml:space="preserve">
+    <value>Pay Reservation</value>
+  </data>
+  <data name="btnPayReser.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnPayReser.Name" xml:space="preserve">
+    <value>btnPayReser</value>
+  </data>
+  <data name="&gt;&gt;btnPayReser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPayReser.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnPayReser.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnCreaOrder.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnCreaOrder.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnCreaOrder.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnCreaOrder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 15.75pt, style=Bold</value>
+  </data>
+  <data name="btnCreaOrder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCreaOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 60</value>
+  </data>
+  <data name="btnCreaOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 60</value>
+  </data>
+  <data name="btnCreaOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="btnCreaOrder.Text" xml:space="preserve">
+    <value>Create Order</value>
+  </data>
+  <data name="btnCreaOrder.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnCreaOrder.Name" xml:space="preserve">
+    <value>btnCreaOrder</value>
+  </data>
+  <data name="&gt;&gt;btnCreaOrder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCreaOrder.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnCreaOrder.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnVwOrder.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnVwOrder.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnVwOrder.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnVwOrder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 15.75pt, style=Bold</value>
+  </data>
+  <data name="btnVwOrder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnVwOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnVwOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 60</value>
+  </data>
+  <data name="btnVwOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="btnVwOrder.Text" xml:space="preserve">
+    <value>View Order</value>
+  </data>
+  <data name="btnVwOrder.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnVwOrder.Name" xml:space="preserve">
+    <value>btnVwOrder</value>
+  </data>
+  <data name="&gt;&gt;btnVwOrder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnVwOrder.Parent" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;btnVwOrder.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panelMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 129</value>
+  </data>
+  <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 416</value>
+  </data>
+  <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Name" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
+    <value>panSide</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ptbLogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ptbLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ptbLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 28</value>
+  </data>
+  <data name="ptbLogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 73</value>
+  </data>
+  <data name="ptbLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="ptbLogo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ptbLogo.Name" xml:space="preserve">
+    <value>ptbLogo</value>
+  </data>
+  <data name="&gt;&gt;ptbLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ptbLogo.Parent" xml:space="preserve">
+    <value>panLogo</value>
+  </data>
+  <data name="&gt;&gt;ptbLogo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panLogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panLogo.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>30, 28, 30, 28</value>
+  </data>
+  <data name="panLogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 129</value>
+  </data>
+  <data name="panLogo.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;panLogo.Name" xml:space="preserve">
+    <value>panLogo</value>
+  </data>
+  <data name="&gt;&gt;panLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panLogo.Parent" xml:space="preserve">
+    <value>panSide</value>
+  </data>
+  <data name="&gt;&gt;panLogo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnLogout.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnLogout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="btnLogout.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnLogout.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15.75pt, style=Bold</value>
+  </data>
+  <data name="btnLogout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnLogout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 545</value>
+  </data>
+  <data name="btnLogout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 84</value>
+  </data>
+  <data name="btnLogout.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="btnLogout.Text" xml:space="preserve">
+    <value>LOGOUT</value>
+  </data>
+  <data name="btnLogout.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="btnLogout.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageBeforeText</value>
   </data>
-  <data name="&gt;&gt;panSubFormLoader.Name" xml:space="preserve">
-    <value>panSubFormLoader</value>
+  <data name="&gt;&gt;btnLogout.Name" xml:space="preserve">
+    <value>btnLogout</value>
   </data>
-  <data name="btnVwOrder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 65</value>
+  <data name="&gt;&gt;btnLogout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnPayReser.Text" xml:space="preserve">
-    <value>Pay Reservation</value>
+  <data name="&gt;&gt;btnLogout.Parent" xml:space="preserve">
+    <value>panSide</value>
   </data>
   <data name="&gt;&gt;btnLogout.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -510,17 +480,50 @@
   <data name="panSide.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="btnDefect.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="panSide.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="btnLogout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
+  <data name="panSide.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 629</value>
   </data>
-  <data name="panNavHightLight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 65</value>
+  <data name="panSide.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="panLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 140</value>
+  <data name="&gt;&gt;panSide.Name" xml:space="preserve">
+    <value>panSide</value>
+  </data>
+  <data name="&gt;&gt;panSide.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panSide.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panSide.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panSubFormLoader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panSubFormLoader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 0</value>
+  </data>
+  <data name="panSubFormLoader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>950, 629</value>
+  </data>
+  <data name="panSubFormLoader.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panSubFormLoader.Name" xml:space="preserve">
+    <value>panSubFormLoader</value>
+  </data>
+  <data name="&gt;&gt;panSubFormLoader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panSubFormLoader.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panSubFormLoader.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -528,4 +531,22 @@
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>zh-Hans</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 629</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>SalesForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SalesForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

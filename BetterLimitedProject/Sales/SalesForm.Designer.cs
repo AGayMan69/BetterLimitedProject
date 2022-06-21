@@ -50,34 +50,34 @@ namespace BetterLimitedProject
             // 
             // panSide
             // 
-            resources.ApplyResources(this.panSide, "panSide");
             this.panSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.panSide.Controls.Add(this.panelMenu);
             this.panSide.Controls.Add(this.panLogo);
             this.panSide.Controls.Add(this.btnLogout);
+            resources.ApplyResources(this.panSide, "panSide");
             this.panSide.Name = "panSide";
             // 
             // panelMenu
             // 
-            resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Controls.Add(this.panNavHightLight);
             this.panelMenu.Controls.Add(this.btnDefect);
             this.panelMenu.Controls.Add(this.btnVwStock);
             this.panelMenu.Controls.Add(this.btnPayReser);
             this.panelMenu.Controls.Add(this.btnCreaOrder);
             this.panelMenu.Controls.Add(this.btnVwOrder);
+            resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Name = "panelMenu";
             // 
             // panNavHightLight
             // 
-            resources.ApplyResources(this.panNavHightLight, "panNavHightLight");
             this.panNavHightLight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            resources.ApplyResources(this.panNavHightLight, "panNavHightLight");
             this.panNavHightLight.Name = "panNavHightLight";
             // 
             // btnDefect
             // 
-            resources.ApplyResources(this.btnDefect, "btnDefect");
             this.btnDefect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            resources.ApplyResources(this.btnDefect, "btnDefect");
             this.btnDefect.FlatAppearance.BorderSize = 0;
             this.btnDefect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.btnDefect.Name = "btnDefect";
@@ -86,8 +86,8 @@ namespace BetterLimitedProject
             // 
             // btnVwStock
             // 
-            resources.ApplyResources(this.btnVwStock, "btnVwStock");
             this.btnVwStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            resources.ApplyResources(this.btnVwStock, "btnVwStock");
             this.btnVwStock.FlatAppearance.BorderSize = 0;
             this.btnVwStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.btnVwStock.Name = "btnVwStock";
@@ -96,8 +96,8 @@ namespace BetterLimitedProject
             // 
             // btnPayReser
             // 
-            resources.ApplyResources(this.btnPayReser, "btnPayReser");
             this.btnPayReser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            resources.ApplyResources(this.btnPayReser, "btnPayReser");
             this.btnPayReser.FlatAppearance.BorderSize = 0;
             this.btnPayReser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.btnPayReser.Name = "btnPayReser";
@@ -106,8 +106,8 @@ namespace BetterLimitedProject
             // 
             // btnCreaOrder
             // 
-            resources.ApplyResources(this.btnCreaOrder, "btnCreaOrder");
             this.btnCreaOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            resources.ApplyResources(this.btnCreaOrder, "btnCreaOrder");
             this.btnCreaOrder.FlatAppearance.BorderSize = 0;
             this.btnCreaOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.btnCreaOrder.Name = "btnCreaOrder";
@@ -116,8 +116,8 @@ namespace BetterLimitedProject
             // 
             // btnVwOrder
             // 
-            resources.ApplyResources(this.btnVwOrder, "btnVwOrder");
             this.btnVwOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            resources.ApplyResources(this.btnVwOrder, "btnVwOrder");
             this.btnVwOrder.FlatAppearance.BorderSize = 0;
             this.btnVwOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.btnVwOrder.Name = "btnVwOrder";
@@ -126,14 +126,14 @@ namespace BetterLimitedProject
             // 
             // panLogo
             // 
-            resources.ApplyResources(this.panLogo, "panLogo");
             this.panLogo.Controls.Add(this.ptbLogo);
+            resources.ApplyResources(this.panLogo, "panLogo");
             this.panLogo.Name = "panLogo";
             // 
             // btnLogout
             // 
-            resources.ApplyResources(this.btnLogout, "btnLogout");
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(41)))));
+            resources.ApplyResources(this.btnLogout, "btnLogout");
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
             this.btnLogout.Name = "btnLogout";

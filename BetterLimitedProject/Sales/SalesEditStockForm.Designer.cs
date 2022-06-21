@@ -29,11 +29,11 @@ namespace BetterLimitedProject.Sales
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesEditStockForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblStore = new System.Windows.Forms.Label();
-            this.pbProduct = new System.Windows.Forms.PictureBox();
             this.tbProductName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,266 +52,164 @@ namespace BetterLimitedProject.Sales
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
+            this.pbProduct = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nupRestockLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(442, 48);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 44);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "库存";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label2, "label2");
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.label2.Location = new System.Drawing.Point(78, 436);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "店铺";
             // 
             // lblAddress
             // 
-            this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblAddress, "lblAddress");
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.lblAddress.Location = new System.Drawing.Point(79, 536);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(255, 71);
-            this.lblAddress.TabIndex = 2;
-            this.lblAddress.Text = "1 Shing Cheong Rd, Ngau Tau Kok, Kowloon Bay Hong Kong";
             // 
             // lblStore
             // 
-            this.lblStore.AutoSize = true;
-            this.lblStore.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblStore, "lblStore");
             this.lblStore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.lblStore.Location = new System.Drawing.Point(78, 468);
             this.lblStore.Name = "lblStore";
-            this.lblStore.Size = new System.Drawing.Size(98, 30);
-            this.lblStore.TabIndex = 3;
-            this.lblStore.Text = "Kowloon";
-            // 
-            // pbProduct
-            // 
-            this.pbProduct.Location = new System.Drawing.Point(83, 139);
-            this.pbProduct.Name = "pbProduct";
-            this.pbProduct.Size = new System.Drawing.Size(222, 214);
-            this.pbProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbProduct.TabIndex = 4;
-            this.pbProduct.TabStop = false;
-            this.pbProduct.DoubleClick += new System.EventHandler(this.pbProduct_DoubleClick);
             // 
             // tbProductName
             // 
-            this.tbProductName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.tbProductName, "tbProductName");
             this.tbProductName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.tbProductName.Location = new System.Drawing.Point(346, 163);
-            this.tbProductName.Multiline = true;
             this.tbProductName.Name = "tbProductName";
-            this.tbProductName.Size = new System.Drawing.Size(239, 72);
-            this.tbProductName.TabIndex = 5;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label3, "label3");
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.label3.Location = new System.Drawing.Point(342, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 21);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "名称";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label4, "label4");
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.label4.Location = new System.Drawing.Point(741, 139);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 21);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "类别";
             // 
             // tbPrice
             // 
-            this.tbPrice.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.tbPrice, "tbPrice");
             this.tbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.tbPrice.Location = new System.Drawing.Point(346, 312);
             this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(100, 22);
-            this.tbPrice.TabIndex = 7;
             // 
             // cboCategory
             // 
+            resources.ApplyResources(this.cboCategory, "cboCategory");
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.Location = new System.Drawing.Point(745, 163);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(139, 25);
-            this.cboCategory.TabIndex = 9;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label5, "label5");
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.label5.Location = new System.Drawing.Point(741, 228);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 21);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "补货水平";
             // 
             // nupRestockLevel
             // 
-            this.nupRestockLevel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.nupRestockLevel, "nupRestockLevel");
             this.nupRestockLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.nupRestockLevel.Location = new System.Drawing.Point(745, 252);
             this.nupRestockLevel.Name = "nupRestockLevel";
-            this.nupRestockLevel.Size = new System.Drawing.Size(120, 25);
-            this.nupRestockLevel.TabIndex = 11;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label6, "label6");
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.label6.Location = new System.Drawing.Point(342, 288);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 21);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "价格 ($)";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label7, "label7");
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.label7.Location = new System.Drawing.Point(741, 312);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 21);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "位置";
             // 
             // tbSector
             // 
-            this.tbSector.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.tbSector, "tbSector");
             this.tbSector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.tbSector.Location = new System.Drawing.Point(745, 336);
             this.tbSector.Name = "tbSector";
-            this.tbSector.Size = new System.Drawing.Size(100, 22);
-            this.tbSector.TabIndex = 13;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label8, "label8");
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.label8.Location = new System.Drawing.Point(741, 477);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 21);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "库存";
             // 
             // tbStock
             // 
-            this.tbStock.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.tbStock, "tbStock");
             this.tbStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.tbStock.Location = new System.Drawing.Point(745, 501);
             this.tbStock.Name = "tbStock";
-            this.tbStock.Size = new System.Drawing.Size(100, 22);
-            this.tbStock.TabIndex = 15;
             // 
             // cbPhaseout
             // 
-            this.cbPhaseout.AutoSize = true;
-            this.cbPhaseout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.cbPhaseout, "cbPhaseout");
             this.cbPhaseout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.cbPhaseout.Location = new System.Drawing.Point(745, 549);
             this.cbPhaseout.Name = "cbPhaseout";
-            this.cbPhaseout.Size = new System.Drawing.Size(63, 25);
-            this.cbPhaseout.TabIndex = 18;
-            this.cbPhaseout.Text = "淘汰";
             this.cbPhaseout.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label9, "label9");
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.label9.Location = new System.Drawing.Point(79, 621);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(158, 21);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "最后库存更新时间：";
             // 
             // lblRestockDate
             // 
-            this.lblRestockDate.AutoSize = true;
-            this.lblRestockDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblRestockDate, "lblRestockDate");
             this.lblRestockDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.lblRestockDate.Location = new System.Drawing.Point(79, 652);
             this.lblRestockDate.Name = "lblRestockDate";
-            this.lblRestockDate.Size = new System.Drawing.Size(71, 21);
-            this.lblRestockDate.TabIndex = 20;
-            this.lblRestockDate.Text = "Kowloon";
             // 
             // btnRegister
             // 
+            resources.ApplyResources(this.btnRegister, "btnRegister");
             this.btnRegister.BackColor = System.Drawing.Color.White;
             this.btnRegister.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnRegister.FlatAppearance.BorderSize = 3;
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.btnRegister.Location = new System.Drawing.Point(633, 640);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(121, 43);
-            this.btnRegister.TabIndex = 22;
-            this.btnRegister.Text = "取消";
             this.btnRegister.UseVisualStyleBackColor = false;
             // 
             // btnSubmit
             // 
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
-            this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(763, 640);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(121, 43);
-            this.btnSubmit.TabIndex = 21;
-            this.btnSubmit.Text = "提交";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label10, "label10");
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.label10.Location = new System.Drawing.Point(78, 370);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(115, 21);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "双击替换图像";
+            // 
+            // pbProduct
+            // 
+            resources.ApplyResources(this.pbProduct, "pbProduct");
+            this.pbProduct.Name = "pbProduct";
+            this.pbProduct.TabStop = false;
+            this.pbProduct.DoubleClick += new System.EventHandler(this.pbProduct_DoubleClick);
             // 
             // SalesEditStockForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(986, 724);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnSubmit);
@@ -336,11 +234,9 @@ namespace BetterLimitedProject.Sales
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SalesEditStockForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SalesEditStockForm";
             this.Load += new System.EventHandler(this.SalesEditStockForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupRestockLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

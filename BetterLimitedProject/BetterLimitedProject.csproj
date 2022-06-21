@@ -586,6 +586,9 @@
     <EmbeddedResource Include="ForgetPasswdForm.resx">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPasswdForm.zh-Hans.resx">
+      <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTestReceipt1.resx">
       <DependentUpon>frmTestReceipt1.cs</DependentUpon>
     </EmbeddedResource>
@@ -710,13 +713,22 @@
     <EmbeddedResource Include="Sales\SalesDefectForm.resx">
       <DependentUpon>SalesDefectForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesDefectForm.zh-Hans.resx">
+      <DependentUpon>SalesDefectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesDefectItemControl.resx">
       <DependentUpon>SalesDefectItemControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesEditOrderForm.resx">
       <DependentUpon>SalesEditOrderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesEditOrderForm.zh-Hans.resx">
+      <DependentUpon>SalesEditOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesEditStockForm.resx">
+      <DependentUpon>SalesEditStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesEditStockForm.zh-Hans.resx">
       <DependentUpon>SalesEditStockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesForm.zh-Hans.resx">
@@ -734,10 +746,16 @@
     <EmbeddedResource Include="Sales\SalesPayReserForm.resx">
       <DependentUpon>SalesPayReserForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesPayReserForm.zh-Hans.resx">
+      <DependentUpon>SalesPayReserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesProductControl.resx">
       <DependentUpon>SalesProductControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesReservationConfirmForm.resx">
+      <DependentUpon>SalesReservationConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesReservationConfirmForm.zh-Hans.resx">
       <DependentUpon>SalesReservationConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesReservationControl.resx">
@@ -746,10 +764,19 @@
     <EmbeddedResource Include="Sales\SalesRestockForm.resx">
       <DependentUpon>SalesRestockForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesRestockForm.zh-Hans.resx">
+      <DependentUpon>SalesRestockForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesVwOrderForm.resx">
       <DependentUpon>SalesVwOrderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesVwOrderForm.zh-Hans.resx">
+      <DependentUpon>SalesVwOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesVwStockForm.resx">
+      <DependentUpon>SalesVwStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesVwStockForm.zh-Hans.resx">
       <DependentUpon>SalesVwStockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Technical\InstallationAssignWorkerForm.resx">

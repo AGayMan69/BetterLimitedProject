@@ -30,6 +30,7 @@ namespace BetterLimitedProject.Sales
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesRestockForm));
             this.lblProduct = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -46,100 +47,90 @@ namespace BetterLimitedProject.Sales
             // 
             // lblProduct
             // 
+            resources.ApplyResources(this.lblProduct, "lblProduct");
             this.lblProduct.AutoEllipsis = true;
-            this.lblProduct.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProduct.Location = new System.Drawing.Point(334, 83);
+            this.errorProvider1.SetError(this.lblProduct, resources.GetString("lblProduct.Error"));
+            this.errorProvider1.SetIconAlignment(this.lblProduct, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblProduct.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.lblProduct, ((int)(resources.GetObject("lblProduct.IconPadding"))));
             this.lblProduct.Name = "lblProduct";
-            this.lblProduct.Size = new System.Drawing.Size(423, 50);
-            this.lblProduct.TabIndex = 0;
-            this.lblProduct.Text = "产品名称";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(337, 196);
+            resources.ApplyResources(this.label2, "label2");
+            this.errorProvider1.SetError(this.label2, resources.GetString("label2.Error"));
+            this.errorProvider1.SetIconAlignment(this.label2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label2.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label2, ((int)(resources.GetObject("label2.IconPadding"))));
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 32);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "请输入补货金额";
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.errorProvider1.SetError(this.menuStrip1, resources.GetString("menuStrip1.Error"));
+            this.errorProvider1.SetIconAlignment(this.menuStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("menuStrip1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.menuStrip1, ((int)(resources.GetObject("menuStrip1.IconPadding"))));
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(821, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider1, "errorProvider1");
             // 
             // btnSave
             // 
+            resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.BackColor = System.Drawing.Color.Black;
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorProvider1.SetError(this.btnSave, resources.GetString("btnSave.Error"));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.btnSave.Location = new System.Drawing.Point(544, 377);
+            this.errorProvider1.SetIconAlignment(this.btnSave, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnSave.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnSave, ((int)(resources.GetObject("btnSave.IconPadding"))));
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(251, 65);
-            this.btnSave.TabIndex = 10;
-            this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.White;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.errorProvider1.SetError(this.btnCancel, resources.GetString("btnCancel.Error"));
             this.btnCancel.FlatAppearance.BorderSize = 5;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(31, 377);
+            this.errorProvider1.SetIconAlignment(this.btnCancel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnCancel.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnCancel, ((int)(resources.GetObject("btnCancel.IconPadding"))));
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(206, 65);
-            this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // pbProduct
             // 
+            resources.ApplyResources(this.pbProduct, "pbProduct");
             this.pbProduct.BackColor = System.Drawing.Color.White;
-            this.pbProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbProduct.Location = new System.Drawing.Point(31, 83);
+            this.errorProvider1.SetError(this.pbProduct, resources.GetString("pbProduct.Error"));
+            this.errorProvider1.SetIconAlignment(this.pbProduct, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pbProduct.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.pbProduct, ((int)(resources.GetObject("pbProduct.IconPadding"))));
             this.pbProduct.Name = "pbProduct";
-            this.pbProduct.Size = new System.Drawing.Size(263, 241);
-            this.pbProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbProduct.TabIndex = 2;
             this.pbProduct.TabStop = false;
             // 
             // lblLastRestock
             // 
-            this.lblLastRestock.AutoSize = true;
-            this.lblLastRestock.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastRestock.Location = new System.Drawing.Point(340, 146);
+            resources.ApplyResources(this.lblLastRestock, "lblLastRestock");
+            this.errorProvider1.SetError(this.lblLastRestock, resources.GetString("lblLastRestock.Error"));
+            this.errorProvider1.SetIconAlignment(this.lblLastRestock, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblLastRestock.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.lblLastRestock, ((int)(resources.GetObject("lblLastRestock.IconPadding"))));
             this.lblLastRestock.Name = "lblLastRestock";
-            this.lblLastRestock.Size = new System.Drawing.Size(150, 21);
-            this.lblLastRestock.TabIndex = 12;
-            this.lblLastRestock.Text = "Last Restock Time: 2";
             // 
             // nudRestockAmount
             // 
-            this.nudRestockAmount.Location = new System.Drawing.Point(343, 249);
+            resources.ApplyResources(this.nudRestockAmount, "nudRestockAmount");
+            this.errorProvider1.SetError(this.nudRestockAmount, resources.GetString("nudRestockAmount.Error"));
+            this.errorProvider1.SetIconAlignment(this.nudRestockAmount, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("nudRestockAmount.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.nudRestockAmount, ((int)(resources.GetObject("nudRestockAmount.IconPadding"))));
             this.nudRestockAmount.Name = "nudRestockAmount";
-            this.nudRestockAmount.Size = new System.Drawing.Size(120, 20);
-            this.nudRestockAmount.TabIndex = 13;
             // 
             // SalesRestockForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(821, 472);
             this.Controls.Add(this.nudRestockAmount);
             this.Controls.Add(this.lblLastRestock);
             this.Controls.Add(this.btnCancel);
@@ -150,8 +141,6 @@ namespace BetterLimitedProject.Sales
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SalesRestockForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
             this.Load += new System.EventHandler(this.SalesRestockForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();

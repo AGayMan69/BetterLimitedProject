@@ -31,6 +31,7 @@ namespace BetterLimitedProject
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,11 +42,10 @@ namespace BetterLimitedProject
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.lblSwitchLang = new System.Windows.Forms.Label();
             this.passwordPic = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,13 @@ namespace BetterLimitedProject
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Name = "panel1";
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::BetterLimitedProject.Properties.Resources.logo;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -131,13 +138,6 @@ namespace BetterLimitedProject
             this.passwordPic.TabStop = false;
             this.passwordPic.Click += new System.EventHandler(this.passwordPic_Click);
             // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::BetterLimitedProject.Properties.Resources.logo;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
@@ -165,8 +165,8 @@ namespace BetterLimitedProject
             this.Name = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

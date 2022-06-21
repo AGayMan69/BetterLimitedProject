@@ -43,8 +43,12 @@ namespace BetterLimitedProject.Sales
             this.panOrderLine = new System.Windows.Forms.Panel();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tpShoppingCart = new System.Windows.Forms.TabPage();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.tpOption = new System.Windows.Forms.TabPage();
             this.btnBackCart = new System.Windows.Forms.Button();
+            this.btnSelectDeposit = new System.Windows.Forms.Button();
+            this.btnSelectDelivery = new System.Windows.Forms.Button();
+            this.btnSelectCustomer = new System.Windows.Forms.Button();
             this.tpPay = new System.Windows.Forms.TabPage();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -70,6 +74,8 @@ namespace BetterLimitedProject.Sales
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tpPrintReceipt = new System.Windows.Forms.TabPage();
+            this.btnGenerateReceipt = new System.Windows.Forms.Button();
+            this.btnViewReceipt = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tpFillInfo = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
@@ -85,12 +91,6 @@ namespace BetterLimitedProject.Sales
             this.label6 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnSelectDeposit = new System.Windows.Forms.Button();
-            this.btnSelectDelivery = new System.Windows.Forms.Button();
-            this.btnSelectCustomer = new System.Windows.Forms.Button();
-            this.btnGenerateReceipt = new System.Windows.Forms.Button();
-            this.btnViewReceipt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tpShoppingCart.SuspendLayout();
@@ -213,6 +213,15 @@ namespace BetterLimitedProject.Sales
             this.tpShoppingCart.Controls.Add(this.panel1);
             this.tpShoppingCart.Name = "tpShoppingCart";
             // 
+            // btnSearch
+            // 
+            resources.ApplyResources(this.btnSearch, "btnSearch");
+            this.btnSearch.BackColor = System.Drawing.Color.Black;
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // tpOption
             // 
             resources.ApplyResources(this.tpOption, "tpOption");
@@ -232,6 +241,36 @@ namespace BetterLimitedProject.Sales
             this.btnBackCart.Name = "btnBackCart";
             this.btnBackCart.UseVisualStyleBackColor = false;
             this.btnBackCart.Click += new System.EventHandler(this.btnBackCart_Click);
+            // 
+            // btnSelectDeposit
+            // 
+            resources.ApplyResources(this.btnSelectDeposit, "btnSelectDeposit");
+            this.btnSelectDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(52)))), ((int)(((byte)(19)))));
+            this.btnSelectDeposit.ForeColor = System.Drawing.Color.White;
+            this.btnSelectDeposit.Image = global::BetterLimitedProject.Properties.Resources.deposit;
+            this.btnSelectDeposit.Name = "btnSelectDeposit";
+            this.btnSelectDeposit.UseVisualStyleBackColor = false;
+            this.btnSelectDeposit.Click += new System.EventHandler(this.btnSelectDeposit_Click);
+            // 
+            // btnSelectDelivery
+            // 
+            resources.ApplyResources(this.btnSelectDelivery, "btnSelectDelivery");
+            this.btnSelectDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
+            this.btnSelectDelivery.ForeColor = System.Drawing.Color.White;
+            this.btnSelectDelivery.Image = global::BetterLimitedProject.Properties.Resources.delivery;
+            this.btnSelectDelivery.Name = "btnSelectDelivery";
+            this.btnSelectDelivery.UseVisualStyleBackColor = false;
+            this.btnSelectDelivery.Click += new System.EventHandler(this.btnSelectDelivery_Click);
+            // 
+            // btnSelectCustomer
+            // 
+            resources.ApplyResources(this.btnSelectCustomer, "btnSelectCustomer");
+            this.btnSelectCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
+            this.btnSelectCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnSelectCustomer.Image = global::BetterLimitedProject.Properties.Resources.customerpickup;
+            this.btnSelectCustomer.Name = "btnSelectCustomer";
+            this.btnSelectCustomer.UseVisualStyleBackColor = false;
+            this.btnSelectCustomer.Click += new System.EventHandler(this.btnSelectCustomer_Click);
             // 
             // tpPay
             // 
@@ -421,6 +460,26 @@ namespace BetterLimitedProject.Sales
             this.tpPrintReceipt.Controls.Add(this.label5);
             this.tpPrintReceipt.Name = "tpPrintReceipt";
             // 
+            // btnGenerateReceipt
+            // 
+            resources.ApplyResources(this.btnGenerateReceipt, "btnGenerateReceipt");
+            this.btnGenerateReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
+            this.btnGenerateReceipt.ForeColor = System.Drawing.Color.White;
+            this.btnGenerateReceipt.Image = global::BetterLimitedProject.Properties.Resources.icon_viewdocument;
+            this.btnGenerateReceipt.Name = "btnGenerateReceipt";
+            this.btnGenerateReceipt.UseVisualStyleBackColor = false;
+            this.btnGenerateReceipt.Click += new System.EventHandler(this.btnGenerateReceipt_Click);
+            // 
+            // btnViewReceipt
+            // 
+            resources.ApplyResources(this.btnViewReceipt, "btnViewReceipt");
+            this.btnViewReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
+            this.btnViewReceipt.ForeColor = System.Drawing.Color.White;
+            this.btnViewReceipt.Image = global::BetterLimitedProject.Properties.Resources.icon_printdocument;
+            this.btnViewReceipt.Name = "btnViewReceipt";
+            this.btnViewReceipt.UseVisualStyleBackColor = false;
+            this.btnViewReceipt.Click += new System.EventHandler(this.btnViewReceipt_Click);
+            // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
@@ -525,65 +584,6 @@ namespace BetterLimitedProject.Sales
             resources.ApplyResources(this.label4, "label4");
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Name = "label4";
-            // 
-            // btnSearch
-            // 
-            resources.ApplyResources(this.btnSearch, "btnSearch");
-            this.btnSearch.BackColor = System.Drawing.Color.Black;
-            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnSelectDeposit
-            // 
-            resources.ApplyResources(this.btnSelectDeposit, "btnSelectDeposit");
-            this.btnSelectDeposit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(52)))), ((int)(((byte)(19)))));
-            this.btnSelectDeposit.ForeColor = System.Drawing.Color.White;
-            this.btnSelectDeposit.Image = global::BetterLimitedProject.Properties.Resources.deposit;
-            this.btnSelectDeposit.Name = "btnSelectDeposit";
-            this.btnSelectDeposit.UseVisualStyleBackColor = false;
-            this.btnSelectDeposit.Click += new System.EventHandler(this.btnSelectDeposit_Click);
-            // 
-            // btnSelectDelivery
-            // 
-            resources.ApplyResources(this.btnSelectDelivery, "btnSelectDelivery");
-            this.btnSelectDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
-            this.btnSelectDelivery.ForeColor = System.Drawing.Color.White;
-            this.btnSelectDelivery.Image = global::BetterLimitedProject.Properties.Resources.delivery;
-            this.btnSelectDelivery.Name = "btnSelectDelivery";
-            this.btnSelectDelivery.UseVisualStyleBackColor = false;
-            this.btnSelectDelivery.Click += new System.EventHandler(this.btnSelectDelivery_Click);
-            // 
-            // btnSelectCustomer
-            // 
-            resources.ApplyResources(this.btnSelectCustomer, "btnSelectCustomer");
-            this.btnSelectCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
-            this.btnSelectCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnSelectCustomer.Image = global::BetterLimitedProject.Properties.Resources.customerpickup;
-            this.btnSelectCustomer.Name = "btnSelectCustomer";
-            this.btnSelectCustomer.UseVisualStyleBackColor = false;
-            this.btnSelectCustomer.Click += new System.EventHandler(this.btnSelectCustomer_Click);
-            // 
-            // btnGenerateReceipt
-            // 
-            resources.ApplyResources(this.btnGenerateReceipt, "btnGenerateReceipt");
-            this.btnGenerateReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
-            this.btnGenerateReceipt.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateReceipt.Image = global::BetterLimitedProject.Properties.Resources.icon_viewdocument;
-            this.btnGenerateReceipt.Name = "btnGenerateReceipt";
-            this.btnGenerateReceipt.UseVisualStyleBackColor = false;
-            this.btnGenerateReceipt.Click += new System.EventHandler(this.btnGenerateReceipt_Click);
-            // 
-            // btnViewReceipt
-            // 
-            resources.ApplyResources(this.btnViewReceipt, "btnViewReceipt");
-            this.btnViewReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
-            this.btnViewReceipt.ForeColor = System.Drawing.Color.White;
-            this.btnViewReceipt.Image = global::BetterLimitedProject.Properties.Resources.icon_printdocument;
-            this.btnViewReceipt.Name = "btnViewReceipt";
-            this.btnViewReceipt.UseVisualStyleBackColor = false;
-            this.btnViewReceipt.Click += new System.EventHandler(this.btnViewReceipt_Click);
             // 
             // SalesCreaOrderForm
             // 

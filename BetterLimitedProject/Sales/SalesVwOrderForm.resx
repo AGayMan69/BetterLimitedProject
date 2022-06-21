@@ -117,7 +117,267 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;cboOrderDate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 21</value>
+  </data>
+  <data name="&gt;&gt;cboType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="tbSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panSalesLoad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="tbSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Install ID</value>
+  </data>
+  <data name="&gt;&gt;cboSortOrder.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cboType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboOrderDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panSalesLoad.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="cboType.Items2" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;salesOrderControl2.Name" xml:space="preserve">
+    <value>salesOrderControl2</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>415, 15</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cboType.Name" xml:space="preserve">
+    <value>cboType</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>VwOrderForm</value>
+  </data>
+  <data name="&gt;&gt;cboSortOrder.Name" xml:space="preserve">
+    <value>cboSortOrder</value>
+  </data>
+  <data name="&gt;&gt;cboType.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>250, 0</value>
+  </data>
+  <data name="&gt;&gt;salesOrderControl1.Type" xml:space="preserve">
+    <value>BetterLimitedProject.Sales.SalesOrderControl, BetterLimitedProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cboOrderDate.Items" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="panSalesLoad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>833, 414</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="salesOrderControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 277</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cboOrderDate.Items2" xml:space="preserve">
+    <value>This Month</value>
+  </data>
+  <data name="&gt;&gt;cboOrderDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cboOrderDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 29</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <data name="cboSortOrder.Items3" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>833, 2</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 82</value>
+  </data>
+  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Delivery ID</value>
+  </data>
+  <data name="cboOrderDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 30</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cboSortOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="cboSortOrder.Items1" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="salesOrderControl2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 9</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;salesOrderControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="cboType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 30</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.Name" xml:space="preserve">
+    <value>tbSearch</value>
+  </data>
+  <data name="&gt;&gt;panSalesLoad.Name" xml:space="preserve">
+    <value>panSalesLoad</value>
+  </data>
+  <data name="salesOrderControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 21</value>
+  </data>
+  <data name="&gt;&gt;cboOrderDate.Name" xml:space="preserve">
+    <value>cboOrderDate</value>
+  </data>
+  <data name="btnSearch.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 15</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>588, 26</value>
+  </data>
+  <data name="&gt;&gt;panSalesLoad.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="cboSortOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 29</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SalesVwOrderForm</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tbSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>700, 33</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cboOrderDate.Items1" xml:space="preserve">
+    <value>This Week</value>
+  </data>
   <data name="btnSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -128,4 +388,262 @@
         yi9hdgcDYWG3XDO6wAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 21</value>
+  </data>
+  <data name="salesOrderControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnSearch.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;salesOrderControl2.Parent" xml:space="preserve">
+    <value>panSalesLoad</value>
+  </data>
+  <data name="salesOrderControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cboType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 29</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 35</value>
+  </data>
+  <data name="cboType.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="salesOrderControl1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 9</value>
+  </data>
+  <data name="cboType.Items" xml:space="preserve">
+    <value>Walkin</value>
+  </data>
+  <data name="&gt;&gt;salesOrderControl2.Type" xml:space="preserve">
+    <value>BetterLimitedProject.Sales.SalesOrderControl, BetterLimitedProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="panSalesLoad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 66</value>
+  </data>
+  <data name="panSalesLoad.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cboSortOrder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="cboSortOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>461, 32</value>
+  </data>
+  <data name="&gt;&gt;tbSearch.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="cboOrderDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;cboSortOrder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 15</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboSortOrder.Items" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cboOrderDate.Items3" xml:space="preserve">
+    <value>This Year</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="salesOrderControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>833, 114</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+  <data name="&gt;&gt;cboType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 44</value>
+  </data>
+  <data name="&gt;&gt;panSalesLoad.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 15</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="salesOrderControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 114</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 32</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="salesOrderControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="salesOrderControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;salesOrderControl1.Parent" xml:space="preserve">
+    <value>panSalesLoad</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 21</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cboType.Items1" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="tbSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 23</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>934, 593</value>
+  </data>
+  <data name="&gt;&gt;salesOrderControl1.Name" xml:space="preserve">
+    <value>salesOrderControl1</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 20pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;cboSortOrder.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>855, 28</value>
+  </data>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="cboOrderDate.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 21</value>
+  </data>
+  <data name="&gt;&gt;salesOrderControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="salesOrderControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>833, 114</value>
+  </data>
+  <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>505, 15</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Order Date</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>875, 499</value>
+  </data>
+  <data name="cboSortOrder.Items2" xml:space="preserve">
+    <value>Order ID</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>zh-Hans</value>
+  </metadata>
 </root>
