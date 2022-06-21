@@ -32,9 +32,9 @@ namespace BetterLimitedProject.Inventory
             this.lblUnAss = new System.Windows.Forms.Label();
             this.lblAss = new System.Windows.Forms.Label();
             this.lblDelID = new System.Windows.Forms.Label();
-            this.lblType = new System.Windows.Forms.Label();
             this.btnAssign = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
+            this.lblType = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUnAss
@@ -78,19 +78,6 @@ namespace BetterLimitedProject.Inventory
             this.lblDelID.TabIndex = 3;
             this.lblDelID.Text = "2200000";
             // 
-            // lblType
-            // 
-            this.lblType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
-            this.lblType.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblType.ForeColor = System.Drawing.Color.White;
-            this.lblType.Location = new System.Drawing.Point(256, 13);
-            this.lblType.Name = "lblType";
-            this.lblType.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.lblType.Size = new System.Drawing.Size(100, 35);
-            this.lblType.TabIndex = 4;
-            this.lblType.Text = "Customer";
-            this.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnAssign
             // 
             this.btnAssign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
@@ -122,6 +109,19 @@ namespace BetterLimitedProject.Inventory
             this.btnDel.UseVisualStyleBackColor = false;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
+            // lblType
+            // 
+            this.lblType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
+            this.lblType.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblType.ForeColor = System.Drawing.Color.White;
+            this.lblType.Location = new System.Drawing.Point(256, 13);
+            this.lblType.Name = "lblType";
+            this.lblType.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.lblType.Size = new System.Drawing.Size(100, 35);
+            this.lblType.TabIndex = 4;
+            this.lblType.Text = "Customer";
+            this.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // InventoryDeliveryDutyControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,8 +146,8 @@ namespace BetterLimitedProject.Inventory
         private System.Windows.Forms.Label lblUnAss;
         private System.Windows.Forms.Label lblAss;
         private System.Windows.Forms.Label lblDelID;
-        private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Button btnAssign;
         private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Label lblType;
     }
 }

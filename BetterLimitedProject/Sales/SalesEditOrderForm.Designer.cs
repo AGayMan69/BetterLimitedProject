@@ -67,7 +67,7 @@ namespace BetterLimitedProject.Sales
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(121, 43);
             this.btnSubmit.TabIndex = 18;
-            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Text = "提交";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -89,9 +89,9 @@ namespace BetterLimitedProject.Sales
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label7.Location = new System.Drawing.Point(28, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 25);
+            this.label7.Size = new System.Drawing.Size(95, 25);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Delivery Time";
+            this.label7.Text = "交货时间";
             // 
             // btnRegister
             // 
@@ -105,7 +105,7 @@ namespace BetterLimitedProject.Sales
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(121, 43);
             this.btnRegister.TabIndex = 19;
-            this.btnRegister.Text = "Cancel";
+            this.btnRegister.Text = "取消";
             this.btnRegister.UseVisualStyleBackColor = false;
             // 
             // panDelivery
@@ -135,9 +135,9 @@ namespace BetterLimitedProject.Sales
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.label8.Location = new System.Drawing.Point(80, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 17);
+            this.label8.Size = new System.Drawing.Size(73, 17);
             this.label8.TabIndex = 13;
-            this.label8.Text = "Product Name";
+            this.label8.Text = "产品名称";
             // 
             // panOrderlineLoader
             // 
@@ -159,11 +159,11 @@ namespace BetterLimitedProject.Sales
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.label6.Location = new System.Drawing.Point(22, 72);
+            this.label6.Location = new System.Drawing.Point(22, 81);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 17);
+            this.label6.Size = new System.Drawing.Size(40, 17);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Address";
+            this.label6.Text = "地址";
             // 
             // label5
             // 
@@ -172,9 +172,9 @@ namespace BetterLimitedProject.Sales
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label5.Location = new System.Drawing.Point(375, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 17);
+            this.label5.Size = new System.Drawing.Size(74, 17);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Email";
+            this.label5.Text = "电子邮件";
             // 
             // label3
             // 
@@ -183,9 +183,9 @@ namespace BetterLimitedProject.Sales
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label3.Location = new System.Drawing.Point(196, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Phone";
+            this.label3.Text = "电话";
             // 
             // label4
             // 
@@ -194,9 +194,9 @@ namespace BetterLimitedProject.Sales
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label4.Location = new System.Drawing.Point(22, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 17);
+            this.label4.Size = new System.Drawing.Size(40, 17);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Name";
+            this.label4.Text = "名称";
             // 
             // label9
             // 
@@ -205,9 +205,9 @@ namespace BetterLimitedProject.Sales
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.label9.Location = new System.Drawing.Point(581, 12);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 17);
+            this.label9.Size = new System.Drawing.Size(40, 17);
             this.label9.TabIndex = 14;
-            this.label9.Text = "Quantity";
+            this.label9.Text = "数量";
             // 
             // panCustomerInfo
             // 
@@ -268,9 +268,9 @@ namespace BetterLimitedProject.Sales
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label2.Location = new System.Drawing.Point(289, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 32);
+            this.label2.Size = new System.Drawing.Size(131, 32);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Customer Order";
+            this.label2.Text = "顾客订单";
             // 
             // lblDeliveryID
             // 

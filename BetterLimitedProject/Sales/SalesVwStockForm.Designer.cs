@@ -35,13 +35,13 @@ namespace BetterLimitedProject
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panProductLoad = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -90,9 +90,9 @@ namespace BetterLimitedProject
             this.label1.Location = new System.Drawing.Point(612, 49);
             this.label1.MaximumSize = new System.Drawing.Size(250, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 25);
+            this.label1.Size = new System.Drawing.Size(54, 25);
             this.label1.TabIndex = 33;
-            this.label1.Text = "Search";
+            this.label1.Text = "搜索";
             // 
             // panel1
             // 
@@ -109,60 +109,13 @@ namespace BetterLimitedProject
             this.panel1.Size = new System.Drawing.Size(853, 512);
             this.panel1.TabIndex = 36;
             // 
-            // label2
+            // panProductLoad
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label2.Location = new System.Drawing.Point(22, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Status";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label3.Location = new System.Drawing.Point(131, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 21);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Product ID";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label4.Location = new System.Drawing.Point(323, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 21);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Name";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label5.Location = new System.Drawing.Point(434, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 21);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Category";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label6.Location = new System.Drawing.Point(576, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 21);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Quantity";
+            this.panProductLoad.AutoScroll = true;
+            this.panProductLoad.Location = new System.Drawing.Point(26, 70);
+            this.panProductLoad.Name = "panProductLoad";
+            this.panProductLoad.Size = new System.Drawing.Size(787, 403);
+            this.panProductLoad.TabIndex = 6;
             // 
             // panel2
             // 
@@ -172,13 +125,60 @@ namespace BetterLimitedProject
             this.panel2.Size = new System.Drawing.Size(787, 2);
             this.panel2.TabIndex = 5;
             // 
-            // panProductLoad
+            // label6
             // 
-            this.panProductLoad.AutoScroll = true;
-            this.panProductLoad.Location = new System.Drawing.Point(26, 70);
-            this.panProductLoad.Name = "panProductLoad";
-            this.panProductLoad.Size = new System.Drawing.Size(787, 403);
-            this.panProductLoad.TabIndex = 6;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label6.Location = new System.Drawing.Point(576, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 21);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "数量";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label5.Location = new System.Drawing.Point(434, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 21);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "类别";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label4.Location = new System.Drawing.Point(323, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 21);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "名称";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label3.Location = new System.Drawing.Point(131, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 21);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "产品编号";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label2.Location = new System.Drawing.Point(22, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "状态";
             // 
             // btnSearch
             // 

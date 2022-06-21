@@ -345,6 +345,7 @@ namespace BetterLimitedProject.Sales
 
                     newDelivery = new delivery();
                     newDelivery.delivery_ID = newDeliveryID;
+                    newDelivery.creation_time = DateTime.Now;
                     newDelivery.approve_time = DateTime.Now;
                     newDelivery.delivery_date = dtpDeliveryTime.Value;
                     newDelivery.status = "Approved";
@@ -544,18 +545,47 @@ namespace BetterLimitedProject.Sales
             }
             else if (ordOption == OrderOption.LevelDelivery)
             {
+                // Generating new reservation id
+                string strYear = DateTime.Now.Year.ToString();
+                int year = Int32.Parse(strYear.Remove(0, 2));
+                int tempID = year * (int)Math.Pow(10, 5);
+
+                int newInstallationID;
+                var latestInstallation = (from installRec in betterDb.installations
+                                         where installRec.installation_ID >= tempID
+                                         orderby installRec.installation_ID descending
+                                         select installRec).AsNoTracking().FirstOrDefault();
+
+                if (latestInstallation == null)
+                {
+                    newInstallationID = tempID;
+                }
+                else
+                {
+                    newInstallationID = latestInstallation.installation_ID + 1;
+                }
+
+                order.installation_ID = newInstallationID;
+
                 order.customer_ID = newCustomer.user_ID;
                 order.delivery_ID = newDelivery.delivery_ID;
+
                 betterDb.customers.Add(newCustomer);
                 betterDb.buyorders.Add(order);
+
                 foreach (var line in shoppingCart)
                 {
                     betterDb.orderlines.Add(line);
                 }
 
+                installation newInstallation = new installation();
+
+                newInstallation.installation_ID = newInstallationID;
+                newInstallation.delivery_ID = newDelivery.delivery_ID;
+                newInstallation.order_ID = newOrderID;
+
                 betterDb.deliveries.Add(newDelivery);
-
-
+                betterDb.installations.Add(newInstallation);
                 betterDb.SaveChanges();
             }
             else if (ordOption == OrderOption.LevelDeposit)

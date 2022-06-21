@@ -40,7 +40,7 @@ namespace BetterLimitedProject.Inventory
             using (var betterDB = new betterlimitedEntities())
             {
 
-                // Generating new buy order id
+                // Generating new assignment id
                 string strYear = DateTime.Now.Year.ToString();
                 int year = Int32.Parse(strYear.Remove(0, 2));
                 int tempID = year * (int)Math.Pow(10, 5);

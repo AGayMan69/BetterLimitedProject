@@ -295,6 +295,7 @@
     <Compile Include="Inventory\WareHouseProductControl.Designer.cs">
       <DependentUpon>WareHouseProductControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="LanguageSwitcher.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +403,12 @@
     <Compile Include="Sales\SalesDefectForm.Designer.cs">
       <DependentUpon>SalesDefectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\SalesDefectItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesDefectItemControl.Designer.cs">
+      <DependentUpon>SalesDefectItemControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\SalesEditOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -413,12 +420,6 @@
     </Compile>
     <Compile Include="Sales\SalesEditStockForm.Designer.cs">
       <DependentUpon>SalesEditStockForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sales\SalesHomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sales\SalesHomeForm.Designer.cs">
-      <DependentUpon>SalesHomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\SalesOrderControl.cs">
       <SubType>UserControl</SubType>
@@ -450,6 +451,18 @@
     <Compile Include="Sales\SalesProductControl.Designer.cs">
       <DependentUpon>SalesProductControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\SalesReservationConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesReservationConfirmForm.Designer.cs">
+      <DependentUpon>SalesReservationConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SalesReservationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesReservationControl.Designer.cs">
+      <DependentUpon>SalesReservationControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\SalesRestockForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -470,6 +483,48 @@
     </Compile>
     <Compile Include="staff.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Technical\InstallationAssignWorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Technical\InstallationAssignWorkerForm.Designer.cs">
+      <DependentUpon>InstallationAssignWorkerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Technical\InstallationDutyAfternoonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Technical\InstallationDutyAfternoonForm.Designer.cs">
+      <DependentUpon>InstallationDutyAfternoonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Technical\InstallationDutyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Technical\InstallationDutyControl.Designer.cs">
+      <DependentUpon>InstallationDutyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Technical\InstallationDutyEveningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Technical\InstallationDutyEveningForm.Designer.cs">
+      <DependentUpon>InstallationDutyEveningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Technical\InstallationDutyMorningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Technical\InstallationDutyMorningForm.Designer.cs">
+      <DependentUpon>InstallationDutyMorningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Technical\InstallationEditInstallationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Technical\InstallationEditInstallationForm.Designer.cs">
+      <DependentUpon>InstallationEditInstallationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Technical\InstallationRowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Technical\InstallationRowControl.Designer.cs">
+      <DependentUpon>InstallationRowControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Technical\TechnicalArraInstallationForm.cs">
       <SubType>Form</SubType>
@@ -594,6 +649,21 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.zh-CHS.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.zh-Hans-HK.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.zh-Hans-MO.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.zh-Hans.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.zh.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -634,8 +704,14 @@
     <EmbeddedResource Include="Sales\SalesCreaOrderForm.resx">
       <DependentUpon>SalesCreaOrderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesCreaOrderForm.zh-Hans.resx">
+      <DependentUpon>SalesCreaOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesDefectForm.resx">
       <DependentUpon>SalesDefectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesDefectItemControl.resx">
+      <DependentUpon>SalesDefectItemControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesEditOrderForm.resx">
       <DependentUpon>SalesEditOrderForm.cs</DependentUpon>
@@ -643,8 +719,8 @@
     <EmbeddedResource Include="Sales\SalesEditStockForm.resx">
       <DependentUpon>SalesEditStockForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sales\SalesHomeForm.resx">
-      <DependentUpon>SalesHomeForm.cs</DependentUpon>
+    <EmbeddedResource Include="Sales\SalesForm.zh-Hans.resx">
+      <DependentUpon>SalesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
@@ -661,6 +737,12 @@
     <EmbeddedResource Include="Sales\SalesProductControl.resx">
       <DependentUpon>SalesProductControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesReservationConfirmForm.resx">
+      <DependentUpon>SalesReservationConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesReservationControl.resx">
+      <DependentUpon>SalesReservationControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesRestockForm.resx">
       <DependentUpon>SalesRestockForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -669,6 +751,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesVwStockForm.resx">
       <DependentUpon>SalesVwStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical\InstallationAssignWorkerForm.resx">
+      <DependentUpon>InstallationAssignWorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical\InstallationDutyAfternoonForm.resx">
+      <DependentUpon>InstallationDutyAfternoonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical\InstallationDutyControl.resx">
+      <DependentUpon>InstallationDutyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical\InstallationDutyEveningForm.resx">
+      <DependentUpon>InstallationDutyEveningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical\InstallationDutyMorningForm.resx">
+      <DependentUpon>InstallationDutyMorningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical\InstallationEditInstallationForm.resx">
+      <DependentUpon>InstallationEditInstallationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical\InstallationRowControl.resx">
+      <DependentUpon>InstallationRowControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Technical\TechnicalArraInstallationForm.resx">
       <DependentUpon>TechnicalArraInstallationForm.cs</DependentUpon>

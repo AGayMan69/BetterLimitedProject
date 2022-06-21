@@ -92,6 +92,7 @@
           <Property Name="installation_date" Type="timestamp" Precision="0" />
           <Property Name="delivery_ID" Type="int" Nullable="false" />
           <Property Name="order_ID" Type="int" Nullable="false" />
+          <Property Name="assignment_ID" Type="int" />
         </EntityType>
         <EntityType Name="installation_assignment">
           <Key>
@@ -387,6 +388,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FKInstallationIAssignmentID" />-->
         <Association Name="FKInstallationOrderID">
           <End Role="buyorder" Type="Self.buyorder" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -1196,6 +1200,7 @@
           <Property Name="installation_date" Type="DateTime" />
           <Property Name="delivery_ID" Type="Int32" Nullable="false" />
           <Property Name="order_ID" Type="Int32" Nullable="false" />
+          <Property Name="assignment_ID" Type="Int32" />
           <NavigationProperty Name="buyorder" Relationship="betterlimitedModel.FKInstallationOrderID" FromRole="installation" ToRole="buyorder" />
           <NavigationProperty Name="delivery" Relationship="betterlimitedModel.FKInstallationDeliveryID" FromRole="installation" ToRole="delivery" />
           <NavigationProperty Name="installation_assignment" Relationship="betterlimitedModel.FKInstallationAssInstallationID" FromRole="installation" ToRole="installation_assignment" />
@@ -1999,6 +2004,7 @@
           <EntitySetMapping Name="installations">
             <EntityTypeMapping TypeName="betterlimitedModel.installation">
               <MappingFragment StoreEntitySet="installation">
+                <ScalarProperty Name="assignment_ID" ColumnName="assignment_ID" />
                 <ScalarProperty Name="order_ID" ColumnName="order_ID" />
                 <ScalarProperty Name="delivery_ID" ColumnName="delivery_ID" />
                 <ScalarProperty Name="installation_date" ColumnName="installation_date" />

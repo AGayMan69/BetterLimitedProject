@@ -62,9 +62,9 @@ namespace BetterLimitedProject.Sales
             this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(442, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 44);
+            this.label1.Size = new System.Drawing.Size(98, 44);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Stock";
+            this.label1.Text = "库存";
             // 
             // label2
             // 
@@ -73,9 +73,9 @@ namespace BetterLimitedProject.Sales
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label2.Location = new System.Drawing.Point(78, 436);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 21);
+            this.label2.Size = new System.Drawing.Size(45, 21);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Store";
+            this.label2.Text = "店铺";
             // 
             // lblAddress
             // 
@@ -125,9 +125,9 @@ namespace BetterLimitedProject.Sales
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label3.Location = new System.Drawing.Point(342, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 21);
+            this.label3.Size = new System.Drawing.Size(44, 21);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Name";
+            this.label3.Text = "名称";
             // 
             // label4
             // 
@@ -136,9 +136,9 @@ namespace BetterLimitedProject.Sales
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label4.Location = new System.Drawing.Point(741, 139);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 21);
+            this.label4.Size = new System.Drawing.Size(46, 21);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Category";
+            this.label4.Text = "类别";
             // 
             // tbPrice
             // 
@@ -167,9 +167,9 @@ namespace BetterLimitedProject.Sales
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label5.Location = new System.Drawing.Point(741, 228);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 21);
+            this.label5.Size = new System.Drawing.Size(80, 21);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Restock Level";
+            this.label5.Text = "补货水平";
             // 
             // nupRestockLevel
             // 
@@ -187,9 +187,9 @@ namespace BetterLimitedProject.Sales
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label6.Location = new System.Drawing.Point(342, 288);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 21);
+            this.label6.Size = new System.Drawing.Size(69, 21);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Price ($)";
+            this.label6.Text = "价格 ($)";
             // 
             // label7
             // 
@@ -198,9 +198,9 @@ namespace BetterLimitedProject.Sales
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label7.Location = new System.Drawing.Point(741, 312);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 21);
+            this.label7.Size = new System.Drawing.Size(44, 21);
             this.label7.TabIndex = 14;
-            this.label7.Text = "Sector";
+            this.label7.Text = "位置";
             // 
             // tbSector
             // 
@@ -218,9 +218,9 @@ namespace BetterLimitedProject.Sales
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label8.Location = new System.Drawing.Point(741, 477);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 21);
+            this.label8.Size = new System.Drawing.Size(45, 21);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Stock";
+            this.label8.Text = "库存";
             // 
             // tbStock
             // 
@@ -238,9 +238,9 @@ namespace BetterLimitedProject.Sales
             this.cbPhaseout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.cbPhaseout.Location = new System.Drawing.Point(745, 549);
             this.cbPhaseout.Name = "cbPhaseout";
-            this.cbPhaseout.Size = new System.Drawing.Size(102, 25);
+            this.cbPhaseout.Size = new System.Drawing.Size(63, 25);
             this.cbPhaseout.TabIndex = 18;
-            this.cbPhaseout.Text = "PhaseOut";
+            this.cbPhaseout.Text = "淘汰";
             this.cbPhaseout.UseVisualStyleBackColor = true;
             // 
             // label9
@@ -250,9 +250,9 @@ namespace BetterLimitedProject.Sales
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label9.Location = new System.Drawing.Point(79, 621);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(192, 21);
+            this.label9.Size = new System.Drawing.Size(158, 21);
             this.label9.TabIndex = 19;
-            this.label9.Text = "Last Stock Update Time:";
+            this.label9.Text = "最后库存更新时间：";
             // 
             // lblRestockDate
             // 
@@ -277,7 +277,7 @@ namespace BetterLimitedProject.Sales
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(121, 43);
             this.btnRegister.TabIndex = 22;
-            this.btnRegister.Text = "Cancel";
+            this.btnRegister.Text = "取消";
             this.btnRegister.UseVisualStyleBackColor = false;
             // 
             // btnSubmit
@@ -291,7 +291,7 @@ namespace BetterLimitedProject.Sales
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(121, 43);
             this.btnSubmit.TabIndex = 21;
-            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Text = "提交";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
@@ -302,9 +302,9 @@ namespace BetterLimitedProject.Sales
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.label10.Location = new System.Drawing.Point(78, 370);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(245, 21);
+            this.label10.Size = new System.Drawing.Size(115, 21);
             this.label10.TabIndex = 23;
-            this.label10.Text = "Double Click To Replace Image";
+            this.label10.Text = "双击替换图像";
             // 
             // SalesEditStockForm
             // 

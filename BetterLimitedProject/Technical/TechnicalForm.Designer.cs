@@ -187,6 +187,7 @@ namespace BetterLimitedProject
             this.Controls.Add(this.panSubFormLoader);
             this.Controls.Add(this.panSide);
             this.Name = "TechnicalForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Technical";
             this.Load += new System.EventHandler(this.TechnicalForm_Load);
             this.panSide.ResumeLayout(false);

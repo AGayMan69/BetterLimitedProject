@@ -52,26 +52,18 @@ namespace BetterLimitedProject
 
         private void Sales_Load(object sender, EventArgs e)
         {
-            menulist = new[] {btnHome, btnVwOrder, btnPayReser, btnCreaOrder, btnVwStock, btnDefect} ;
-            menu_Navigate(btnHome);
+            menulist = new[] {btnVwOrder, btnPayReser, btnCreaOrder, btnVwStock, btnDefect} ;
+            menu_Navigate(btnVwOrder);
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.Image = (Image)new Bitmap(BetterLimitedProject.Properties.Resources.logout_icon, new Size(16,16));
             clearSubformLoader();
-            SalesHomeForm hmfrm = new SalesHomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            SalesVwOrderForm hmfrm = new SalesVwOrderForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(hmfrm);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Abort;
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            menu_Navigate(btnHome);
-            clearSubformLoader();
-            SalesHomeForm hmfrm = new SalesHomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            loadSubform(hmfrm);
         }
 
         private void btnVwOrder_Click(object sender, EventArgs e)

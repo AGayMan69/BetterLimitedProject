@@ -59,9 +59,9 @@ namespace BetterLimitedProject.Sales
             this.label1.Location = new System.Drawing.Point(588, 28);
             this.label1.MaximumSize = new System.Drawing.Size(250, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 32);
+            this.label1.Size = new System.Drawing.Size(73, 32);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Search";
+            this.label1.Text = "搜索";
             // 
             // cboType
             // 
@@ -177,9 +177,9 @@ namespace BetterLimitedProject.Sales
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(601, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 21);
+            this.label7.Size = new System.Drawing.Size(44, 21);
             this.label7.TabIndex = 5;
-            this.label7.Text = "Total";
+            this.label7.Text = "总额";
             // 
             // label6
             // 
@@ -187,9 +187,9 @@ namespace BetterLimitedProject.Sales
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(505, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 21);
+            this.label6.Size = new System.Drawing.Size(78, 21);
             this.label6.TabIndex = 4;
-            this.label6.Text = "InstallID";
+            this.label6.Text = "安装编号";
             // 
             // label5
             // 
@@ -197,9 +197,9 @@ namespace BetterLimitedProject.Sales
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(415, 16);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 21);
+            this.label5.Size = new System.Drawing.Size(78, 21);
             this.label5.TabIndex = 3;
-            this.label5.Text = "DeliveryID";
+            this.label5.Text = "交货编号";
             // 
             // label4
             // 
@@ -207,9 +207,9 @@ namespace BetterLimitedProject.Sales
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(240, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 21);
+            this.label4.Size = new System.Drawing.Size(78, 21);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Order Date";
+            this.label4.Text = "订购日期";
             // 
             // label3
             // 
@@ -217,9 +217,9 @@ namespace BetterLimitedProject.Sales
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(133, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 21);
+            this.label3.Size = new System.Drawing.Size(78, 21);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Customer ID";
+            this.label3.Text = "客户编号";
             // 
             // label2
             // 
@@ -227,9 +227,9 @@ namespace BetterLimitedProject.Sales
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(32, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 21);
+            this.label2.Size = new System.Drawing.Size(78, 21);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Order ID";
+            this.label2.Text = "订单编号";
             // 
             // btnSearch
             // 

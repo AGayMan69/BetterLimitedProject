@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -50,6 +51,7 @@ namespace BetterLimitedProject
         {
             LeavingTextBox(tbUsername, usernamePlaceHolder);
             LeavingTextBox(tbPassword, passwordPlaceHolder);
+
         }
 
         private void tbUsername_Enter(object sender, EventArgs e)
@@ -130,7 +132,7 @@ namespace BetterLimitedProject
                     if (password.Equals(user.password))
                     {
                         // Login Successful
-                        MessageBox.Show("Login successful!");
+                        //MessageBox.Show("Login successful!");
                         this.Hide();
                         switch (user.department_ID)
                         {
@@ -180,6 +182,20 @@ namespace BetterLimitedProject
             this.Hide();
             forgetPasswdForm.ShowDialog();
             this.Show();
+        }
+
+        private void lblSwitchLang_Click(object sender, EventArgs e)
+        {
+            LanguageSwitcher.switchLang();
+            if (LanguageSwitcher.isEng)
+            {
+                LanguageSwitcher.ChangeLanguage("en-HK");
+            }
+            else
+            {
+                LanguageSwitcher.ChangeLanguage("zh-Hans");
+            }
+
         }
     }
 } 
