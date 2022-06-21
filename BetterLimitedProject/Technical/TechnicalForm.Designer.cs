@@ -35,7 +35,6 @@ namespace BetterLimitedProject
             this.panNavHightLight = new System.Windows.Forms.Panel();
             this.btnArraInstallation = new System.Windows.Forms.Button();
             this.btnVwInstallation = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.panLogo = new System.Windows.Forms.Panel();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -70,7 +69,6 @@ namespace BetterLimitedProject
             this.panelMenu.Controls.Add(this.panNavHightLight);
             this.panelMenu.Controls.Add(this.btnArraInstallation);
             this.panelMenu.Controls.Add(this.btnVwInstallation);
-            this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(0, 140);
             this.panelMenu.Name = "panelMenu";
@@ -94,7 +92,7 @@ namespace BetterLimitedProject
             this.btnArraInstallation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArraInstallation.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArraInstallation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnArraInstallation.Location = new System.Drawing.Point(0, 130);
+            this.btnArraInstallation.Location = new System.Drawing.Point(0, 65);
             this.btnArraInstallation.Name = "btnArraInstallation";
             this.btnArraInstallation.Size = new System.Drawing.Size(314, 65);
             this.btnArraInstallation.TabIndex = 47;
@@ -112,7 +110,7 @@ namespace BetterLimitedProject
             this.btnVwInstallation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVwInstallation.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVwInstallation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnVwInstallation.Location = new System.Drawing.Point(0, 65);
+            this.btnVwInstallation.Location = new System.Drawing.Point(0, 0);
             this.btnVwInstallation.Name = "btnVwInstallation";
             this.btnVwInstallation.Size = new System.Drawing.Size(314, 65);
             this.btnVwInstallation.TabIndex = 46;
@@ -120,24 +118,6 @@ namespace BetterLimitedProject
             this.btnVwInstallation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVwInstallation.UseVisualStyleBackColor = false;
             this.btnVwInstallation.Click += new System.EventHandler(this.btnVwInstallation_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(31)))));
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(314, 65);
-            this.btnHome.TabIndex = 45;
-            this.btnHome.Text = "Home";
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panLogo
             // 
@@ -206,7 +186,6 @@ namespace BetterLimitedProject
         private System.Windows.Forms.Panel panNavHightLight;
         private System.Windows.Forms.Button btnArraInstallation;
         private System.Windows.Forms.Button btnVwInstallation;
-        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panLogo;
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Button btnLogout;

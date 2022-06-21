@@ -36,7 +36,6 @@ namespace BetterLimitedProject
             this.btnVwStock = new System.Windows.Forms.Button();
             this.btnVwOrder = new System.Windows.Forms.Button();
             this.btnDashBoard = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.panLogo = new System.Windows.Forms.Panel();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -72,7 +71,6 @@ namespace BetterLimitedProject
             this.panelMenu.Controls.Add(this.btnVwStock);
             this.panelMenu.Controls.Add(this.btnVwOrder);
             this.panelMenu.Controls.Add(this.btnDashBoard);
-            this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(0, 140);
             this.panelMenu.Name = "panelMenu";
@@ -96,7 +94,7 @@ namespace BetterLimitedProject
             this.btnVwStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVwStock.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVwStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnVwStock.Location = new System.Drawing.Point(0, 195);
+            this.btnVwStock.Location = new System.Drawing.Point(0, 130);
             this.btnVwStock.Name = "btnVwStock";
             this.btnVwStock.Size = new System.Drawing.Size(314, 65);
             this.btnVwStock.TabIndex = 50;
@@ -114,7 +112,7 @@ namespace BetterLimitedProject
             this.btnVwOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVwOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVwOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnVwOrder.Location = new System.Drawing.Point(0, 130);
+            this.btnVwOrder.Location = new System.Drawing.Point(0, 65);
             this.btnVwOrder.Name = "btnVwOrder";
             this.btnVwOrder.Size = new System.Drawing.Size(314, 65);
             this.btnVwOrder.TabIndex = 49;
@@ -132,7 +130,7 @@ namespace BetterLimitedProject
             this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashBoard.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashBoard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnDashBoard.Location = new System.Drawing.Point(0, 65);
+            this.btnDashBoard.Location = new System.Drawing.Point(0, 0);
             this.btnDashBoard.Name = "btnDashBoard";
             this.btnDashBoard.Size = new System.Drawing.Size(314, 65);
             this.btnDashBoard.TabIndex = 46;
@@ -140,24 +138,6 @@ namespace BetterLimitedProject
             this.btnDashBoard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashBoard.UseVisualStyleBackColor = false;
             this.btnDashBoard.Click += new System.EventHandler(this.btnDashBoard_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(31)))));
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(314, 65);
-            this.btnHome.TabIndex = 45;
-            this.btnHome.Text = "Home";
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panLogo
             // 
@@ -226,7 +206,6 @@ namespace BetterLimitedProject
         private System.Windows.Forms.Panel panNavHightLight;
         private System.Windows.Forms.Button btnVwOrder;
         private System.Windows.Forms.Button btnDashBoard;
-        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panLogo;
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Button btnLogout;

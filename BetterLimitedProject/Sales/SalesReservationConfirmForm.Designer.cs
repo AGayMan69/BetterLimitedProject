@@ -49,9 +49,9 @@ namespace BetterLimitedProject.Sales
             this.lblQty = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblProductName = new System.Windows.Forms.Label();
+            this.pbProductImage = new System.Windows.Forms.PictureBox();
             this.btnPay = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.pbProductImage = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProductImage)).BeginInit();
@@ -75,7 +75,6 @@ namespace BetterLimitedProject.Sales
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.tbAddress);
@@ -85,6 +84,7 @@ namespace BetterLimitedProject.Sales
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lblCustomerName);
             this.panel1.Controls.Add(this.label2);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // label8
@@ -142,7 +142,6 @@ namespace BetterLimitedProject.Sales
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.lblAmount);
             this.panel2.Controls.Add(this.label4);
@@ -150,6 +149,7 @@ namespace BetterLimitedProject.Sales
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lblProductName);
             this.panel2.Controls.Add(this.pbProductImage);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // lblAmount
@@ -182,11 +182,17 @@ namespace BetterLimitedProject.Sales
             this.lblProductName.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblProductName.Name = "lblProductName";
             // 
+            // pbProductImage
+            // 
+            resources.ApplyResources(this.pbProductImage, "pbProductImage");
+            this.pbProductImage.Name = "pbProductImage";
+            this.pbProductImage.TabStop = false;
+            // 
             // btnPay
             // 
-            resources.ApplyResources(this.btnPay, "btnPay");
             this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(203)))), ((int)(((byte)(126)))));
             this.btnPay.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnPay, "btnPay");
             this.btnPay.ForeColor = System.Drawing.Color.White;
             this.btnPay.Name = "btnPay";
             this.btnPay.UseVisualStyleBackColor = false;
@@ -194,19 +200,13 @@ namespace BetterLimitedProject.Sales
             // 
             // btnCancel
             // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatAppearance.BorderSize = 5;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // pbProductImage
-            // 
-            resources.ApplyResources(this.pbProductImage, "pbProductImage");
-            this.pbProductImage.Name = "pbProductImage";
-            this.pbProductImage.TabStop = false;
             // 
             // SalesReservationConfirmForm
             // 
