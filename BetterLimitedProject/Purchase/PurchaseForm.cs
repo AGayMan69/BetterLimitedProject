@@ -53,12 +53,12 @@ namespace BetterLimitedProject
         private void PurchaseForm_Load(object sender, EventArgs e)
         {
 
-            menulist = new[] {btnHome, btnVwPurchase, btnHdlDefect,} ;
-            menu_Navigate(btnHome);
+            menulist = new[] {btnReorder, btnGood} ;
+            menu_Navigate(btnReorder);
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.Image = (Image)new Bitmap(BetterLimitedProject.Properties.Resources.logout_icon, new Size(16,16));
             clearSubformLoader();
-            PurchaseHomeForm hmfrm = new PurchaseHomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            PurchaseVwReorder hmfrm = new PurchaseVwReorder() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(hmfrm);
         }
 
@@ -67,28 +67,20 @@ namespace BetterLimitedProject
             this.DialogResult = DialogResult.Abort;
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void btnReorder_Click(object sender, EventArgs e)
         {
-            menu_Navigate(btnHome);
+            menu_Navigate(btnReorder);
             clearSubformLoader();
-            PurchaseHomeForm hmfrm = new PurchaseHomeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            PurchaseVwReorder hmfrm = new PurchaseVwReorder() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(hmfrm);
         }
 
-        private void btnVwPurchase_Click(object sender, EventArgs e)
+        private void btnGood_Click(object sender, EventArgs e)
         {
-            menu_Navigate(btnHome);
+            menu_Navigate(btnGood);
             clearSubformLoader();
-            PurchaseVwPurchaseForm vwPurchaseForm = new PurchaseVwPurchaseForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            PurchaseVwGoodRecievedForm vwPurchaseForm = new PurchaseVwGoodRecievedForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(vwPurchaseForm);
-        }
-
-        private void btnHdlDefect_Click(object sender, EventArgs e)
-        {
-            menu_Navigate(btnHome);
-            clearSubformLoader();
-            PurchaseHdlDefectForm hdlDefectForm = new PurchaseHdlDefectForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            loadSubform(hdlDefectForm);
         }
     }
 }

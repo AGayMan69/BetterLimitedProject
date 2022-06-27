@@ -33,9 +33,8 @@ namespace BetterLimitedProject
             this.panSide = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panNavHightLight = new System.Windows.Forms.Panel();
-            this.btnHdlDefect = new System.Windows.Forms.Button();
-            this.btnVwPurchase = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.btnGood = new System.Windows.Forms.Button();
+            this.btnReorder = new System.Windows.Forms.Button();
             this.panLogo = new System.Windows.Forms.Panel();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -68,9 +67,8 @@ namespace BetterLimitedProject
             // panelMenu
             // 
             this.panelMenu.Controls.Add(this.panNavHightLight);
-            this.panelMenu.Controls.Add(this.btnHdlDefect);
-            this.panelMenu.Controls.Add(this.btnVwPurchase);
-            this.panelMenu.Controls.Add(this.btnHome);
+            this.panelMenu.Controls.Add(this.btnGood);
+            this.panelMenu.Controls.Add(this.btnReorder);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(0, 140);
             this.panelMenu.Name = "panelMenu";
@@ -85,59 +83,41 @@ namespace BetterLimitedProject
             this.panNavHightLight.Size = new System.Drawing.Size(10, 65);
             this.panNavHightLight.TabIndex = 4;
             // 
-            // btnHdlDefect
+            // btnGood
             // 
-            this.btnHdlDefect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.btnHdlDefect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHdlDefect.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHdlDefect.FlatAppearance.BorderSize = 0;
-            this.btnHdlDefect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHdlDefect.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHdlDefect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnHdlDefect.Location = new System.Drawing.Point(0, 130);
-            this.btnHdlDefect.Name = "btnHdlDefect";
-            this.btnHdlDefect.Size = new System.Drawing.Size(314, 65);
-            this.btnHdlDefect.TabIndex = 47;
-            this.btnHdlDefect.Text = "Handle Defect";
-            this.btnHdlDefect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHdlDefect.UseVisualStyleBackColor = false;
-            this.btnHdlDefect.Click += new System.EventHandler(this.btnHdlDefect_Click);
+            this.btnGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.btnGood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnGood.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGood.FlatAppearance.BorderSize = 0;
+            this.btnGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGood.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.btnGood.Location = new System.Drawing.Point(0, 65);
+            this.btnGood.Name = "btnGood";
+            this.btnGood.Size = new System.Drawing.Size(314, 65);
+            this.btnGood.TabIndex = 46;
+            this.btnGood.Text = "View Received Good";
+            this.btnGood.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGood.UseVisualStyleBackColor = false;
+            this.btnGood.Click += new System.EventHandler(this.btnGood_Click);
             // 
-            // btnVwPurchase
+            // btnReorder
             // 
-            this.btnVwPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.btnVwPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnVwPurchase.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVwPurchase.FlatAppearance.BorderSize = 0;
-            this.btnVwPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVwPurchase.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVwPurchase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnVwPurchase.Location = new System.Drawing.Point(0, 65);
-            this.btnVwPurchase.Name = "btnVwPurchase";
-            this.btnVwPurchase.Size = new System.Drawing.Size(314, 65);
-            this.btnVwPurchase.TabIndex = 46;
-            this.btnVwPurchase.Text = "View Purchase Order";
-            this.btnVwPurchase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVwPurchase.UseVisualStyleBackColor = false;
-            this.btnVwPurchase.Click += new System.EventHandler(this.btnVwPurchase_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(31)))));
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(314, 65);
-            this.btnHome.TabIndex = 45;
-            this.btnHome.Text = "Home";
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnReorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(31)))));
+            this.btnReorder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnReorder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReorder.FlatAppearance.BorderSize = 0;
+            this.btnReorder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReorder.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReorder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
+            this.btnReorder.Location = new System.Drawing.Point(0, 0);
+            this.btnReorder.Name = "btnReorder";
+            this.btnReorder.Size = new System.Drawing.Size(314, 65);
+            this.btnReorder.TabIndex = 45;
+            this.btnReorder.Text = "View Reorder";
+            this.btnReorder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReorder.UseVisualStyleBackColor = false;
+            this.btnReorder.Click += new System.EventHandler(this.btnReorder_Click);
             // 
             // panLogo
             // 
@@ -188,6 +168,7 @@ namespace BetterLimitedProject
             this.Controls.Add(this.panSubFormLoader);
             this.Controls.Add(this.panSide);
             this.Name = "PurchaseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purchase";
             this.Load += new System.EventHandler(this.PurchaseForm_Load);
             this.panSide.ResumeLayout(false);
@@ -204,9 +185,8 @@ namespace BetterLimitedProject
         private System.Windows.Forms.Panel panSide;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panNavHightLight;
-        private System.Windows.Forms.Button btnHdlDefect;
-        private System.Windows.Forms.Button btnVwPurchase;
-        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnGood;
+        private System.Windows.Forms.Button btnReorder;
         private System.Windows.Forms.Panel panLogo;
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Button btnLogout;

@@ -18,6 +18,7 @@ namespace BetterLimitedProject
         {
             this.defects = new HashSet<defect>();
             this.orderlines = new HashSet<orderline>();
+            this.purchase_orderline = new HashSet<purchase_orderline>();
             this.replenishment_product = new HashSet<replenishment_product>();
             this.reservations = new HashSet<reservation>();
             this.retail_store_product = new HashSet<retail_store_product>();
@@ -39,6 +40,8 @@ namespace BetterLimitedProject
         public virtual category category { get; set; }
         public virtual ICollection<defect> defects { get; set; }
         public virtual ICollection<orderline> orderlines { get; set; }
+        public virtual supplier supplier { get; set; }
+        public virtual ICollection<purchase_orderline> purchase_orderline { get; set; }
         public virtual ICollection<replenishment_product> replenishment_product { get; set; }
         public virtual ICollection<reservation> reservations { get; set; }
         public virtual ICollection<retail_store_product> retail_store_product { get; set; }

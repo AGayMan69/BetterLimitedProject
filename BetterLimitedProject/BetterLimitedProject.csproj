@@ -110,12 +110,6 @@
     <Compile Include="Accounting\AccountingVwOrderForm.Designer.cs">
       <DependentUpon>AccountingVwOrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\AccountingVwStockForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Accounting\AccountingVwStockForm.Designer.cs">
-      <DependentUpon>AccountingVwStockForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="buyorder.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
@@ -156,6 +150,7 @@
     <Compile Include="department.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DocumentViewer.cs" />
     <Compile Include="exampleValidator.cs" />
     <Compile Include="ForgetPasswdForm.cs">
       <SubType>Form</SubType>
@@ -168,6 +163,9 @@
     </Compile>
     <Compile Include="frmTestReceipt1.Designer.cs">
       <DependentUpon>frmTestReceipt1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="good_received.cs">
+      <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="installation.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
@@ -247,17 +245,29 @@
     <Compile Include="Inventory\InventoryProductControl.Designer.cs">
       <DependentUpon>InventoryProductControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\InventoryPurGoodForm.cs">
+    <Compile Include="Inventory\InventoryPurchaseOrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryPurchaseOrderControl.Designer.cs">
+      <DependentUpon>InventoryPurchaseOrderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\inventoryPurchaseOrderLineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\inventoryPurchaseOrderLineControl.Designer.cs">
+      <DependentUpon>inventoryPurchaseOrderLineControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\PurUpdateOrderLineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\PurUpdateOrderLineControl.Designer.cs">
+      <DependentUpon>PurUpdateOrderLineControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryPurUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory\InventoryPurGoodForm.Designer.cs">
-      <DependentUpon>InventoryPurGoodForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inventory\InventoryRestockForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventory\InventoryRestockForm.Designer.cs">
-      <DependentUpon>InventoryRestockForm.cs</DependentUpon>
+    <Compile Include="Inventory\InventoryPurUpdateForm.Designer.cs">
+      <DependentUpon>InventoryPurUpdateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\InventoryVwDeliveryForm.cs">
       <SubType>Form</SubType>
@@ -265,11 +275,11 @@
     <Compile Include="Inventory\InventoryVwDeliveryForm.Designer.cs">
       <DependentUpon>InventoryVwDeliveryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\InventoryVwGoodForm.cs">
+    <Compile Include="Inventory\InventoryVwPurchaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory\InventoryVwGoodForm.Designer.cs">
-      <DependentUpon>InventoryVwGoodForm.cs</DependentUpon>
+    <Compile Include="Inventory\InventoryVwPurchaseForm.Designer.cs">
+      <DependentUpon>InventoryVwPurchaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\InventoryVwStockForm.cs">
       <SubType>Form</SubType>
@@ -310,23 +320,32 @@
     <Compile Include="Purchase\PurchaseForm.Designer.cs">
       <DependentUpon>PurchaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchase\PurchaseHdlDefectForm.cs">
+    <Compile Include="Purchase\PurchaseGoodControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Purchase\PurchaseGoodControl.Designer.cs">
+      <DependentUpon>PurchaseGoodControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PurchaseVwReorder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purchase\PurchaseHdlDefectForm.Designer.cs">
-      <DependentUpon>PurchaseHdlDefectForm.cs</DependentUpon>
+    <Compile Include="Purchase\PurchaseVwReorder.Designer.cs">
+      <DependentUpon>PurchaseVwReorder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchase\PurchaseHomeForm.cs">
+    <Compile Include="Purchase\PurchaseVwGoodRecievedForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purchase\PurchaseHomeForm.Designer.cs">
-      <DependentUpon>PurchaseHomeForm.cs</DependentUpon>
+    <Compile Include="Purchase\PurchaseVwGoodRecievedForm.Designer.cs">
+      <DependentUpon>PurchaseVwGoodRecievedForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchase\PurchaseVwPurchaseForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Purchase\reorderControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Purchase\PurchaseVwPurchaseForm.Designer.cs">
-      <DependentUpon>PurchaseVwPurchaseForm.cs</DependentUpon>
+    <Compile Include="Purchase\reorderControl.Designer.cs">
+      <DependentUpon>reorderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchase_orderline.cs">
+      <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
@@ -472,6 +491,9 @@
     <Compile Include="staff.cs">
       <DependentUpon>dataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="supplier.cs">
+      <DependentUpon>dataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Technical\InstallationAssignWorkerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -559,9 +581,6 @@
     <EmbeddedResource Include="Accounting\AccountingVwOrderForm.resx">
       <DependentUpon>AccountingVwOrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\AccountingVwStockForm.resx">
-      <DependentUpon>AccountingVwStockForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ForgetPasswdForm.resx">
       <DependentUpon>ForgetPasswdForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -607,20 +626,26 @@
     <EmbeddedResource Include="Inventory\InventoryProductControl.resx">
       <DependentUpon>InventoryProductControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\InventoryPurGoodForm.resx">
-      <DependentUpon>InventoryPurGoodForm.cs</DependentUpon>
+    <EmbeddedResource Include="Inventory\InventoryPurchaseOrderControl.resx">
+      <DependentUpon>InventoryPurchaseOrderControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\InventoryRestockForm.resx">
-      <DependentUpon>InventoryRestockForm.cs</DependentUpon>
+    <EmbeddedResource Include="Inventory\inventoryPurchaseOrderLineControl.resx">
+      <DependentUpon>inventoryPurchaseOrderLineControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryPurUpdateForm.resx">
+      <DependentUpon>InventoryPurUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryVwDeliveryForm.resx">
       <DependentUpon>InventoryVwDeliveryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\InventoryVwGoodForm.resx">
-      <DependentUpon>InventoryVwGoodForm.cs</DependentUpon>
+    <EmbeddedResource Include="Inventory\InventoryVwPurchaseForm.resx">
+      <DependentUpon>InventoryVwPurchaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryVwStockForm.resx">
       <DependentUpon>InventoryVwStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\PurUpdateOrderLineControl.resx">
+      <DependentUpon>PurUpdateOrderLineControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\WareHouseProductControl.resx">
       <DependentUpon>WareHouseProductControl.cs</DependentUpon>
@@ -656,14 +681,17 @@
     <EmbeddedResource Include="Purchase\PurchaseForm.resx">
       <DependentUpon>PurchaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchase\PurchaseHdlDefectForm.resx">
-      <DependentUpon>PurchaseHdlDefectForm.cs</DependentUpon>
+    <EmbeddedResource Include="Purchase\PurchaseGoodControl.resx">
+      <DependentUpon>PurchaseGoodControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchase\PurchaseHomeForm.resx">
-      <DependentUpon>PurchaseHomeForm.cs</DependentUpon>
+    <EmbeddedResource Include="Purchase\PurchaseVwReorder.resx">
+      <DependentUpon>PurchaseVwReorder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchase\PurchaseVwPurchaseForm.resx">
-      <DependentUpon>PurchaseVwPurchaseForm.cs</DependentUpon>
+    <EmbeddedResource Include="Purchase\PurchaseVwGoodRecievedForm.resx">
+      <DependentUpon>PurchaseVwGoodRecievedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\reorderControl.resx">
+      <DependentUpon>reorderControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>

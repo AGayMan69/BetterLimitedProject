@@ -63,10 +63,10 @@ namespace BetterLimitedProject.Sales
                 return;
             }
 
-            MessageBox.Show($"Name: {cboProduct.SelectedIndex}");
-            MessageBox.Show($"Description: {tbDescription.Text}");
-            MessageBox.Show($"Qty: {nudQty.Value}");
-            MessageBox.Show($"Tier: {cboTier.SelectedIndex +1}");
+            //MessageBox.Show($"Name: {cboProduct.SelectedIndex}");
+            //MessageBox.Show($"Description: {tbDescription.Text}");
+            //MessageBox.Show($"Qty: {nudQty.Value}");
+            //MessageBox.Show($"Tier: {cboTier.SelectedIndex +1}");
             using (var betterDB = new betterlimitedEntities())
             {
                 // Generating new delivery id
