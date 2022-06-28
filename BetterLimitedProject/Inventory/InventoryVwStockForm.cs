@@ -216,13 +216,13 @@ namespace BetterLimitedProject.Inventory
         internal void editStock(int productID)
         {
             MessageBox.Show("Editing Warehouse stock");
-            //SalesEditStockForm editStock = new SalesEditStockForm();
-            //editStock.productID = productID;
-            //var dialog = editStock.ShowDialog();
-            //if (dialog == DialogResult.OK)
-            //{
-            //    loadStock();
-            //}
+            InventoryEditStockForm editStock = new InventoryEditStockForm();
+            editStock.productID = productID;
+            var dialog = editStock.ShowDialog();
+            if (dialog == DialogResult.OK)
+            {
+                loadStock();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)

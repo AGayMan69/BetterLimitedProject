@@ -188,6 +188,7 @@ namespace BetterLimitedProject
             this.Controls.Add(this.panSubFormLoader);
             this.Controls.Add(this.panSide);
             this.Name = "AccountingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounting";
             this.Load += new System.EventHandler(this.AccountingForm_Load);
             this.panSide.ResumeLayout(false);
