@@ -53,7 +53,7 @@ namespace BetterLimitedProject
         private void AccountingForm_Load(object sender, EventArgs e)
         {
 
-            menulist = new[] {btnVwOrder, btnVwStock, btnDashBoard} ;
+            menulist = new[] {btnVwOrder, btnVwGood, btnDashBoard} ;
             menu_Navigate(btnVwOrder);
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.Image = (Image)new Bitmap(BetterLimitedProject.Properties.Resources.logout_icon, new Size(16,16));
@@ -84,12 +84,12 @@ namespace BetterLimitedProject
             loadSubform(vwOrderForm);
         }
 
-        private void btnVwStock_Click(object sender, EventArgs e)
+        private void btnVwGood_Click(object sender, EventArgs e)
         {
-            menu_Navigate(btnVwStock);
+            menu_Navigate(btnVwGood);
             clearSubformLoader();
-            AccountingVwStockForm vwStockForm = new AccountingVwStockForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            loadSubform(vwStockForm);
+            Purchase.PurchaseVwGoodRecievedForm vwGoodForm = new Purchase.PurchaseVwGoodRecievedForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            loadSubform(vwGoodForm);
         }
     }
 }

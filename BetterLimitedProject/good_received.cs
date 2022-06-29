@@ -12,18 +12,10 @@ namespace BetterLimitedProject
     using System;
     using System.Collections.Generic;
     
-    public partial class reorder
+    public partial class good_received
     {
-        public reorder()
-        {
-            this.purchaseorders = new HashSet<purchaseorder>();
-        }
-    
-        public int reorder_ID { get; set; }
-        public int warehouse_ID { get; set; }
-        public System.DateTime creation_time { get; set; }
-    
-        public virtual ICollection<purchaseorder> purchaseorders { get; set; }
-        public virtual warehouse warehouse { get; set; }
+        public int received_id { get; set; }
+        public int purchase_order_id { get; set; }
+        public System.DateTime received_time { get; set; }
     }
 }

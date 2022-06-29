@@ -83,6 +83,14 @@
           <Property Name="department_name" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="department_head" Type="int" />
         </EntityType>
+        <EntityType Name="good_received">
+          <Key>
+            <PropertyRef Name="received_id" />
+          </Key>
+          <Property Name="received_id" Type="int" Nullable="false" />
+          <Property Name="purchase_order_id" Type="int" Nullable="false" />
+          <Property Name="received_time" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
         <EntityType Name="installation">
           <Key>
             <PropertyRef Name="installation_ID" />
@@ -138,25 +146,34 @@
           <Property Name="dimension" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="product_image" Type="longblob" />
         </EntityType>
+        <EntityType Name="purchase_orderline">
+          <Key>
+            <PropertyRef Name="purchase_order_id" />
+            <PropertyRef Name="product_id" />
+          </Key>
+          <Property Name="purchase_order_id" Type="int" Nullable="false" />
+          <Property Name="product_id" Type="int" Nullable="false" />
+          <Property Name="qty" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="purchaseorder">
           <Key>
             <PropertyRef Name="purchase_order_ID" />
           </Key>
-          <Property Name="purchase_order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="sent_by" Type="int" Nullable="false" />
+          <Property Name="purchase_order_ID" Type="int" Nullable="false" />
           <Property Name="supplier_ID" Type="int" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="total" Type="float" Nullable="false" />
-          <Property Name="invoice_link" Type="varchar" MaxLength="255" />
+          <Property Name="reorder_ID" Type="int" Nullable="false" />
+          <Property Name="creation_time" Type="timestamp" Precision="0" Nullable="false" />
+          <Property Name="approve_time" Type="timestamp" Precision="0" />
         </EntityType>
         <EntityType Name="reorder">
           <Key>
             <PropertyRef Name="reorder_ID" />
           </Key>
-          <Property Name="reorder_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="sender_ID" Type="int" Nullable="false" />
-          <Property Name="receiver_ID" Type="int" Nullable="false" />
+          <Property Name="reorder_ID" Type="int" Nullable="false" />
           <Property Name="warehouse_ID" Type="int" Nullable="false" />
-          <Property Name="purchase_order_ID" Type="int" Nullable="false" />
+          <Property Name="creation_time" Type="timestamp" Precision="0" Nullable="false" />
         </EntityType>
         <EntityType Name="replenishment">
           <Key>
@@ -232,6 +249,13 @@
           <Property Name="password" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="hire_date" Type="date" Nullable="false" />
           <Property Name="DOB" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="supplier">
+          <Key>
+            <PropertyRef Name="supplier_id" />
+          </Key>
+          <Property Name="supplier_id" Type="int" Nullable="false" />
+          <Property Name="supplier_name" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <EntityType Name="warehouse">
           <Key>
@@ -461,17 +485,71 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKPurchaseOr784407">
-          <End Role="staff" Type="Self.staff" Multiplicity="1">
+        <Association Name="FKproductSupplierID">
+          <End Role="supplier" Type="Self.supplier" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="product" Type="Self.product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supplier">
+              <PropertyRef Name="supplier_id" />
+            </Principal>
+            <Dependent Role="product">
+              <PropertyRef Name="supplier_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPurchaseOLproductID">
+          <End Role="product" Type="Self.product" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="purchase_orderline" Type="Self.purchase_orderline" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_ID" />
+            </Principal>
+            <Dependent Role="purchase_orderline">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPurchaseOLpurchaseID">
+          <End Role="purchaseorder" Type="Self.purchaseorder" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="purchase_orderline" Type="Self.purchase_orderline" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="purchaseorder">
+              <PropertyRef Name="purchase_order_ID" />
+            </Principal>
+            <Dependent Role="purchase_orderline">
+              <PropertyRef Name="purchase_order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKpurchaseReOrderID">
+          <End Role="reorder" Type="Self.reorder" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="purchaseorder" Type="Self.purchaseorder" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
+            <Principal Role="reorder">
+              <PropertyRef Name="reorder_ID" />
             </Principal>
             <Dependent Role="purchaseorder">
-              <PropertyRef Name="sent_by" />
+              <PropertyRef Name="reorder_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKpurchaseSupplierID">
+          <End Role="supplier" Type="Self.supplier" Multiplicity="1" />
+          <End Role="purchaseorder" Type="Self.purchaseorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supplier">
+              <PropertyRef Name="supplier_id" />
+            </Principal>
+            <Dependent Role="purchaseorder">
+              <PropertyRef Name="supplier_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -486,48 +564,6 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
             </Principal>
             <Dependent Role="reorder">
               <PropertyRef Name="warehouse_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReorder355225">
-          <End Role="staff" Type="Self.staff" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="reorder">
-              <PropertyRef Name="receiver_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReorder820023">
-          <End Role="purchaseorder" Type="Self.purchaseorder" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="purchaseorder">
-              <PropertyRef Name="purchase_order_ID" />
-            </Principal>
-            <Dependent Role="reorder">
-              <PropertyRef Name="purchase_order_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReorder868636">
-          <End Role="staff" Type="Self.staff" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="reorder" Type="Self.reorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="reorder">
-              <PropertyRef Name="sender_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -764,11 +800,13 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
           <EntitySet Name="delivery_assignment" EntityType="Self.delivery_assignment" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="delivery_type" EntityType="Self.delivery_type" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="department" EntityType="Self.department" Schema="betterlimited" store:Type="Tables" />
+          <EntitySet Name="good_received" EntityType="Self.good_received" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="installation" EntityType="Self.installation" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="installation_assignment" EntityType="Self.installation_assignment" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="orderline" EntityType="Self.orderline" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="position" EntityType="Self.position" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="product" EntityType="Self.product" Schema="betterlimited" store:Type="Tables" />
+          <EntitySet Name="purchase_orderline" EntityType="Self.purchase_orderline" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="purchaseorder" EntityType="Self.purchaseorder" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="reorder" EntityType="Self.reorder" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="replenishment" EntityType="Self.replenishment" Schema="betterlimited" store:Type="Tables" />
@@ -778,6 +816,7 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
           <EntitySet Name="retail_store" EntityType="Self.retail_store" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="retail_store_product" EntityType="Self.retail_store_product" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="staff" EntityType="Self.staff" Schema="betterlimited" store:Type="Tables" />
+          <EntitySet Name="supplier" EntityType="Self.supplier" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="warehouse" EntityType="Self.warehouse" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="warehouse_product" EntityType="Self.warehouse_product" Schema="betterlimited" store:Type="Tables" />
           <EntitySet Name="worker" EntityType="Self.worker" Schema="betterlimited" store:Type="Tables" />
@@ -837,24 +876,28 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
             <End Role="category" EntitySet="category" />
             <End Role="product" EntitySet="product" />
           </AssociationSet>
-          <AssociationSet Name="FKPurchaseOr784407" Association="Self.FKPurchaseOr784407">
-            <End Role="staff" EntitySet="staff" />
+          <AssociationSet Name="FKproductSupplierID" Association="Self.FKproductSupplierID">
+            <End Role="supplier" EntitySet="supplier" />
+            <End Role="product" EntitySet="product" />
+          </AssociationSet>
+          <AssociationSet Name="FKPurchaseOLproductID" Association="Self.FKPurchaseOLproductID">
+            <End Role="product" EntitySet="product" />
+            <End Role="purchase_orderline" EntitySet="purchase_orderline" />
+          </AssociationSet>
+          <AssociationSet Name="FKPurchaseOLpurchaseID" Association="Self.FKPurchaseOLpurchaseID">
+            <End Role="purchaseorder" EntitySet="purchaseorder" />
+            <End Role="purchase_orderline" EntitySet="purchase_orderline" />
+          </AssociationSet>
+          <AssociationSet Name="FKpurchaseReOrderID" Association="Self.FKpurchaseReOrderID">
+            <End Role="reorder" EntitySet="reorder" />
+            <End Role="purchaseorder" EntitySet="purchaseorder" />
+          </AssociationSet>
+          <AssociationSet Name="FKpurchaseSupplierID" Association="Self.FKpurchaseSupplierID">
+            <End Role="supplier" EntitySet="supplier" />
             <End Role="purchaseorder" EntitySet="purchaseorder" />
           </AssociationSet>
           <AssociationSet Name="FKReorder24757" Association="Self.FKReorder24757">
             <End Role="warehouse" EntitySet="warehouse" />
-            <End Role="reorder" EntitySet="reorder" />
-          </AssociationSet>
-          <AssociationSet Name="FKReorder355225" Association="Self.FKReorder355225">
-            <End Role="staff" EntitySet="staff" />
-            <End Role="reorder" EntitySet="reorder" />
-          </AssociationSet>
-          <AssociationSet Name="FKReorder820023" Association="Self.FKReorder820023">
-            <End Role="purchaseorder" EntitySet="purchaseorder" />
-            <End Role="reorder" EntitySet="reorder" />
-          </AssociationSet>
-          <AssociationSet Name="FKReorder868636" Association="Self.FKReorder868636">
-            <End Role="staff" EntitySet="staff" />
             <End Role="reorder" EntitySet="reorder" />
           </AssociationSet>
           <AssociationSet Name="FKReplenishm241066" Association="Self.FKReplenishm241066">
@@ -935,11 +978,13 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
           <EntitySet Name="delivery_assignment" EntityType="betterlimitedModel.delivery_assignment" />
           <EntitySet Name="delivery_type" EntityType="betterlimitedModel.delivery_type" />
           <EntitySet Name="departments" EntityType="betterlimitedModel.department" />
+          <EntitySet Name="good_received" EntityType="betterlimitedModel.good_received" />
           <EntitySet Name="installations" EntityType="betterlimitedModel.installation" />
           <EntitySet Name="installation_assignment" EntityType="betterlimitedModel.installation_assignment" />
           <EntitySet Name="orderlines" EntityType="betterlimitedModel.orderline" />
           <EntitySet Name="positions" EntityType="betterlimitedModel.position" />
           <EntitySet Name="products" EntityType="betterlimitedModel.product" />
+          <EntitySet Name="purchase_orderline" EntityType="betterlimitedModel.purchase_orderline" />
           <EntitySet Name="purchaseorders" EntityType="betterlimitedModel.purchaseorder" />
           <EntitySet Name="reorders" EntityType="betterlimitedModel.reorder" />
           <EntitySet Name="replenishments" EntityType="betterlimitedModel.replenishment" />
@@ -949,6 +994,7 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
           <EntitySet Name="retail_store" EntityType="betterlimitedModel.retail_store" />
           <EntitySet Name="retail_store_product" EntityType="betterlimitedModel.retail_store_product" />
           <EntitySet Name="staffs" EntityType="betterlimitedModel.staff" />
+          <EntitySet Name="suppliers" EntityType="betterlimitedModel.supplier" />
           <EntitySet Name="warehouses" EntityType="betterlimitedModel.warehouse" />
           <EntitySet Name="warehouse_product" EntityType="betterlimitedModel.warehouse_product" />
           <EntitySet Name="workers" EntityType="betterlimitedModel.worker" />
@@ -1024,6 +1070,14 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
             <End Role="position" EntitySet="positions" />
             <End Role="staff" EntitySet="staffs" />
           </AssociationSet>
+          <AssociationSet Name="FKproductSupplierID" Association="betterlimitedModel.FKproductSupplierID">
+            <End Role="supplier" EntitySet="suppliers" />
+            <End Role="product" EntitySet="products" />
+          </AssociationSet>
+          <AssociationSet Name="FKPurchaseOLproductID" Association="betterlimitedModel.FKPurchaseOLproductID">
+            <End Role="product" EntitySet="products" />
+            <End Role="purchase_orderline" EntitySet="purchase_orderline" />
+          </AssociationSet>
           <AssociationSet Name="FKReplenishm931267" Association="betterlimitedModel.FKReplenishm931267">
             <End Role="product" EntitySet="products" />
             <End Role="replenishment_product" EntitySet="replenishment_product" />
@@ -1040,24 +1094,20 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
             <End Role="product" EntitySet="products" />
             <End Role="warehouse_product" EntitySet="warehouse_product" />
           </AssociationSet>
-          <AssociationSet Name="FKPurchaseOr784407" Association="betterlimitedModel.FKPurchaseOr784407">
-            <End Role="staff" EntitySet="staffs" />
+          <AssociationSet Name="FKPurchaseOLpurchaseID" Association="betterlimitedModel.FKPurchaseOLpurchaseID">
+            <End Role="purchaseorder" EntitySet="purchaseorders" />
+            <End Role="purchase_orderline" EntitySet="purchase_orderline" />
+          </AssociationSet>
+          <AssociationSet Name="FKpurchaseReOrderID" Association="betterlimitedModel.FKpurchaseReOrderID">
+            <End Role="reorder" EntitySet="reorders" />
             <End Role="purchaseorder" EntitySet="purchaseorders" />
           </AssociationSet>
-          <AssociationSet Name="FKReorder820023" Association="betterlimitedModel.FKReorder820023">
+          <AssociationSet Name="FKpurchaseSupplierID" Association="betterlimitedModel.FKpurchaseSupplierID">
+            <End Role="supplier" EntitySet="suppliers" />
             <End Role="purchaseorder" EntitySet="purchaseorders" />
-            <End Role="reorder" EntitySet="reorders" />
           </AssociationSet>
           <AssociationSet Name="FKReorder24757" Association="betterlimitedModel.FKReorder24757">
             <End Role="warehouse" EntitySet="warehouses" />
-            <End Role="reorder" EntitySet="reorders" />
-          </AssociationSet>
-          <AssociationSet Name="FKReorder355225" Association="betterlimitedModel.FKReorder355225">
-            <End Role="staff" EntitySet="staffs" />
-            <End Role="reorder" EntitySet="reorders" />
-          </AssociationSet>
-          <AssociationSet Name="FKReorder868636" Association="betterlimitedModel.FKReorder868636">
-            <End Role="staff" EntitySet="staffs" />
             <End Role="reorder" EntitySet="reorders" />
           </AssociationSet>
           <AssociationSet Name="FKReplenishm241066" Association="betterlimitedModel.FKReplenishm241066">
@@ -1191,6 +1241,14 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
           <NavigationProperty Name="staffs" Relationship="betterlimitedModel.FKdepartmentID" FromRole="department" ToRole="staff" />
           <NavigationProperty Name="positions" Relationship="betterlimitedModel.position_department_department_ID_fk" FromRole="department" ToRole="position" />
         </EntityType>
+        <EntityType Name="good_received">
+          <Key>
+            <PropertyRef Name="received_id" />
+          </Key>
+          <Property Name="received_id" Type="Int32" Nullable="false" />
+          <Property Name="purchase_order_id" Type="Int32" Nullable="false" />
+          <Property Name="received_time" Type="DateTime" Nullable="false" />
+        </EntityType>
         <EntityType Name="installation">
           <Key>
             <PropertyRef Name="installation_ID" />
@@ -1256,36 +1314,48 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
           <NavigationProperty Name="category" Relationship="betterlimitedModel.FKproductCategoryID" FromRole="product" ToRole="category" />
           <NavigationProperty Name="defects" Relationship="betterlimitedModel.FKDefect544799" FromRole="product" ToRole="defect" />
           <NavigationProperty Name="orderlines" Relationship="betterlimitedModel.FKOrderLine592221" FromRole="product" ToRole="orderline" />
+          <NavigationProperty Name="supplier" Relationship="betterlimitedModel.FKproductSupplierID" FromRole="product" ToRole="supplier" />
+          <NavigationProperty Name="purchase_orderline" Relationship="betterlimitedModel.FKPurchaseOLproductID" FromRole="product" ToRole="purchase_orderline" />
           <NavigationProperty Name="replenishment_product" Relationship="betterlimitedModel.FKReplenishm931267" FromRole="product" ToRole="replenishment_product" />
           <NavigationProperty Name="reservations" Relationship="betterlimitedModel.FKReservatio826341" FromRole="product" ToRole="reservation" />
           <NavigationProperty Name="retail_store_product" Relationship="betterlimitedModel.FKRetail_StoPProductID" FromRole="product" ToRole="retail_store_product" />
           <NavigationProperty Name="warehouse_product" Relationship="betterlimitedModel.FKWarehouse_549814" FromRole="product" ToRole="warehouse_product" />
         </EntityType>
+        <EntityType Name="purchase_orderline">
+          <Key>
+            <PropertyRef Name="purchase_order_id" />
+            <PropertyRef Name="product_id" />
+          </Key>
+          <Property Name="purchase_order_id" Type="Int32" Nullable="false" />
+          <Property Name="product_id" Type="Int32" Nullable="false" />
+          <Property Name="qty" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="product" Relationship="betterlimitedModel.FKPurchaseOLproductID" FromRole="purchase_orderline" ToRole="product" />
+          <NavigationProperty Name="purchaseorder" Relationship="betterlimitedModel.FKPurchaseOLpurchaseID" FromRole="purchase_orderline" ToRole="purchaseorder" />
+        </EntityType>
         <EntityType Name="purchaseorder">
           <Key>
             <PropertyRef Name="purchase_order_ID" />
           </Key>
-          <Property Name="purchase_order_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="sent_by" Type="Int32" Nullable="false" />
+          <Property Name="purchase_order_ID" Type="Int32" Nullable="false" />
           <Property Name="supplier_ID" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="total" Type="Single" Nullable="false" />
-          <Property Name="invoice_link" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKPurchaseOr784407" FromRole="purchaseorder" ToRole="staff" />
-          <NavigationProperty Name="reorders" Relationship="betterlimitedModel.FKReorder820023" FromRole="purchaseorder" ToRole="reorder" />
+          <Property Name="reorder_ID" Type="Int32" Nullable="false" />
+          <Property Name="creation_time" Type="DateTime" Nullable="false" />
+          <Property Name="approve_time" Type="DateTime" />
+          <NavigationProperty Name="purchase_orderline" Relationship="betterlimitedModel.FKPurchaseOLpurchaseID" FromRole="purchaseorder" ToRole="purchase_orderline" />
+          <NavigationProperty Name="reorder" Relationship="betterlimitedModel.FKpurchaseReOrderID" FromRole="purchaseorder" ToRole="reorder" />
+          <NavigationProperty Name="supplier" Relationship="betterlimitedModel.FKpurchaseSupplierID" FromRole="purchaseorder" ToRole="supplier" />
         </EntityType>
         <EntityType Name="reorder">
           <Key>
             <PropertyRef Name="reorder_ID" />
           </Key>
-          <Property Name="reorder_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="sender_ID" Type="Int32" Nullable="false" />
-          <Property Name="receiver_ID" Type="Int32" Nullable="false" />
+          <Property Name="reorder_ID" Type="Int32" Nullable="false" />
           <Property Name="warehouse_ID" Type="Int32" Nullable="false" />
-          <Property Name="purchase_order_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="purchaseorder" Relationship="betterlimitedModel.FKReorder820023" FromRole="reorder" ToRole="purchaseorder" />
+          <Property Name="creation_time" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="purchaseorders" Relationship="betterlimitedModel.FKpurchaseReOrderID" FromRole="reorder" ToRole="purchaseorder" />
           <NavigationProperty Name="warehouse" Relationship="betterlimitedModel.FKReorder24757" FromRole="reorder" ToRole="warehouse" />
-          <NavigationProperty Name="staff" Relationship="betterlimitedModel.FKReorder355225" FromRole="reorder" ToRole="staff" />
-          <NavigationProperty Name="staff1" Relationship="betterlimitedModel.FKReorder868636" FromRole="reorder" ToRole="staff" />
         </EntityType>
         <EntityType Name="replenishment">
           <Key>
@@ -1377,13 +1447,19 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
           <Property Name="DOB" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="department" Relationship="betterlimitedModel.FKdepartmentID" FromRole="staff" ToRole="department" />
           <NavigationProperty Name="position" Relationship="betterlimitedModel.FKStaff255574" FromRole="staff" ToRole="position" />
-          <NavigationProperty Name="purchaseorders" Relationship="betterlimitedModel.FKPurchaseOr784407" FromRole="staff" ToRole="purchaseorder" />
-          <NavigationProperty Name="reorders" Relationship="betterlimitedModel.FKReorder355225" FromRole="staff" ToRole="reorder" />
-          <NavigationProperty Name="reorders1" Relationship="betterlimitedModel.FKReorder868636" FromRole="staff" ToRole="reorder" />
           <NavigationProperty Name="replenishments" Relationship="betterlimitedModel.FKReplenishm316808" FromRole="staff" ToRole="replenishment" />
           <NavigationProperty Name="resetpassword_request" Relationship="betterlimitedModel.FKstaffID" FromRole="staff" ToRole="resetpassword_request" />
           <NavigationProperty Name="retail_store" Relationship="betterlimitedModel.FKRetail_Sto624655" FromRole="staff" ToRole="retail_store" />
           <NavigationProperty Name="warehouses" Relationship="betterlimitedModel.FKWarehouse741635" FromRole="staff" ToRole="warehouse" />
+        </EntityType>
+        <EntityType Name="supplier">
+          <Key>
+            <PropertyRef Name="supplier_id" />
+          </Key>
+          <Property Name="supplier_id" Type="Int32" Nullable="false" />
+          <Property Name="supplier_name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="products" Relationship="betterlimitedModel.FKproductSupplierID" FromRole="supplier" ToRole="product" />
+          <NavigationProperty Name="purchaseorders" Relationship="betterlimitedModel.FKpurchaseSupplierID" FromRole="supplier" ToRole="purchaseorder" />
         </EntityType>
         <EntityType Name="warehouse">
           <Key>
@@ -1672,6 +1748,34 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FKproductSupplierID">
+          <End Type="betterlimitedModel.supplier" Role="supplier" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="betterlimitedModel.product" Role="product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supplier">
+              <PropertyRef Name="supplier_id" />
+            </Principal>
+            <Dependent Role="product">
+              <PropertyRef Name="supplier_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPurchaseOLproductID">
+          <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="betterlimitedModel.purchase_orderline" Role="purchase_orderline" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_ID" />
+            </Principal>
+            <Dependent Role="purchase_orderline">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FKReplenishm931267">
           <End Type="betterlimitedModel.product" Role="product" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -1728,31 +1832,43 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FKPurchaseOr784407">
-          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="betterlimitedModel.purchaseorder" Role="purchaseorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="purchaseorder">
-              <PropertyRef Name="sent_by" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReorder820023">
+        <Association Name="FKPurchaseOLpurchaseID">
           <End Type="betterlimitedModel.purchaseorder" Role="purchaseorder" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
+          <End Type="betterlimitedModel.purchase_orderline" Role="purchase_orderline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="purchaseorder">
               <PropertyRef Name="purchase_order_ID" />
             </Principal>
-            <Dependent Role="reorder">
-              <PropertyRef Name="purchase_order_ID" />
+            <Dependent Role="purchase_orderline">
+              <PropertyRef Name="purchase_order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKpurchaseReOrderID">
+          <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="betterlimitedModel.purchaseorder" Role="purchaseorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="reorder">
+              <PropertyRef Name="reorder_ID" />
+            </Principal>
+            <Dependent Role="purchaseorder">
+              <PropertyRef Name="reorder_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKpurchaseSupplierID">
+          <End Type="betterlimitedModel.supplier" Role="supplier" Multiplicity="1" />
+          <End Type="betterlimitedModel.purchaseorder" Role="purchaseorder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supplier">
+              <PropertyRef Name="supplier_id" />
+            </Principal>
+            <Dependent Role="purchaseorder">
+              <PropertyRef Name="supplier_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1767,34 +1883,6 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
             </Principal>
             <Dependent Role="reorder">
               <PropertyRef Name="warehouse_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReorder355225">
-          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="reorder">
-              <PropertyRef Name="receiver_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FKReorder868636">
-          <End Type="betterlimitedModel.staff" Role="staff" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="betterlimitedModel.reorder" Role="reorder" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="staff">
-              <PropertyRef Name="staff_ID" />
-            </Principal>
-            <Dependent Role="reorder">
-              <PropertyRef Name="sender_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2001,6 +2089,15 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="good_received">
+            <EntityTypeMapping TypeName="betterlimitedModel.good_received">
+              <MappingFragment StoreEntitySet="good_received">
+                <ScalarProperty Name="received_time" ColumnName="received_time" />
+                <ScalarProperty Name="purchase_order_id" ColumnName="purchase_order_id" />
+                <ScalarProperty Name="received_id" ColumnName="received_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="installations">
             <EntityTypeMapping TypeName="betterlimitedModel.installation">
               <MappingFragment StoreEntitySet="installation">
@@ -2059,13 +2156,24 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="purchase_orderline">
+            <EntityTypeMapping TypeName="betterlimitedModel.purchase_orderline">
+              <MappingFragment StoreEntitySet="purchase_orderline">
+                <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="purchase_order_id" ColumnName="purchase_order_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="purchaseorders">
             <EntityTypeMapping TypeName="betterlimitedModel.purchaseorder">
               <MappingFragment StoreEntitySet="purchaseorder">
-                <ScalarProperty Name="invoice_link" ColumnName="invoice_link" />
+                <ScalarProperty Name="approve_time" ColumnName="approve_time" />
+                <ScalarProperty Name="creation_time" ColumnName="creation_time" />
+                <ScalarProperty Name="reorder_ID" ColumnName="reorder_ID" />
                 <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="supplier_ID" ColumnName="supplier_ID" />
-                <ScalarProperty Name="sent_by" ColumnName="sent_by" />
                 <ScalarProperty Name="purchase_order_ID" ColumnName="purchase_order_ID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -2073,10 +2181,8 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
           <EntitySetMapping Name="reorders">
             <EntityTypeMapping TypeName="betterlimitedModel.reorder">
               <MappingFragment StoreEntitySet="reorder">
-                <ScalarProperty Name="purchase_order_ID" ColumnName="purchase_order_ID" />
+                <ScalarProperty Name="creation_time" ColumnName="creation_time" />
                 <ScalarProperty Name="warehouse_ID" ColumnName="warehouse_ID" />
-                <ScalarProperty Name="receiver_ID" ColumnName="receiver_ID" />
-                <ScalarProperty Name="sender_ID" ColumnName="sender_ID" />
                 <ScalarProperty Name="reorder_ID" ColumnName="reorder_ID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -2158,6 +2264,14 @@ warning 6035: The relationship 'FKInstallationIAssignmentID' has columns that ar
                 <ScalarProperty Name="phone_no" ColumnName="phone_no" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="staff_ID" ColumnName="staff_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="suppliers">
+            <EntityTypeMapping TypeName="betterlimitedModel.supplier">
+              <MappingFragment StoreEntitySet="supplier">
+                <ScalarProperty Name="supplier_name" ColumnName="supplier_name" />
+                <ScalarProperty Name="supplier_id" ColumnName="supplier_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

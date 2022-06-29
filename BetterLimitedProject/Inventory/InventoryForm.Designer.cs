@@ -32,9 +32,7 @@ namespace BetterLimitedProject
             this.panSubFormLoader = new System.Windows.Forms.Panel();
             this.panSide = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnVwReceGood = new System.Windows.Forms.Button();
-            this.btnRestock = new System.Windows.Forms.Button();
-            this.btnPurGood = new System.Windows.Forms.Button();
+            this.btnVwPurchase = new System.Windows.Forms.Button();
             this.btnVwStock = new System.Windows.Forms.Button();
             this.panNavHightLight = new System.Windows.Forms.Panel();
             this.btnArraDelivery = new System.Windows.Forms.Button();
@@ -70,9 +68,7 @@ namespace BetterLimitedProject
             // 
             // panelMenu
             // 
-            this.panelMenu.Controls.Add(this.btnVwReceGood);
-            this.panelMenu.Controls.Add(this.btnRestock);
-            this.panelMenu.Controls.Add(this.btnPurGood);
+            this.panelMenu.Controls.Add(this.btnVwPurchase);
             this.panelMenu.Controls.Add(this.btnVwStock);
             this.panelMenu.Controls.Add(this.panNavHightLight);
             this.panelMenu.Controls.Add(this.btnArraDelivery);
@@ -83,59 +79,23 @@ namespace BetterLimitedProject
             this.panelMenu.Size = new System.Drawing.Size(314, 450);
             this.panelMenu.TabIndex = 44;
             // 
-            // btnVwReceGood
+            // btnVwPurchase
             // 
-            this.btnVwReceGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.btnVwReceGood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnVwReceGood.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVwReceGood.FlatAppearance.BorderSize = 0;
-            this.btnVwReceGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVwReceGood.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVwReceGood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnVwReceGood.Location = new System.Drawing.Point(0, 325);
-            this.btnVwReceGood.Name = "btnVwReceGood";
-            this.btnVwReceGood.Size = new System.Drawing.Size(314, 65);
-            this.btnVwReceGood.TabIndex = 53;
-            this.btnVwReceGood.Text = "View Received Good";
-            this.btnVwReceGood.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVwReceGood.UseVisualStyleBackColor = false;
-            this.btnVwReceGood.Click += new System.EventHandler(this.btnVwReceGood_Click);
-            // 
-            // btnRestock
-            // 
-            this.btnRestock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.btnRestock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRestock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRestock.FlatAppearance.BorderSize = 0;
-            this.btnRestock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestock.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnRestock.Location = new System.Drawing.Point(0, 260);
-            this.btnRestock.Name = "btnRestock";
-            this.btnRestock.Size = new System.Drawing.Size(314, 65);
-            this.btnRestock.TabIndex = 52;
-            this.btnRestock.Text = "Restock";
-            this.btnRestock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRestock.UseVisualStyleBackColor = false;
-            this.btnRestock.Click += new System.EventHandler(this.btnRestock_Click);
-            // 
-            // btnPurGood
-            // 
-            this.btnPurGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.btnPurGood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPurGood.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPurGood.FlatAppearance.BorderSize = 0;
-            this.btnPurGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurGood.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPurGood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnPurGood.Location = new System.Drawing.Point(0, 195);
-            this.btnPurGood.Name = "btnPurGood";
-            this.btnPurGood.Size = new System.Drawing.Size(314, 65);
-            this.btnPurGood.TabIndex = 51;
-            this.btnPurGood.Text = "Purchase Good";
-            this.btnPurGood.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPurGood.UseVisualStyleBackColor = false;
-            this.btnPurGood.Click += new System.EventHandler(this.btnPurGood_Click);
+            this.btnVwPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.btnVwPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnVwPurchase.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVwPurchase.FlatAppearance.BorderSize = 0;
+            this.btnVwPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVwPurchase.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVwPurchase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.btnVwPurchase.Location = new System.Drawing.Point(0, 195);
+            this.btnVwPurchase.Name = "btnVwPurchase";
+            this.btnVwPurchase.Size = new System.Drawing.Size(314, 65);
+            this.btnVwPurchase.TabIndex = 53;
+            this.btnVwPurchase.Text = "Purchase Good";
+            this.btnVwPurchase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVwPurchase.UseVisualStyleBackColor = false;
+            this.btnVwPurchase.Click += new System.EventHandler(this.btnVwPurchase_Click);
             // 
             // btnVwStock
             // 
@@ -270,9 +230,7 @@ namespace BetterLimitedProject
         private System.Windows.Forms.Panel panLogo;
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnRestock;
-        private System.Windows.Forms.Button btnPurGood;
         private System.Windows.Forms.Button btnVwStock;
-        private System.Windows.Forms.Button btnVwReceGood;
+        private System.Windows.Forms.Button btnVwPurchase;
     }
 }

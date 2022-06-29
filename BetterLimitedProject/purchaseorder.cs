@@ -16,16 +16,19 @@ namespace BetterLimitedProject
     {
         public purchaseorder()
         {
-            this.reorders = new HashSet<reorder>();
+            this.purchase_orderline = new HashSet<purchase_orderline>();
         }
     
         public int purchase_order_ID { get; set; }
-        public int sent_by { get; set; }
         public int supplier_ID { get; set; }
+        public string status { get; set; }
         public float total { get; set; }
-        public string invoice_link { get; set; }
+        public int reorder_ID { get; set; }
+        public System.DateTime creation_time { get; set; }
+        public Nullable<System.DateTime> approve_time { get; set; }
     
-        public virtual staff staff { get; set; }
-        public virtual ICollection<reorder> reorders { get; set; }
+        public virtual ICollection<purchase_orderline> purchase_orderline { get; set; }
+        public virtual reorder reorder { get; set; }
+        public virtual supplier supplier { get; set; }
     }
 }

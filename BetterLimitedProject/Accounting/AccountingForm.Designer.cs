@@ -33,7 +33,7 @@ namespace BetterLimitedProject
             this.panSide = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panNavHightLight = new System.Windows.Forms.Panel();
-            this.btnVwStock = new System.Windows.Forms.Button();
+            this.btnVwGood = new System.Windows.Forms.Button();
             this.btnVwOrder = new System.Windows.Forms.Button();
             this.btnDashBoard = new System.Windows.Forms.Button();
             this.panLogo = new System.Windows.Forms.Panel();
@@ -68,7 +68,7 @@ namespace BetterLimitedProject
             // panelMenu
             // 
             this.panelMenu.Controls.Add(this.panNavHightLight);
-            this.panelMenu.Controls.Add(this.btnVwStock);
+            this.panelMenu.Controls.Add(this.btnVwGood);
             this.panelMenu.Controls.Add(this.btnVwOrder);
             this.panelMenu.Controls.Add(this.btnDashBoard);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -85,23 +85,23 @@ namespace BetterLimitedProject
             this.panNavHightLight.Size = new System.Drawing.Size(10, 65);
             this.panNavHightLight.TabIndex = 4;
             // 
-            // btnVwStock
+            // btnVwGood
             // 
-            this.btnVwStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.btnVwStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnVwStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVwStock.FlatAppearance.BorderSize = 0;
-            this.btnVwStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVwStock.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVwStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
-            this.btnVwStock.Location = new System.Drawing.Point(0, 130);
-            this.btnVwStock.Name = "btnVwStock";
-            this.btnVwStock.Size = new System.Drawing.Size(314, 65);
-            this.btnVwStock.TabIndex = 50;
-            this.btnVwStock.Text = "View Stock";
-            this.btnVwStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVwStock.UseVisualStyleBackColor = false;
-            this.btnVwStock.Click += new System.EventHandler(this.btnVwStock_Click);
+            this.btnVwGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
+            this.btnVwGood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnVwGood.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVwGood.FlatAppearance.BorderSize = 0;
+            this.btnVwGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVwGood.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVwGood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.btnVwGood.Location = new System.Drawing.Point(0, 130);
+            this.btnVwGood.Name = "btnVwGood";
+            this.btnVwGood.Size = new System.Drawing.Size(314, 65);
+            this.btnVwGood.TabIndex = 50;
+            this.btnVwGood.Text = "View Received Good";
+            this.btnVwGood.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVwGood.UseVisualStyleBackColor = false;
+            this.btnVwGood.Click += new System.EventHandler(this.btnVwGood_Click);
             // 
             // btnVwOrder
             // 
@@ -188,6 +188,7 @@ namespace BetterLimitedProject
             this.Controls.Add(this.panSubFormLoader);
             this.Controls.Add(this.panSide);
             this.Name = "AccountingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounting";
             this.Load += new System.EventHandler(this.AccountingForm_Load);
             this.panSide.ResumeLayout(false);
@@ -209,6 +210,6 @@ namespace BetterLimitedProject
         private System.Windows.Forms.Panel panLogo;
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnVwStock;
+        private System.Windows.Forms.Button btnVwGood;
     }
 }

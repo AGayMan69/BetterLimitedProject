@@ -121,12 +121,18 @@
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 48</value>
+  </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 436</value>
+  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 21</value>
+    <value>45, 21</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>店铺</value>
@@ -134,14 +140,32 @@
   <data name="lblAddress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="lblAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 536</value>
+  </data>
+  <data name="lblAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 72</value>
+  </data>
   <data name="lblStore.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="lblStore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 468</value>
+  </data>
+  <data name="tbProductName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>346, 163</value>
+  </data>
+  <data name="tbProductName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 72</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 139</value>
+  </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 21</value>
+    <value>44, 21</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>名称</value>
@@ -149,26 +173,44 @@
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>741, 139</value>
+  </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 21</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>类别</value>
   </data>
+  <data name="tbPrice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>346, 312</value>
+  </data>
+  <data name="cboCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>745, 163</value>
+  </data>
   <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>741, 228</value>
+  </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 21</value>
+    <value>80, 21</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>补货数量</value>
   </data>
+  <data name="nupRestockLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>745, 252</value>
+  </data>
   <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 288</value>
+  </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 21</value>
+    <value>69, 21</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>价格 ($)</value>
@@ -176,26 +218,41 @@
   <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>741, 312</value>
+  </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 21</value>
+    <value>44, 21</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>位置</value>
   </data>
+  <data name="tbSector.Location" type="System.Drawing.Point, System.Drawing">
+    <value>745, 336</value>
+  </data>
   <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>741, 477</value>
+  </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 21</value>
+    <value>45, 21</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>库存</value>
   </data>
+  <data name="tbStock.Location" type="System.Drawing.Point, System.Drawing">
+    <value>745, 501</value>
+  </data>
   <data name="cbPhaseout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="cbPhaseout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>745, 549</value>
+  </data>
   <data name="cbPhaseout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 25</value>
+    <value>63, 25</value>
   </data>
   <data name="cbPhaseout.Text" xml:space="preserve">
     <value>淘汰</value>
@@ -203,8 +260,11 @@
   <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 621</value>
+  </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 21</value>
+    <value>158, 21</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>最后库存更新时间：</value>
@@ -212,17 +272,35 @@
   <data name="lblRestockDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="lblRestockDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 652</value>
+  </data>
   <data name="btnRegister.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="btnRegister.Location" type="System.Drawing.Point, System.Drawing">
+    <value>633, 640</value>
+  </data>
+  <data name="btnRegister.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 43</value>
   </data>
   <data name="btnSubmit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>763, 640</value>
+  </data>
+  <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 43</value>
+  </data>
   <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 371</value>
+  </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 21</value>
+    <value>115, 21</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>双击替换图片</value>
@@ -230,7 +308,16 @@
   <data name="pbProduct.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="pbProduct.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 139</value>
+  </data>
+  <data name="pbProduct.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 215</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>986, 724</value>
   </data>
 </root>

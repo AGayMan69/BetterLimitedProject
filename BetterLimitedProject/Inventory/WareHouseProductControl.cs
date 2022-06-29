@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Serialization.Formatters;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +20,7 @@ namespace BetterLimitedProject.Inventory
         internal int qty;
         internal int productID;
         internal int restockLevel;
+        internal string supplier;
 
         public WareHouseProductControl()
         {
@@ -44,11 +47,18 @@ namespace BetterLimitedProject.Inventory
                 lblInStock.Visible = false;
             }
 
+            using (var betterDB = new betterlimitedEntities())
+            {
+                supplier = (from productRec in betterDB.products
+                    where productRec.product_ID == productID
+                    select productRec.supplier.supplier_name).AsNoTracking().FirstOrDefault();
+            }
+
         }
 
         private void btnRestock_Click(object sender, EventArgs e)
         {
-            _parent.reStock(productID);
+            _parent.reStock(productID, supplier);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

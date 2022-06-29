@@ -52,7 +52,7 @@ namespace BetterLimitedProject
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            menulist = new[] {btnVwDelivery, btnArraDelivery, btnVwStock, btnPurGood, btnRestock, btnVwReceGood };
+            menulist = new[] {btnVwDelivery, btnArraDelivery, btnVwStock, btnVwPurchase };
             menu_Navigate(btnVwDelivery);
             btnLogout.BackgroundImageLayout = ImageLayout.Stretch;
             btnLogout.Image = (Image)new Bitmap(BetterLimitedProject.Properties.Resources.logout_icon, new Size(16, 16));
@@ -90,27 +90,11 @@ namespace BetterLimitedProject
             loadSubform(vwStockForm);
         }
 
-        private void btnPurGood_Click(object sender, EventArgs e)
+        private void btnVwPurchase_Click(object sender, EventArgs e)
         {
-            menu_Navigate(btnPurGood);
+            menu_Navigate(btnVwPurchase);
             clearSubformLoader();
-            InventoryPurGoodForm purGoodForm = new InventoryPurGoodForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            loadSubform(purGoodForm);
-        }
-
-        private void btnRestock_Click(object sender, EventArgs e)
-        {
-            menu_Navigate(btnRestock);
-            clearSubformLoader();
-            InventoryRestockForm restockForm = new InventoryRestockForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            loadSubform(restockForm);
-        }
-
-        private void btnVwReceGood_Click(object sender, EventArgs e)
-        {
-            menu_Navigate(btnVwReceGood);
-            clearSubformLoader();
-            InventoryVwGoodForm vwGoodForm = new InventoryVwGoodForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            InventoryVwPurchaseForm vwGoodForm = new InventoryVwPurchaseForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             loadSubform(vwGoodForm);
         }
     }

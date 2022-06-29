@@ -134,6 +134,9 @@ namespace BetterLimitedProject
                         // Login Successful
                         //MessageBox.Show("Login successful!");
                         this.Hide();
+                        this.Controls.Clear();
+                        InitializeComponent();
+                        LoginForm_Load(null, EventArgs.Empty);
                         switch (user.department_ID)
                         {
                             case 1:
