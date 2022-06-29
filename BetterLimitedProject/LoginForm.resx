@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblSwitchLang.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Welcome</value>
   </data>
@@ -127,10 +131,6 @@
   <data name="&gt;&gt;lblSwitchLang.Name" xml:space="preserve">
     <value>lblSwitchLang</value>
   </data>
-  <data name="&gt;&gt;lblPasswd.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tbPassword.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
@@ -139,6 +139,10 @@
   </data>
   <data name="lblSwitchLang.Location" type="System.Drawing.Point, System.Drawing">
     <value>1153, 31</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnRegister.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 32</value>
@@ -152,9 +156,8 @@
   <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
     <value>416, 65</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="passwordPic.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="lblPasswd.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -162,8 +165,8 @@
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Password</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>687, 387</value>
   </data>
   <data name="lblPasswd.Text" xml:space="preserve">
     <value>Forgot your password?</value>
@@ -174,14 +177,14 @@
   <data name="tbPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>284, 43</value>
   </data>
-  <data name="&gt;&gt;lblSwitchLang.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;tbPassword.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1264, 681</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -198,8 +201,8 @@
   <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
     <value>pictureBox1</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>507, 681</value>
+  <data name="&gt;&gt;lblPasswd.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -216,8 +219,8 @@
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="panel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>70, 0, 70, 0</value>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -228,8 +231,8 @@
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;lblPasswd.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="btnLogin.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="&gt;&gt;btnLogin.Name" xml:space="preserve">
     <value>btnLogin</value>
@@ -237,11 +240,8 @@
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;lblPasswd.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>355, 82</value>
@@ -251,9 +251,6 @@
   </data>
   <data name="&gt;&gt;lblSwitchLang.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblUsername.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -276,9 +273,6 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="passwordPic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 38</value>
-  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 32</value>
   </data>
@@ -294,6 +288,9 @@
   <data name="&gt;&gt;tbUsername.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="passwordPic.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="tbUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>284, 43</value>
   </data>
@@ -306,8 +303,8 @@
   <data name="&gt;&gt;lblUsername.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblPasswd.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
   </data>
   <data name="btnRegister.Location" type="System.Drawing.Point, System.Drawing">
     <value>694, 567</value>
@@ -333,17 +330,20 @@
   <data name="passwordPic.Location" type="System.Drawing.Point, System.Drawing">
     <value>1058, 384</value>
   </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>507, 681</value>
+  </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
   <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>721, -16</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 681</value>
+  <data name="passwordPic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 38</value>
   </data>
   <data name="passwordPic.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -351,8 +351,8 @@
   <data name="lblSwitchLang.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;tbPassword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblSwitchLang.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -363,17 +363,20 @@
   <data name="&gt;&gt;btnRegister.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>721, -16</value>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>367, 681</value>
   </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="panel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>70, 0, 70, 0</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;tbUsername.Name" xml:space="preserve">
+    <value>tbUsername</value>
   </data>
-  <data name="lblSwitchLang.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblSwitchLang.Text" xml:space="preserve">
+    <value>en-US</value>
   </data>
   <data name="btnLogin.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -396,6 +399,9 @@
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
   </data>
+  <data name="&gt;&gt;tbPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="lblPasswd.Location" type="System.Drawing.Point, System.Drawing">
     <value>928, 440</value>
   </data>
@@ -408,8 +414,8 @@
   <data name="&gt;&gt;btnRegister.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnLogin.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="lblSwitchLang.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -423,8 +429,8 @@
   <data name="&gt;&gt;passwordPic.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Password</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>9, 21</value>
@@ -432,8 +438,8 @@
   <data name="&gt;&gt;tbPassword.Name" xml:space="preserve">
     <value>tbPassword</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>687, 387</value>
+  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
   <data name="lblUsername.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -456,14 +462,11 @@
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="lblPasswd.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="btnRegister.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;tbUsername.Name" xml:space="preserve">
-    <value>tbUsername</value>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Better Limited - Login</value>
@@ -504,14 +507,11 @@
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;passwordPic.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
     <value>694, 487</value>
   </data>
-  <data name="lblSwitchLang.Text" xml:space="preserve">
-    <value>en-US</value>
+  <data name="&gt;&gt;passwordPic.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

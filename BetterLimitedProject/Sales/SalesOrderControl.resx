@@ -120,11 +120,10 @@
   <data name="&gt;&gt;lblDeliveryID.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>833, 134</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblInstallationID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -134,10 +133,7 @@
   <data name="&gt;&gt;lblInstallationID.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblCustomerID.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblInstallationID.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
@@ -159,14 +155,8 @@
   <data name="&gt;&gt;panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblOrderID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
-  </data>
   <data name="&gt;&gt;lblCustomerID.Name" xml:space="preserve">
     <value>lblCustomerID</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
   </data>
   <data name="lblCustomerID.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 43</value>
@@ -177,11 +167,8 @@
   <data name="lblOrderID.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 43</value>
   </data>
-  <data name="&gt;&gt;btnEdit.Name" xml:space="preserve">
-    <value>btnEdit</value>
-  </data>
-  <data name="&gt;&gt;lblDate.Name" xml:space="preserve">
-    <value>lblDate</value>
+  <data name="lblDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
   </data>
   <data name="&gt;&gt;lblDeliveryID.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -192,8 +179,12 @@
   <data name="lblOrderID.Text" xml:space="preserve">
     <value>2200001</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblCustomerID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblOrderID.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -206,6 +197,9 @@
   </data>
   <data name="lblTotal.Text" xml:space="preserve">
     <value>$100000</value>
+  </data>
+  <data name="btnEdit.Text" xml:space="preserve">
+    <value>EDIT</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -231,6 +225,9 @@
   <data name="&gt;&gt;lblInstallationID.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>819, 110</value>
   </data>
@@ -240,14 +237,8 @@
   <data name="lblDeliveryID.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 21</value>
   </data>
-  <data name="lblCustomerID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
   <data name="&gt;&gt;lblDeliveryID.Name" xml:space="preserve">
     <value>lblDeliveryID</value>
-  </data>
-  <data name="&gt;&gt;lblDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblDate.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -270,11 +261,11 @@
   <data name="lblDeliveryID.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="btnDel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 110</value>
-  </data>
   <data name="lblTotal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btnEdit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Black, 14.25pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;btnDel.Name" xml:space="preserve">
     <value>btnDel</value>
@@ -294,17 +285,20 @@
   <data name="lblOrderID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="btnEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 110</value>
-  </data>
   <data name="lblDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;btnEdit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblInstallationID.Text" xml:space="preserve">
+    <value>2200001</value>
   </data>
-  <data name="lblInstallationID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="&gt;&gt;lblOrderID.Name" xml:space="preserve">
+    <value>lblOrderID</value>
+  </data>
+  <data name="btnEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
   </data>
   <data name="lblTotal.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
@@ -315,9 +309,6 @@
   <data name="&gt;&gt;btnDel.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SalesOrderControl</value>
-  </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -327,14 +318,17 @@
   <data name="&gt;&gt;lblDate.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 21</value>
   </data>
-  <data name="&gt;&gt;lblOrderID.Name" xml:space="preserve">
-    <value>lblOrderID</value>
+  <data name="lblCustomerID.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;lblTotal.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="btnDel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 110</value>
+  </data>
+  <data name="lblCustomerID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
   </data>
   <data name="lblCustomerID.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 21</value>
@@ -342,14 +336,17 @@
   <data name="&gt;&gt;lblDeliveryID.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="btnEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
   <data name="&gt;&gt;btnDel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lblInstallationID.Text" xml:space="preserve">
-    <value>2200001</value>
+  <data name="&gt;&gt;btnEdit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 110</value>
   </data>
   <data name="lblOrderID.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -357,26 +354,26 @@
   <data name="lblCustomerID.Text" xml:space="preserve">
     <value>1000000000</value>
   </data>
-  <data name="&gt;&gt;lblOrderID.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="lblDeliveryID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="btnEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SalesOrderControl</value>
   </data>
   <data name="lblInstallationID.Location" type="System.Drawing.Point, System.Drawing">
     <value>485, 43</value>
   </data>
-  <data name="btnEdit.Text" xml:space="preserve">
-    <value>EDIT</value>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>833, 134</value>
   </data>
   <data name="lblTotal.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 21</value>
   </data>
-  <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 21</value>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnDel.Location" type="System.Drawing.Point, System.Drawing">
     <value>744, 0</value>
@@ -399,8 +396,8 @@
   <data name="&gt;&gt;lblInstallationID.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnEdit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Black, 14.25pt, style=Bold</value>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 10</value>
@@ -411,14 +408,17 @@
   <data name="btnDel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="&gt;&gt;lblTotal.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
   <data name="&gt;&gt;panel2.Name" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 7</value>
+  <data name="lblOrderID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 21</value>
   </data>
-  <data name="btnEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
+  <data name="&gt;&gt;lblDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 300</value>
@@ -426,8 +426,8 @@
   <data name="lblInstallationID.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblDate.Name" xml:space="preserve">
+    <value>lblDate</value>
   </data>
   <data name="lblTotal.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -447,8 +447,8 @@
   <data name="&gt;&gt;lblOrderID.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="lblDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+  <data name="&gt;&gt;btnEdit.Name" xml:space="preserve">
+    <value>btnEdit</value>
   </data>
   <data name="lblTotal.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
