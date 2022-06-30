@@ -20,8 +20,8 @@ namespace BetterLimitedProject.Accounting
 
         private void AccountingDashBoardForm_Load(object sender, EventArgs e)
         {
-            DateTime upperBound = DateTime.Now.GetThisMonthUpperBound();
-            DateTime lowerBound = DateTime.Now.GetThisMonthLowerBound();
+            DateTime upperBound = DateTime.Now.GetThisYearUpperBound();
+            DateTime lowerBound = DateTime.Now.GetThisYearLowerBound();
             using (var betterDB = new betterlimitedEntities())
             {
                 lblSalesCreated.Text = (from salesOrderRec in betterDB.buyorders

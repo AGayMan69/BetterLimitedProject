@@ -29,22 +29,22 @@ namespace BetterLimitedProject.Accounting
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlSales = new System.Windows.Forms.Panel();
-            this.pnlSalesContainer = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblSalesCreated = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlSalesContainer = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.lblOrderShipped = new System.Windows.Forms.Label();
+            this.lblSalesCreated = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlPurchaseOrder = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,24 +60,25 @@ namespace BetterLimitedProject.Accounting
             this.label14 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pbTopItem1 = new System.Windows.Forms.PictureBox();
-            this.lblTop1itemName = new System.Windows.Forms.Label();
-            this.lblTop1ItemQuantity = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.lblTop2itemName = new System.Windows.Forms.Label();
-            this.lblTop2ItemQuantity = new System.Windows.Forms.Label();
-            this.pbTopItem2 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.lblTop3itemName = new System.Windows.Forms.Label();
             this.lblTop3ItemQuantity = new System.Windows.Forms.Label();
             this.pbTopItem3 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lblTop2itemName = new System.Windows.Forms.Label();
+            this.lblTop2ItemQuantity = new System.Windows.Forms.Label();
+            this.pbTopItem2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTop1itemName = new System.Windows.Forms.Label();
+            this.lblTop1ItemQuantity = new System.Windows.Forms.Label();
+            this.pbTopItem1 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.chartStock = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
@@ -85,30 +86,29 @@ namespace BetterLimitedProject.Accounting
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.chartSale = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartStock = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlSales.SuspendLayout();
-            this.pnlSalesContainer.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.pnlSalesContainer.SuspendLayout();
             this.pnlPurchaseOrder.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.pnlTopSelling.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTopItem1)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTopItem2)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTopItem3)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTopItem2)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTopItem1)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartStock)).BeginInit();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartSale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartStock)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSales
@@ -123,27 +123,6 @@ namespace BetterLimitedProject.Accounting
             this.pnlSales.Size = new System.Drawing.Size(375, 268);
             this.pnlSales.TabIndex = 0;
             // 
-            // pnlSalesContainer
-            // 
-            this.pnlSalesContainer.Controls.Add(this.label5);
-            this.pnlSalesContainer.Controls.Add(this.lblOrderShipped);
-            this.pnlSalesContainer.Controls.Add(this.lblSalesCreated);
-            this.pnlSalesContainer.Controls.Add(this.label3);
-            this.pnlSalesContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlSalesContainer.Location = new System.Drawing.Point(10, 76);
-            this.pnlSalesContainer.Name = "pnlSalesContainer";
-            this.pnlSalesContainer.Size = new System.Drawing.Size(355, 182);
-            this.pnlSalesContainer.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(113)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(10, 74);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(355, 2);
-            this.panel3.TabIndex = 2;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label2);
@@ -154,6 +133,17 @@ namespace BetterLimitedProject.Accounting
             this.panel4.Padding = new System.Windows.Forms.Padding(15);
             this.panel4.Size = new System.Drawing.Size(355, 64);
             this.panel4.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(227, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 34);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "This Year";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -166,40 +156,26 @@ namespace BetterLimitedProject.Accounting
             this.label1.Text = "SALES ORDER";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // panel3
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(227, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 34);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "This Month";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(113)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(10, 74);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(355, 2);
+            this.panel3.TabIndex = 2;
             // 
-            // label3
+            // pnlSalesContainer
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.label3.Size = new System.Drawing.Size(355, 45);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Order Created";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // lblSalesCreated
-            // 
-            this.lblSalesCreated.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblSalesCreated.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalesCreated.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(199)))), ((int)(((byte)(105)))));
-            this.lblSalesCreated.Location = new System.Drawing.Point(0, 45);
-            this.lblSalesCreated.Name = "lblSalesCreated";
-            this.lblSalesCreated.Size = new System.Drawing.Size(355, 55);
-            this.lblSalesCreated.TabIndex = 2;
-            this.lblSalesCreated.Text = "2343433";
-            this.lblSalesCreated.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pnlSalesContainer.Controls.Add(this.label5);
+            this.pnlSalesContainer.Controls.Add(this.lblOrderShipped);
+            this.pnlSalesContainer.Controls.Add(this.lblSalesCreated);
+            this.pnlSalesContainer.Controls.Add(this.label3);
+            this.pnlSalesContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlSalesContainer.Location = new System.Drawing.Point(10, 76);
+            this.pnlSalesContainer.Name = "pnlSalesContainer";
+            this.pnlSalesContainer.Size = new System.Drawing.Size(355, 182);
+            this.pnlSalesContainer.TabIndex = 1;
             // 
             // label5
             // 
@@ -224,6 +200,30 @@ namespace BetterLimitedProject.Accounting
             this.lblOrderShipped.TabIndex = 3;
             this.lblOrderShipped.Text = "343242";
             this.lblOrderShipped.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblSalesCreated
+            // 
+            this.lblSalesCreated.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblSalesCreated.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalesCreated.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(199)))), ((int)(((byte)(105)))));
+            this.lblSalesCreated.Location = new System.Drawing.Point(0, 45);
+            this.lblSalesCreated.Name = "lblSalesCreated";
+            this.lblSalesCreated.Size = new System.Drawing.Size(355, 55);
+            this.lblSalesCreated.TabIndex = 2;
+            this.lblSalesCreated.Text = "2343433";
+            this.lblSalesCreated.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.label3.Size = new System.Drawing.Size(355, 45);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Order Created";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // pnlPurchaseOrder
             // 
@@ -256,7 +256,7 @@ namespace BetterLimitedProject.Accounting
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 34);
             this.label7.TabIndex = 1;
-            this.label7.Text = "This Month";
+            this.label7.Text = "This Year";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label8
@@ -394,101 +394,6 @@ namespace BetterLimitedProject.Accounting
             this.panel10.Size = new System.Drawing.Size(843, 358);
             this.panel10.TabIndex = 1;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.lblTop1itemName);
-            this.panel1.Controls.Add(this.lblTop1ItemQuantity);
-            this.panel1.Controls.Add(this.pbTopItem1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(15, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.panel1.Size = new System.Drawing.Size(244, 328);
-            this.panel1.TabIndex = 0;
-            // 
-            // pbTopItem1
-            // 
-            this.pbTopItem1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbTopItem1.Location = new System.Drawing.Point(15, 15);
-            this.pbTopItem1.Name = "pbTopItem1";
-            this.pbTopItem1.Size = new System.Drawing.Size(214, 200);
-            this.pbTopItem1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbTopItem1.TabIndex = 0;
-            this.pbTopItem1.TabStop = false;
-            // 
-            // lblTop1itemName
-            // 
-            this.lblTop1itemName.AutoEllipsis = true;
-            this.lblTop1itemName.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblTop1itemName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTop1itemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.lblTop1itemName.Location = new System.Drawing.Point(15, 218);
-            this.lblTop1itemName.Name = "lblTop1itemName";
-            this.lblTop1itemName.Size = new System.Drawing.Size(214, 43);
-            this.lblTop1itemName.TabIndex = 1;
-            this.lblTop1itemName.Text = "Deco X75(2-pack) AX5400 Tri-Brand Mesh wifi6 Router";
-            this.lblTop1itemName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTop1ItemQuantity
-            // 
-            this.lblTop1ItemQuantity.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblTop1ItemQuantity.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTop1ItemQuantity.Location = new System.Drawing.Point(15, 261);
-            this.lblTop1ItemQuantity.Name = "lblTop1ItemQuantity";
-            this.lblTop1ItemQuantity.Size = new System.Drawing.Size(214, 52);
-            this.lblTop1ItemQuantity.TabIndex = 2;
-            this.lblTop1ItemQuantity.Text = "29";
-            this.lblTop1ItemQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.lblTop2itemName);
-            this.panel7.Controls.Add(this.lblTop2ItemQuantity);
-            this.panel7.Controls.Add(this.pbTopItem2);
-            this.panel7.Location = new System.Drawing.Point(299, 15);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(15);
-            this.panel7.Size = new System.Drawing.Size(244, 328);
-            this.panel7.TabIndex = 1;
-            // 
-            // lblTop2itemName
-            // 
-            this.lblTop2itemName.AutoEllipsis = true;
-            this.lblTop2itemName.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblTop2itemName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTop2itemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.lblTop2itemName.Location = new System.Drawing.Point(15, 218);
-            this.lblTop2itemName.Name = "lblTop2itemName";
-            this.lblTop2itemName.Size = new System.Drawing.Size(214, 43);
-            this.lblTop2itemName.TabIndex = 1;
-            this.lblTop2itemName.Text = "Deco X75(2-pack) AX5400 Tri-Brand Mesh wifi6 Router";
-            this.lblTop2itemName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTop2ItemQuantity
-            // 
-            this.lblTop2ItemQuantity.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblTop2ItemQuantity.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTop2ItemQuantity.Location = new System.Drawing.Point(15, 261);
-            this.lblTop2ItemQuantity.Name = "lblTop2ItemQuantity";
-            this.lblTop2ItemQuantity.Size = new System.Drawing.Size(214, 52);
-            this.lblTop2ItemQuantity.TabIndex = 2;
-            this.lblTop2ItemQuantity.Text = "29";
-            this.lblTop2ItemQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pbTopItem2
-            // 
-            this.pbTopItem2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbTopItem2.Location = new System.Drawing.Point(15, 15);
-            this.pbTopItem2.Name = "pbTopItem2";
-            this.pbTopItem2.Size = new System.Drawing.Size(214, 200);
-            this.pbTopItem2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbTopItem2.TabIndex = 0;
-            this.pbTopItem2.TabStop = false;
-            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
@@ -537,6 +442,101 @@ namespace BetterLimitedProject.Accounting
             this.pbTopItem3.TabIndex = 0;
             this.pbTopItem3.TabStop = false;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.lblTop2itemName);
+            this.panel7.Controls.Add(this.lblTop2ItemQuantity);
+            this.panel7.Controls.Add(this.pbTopItem2);
+            this.panel7.Location = new System.Drawing.Point(299, 15);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(15);
+            this.panel7.Size = new System.Drawing.Size(244, 328);
+            this.panel7.TabIndex = 1;
+            // 
+            // lblTop2itemName
+            // 
+            this.lblTop2itemName.AutoEllipsis = true;
+            this.lblTop2itemName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblTop2itemName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTop2itemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.lblTop2itemName.Location = new System.Drawing.Point(15, 218);
+            this.lblTop2itemName.Name = "lblTop2itemName";
+            this.lblTop2itemName.Size = new System.Drawing.Size(214, 43);
+            this.lblTop2itemName.TabIndex = 1;
+            this.lblTop2itemName.Text = "Deco X75(2-pack) AX5400 Tri-Brand Mesh wifi6 Router";
+            this.lblTop2itemName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTop2ItemQuantity
+            // 
+            this.lblTop2ItemQuantity.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblTop2ItemQuantity.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTop2ItemQuantity.Location = new System.Drawing.Point(15, 261);
+            this.lblTop2ItemQuantity.Name = "lblTop2ItemQuantity";
+            this.lblTop2ItemQuantity.Size = new System.Drawing.Size(214, 52);
+            this.lblTop2ItemQuantity.TabIndex = 2;
+            this.lblTop2ItemQuantity.Text = "29";
+            this.lblTop2ItemQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pbTopItem2
+            // 
+            this.pbTopItem2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pbTopItem2.Location = new System.Drawing.Point(15, 15);
+            this.pbTopItem2.Name = "pbTopItem2";
+            this.pbTopItem2.Size = new System.Drawing.Size(214, 200);
+            this.pbTopItem2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbTopItem2.TabIndex = 0;
+            this.pbTopItem2.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblTop1itemName);
+            this.panel1.Controls.Add(this.lblTop1ItemQuantity);
+            this.panel1.Controls.Add(this.pbTopItem1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(15, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(15);
+            this.panel1.Size = new System.Drawing.Size(244, 328);
+            this.panel1.TabIndex = 0;
+            // 
+            // lblTop1itemName
+            // 
+            this.lblTop1itemName.AutoEllipsis = true;
+            this.lblTop1itemName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblTop1itemName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTop1itemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.lblTop1itemName.Location = new System.Drawing.Point(15, 218);
+            this.lblTop1itemName.Name = "lblTop1itemName";
+            this.lblTop1itemName.Size = new System.Drawing.Size(214, 43);
+            this.lblTop1itemName.TabIndex = 1;
+            this.lblTop1itemName.Text = "Deco X75(2-pack) AX5400 Tri-Brand Mesh wifi6 Router";
+            this.lblTop1itemName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTop1ItemQuantity
+            // 
+            this.lblTop1ItemQuantity.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblTop1ItemQuantity.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTop1ItemQuantity.Location = new System.Drawing.Point(15, 261);
+            this.lblTop1ItemQuantity.Name = "lblTop1ItemQuantity";
+            this.lblTop1ItemQuantity.Size = new System.Drawing.Size(214, 52);
+            this.lblTop1ItemQuantity.TabIndex = 2;
+            this.lblTop1ItemQuantity.Text = "29";
+            this.lblTop1ItemQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pbTopItem1
+            // 
+            this.pbTopItem1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pbTopItem1.Location = new System.Drawing.Point(15, 15);
+            this.pbTopItem1.Name = "pbTopItem1";
+            this.pbTopItem1.Size = new System.Drawing.Size(214, 200);
+            this.pbTopItem1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbTopItem1.TabIndex = 0;
+            this.pbTopItem1.TabStop = false;
+            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
@@ -568,7 +568,7 @@ namespace BetterLimitedProject.Accounting
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(113, 40);
             this.label13.TabIndex = 1;
-            this.label13.Text = "This Month";
+            this.label13.Text = "This Year";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label15
@@ -599,6 +599,29 @@ namespace BetterLimitedProject.Accounting
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(355, 314);
             this.panel15.TabIndex = 1;
+            // 
+            // chartStock
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartStock.ChartAreas.Add(chartArea1);
+            this.chartStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chartStock.Legends.Add(legend1);
+            this.chartStock.Location = new System.Drawing.Point(0, 0);
+            this.chartStock.Name = "chartStock";
+            this.chartStock.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chartStock.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Salmon,
+        System.Drawing.Color.PaleGreen};
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "Legend1";
+            series1.Name = "s1";
+            this.chartStock.Series.Add(series1);
+            this.chartStock.Size = new System.Drawing.Size(355, 314);
+            this.chartStock.TabIndex = 8;
+            this.chartStock.Text = "chartSalesType";
             // 
             // panel16
             // 
@@ -631,7 +654,7 @@ namespace BetterLimitedProject.Accounting
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(113, 40);
             this.label20.TabIndex = 1;
-            this.label20.Text = "This Month";
+            this.label20.Text = "This Year";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label21
@@ -683,29 +706,6 @@ namespace BetterLimitedProject.Accounting
             this.chartSale.TabIndex = 7;
             this.chartSale.Text = "chartSalesType";
             // 
-            // chartStock
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartStock.ChartAreas.Add(chartArea1);
-            this.chartStock.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartStock.Legends.Add(legend1);
-            this.chartStock.Location = new System.Drawing.Point(0, 0);
-            this.chartStock.Name = "chartStock";
-            this.chartStock.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chartStock.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.Salmon,
-        System.Drawing.Color.PaleGreen};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.Legend = "Legend1";
-            series1.Name = "s1";
-            this.chartStock.Series.Add(series1);
-            this.chartStock.Size = new System.Drawing.Size(355, 314);
-            this.chartStock.TabIndex = 8;
-            this.chartStock.Text = "chartSalesType";
-            // 
             // AccountingDashBoardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -722,28 +722,28 @@ namespace BetterLimitedProject.Accounting
             this.Text = "AccountingDashBoardForm";
             this.Load += new System.EventHandler(this.AccountingDashBoardForm_Load);
             this.pnlSales.ResumeLayout(false);
-            this.pnlSalesContainer.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.pnlSalesContainer.ResumeLayout(false);
             this.pnlPurchaseOrder.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.pnlTopSelling.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbTopItem1)).EndInit();
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbTopItem2)).EndInit();
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbTopItem3)).EndInit();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTopItem2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTopItem1)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartStock)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartSale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartStock)).EndInit();
             this.ResumeLayout(false);
 
         }
