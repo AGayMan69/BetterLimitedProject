@@ -179,14 +179,17 @@
   <data name="cboType.Items2" xml:space="preserve">
     <value>All</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="salesOrderControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="&gt;&gt;salesOrderControl2.Name" xml:space="preserve">
     <value>salesOrderControl2</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="cboType.Items1" xml:space="preserve">
+    <value>Delivery</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>415, 15</value>
@@ -202,9 +205,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>VwOrderForm</value>
-  </data>
-  <data name="&gt;&gt;cboSortOrder.Name" xml:space="preserve">
-    <value>cboSortOrder</value>
   </data>
   <data name="&gt;&gt;cboType.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -315,8 +315,8 @@
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  <data name="tbSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 23</value>
   </data>
   <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
     <value>btnSearch</value>
@@ -329,9 +329,6 @@
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 21</value>
-  </data>
-  <data name="&gt;&gt;cboOrderDate.Name" xml:space="preserve">
-    <value>cboOrderDate</value>
   </data>
   <data name="btnSearch.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -347,9 +344,6 @@
   </data>
   <data name="&gt;&gt;panSalesLoad.Parent" xml:space="preserve">
     <value>panel1</value>
-  </data>
-  <data name="cboSortOrder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 29</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -377,6 +371,9 @@
   </data>
   <data name="cboOrderDate.Items1" xml:space="preserve">
     <value>This Week</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="btnSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -410,9 +407,6 @@
     <value>121, 29</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
   <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
@@ -478,11 +472,17 @@
   <data name="cboOrderDate.Items3" xml:space="preserve">
     <value>This Year</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>855, 28</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Order Date</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -547,20 +547,20 @@
   <data name="salesOrderControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="salesOrderControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
   <data name="&gt;&gt;salesOrderControl1.Parent" xml:space="preserve">
     <value>panSalesLoad</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 21</value>
   </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 20pt, style=Bold</value>
+  </data>
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="cboType.Items1" xml:space="preserve">
-    <value>Delivery</value>
+  <data name="&gt;&gt;cboSortOrder.Name" xml:space="preserve">
+    <value>cboSortOrder</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -568,8 +568,8 @@
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
   </data>
-  <data name="tbSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 23</value>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 15</value>
@@ -589,23 +589,23 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 20pt, style=Bold</value>
-  </data>
   <data name="&gt;&gt;cboSortOrder.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;cboOrderDate.Name" xml:space="preserve">
+    <value>cboOrderDate</value>
   </data>
   <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
   </data>
-  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>855, 28</value>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
@@ -622,17 +622,17 @@
   <data name="salesOrderControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>833, 114</value>
   </data>
-  <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt, style=Bold</value>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>505, 15</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Order Date</value>
+  <data name="cboSortOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 29</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>875, 499</value>

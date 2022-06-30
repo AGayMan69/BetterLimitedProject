@@ -224,6 +224,7 @@ namespace BetterLimitedProject.Sales
         {
             SalesEditOrderForm editform = new SalesEditOrderForm();
             editform.orderID = orderID;
+            editform.read = false;
 
             var dialogResult = editform.ShowDialog();
             if (dialogResult == DialogResult.OK)

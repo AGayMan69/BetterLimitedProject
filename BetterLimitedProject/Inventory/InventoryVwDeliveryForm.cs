@@ -209,10 +209,14 @@ namespace BetterLimitedProject.Inventory
 
                 editresult = replFrm.ShowDialog();
             }
-            else
+            else 
             {
-                editresult = DialogResult.Cancel;
-            }
+                InventoryArrangeDefectDelForm defectFrm = new InventoryArrangeDefectDelForm();
+                defectFrm._parent = this;
+                defectFrm.deliveryID = deliveryID;
+                editresult = defectFrm.ShowDialog();
+
+            } 
             if (editresult == DialogResult.OK)
             {
                 using (var betterDB = new betterlimitedEntities())
@@ -257,6 +261,8 @@ namespace BetterLimitedProject.Inventory
             else
             {
                 InventoryArrangeDefectDelForm defectFrm = new InventoryArrangeDefectDelForm();
+                defectFrm._parent = this;
+                defectFrm.deliveryID = deliveryID;
                 editresult = defectFrm.ShowDialog();
             }
 

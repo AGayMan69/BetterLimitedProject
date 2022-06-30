@@ -38,8 +38,6 @@ namespace BetterLimitedProject.Sales
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panSalesLoad = new System.Windows.Forms.Panel();
-            this.salesOrderControl2 = new BetterLimitedProject.Sales.SalesOrderControl();
-            this.salesOrderControl1 = new BetterLimitedProject.Sales.SalesOrderControl();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,7 +46,6 @@ namespace BetterLimitedProject.Sales
             this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panSalesLoad.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -123,19 +120,7 @@ namespace BetterLimitedProject.Sales
             // panSalesLoad
             // 
             resources.ApplyResources(this.panSalesLoad, "panSalesLoad");
-            this.panSalesLoad.Controls.Add(this.salesOrderControl2);
-            this.panSalesLoad.Controls.Add(this.salesOrderControl1);
             this.panSalesLoad.Name = "panSalesLoad";
-            // 
-            // salesOrderControl2
-            // 
-            resources.ApplyResources(this.salesOrderControl2, "salesOrderControl2");
-            this.salesOrderControl2.Name = "salesOrderControl2";
-            // 
-            // salesOrderControl1
-            // 
-            resources.ApplyResources(this.salesOrderControl1, "salesOrderControl1");
-            this.salesOrderControl1.Name = "salesOrderControl1";
             // 
             // label7
             // 
@@ -192,7 +177,6 @@ namespace BetterLimitedProject.Sales
             this.Load += new System.EventHandler(this.SalesVwOrderForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panSalesLoad.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,8 +198,6 @@ namespace BetterLimitedProject.Sales
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private SalesOrderControl salesOrderControl2;
-        private SalesOrderControl salesOrderControl1;
         private System.Windows.Forms.Panel panel2;
     }
 }

@@ -93,7 +93,7 @@ namespace BetterLimitedProject.Sales
                 }
 
                 newOrder.order_ID = newOrderID;
-                newOrder.customer_ID = reserFormData.targetCustomer.user_ID;
+                newOrder.customer_ID = 1000000000;
                 newOrder.order_date = DateTime.Now;
                 newOrder.total_price = total;
                 betterDB.buyorders.Add(newOrder);

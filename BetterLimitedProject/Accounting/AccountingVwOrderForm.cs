@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BetterLimitedProject.Sales;
 
 namespace BetterLimitedProject.Accounting
 {
@@ -197,14 +198,14 @@ namespace BetterLimitedProject.Accounting
         }
         internal void viewOrder(int orderID)
         {
-            using (var betterDB = new betterlimitedEntities())
-            {
-                var targetOrder = (from orderRec in betterDB.buyorders
-                                  where orderRec.order_ID == orderID
-                                  select orderRec).AsNoTracking().FirstOrDefault();
+            SalesEditOrderForm editform = new SalesEditOrderForm();
+            editform.orderID = orderID;
+            editform.read = true;
 
-                AccountingVwOrderDetail detailform = new AccountingVwOrderDetail();
-                var dialogResult =  detailform.ShowDialog();
+            var dialogResult = editform.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                loadOrder();
             }
         }
 

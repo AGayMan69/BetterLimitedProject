@@ -43,6 +43,7 @@ namespace BetterLimitedProject
             
             string targetDepartment = cboDepartment.SelectedItem.ToString();
             // generating position according to the 
+            cboPosition.Items.Clear();
             using (var betterDb = new betterlimitedEntities())
             {
                 var positions = (from position in betterDb.positions

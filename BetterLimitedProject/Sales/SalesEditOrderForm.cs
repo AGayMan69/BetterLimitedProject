@@ -15,6 +15,7 @@ namespace BetterLimitedProject.Sales
     {
         internal int orderID;
         internal SalesVwOrderForm _parent;
+        internal bool read;
         internal bool walkIn;
 
         public SalesEditOrderForm()
@@ -32,7 +33,7 @@ namespace BetterLimitedProject.Sales
                 var customerResult = (from orderRec in betterDB.buyorders
                                       where orderRec.order_ID == orderID
                                       select orderRec.customer).AsNoTracking().FirstOrDefault();
-                if (customerResult.user_ID == 1000000000)
+                if (customerResult.user_ID == 1000000000 || orderResult.delivery_ID == 0)
                 {
                     panCustomerInfo.Visible = false;
                     panDelivery.Visible = false;
@@ -50,6 +51,14 @@ namespace BetterLimitedProject.Sales
                     tbAddress.Text = customerResult.address;
                     lblDeliveryID.Text = $"Delivery ID: {orderID}";
                     dtpDeliveryTime.Value = (DateTime)delResult.delivery_date;
+                    if (read)
+                    {
+                        dtpDeliveryTime.Enabled = false;
+                        tbCustomerName.Enabled = false;
+                        tbPhone.Enabled = false;
+                        tbEmail.Enabled = false;
+                        tbAddress.Enabled = false;
+                    }
                 }
 
                 foreach (var line in orderResult.orderlines)
@@ -66,7 +75,7 @@ namespace BetterLimitedProject.Sales
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (walkIn)
+            if (walkIn || read)
             {
                 this.DialogResult = DialogResult.Ignore;
             }
@@ -110,16 +119,16 @@ namespace BetterLimitedProject.Sales
                 using (var betterDB = new betterlimitedEntities())
                 {
                     var customerResult = (from buyRec in betterDB.buyorders
-                        where buyRec.order_ID == orderID
-                        select buyRec.customer).FirstOrDefault();
+                                          where buyRec.order_ID == orderID
+                                          select buyRec.customer).FirstOrDefault();
                     customerResult.name = tbCustomerName.Text;
                     customerResult.phone_No = phone;
                     customerResult.email = tbEmail.Text;
                     customerResult.address = tbAddress.Text;
 
                     var deliResult = (from buyRec in betterDB.buyorders
-                        where buyRec.order_ID == orderID
-                        select buyRec.delivery).FirstOrDefault();
+                                      where buyRec.order_ID == orderID
+                                      select buyRec.delivery).FirstOrDefault();
                     deliResult.delivery_date = dtpDeliveryTime.Value;
                     betterDB.SaveChanges();
                 }
