@@ -675,6 +675,9 @@
     <EmbeddedResource Include="LoginForm.zh-Hans.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.zh-Hant.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.zh.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
