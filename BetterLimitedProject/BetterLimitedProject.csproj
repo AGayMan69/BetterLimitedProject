@@ -579,13 +579,28 @@
     <EmbeddedResource Include="Accounting\AccountingDashBoardForm.resx">
       <DependentUpon>AccountingDashBoardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AccountingDashBoardForm.zh-Hans-MO.resx">
+      <DependentUpon>AccountingDashBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AccountingDashBoardForm.zh-Hans.resx">
+      <DependentUpon>AccountingDashBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingForm.resx">
+      <DependentUpon>AccountingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AccountingForm.zh-Hans.resx">
       <DependentUpon>AccountingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingOrderControl.resx">
       <DependentUpon>AccountingOrderControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AccountingOrderControl.zh-Hans.resx">
+      <DependentUpon>AccountingOrderControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AccountingVwOrderForm.resx">
+      <DependentUpon>AccountingVwOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AccountingVwOrderForm.zh-Hans.resx">
       <DependentUpon>AccountingVwOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgetPasswdForm.resx">
@@ -600,25 +615,46 @@
     <EmbeddedResource Include="Inventory\InventoryArrangeCustomerDelForm.resx">
       <DependentUpon>InventoryArrangeCustomerDelForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryArrangeCustomerDelForm.zh-Hans.resx">
+      <DependentUpon>InventoryArrangeCustomerDelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryArrangeDefectDelForm.resx">
+      <DependentUpon>InventoryArrangeDefectDelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryArrangeDefectDelForm.zh-Hans.resx">
       <DependentUpon>InventoryArrangeDefectDelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryArrangeReplenishForm.resx">
       <DependentUpon>InventoryArrangeReplenishForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryArrangeReplenishForm.zh-Hans.resx">
+      <DependentUpon>InventoryArrangeReplenishForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryAssDeliveryForm.resx">
+      <DependentUpon>InventoryAssDeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryAssDeliveryForm.zh-Hans.resx">
       <DependentUpon>InventoryAssDeliveryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryAssWorkerForm.resx">
       <DependentUpon>InventoryAssWorkerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryAssWorkerForm.zh-Hans.resx">
+      <DependentUpon>InventoryAssWorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryDeliveryControl.resx">
+      <DependentUpon>InventoryDeliveryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryDeliveryControl.zh-Hans.resx">
       <DependentUpon>InventoryDeliveryControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryDeliveryDutyAfternoonForm.resx">
       <DependentUpon>InventoryDeliveryDutyAfternoonForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryDeliveryDutyControl.resx">
+      <DependentUpon>InventoryDeliveryDutyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryDeliveryDutyControl.zh-Hans.resx">
       <DependentUpon>InventoryDeliveryDutyControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryDeliveryDutyEveningForm.resx">
@@ -630,7 +666,13 @@
     <EmbeddedResource Include="Inventory\InventoryEditStockForm.resx">
       <DependentUpon>InventoryEditStockForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryEditStockForm.zh-Hans.resx">
+      <DependentUpon>InventoryEditStockForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryForm.zh-Hans.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryProductControl.resx">
@@ -639,25 +681,55 @@
     <EmbeddedResource Include="Inventory\InventoryPurchaseOrderControl.resx">
       <DependentUpon>InventoryPurchaseOrderControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryPurchaseOrderControl.zh-Hans.resx">
+      <DependentUpon>InventoryPurchaseOrderControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\inventoryPurchaseOrderLineControl.resx">
+      <DependentUpon>inventoryPurchaseOrderLineControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\inventoryPurchaseOrderLineControl.zh-Hans.resx">
       <DependentUpon>inventoryPurchaseOrderLineControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryPurUpdateForm.resx">
       <DependentUpon>InventoryPurUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryPurUpdateForm.zh-Hans.resx">
+      <DependentUpon>InventoryPurUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryVwDeliveryForm.resx">
+      <DependentUpon>InventoryVwDeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryVwDeliveryForm.zh-Hans.resx">
       <DependentUpon>InventoryVwDeliveryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryVwPurchaseForm.resx">
       <DependentUpon>InventoryVwPurchaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryVwPurchaseForm.zh-Hans.resx">
+      <DependentUpon>InventoryVwPurchaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryVwStockForm.aa-ER.resx">
+      <DependentUpon>InventoryVwStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryVwStockForm.aa.resx">
+      <DependentUpon>InventoryVwStockForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\InventoryVwStockForm.resx">
+      <DependentUpon>InventoryVwStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryVwStockForm.zh-Hans.resx">
       <DependentUpon>InventoryVwStockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\PurUpdateOrderLineControl.resx">
       <DependentUpon>PurUpdateOrderLineControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\PurUpdateOrderLineControl.zh-Hans.resx">
+      <DependentUpon>PurUpdateOrderLineControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\WareHouseProductControl.resx">
+      <DependentUpon>WareHouseProductControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\WareHouseProductControl.zh-Hans.resx">
       <DependentUpon>WareHouseProductControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
@@ -691,14 +763,26 @@
     <EmbeddedResource Include="Purchase\PurchaseForm.resx">
       <DependentUpon>PurchaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PurchaseForm.zh-Hans.resx">
+      <DependentUpon>PurchaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\PurchaseGoodControl.resx">
       <DependentUpon>PurchaseGoodControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PurchaseGoodControl.zh-Hans.resx">
+      <DependentUpon>PurchaseGoodControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PurchaseVwGoodRecievedForm.zh-Hans.resx">
+      <DependentUpon>PurchaseVwGoodRecievedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\PurchaseVwReorder.resx">
       <DependentUpon>PurchaseVwReorder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\PurchaseVwGoodRecievedForm.resx">
       <DependentUpon>PurchaseVwGoodRecievedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PurchaseVwReorder.zh-Hans.resx">
+      <DependentUpon>PurchaseVwReorder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\reorderControl.resx">
       <DependentUpon>reorderControl.cs</DependentUpon>
@@ -773,6 +857,9 @@
       <DependentUpon>SalesPayReserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesProductControl.resx">
+      <DependentUpon>SalesProductControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesProductControl.zh-Hans.resx">
       <DependentUpon>SalesProductControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\SalesReservationConfirmForm.resx">

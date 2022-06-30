@@ -126,7 +126,7 @@
     <value>Century Gothic, 36pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 33</value>
+    <value>48, 30</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>477, 56</value>
@@ -156,7 +156,7 @@
     <value>Segoe UI Semibold, 14.25pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 20</value>
+    <value>22, 18</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 25</value>
@@ -180,10 +180,10 @@
     <value>8</value>
   </data>
   <data name="pnlProduct.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 114</value>
+    <value>27, 105</value>
   </data>
   <data name="pnlProduct.Size" type="System.Drawing.Size, System.Drawing">
-    <value>709, 56</value>
+    <value>709, 52</value>
   </data>
   <data name="pnlProduct.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -219,7 +219,7 @@
     <value>5</value>
   </data>
   <data name="cboTier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 371</value>
+    <value>426, 342</value>
   </data>
   <data name="cboTier.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 33</value>
@@ -246,7 +246,7 @@
     <value>Segoe UI Semibold, 14.25pt, style=Bold</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 374</value>
+    <value>300, 345</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 25</value>
@@ -276,7 +276,7 @@
     <value>Segoe UI Semibold, 14.25pt, style=Bold</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 372</value>
+    <value>22, 343</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 25</value>
@@ -306,7 +306,7 @@
     <value>Segoe UI Semibold, 14.25pt, style=Bold</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 194</value>
+    <value>22, 179</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 25</value>
@@ -333,13 +333,13 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="tbDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 222</value>
+    <value>27, 205</value>
   </data>
   <data name="tbDescription.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="tbDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>709, 128</value>
+    <value>709, 118</value>
   </data>
   <data name="tbDescription.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -360,7 +360,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="nudQty.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 372</value>
+    <value>130, 343</value>
   </data>
   <data name="nudQty.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 33</value>
@@ -387,7 +387,7 @@
     <value>---- Please Select Product ----</value>
   </data>
   <data name="cboProduct.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 61</value>
+    <value>27, 56</value>
   </data>
   <data name="cboProduct.Size" type="System.Drawing.Size, System.Drawing">
     <value>453, 33</value>
@@ -408,10 +408,10 @@
     <value>7</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 126</value>
+    <value>69, 116</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>778, 438</value>
+    <value>778, 404</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -439,10 +439,10 @@
     <value>Segoe UI, 14.25pt, style=Bold</value>
   </data>
   <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>726, 587</value>
+    <value>726, 542</value>
   </data>
   <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 43</value>
+    <value>121, 40</value>
   </data>
   <data name="btnAdd.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -462,14 +462,17 @@
   <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>zh-Hans</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>934, 642</value>
+    <value>934, 593</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>SalesDefectForm</value>

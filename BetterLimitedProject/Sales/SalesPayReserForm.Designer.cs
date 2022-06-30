@@ -45,13 +45,13 @@ namespace BetterLimitedProject.Sales
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pnlReservationLoad);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // pnlReservationLoad
@@ -61,8 +61,8 @@ namespace BetterLimitedProject.Sales
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // label5
@@ -96,8 +96,8 @@ namespace BetterLimitedProject.Sales
             // 
             // cboOrderDate
             // 
-            resources.ApplyResources(this.cboOrderDate, "cboOrderDate");
             this.cboOrderDate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cboOrderDate, "cboOrderDate");
             this.cboOrderDate.FormattingEnabled = true;
             this.cboOrderDate.Items.AddRange(new object[] {
             resources.GetString("cboOrderDate.Items"),
@@ -109,8 +109,8 @@ namespace BetterLimitedProject.Sales
             // 
             // btnSearch
             // 
-            resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(227)))), ((int)(((byte)(140)))));
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.UseVisualStyleBackColor = false;

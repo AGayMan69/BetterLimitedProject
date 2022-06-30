@@ -29,6 +29,7 @@ namespace BetterLimitedProject.Sales
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesProductControl));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -45,17 +46,14 @@ namespace BetterLimitedProject.Sales
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(2);
-            this.panel1.Size = new System.Drawing.Size(787, 75);
-            this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Controls.Add(this.btnRestock);
@@ -65,119 +63,73 @@ namespace BetterLimitedProject.Sales
             this.panel2.Controls.Add(this.lblProductID);
             this.panel2.Controls.Add(this.lblInStock);
             this.panel2.Controls.Add(this.lblOutStock);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(783, 71);
-            this.panel2.TabIndex = 0;
             // 
             // btnEdit
             // 
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Right;
+            resources.ApplyResources(this.btnEdit, "btnEdit");
             this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
             this.btnEdit.FlatAppearance.BorderSize = 4;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(39)))), ((int)(((byte)(79)))));
-            this.btnEdit.Location = new System.Drawing.Point(599, 0);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(93, 71);
-            this.btnEdit.TabIndex = 6;
-            this.btnEdit.Text = "EDIT";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnRestock
             // 
+            resources.ApplyResources(this.btnRestock, "btnRestock");
             this.btnRestock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(118)))), ((int)(((byte)(19)))));
-            this.btnRestock.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnRestock.FlatAppearance.BorderSize = 0;
-            this.btnRestock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestock.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestock.ForeColor = System.Drawing.Color.White;
-            this.btnRestock.Location = new System.Drawing.Point(692, 0);
             this.btnRestock.Name = "btnRestock";
-            this.btnRestock.Size = new System.Drawing.Size(91, 71);
-            this.btnRestock.TabIndex = 5;
-            this.btnRestock.Text = "RESTOCK";
             this.btnRestock.UseVisualStyleBackColor = false;
             this.btnRestock.Click += new System.EventHandler(this.btnRestock_Click);
             // 
             // lblQty
             // 
+            resources.ApplyResources(this.lblQty, "lblQty");
             this.lblQty.AutoEllipsis = true;
-            this.lblQty.AutoSize = true;
-            this.lblQty.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQty.Location = new System.Drawing.Point(537, 25);
             this.lblQty.Name = "lblQty";
-            this.lblQty.Size = new System.Drawing.Size(25, 20);
-            this.lblQty.TabIndex = 4;
-            this.lblQty.Text = "20";
             // 
             // lblCategory
             // 
+            resources.ApplyResources(this.lblCategory, "lblCategory");
             this.lblCategory.AutoEllipsis = true;
-            this.lblCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.Location = new System.Drawing.Point(372, 25);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(115, 20);
-            this.lblCategory.TabIndex = 3;
-            this.lblCategory.Text = "Gaming";
             // 
             // lblName
             // 
+            resources.ApplyResources(this.lblName, "lblName");
             this.lblName.AutoEllipsis = true;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(200, 25);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(139, 20);
-            this.lblName.TabIndex = 2;
-            this.lblName.Text = "TUF Gaming sdfsdfsd";
             // 
             // lblProductID
             // 
-            this.lblProductID.AutoSize = true;
-            this.lblProductID.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductID.Location = new System.Drawing.Point(145, 25);
+            resources.ApplyResources(this.lblProductID, "lblProductID");
             this.lblProductID.Name = "lblProductID";
-            this.lblProductID.Size = new System.Drawing.Size(23, 20);
-            this.lblProductID.TabIndex = 1;
-            this.lblProductID.Text = "12";
             // 
             // lblInStock
             // 
+            resources.ApplyResources(this.lblInStock, "lblInStock");
             this.lblInStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
             this.lblInStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblInStock.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInStock.ForeColor = System.Drawing.Color.White;
-            this.lblInStock.Location = new System.Drawing.Point(-2, -2);
             this.lblInStock.Name = "lblInStock";
-            this.lblInStock.Size = new System.Drawing.Size(130, 75);
-            this.lblInStock.TabIndex = 0;
-            this.lblInStock.Text = "IN STOCK";
-            this.lblInStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblOutStock
             // 
+            resources.ApplyResources(this.lblOutStock, "lblOutStock");
             this.lblOutStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
             this.lblOutStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblOutStock.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOutStock.ForeColor = System.Drawing.Color.White;
-            this.lblOutStock.Location = new System.Drawing.Point(-2, -2);
             this.lblOutStock.Name = "lblOutStock";
-            this.lblOutStock.Size = new System.Drawing.Size(130, 75);
-            this.lblOutStock.TabIndex = 1;
-            this.lblOutStock.Text = "OUT OF STOCK";
-            this.lblOutStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SalesProductControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "SalesProductControl";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.Size = new System.Drawing.Size(787, 85);
             this.Load += new System.EventHandler(this.SalesProductControl_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
