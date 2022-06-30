@@ -129,7 +129,7 @@ namespace BetterLimitedProject
                     var user = (from users in betterDB.staffs
                                 where users.username.Equals(username)
                                 select new {users.username, users.password, users.department_ID}).FirstOrDefault();
-                    if (password.Equals(user.password))
+                    if (user != null && password.Equals(user.password))
                     {
                         // Login Successful
                         //MessageBox.Show("Login successful!");
