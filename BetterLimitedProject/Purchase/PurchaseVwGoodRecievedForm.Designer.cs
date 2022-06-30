@@ -29,6 +29,7 @@ namespace BetterLimitedProject.Purchase
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseVwGoodRecievedForm));
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -42,106 +43,72 @@ namespace BetterLimitedProject.Purchase
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.pnlReceiveGDLoader);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(48, 102);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(30);
-            this.panel3.Size = new System.Drawing.Size(848, 482);
-            this.panel3.TabIndex = 4;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label11, "label11");
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(63, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 17);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Received ID";
             // 
             // panel4
             // 
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.panel4.Location = new System.Drawing.Point(33, 50);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(787, 2);
-            this.panel4.TabIndex = 9;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label8, "label8");
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(373, 25);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 17);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Received Time";
             // 
             // pnlReceiveGDLoader
             // 
-            this.pnlReceiveGDLoader.AutoScroll = true;
+            resources.ApplyResources(this.pnlReceiveGDLoader, "pnlReceiveGDLoader");
             this.pnlReceiveGDLoader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.pnlReceiveGDLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlReceiveGDLoader.Location = new System.Drawing.Point(30, 58);
             this.pnlReceiveGDLoader.Name = "pnlReceiveGDLoader";
-            this.pnlReceiveGDLoader.Size = new System.Drawing.Size(788, 394);
-            this.pnlReceiveGDLoader.TabIndex = 1;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label9, "label9");
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(219, 25);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 17);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Purchase Order ID";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(41, 32);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(283, 41);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Received Good";
             // 
             // cboDate
             // 
+            resources.ApplyResources(this.cboDate, "cboDate");
             this.cboDate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDate.FormattingEnabled = true;
             this.cboDate.Items.AddRange(new object[] {
-            "Today",
-            "This Week",
-            "This Month",
-            "This Year"});
-            this.cboDate.Location = new System.Drawing.Point(775, 52);
+            resources.GetString("cboDate.Items"),
+            resources.GetString("cboDate.Items1"),
+            resources.GetString("cboDate.Items2"),
+            resources.GetString("cboDate.Items3")});
             this.cboDate.Name = "cboDate";
-            this.cboDate.Size = new System.Drawing.Size(121, 29);
-            this.cboDate.TabIndex = 5;
             this.cboDate.SelectedValueChanged += new System.EventHandler(this.cboDate_SelectedValueChanged);
             // 
             // PurchaseVwGoodRecievedForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(934, 642);
             this.Controls.Add(this.cboDate);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label7);
             this.Name = "PurchaseVwGoodRecievedForm";
-            this.Text = "PurchaseVwGoodRecievedForm";
             this.Load += new System.EventHandler(this.PurchaseVwGoodRecievedForm_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

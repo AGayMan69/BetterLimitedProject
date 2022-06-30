@@ -106,8 +106,8 @@ namespace BetterLimitedProject.Sales
             // 
             // cboCategory
             // 
-            resources.ApplyResources(this.cboCategory, "cboCategory");
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cboCategory, "cboCategory");
             this.cboCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.cboCategory.FormattingEnabled = true;
             this.cboCategory.Name = "cboCategory";
@@ -175,18 +175,18 @@ namespace BetterLimitedProject.Sales
             // 
             // btnRegister
             // 
-            resources.ApplyResources(this.btnRegister, "btnRegister");
             this.btnRegister.BackColor = System.Drawing.Color.White;
             this.btnRegister.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnRegister.FlatAppearance.BorderSize = 3;
+            resources.ApplyResources(this.btnRegister, "btnRegister");
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.UseVisualStyleBackColor = false;
             // 
             // btnSubmit
             // 
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(219)))), ((int)(((byte)(149)))));
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = false;

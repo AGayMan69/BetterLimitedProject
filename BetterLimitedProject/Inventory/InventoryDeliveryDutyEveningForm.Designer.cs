@@ -57,9 +57,9 @@ namespace BetterLimitedProject.Inventory
             this.panelbruh.Controls.Add(this.panel2);
             this.panelbruh.Controls.Add(this.panel1);
             this.panelbruh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelbruh.Location = new System.Drawing.Point(10, 10);
+            this.panelbruh.Location = new System.Drawing.Point(10, 9);
             this.panelbruh.Name = "panelbruh";
-            this.panelbruh.Size = new System.Drawing.Size(504, 409);
+            this.panelbruh.Size = new System.Drawing.Size(504, 378);
             this.panelbruh.TabIndex = 1;
             // 
             // panel6
@@ -68,10 +68,10 @@ namespace BetterLimitedProject.Inventory
             this.panel6.Controls.Add(this.panDuty21);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 150);
+            this.panel6.Location = new System.Drawing.Point(0, 144);
             this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.panel6.Size = new System.Drawing.Size(504, 50);
+            this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 18);
+            this.panel6.Size = new System.Drawing.Size(504, 48);
             this.panel6.TabIndex = 3;
             // 
             // panDuty21
@@ -101,10 +101,10 @@ namespace BetterLimitedProject.Inventory
             this.panel4.Controls.Add(this.panDuty20);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 100);
+            this.panel4.Location = new System.Drawing.Point(0, 96);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.panel4.Size = new System.Drawing.Size(504, 50);
+            this.panel4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 18);
+            this.panel4.Size = new System.Drawing.Size(504, 48);
             this.panel4.TabIndex = 2;
             // 
             // panDuty20
@@ -134,10 +134,10 @@ namespace BetterLimitedProject.Inventory
             this.panel2.Controls.Add(this.panDuty19);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Location = new System.Drawing.Point(0, 48);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.panel2.Size = new System.Drawing.Size(504, 50);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 18);
+            this.panel2.Size = new System.Drawing.Size(504, 48);
             this.panel2.TabIndex = 1;
             // 
             // panDuty19
@@ -169,8 +169,8 @@ namespace BetterLimitedProject.Inventory
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.panel1.Size = new System.Drawing.Size(504, 50);
+            this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 18);
+            this.panel1.Size = new System.Drawing.Size(504, 48);
             this.panel1.TabIndex = 0;
             // 
             // panDuty18
@@ -196,13 +196,13 @@ namespace BetterLimitedProject.Inventory
             // 
             // InventoryDeliveryDutyEveningForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(524, 429);
+            this.ClientSize = new System.Drawing.Size(524, 396);
             this.Controls.Add(this.panelbruh);
             this.Name = "InventoryDeliveryDutyEveningForm";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Text = "InventoryDeliveryDutyEveningForm";
             this.Load += new System.EventHandler(this.InventoryDeliveryDutyEveningForm_Load);
             this.panelbruh.ResumeLayout(false);
