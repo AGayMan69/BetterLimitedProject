@@ -135,11 +135,11 @@ namespace BetterLimitedProject.Inventory
                     }
 
                     // getting status
-                    if (cboStatus.SelectedItem == "IN STOCK")
+                    if (cboStatus.SelectedItem.ToString() == "IN STOCK")
                     {
                         stockControls = stockControls.Where(control => control.qty > control.restockLevel);
                     }
-                    else if (cboStatus.SelectedItem == "OUT OF STOCK")
+                    else if (cboStatus.SelectedItem.ToString() == "OUT OF STOCK")
                     {
                         stockControls = stockControls.Where(control => control.qty <= control.restockLevel);
                     }

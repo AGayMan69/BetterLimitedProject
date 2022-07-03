@@ -51,17 +51,17 @@ namespace BetterLimitedProject.Sales
                 // get date parameter
                 DateTime upperBound;
                 DateTime lowerBound;
-                if (cboOrderDate.SelectedItem == "Today")
+                if (cboOrderDate.SelectedItem.ToString() == "Today")
                 {
                     lowerBound = DateTime.Today;
                     upperBound = DateTime.Today.GetTodayUpperBound();
                 }
-                else if (cboOrderDate.SelectedItem == "This Week")
+                else if (cboOrderDate.SelectedItem.ToString() == "This Week")
                 {
                     upperBound = DateTime.Now.GetThisWeekUpperBound();
                     lowerBound = DateTime.Now.GetThisWeekLowerBound();
                 }
-                else if (cboOrderDate.SelectedItem == "This Month")
+                else if (cboOrderDate.SelectedItem.ToString() == "This Month")
                 {
                     upperBound = DateTime.Now.GetThisMonthUpperBound();
                     lowerBound = DateTime.Now.GetThisMonthLowerBound();

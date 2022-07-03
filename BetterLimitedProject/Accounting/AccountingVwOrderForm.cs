@@ -89,17 +89,17 @@ namespace BetterLimitedProject.Accounting
                 // get date parameter
                 DateTime upperBound;
                 DateTime lowerBound;
-                if (cboOrderDate.SelectedItem == "Today")
+                if (cboOrderDate.SelectedItem.ToString() == "Today")
                 {
                     lowerBound = DateTime.Today;
                     upperBound = DateTime.Today.GetTodayUpperBound();
                 }
-                else if (cboOrderDate.SelectedItem == "This Week")
+                else if (cboOrderDate.SelectedItem.ToString() == "This Week")
                 {
                     upperBound = DateTime.Now.GetThisWeekUpperBound();
                     lowerBound = DateTime.Now.GetThisWeekLowerBound();
                 }
-                else if (cboOrderDate.SelectedItem == "This Month")
+                else if (cboOrderDate.SelectedItem.ToString() == "This Month")
                 {
                     upperBound = DateTime.Now.GetThisMonthUpperBound();
                     lowerBound = DateTime.Now.GetThisMonthLowerBound();
@@ -117,14 +117,14 @@ namespace BetterLimitedProject.Accounting
                 int walkINCustomerID = 1000000000;
                 int searchCustomerUpperBound;
                 int searchCustomerLowerBound;
-                if (cboType.SelectedItem == "Walkin")
+                if (cboType.SelectedItem.ToString() == "Walkin")
                 {
                     //MessageBox.Show("Searching Walkin Order");
                     searchCustomerLowerBound = walkINCustomerID;
                     searchCustomerUpperBound = walkINCustomerID;
                     tbSearch.Enabled = false;
                 }
-                else if (cboType.SelectedItem == "Delivery")
+                else if (cboType.SelectedItem.ToString() == "Delivery")
                 {
                     //MessageBox.Show("Searching Delivery Order");
                     searchCustomerLowerBound = 0;
@@ -168,19 +168,19 @@ namespace BetterLimitedProject.Accounting
                     //MessageBox.Show($"Number of sales: {orderResult.Count()}");
 
                     // sorting
-                    if (cboSortOrder.SelectedItem == "Date")
+                    if (cboSortOrder.SelectedItem.ToString() == "Date")
                     {
                         orderResult = orderResult.OrderBy(order => order.order_date);
                     }
-                    else if (cboSortOrder.SelectedItem == "Price")
+                    else if (cboSortOrder.SelectedItem.ToString() == "Price")
                     {
                         orderResult = orderResult.OrderBy(order => order.total_price);
                     }
-                    else if (cboSortOrder.SelectedItem == "Order ID")
+                    else if (cboSortOrder.SelectedItem.ToString() == "Order ID")
                     {
                         orderResult = orderResult.OrderBy(order => order.order_ID);
                     }
-                    else if (cboSortOrder.SelectedItem == "Customer ID")
+                    else if (cboSortOrder.SelectedItem.ToString() == "Customer ID")
                     {
                         orderResult = orderResult.OrderBy(order => order.customer_ID);
                     }
